@@ -47,10 +47,7 @@ module.exports = (grunt) ->
     min:
       module: 
         src: [r + 'itchcork.js']
-        dest: r + 'itchcork.min.js'
-      main:
-        src: [r + 'main.js']
-        dest: r + 'main.min.js'
+        dest: r + 'itchcork.min.js'      
     
     
     # watch:
