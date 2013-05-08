@@ -210,7 +210,7 @@ define("ThemeManager", [], function() {
   	};
   };
 });
-define(['Suite', 'Test', 'Spy', 'Verify', 'ThemeManager'], function(Suite, Test, Spy, Verify, ThemeManager) {
+define("ItchCork",['Suite', 'Test', 'Spy', 'Verify', 'ThemeManager'], function(Suite, Test, Spy, Verify, ThemeManager) {
   return function ItchCork() {
       ItchCork.prototype.Suite = Suite;
       ItchCork.prototype.Test = Test;
