@@ -1,4 +1,4 @@
-define('datetime',['ItchCork', 'context'], function (fs, context) {
+define(['ItchCork', 'context'], function (fs, context) {
     return function () {
         var fs = new fs();
         var suite = new fs.Suite('DateTime tests', context);
