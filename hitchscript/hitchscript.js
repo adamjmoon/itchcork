@@ -11,7 +11,7 @@ if (Meteor.isClient) {
         requirejs.config({
             baseUrl: 'https://',
             paths: {
-                'FiddleSticks': 'raw.github.com/adamjmoon/itchcork/master/itchcork.min',
+                'ItchCork': 'raw.github.com/adamjmoon/itchcork/master/itchcork.min',
                 'ThemeManager': 'raw.github.com/adamjmoon/itchcork/master/itchcork.min',
                 'lodash': 'cdnjs.cloudflare.com/ajax/libs/lodash.js/1.2.0/lodash.min',
                 'platform': 'cdnjs.cloudflare.com/ajax/libs/platform/0.4.0/platform.min',
@@ -21,8 +21,9 @@ if (Meteor.isClient) {
                 'run': 'raw.github.com/adamjmoon/itchcork/master/test/' + testcase
             }
         });
-        require(['run'], function (run) {
-            var runSpecs = new run();
+        require(['run', 'ItchCork', 'knockout', 'platform', 'lodash', 'benchmark'], function (run,ic) {
+
+            var runSpecs = new run(new ic());
         });
     }
 };
