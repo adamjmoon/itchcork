@@ -1,4 +1,4 @@
-define("array", function() {
+define(function() {
   return function context() {
    var my_array = [0,1,2,3,4,5,6,7,8,9];
    var s=0,f=0;
