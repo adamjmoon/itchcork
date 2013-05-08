@@ -1,4 +1,4 @@
-define("context", function() {
+define(function() {
      return function context() {
          this.currentDateTime1 =
          function() {
