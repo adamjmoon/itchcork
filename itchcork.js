@@ -1,4 +1,4 @@
-	define("Suite", ['Test', 'benchmark','knockout','ThemeManager','js2coffee'], function(Test, Benchmark, ko,th, js2coffee) {
+	define("Suite", ['Test', 'benchmark','knockout','ThemeManager','coffee-script','js2coffee'], function(Test, Benchmark, ko,th) {
 return function(desc, js) {
   	var self = this;  
 	self.suiteDesc = ko.observable(desc);

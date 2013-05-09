@@ -16,6 +16,7 @@ if (Meteor.isClient) {
                 'ItchCork': 'raw.github.com/adamjmoon/itchcork/master/itchcork.min',
                 'ThemeManager': 'raw.github.com/adamjmoon/itchcork/master/itchcork.min',
                 'js2coffee': 'raw.github.com/adamjmoon/itchcork/master/vendor/js2coffee.min',
+                'coffee': 'raw.github.com/adamjmoon/itchcork/master/vendor/coffeescript.min',
                 'lodash': 'cdnjs.cloudflare.com/ajax/libs/lodash.js/1.2.0/lodash.min',
                 'platform': 'cdnjs.cloudflare.com/ajax/libs/platform/0.4.0/platform.min',
                 'benchmark': 'raw.github.com/bestiejs/benchmark.js/master/benchmark',
@@ -24,7 +25,7 @@ if (Meteor.isClient) {
                 'test': 'raw.github.com/adamjmoon/itchcork/master/test/' + testcase
             }
         });
-        require(['test', 'ItchCork', 'knockout', 'platform', 'lodash', 'benchmark', 'js2coffee'], function (test, ic) {
+        require(['test', 'ItchCork', 'knockout', 'platform', 'lodash', 'benchmark', 'coffee', 'js2coffee'], function (test, ic) {
             var runSpecs = new test(new ic());
         });
     };
