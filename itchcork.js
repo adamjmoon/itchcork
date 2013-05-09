@@ -13,7 +13,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
         self.benchmarkSuite = new Benchmark.Suite;
         self.benchmarkPlatform = ko.observable(Benchmark.platform.description);
         self.themeManager = new th();
-
+        self.themeManager.init();
 
         setupContextBreakdown(self.jsContext, 'context');
         function setupContextBreakdown(context, base) {
@@ -194,25 +194,29 @@ define("Verify", [], function() {
 		};
 	};
 });
-define("ThemeManager", [], function() {
-  return function ThemeManager() {
-    self = this;
-    self.previousTheme = '';
-    self.currentTheme = 'cyborg';
+define("ThemeManager", [], function () {
+    return function ThemeManager() {
+        ThemeManager.prototype.init = function () {
+            apply();
+        }
 
-    ThemeManager.prototype.setTheme = function(newTheme){
-    	if(newTheme != self.currentTheme){
-    		self.previousTheme = self.currentTheme;
-	    	self.currentTheme = newTheme;
-			var currentThemeStyle = document.getElementById(newTheme);
-			currentThemeStyle.innerHTML = currentThemeStyle.innerHTML.replace(/\/\*/g, "").replace(/\*\//g, "");
-			if(self.previousTheme != ''){
-				var previousThemeStyle = document.getElementById(self.previousTheme);
-				previousThemeStyle.innerHTML = '/*' + previousThemeStyle.innerHTML + '*/';
-			}
-    	}
-  	};
-  };
+        function apply() {
+            var currentThemeStyle = document.getElementById(amplify.store('currentTheme'));
+            currentThemeStyle.innerHTML = currentThemeStyle.innerHTML.replace(/\/\*/g, "").replace(/\*\//g, "");
+            if (self.previousTheme != '') {
+                var previousThemeStyle = document.getElementById(amplify.store('previousTheme'));
+                previousThemeStyle.innerHTML = '/*' + previousThemeStyle.innerHTML + '*/';
+            }
+        }
+
+        ThemeManager.prototype.set = function (newTheme) {
+            if (newTheme != amplify.store('currentTheme')) {
+                amplify.store('previousTheme', amplify.store('currentTheme'));
+                amplify.store('currentTheme', newTheme);
+                apply();
+            }
+        };
+    };
 });
 define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify', 'ThemeManager'], function(Suite, Test, Spy, Verify, ThemeManager) {
   return function ItchCork() {
