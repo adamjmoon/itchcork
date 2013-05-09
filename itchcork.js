@@ -1,10 +1,10 @@
-	define("Suite", ['Test', 'benchmark','knockout','ThemeManager','js2coffee'], function(Test, Benchmark, ko,th) {
+	define("Suite", ['Test', 'benchmark','knockout','ThemeManager','js2coffee'], function(Test, Benchmark, ko,th, js2coffee) {
 return function(desc, js) {
   	var self = this;  
 	self.suiteDesc = ko.observable(desc);
 	self.jsContext = new js();
 	self.jsContextStr = ko.observable(js.toString());
-    self.coffeeContextStr = ko.observable(Js2coffee.build(js.toString()));
+    self.coffeeContextStr = ko.observable(js2coffee.build(js.toString()));
 	self.tests = ko.observableArray([]);
 	self.testCases = ko.observableArray([]);
 	self.shouldShow = ko.observable(true);

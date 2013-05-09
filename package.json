@@ -1,9 +1,9 @@
 {
-  "name": "jsFiddleSticks",
+  "name": "itchcork",
   "version": "0.0.1",
-  "description": "simple test framework for validating javascript expressions and viewing results in succinct html table.",
+  "description": "simple test framework for validating javascript expressions and viewing results and bemchmarks in html table.",
   "keywords": [
-    "jsfiddle",
+    "",
     "test",
     "bdd",
     "knockout",
@@ -13,22 +13,13 @@
   "author": "Adam Moon <itchcork@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/adamjmoon/jsFiddleTests.git"
+    "url": "git://github.com/adamjmoon/itchcork.git"
   },
   "engines": {
     "node": ">= 0.4.x"
   },
   "dependencies": {
-      "knockout": "latest",
-      "requirejs": "latest",
-      "benchmark": "latest",
       "async": ">= 0.1.22",
-      "bunyan": ">= 0.10.0",
-      "cli-color": ">= 0.1.6",
-      "optimist" : ">= 0.3.5",
-      "restify": ">= 1.4.4",
-      "settings": ">= 0.1.0",
-      "grunt-cli": "latest",
       "grunt": "latest"
   },
   "devDependencies": {
@@ -41,8 +32,8 @@
     "grunt-contrib-jshint": "",
     "grunt-contrib-concat": "",
     "grunt-yui-compressor": "latest",
-    "grunt-recess": "latest",
     "grunt-parallel" : "latest",
-    "istanbul" : "latest"
+    "istanbul" : "latest",
+    "recess" : "latest"
   }
 }
