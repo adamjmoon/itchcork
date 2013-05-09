@@ -25,8 +25,6 @@ if (Meteor.isClient) {
                 'test': 'raw.github.com/adamjmoon/itchcork/master/test/' + testcase
             }
         });
-
-        define('js2coffee', ['raw.github.com/adamjmoon/itchcork/master/vendor/coffeescript.min','raw.github.com/adamjmoon/itchcork/master/vendor/js2coffee.min'], function () { return this.Js2Coffee; });
         require(['test', 'ItchCork', 'knockout', 'platform', 'lodash', 'benchmark'], function (test, ic) {
             var runSpecs = new test(new ic());
         });
