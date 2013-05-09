@@ -47,8 +47,19 @@ module.exports = (grunt) ->
     min:
       module: 
         src: [r + 'itchcork.js']
-        dest: r + 'itchcork.min.js'      
-    
+        dest: r + 'itchcork.min.js'
+      platform:
+        src: [v + 'platform.js']
+        dest: v + 'platform.min.js'
+      benchmark:
+        src: [v + 'benchmark.js']
+        dest: v + 'benchmark.min.js'
+      coffeescript:
+        src: [v + 'coffeescript.js']
+        dest: v + 'coffeescript.min.js'
+      js2coffee:
+        src: [v + 'js2coffee.js']
+        dest: v + 'js2coffee.min.js'
     
     # watch:
     #   gruntfile:

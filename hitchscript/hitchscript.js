@@ -13,16 +13,16 @@ if (Meteor.isClient) {
         requirejs.config({
             baseUrl: 'https://',
             paths: {
-                'jquery': '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min',
-                'bootstrap': '//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
-                'underscore': '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min',
-                'coffeescript': '//raw.github.com/adamjmoon/itchcork/master/vendor/coffeescript.min',
-                'js2coffee': '//raw.github.com/adamjmoon/itchcork/master/vendor/js2coffee.min',
+                'jquery': 'cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min',
+                'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
+                'underscore': 'cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min',
+                'coffeescript': 'raw.github.com/adamjmoon/itchcork/master/vendor/coffeescript.min',
+                'js2coffee': 'raw.github.com/adamjmoon/itchcork/master/vendor/js2coffee.min',
                 'ItchCork': 'raw.github.com/adamjmoon/itchcork/master/itchcork.min',
                 'ThemeManager': 'raw.github.com/adamjmoon/itchcork/master/itchcork.min',
                 'lodash': 'cdnjs.cloudflare.com/ajax/libs/lodash.js/1.2.0/lodash.min',
-                'platform': 'raw.github.com/bestiejs/platform.js/master/platform',
-                'benchmark': 'raw.github.com/bestiejs/benchmark.js/master/benchmark',
+                'platform': 'raw.github.com/adamjmoon/itchcork/master/vendor/platform',
+                'benchmark': 'raw.github.com/adamjmoon/itchcork/master/vendor/benchmark',
                 'knockout': 'ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1',
                 'context': 'raw.github.com/adamjmoon/itchcork/master/context/' + testcase,
                 'test': 'raw.github.com/adamjmoon/itchcork/master/test/' + testcase
