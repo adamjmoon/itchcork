@@ -17,10 +17,12 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
 
         setupContextBreakdown(self.jsContext, 'context');
         function setupContextBreakdown(context, base) {
+            var js='';
             for (var prop in context) {
                 if (context[prop] instanceof Function) {
                     try {
-                        var tc = { name: base + '.' + prop, value: context[prop].toString()};
+                        js = context[prop].toString();
+                        var tc = { name: base + '.' + prop, js: js, coffee: Js2coffee.build(js)};
                         self.testCases.push(tc);
                     } catch (err) {
 
@@ -28,7 +30,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
 
                 } else if (context[prop] instanceof Object) {
                     if (Object.toSource) {
-                        var tc = { name: prop, value: context[prop].toSource()};
+                        var tc = { name: prop, js: context[prop].toSource()};
                         self.testCases.push(tc);
                     }
 
