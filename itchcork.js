@@ -23,7 +23,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
                 if (context[prop] instanceof Function) {
                     try {
                         jsStr = context[prop].toString();
-                        coffeeStr = Js2coffee.build(js);
+                        coffeeStr = Js2coffee.build(jsStr);
                         var tc = { name: base + '.' + prop, jsStr: jsStr, coffeeStr: coffeeStr};
                         self.testCases.push(tc);
                     } catch (err) {
