@@ -17,10 +17,14 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
 
         setupContextBreakdown(self.jsContext, 'context');
         function setupContextBreakdown(context, base) {
+            var jsStr='', coffeeStr='';
+
             for (var prop in context) {
                 if (context[prop] instanceof Function) {
                     try {
-                        var tc = { name: base + '.' + prop, js: context[prop].toString(), coffee: Js2coffee.build(context[prop].toString())};
+                        jsStr = context[prop].toString();
+                        coffeeStr = Js2coffee.build(js);
+                        var tc = { name: base + '.' + prop, jsStr: jsStr, coffeeStr: coffeeStr};
                         self.testCases.push(tc);
                     } catch (err) {
 
