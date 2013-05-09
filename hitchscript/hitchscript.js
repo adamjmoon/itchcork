@@ -15,8 +15,6 @@ if (Meteor.isClient) {
             paths: {
                 'ItchCork': 'raw.github.com/adamjmoon/itchcork/master/itchcork.min',
                 'ThemeManager': 'raw.github.com/adamjmoon/itchcork/master/itchcork.min',
-                'js2coffee': 'raw.github.com/adamjmoon/itchcork/master/vendor/js2coffee.min',
-                'coffee-script': 'raw.github.com/adamjmoon/itchcork/master/vendor/coffeescript.min',
                 'lodash': 'cdnjs.cloudflare.com/ajax/libs/lodash.js/1.2.0/lodash.min',
                 'platform': 'cdnjs.cloudflare.com/ajax/libs/platform/0.4.0/platform.min',
                 'benchmark': 'raw.github.com/bestiejs/benchmark.js/master/benchmark',
