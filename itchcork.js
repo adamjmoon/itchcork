@@ -203,7 +203,7 @@ define("ThemeManager", [], function () {
         function apply() {
             var currentThemeStyle = document.getElementById(amplify.store('currentTheme'));
             currentThemeStyle.innerHTML = currentThemeStyle.innerHTML.replace(/\/\*/g, "").replace(/\*\//g, "");
-            if (self.previousTheme != '') {
+            if (amplify.store('previousTheme') != '') {
                 var previousThemeStyle = document.getElementById(amplify.store('previousTheme'));
                 previousThemeStyle.innerHTML = '/*' + previousThemeStyle.innerHTML + '*/';
             }
