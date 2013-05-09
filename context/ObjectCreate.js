@@ -1,5 +1,5 @@
 define(function() {
-  return function () {
+  return function context() {
       //CROCKFORD OBJECT.CREATE
       Object.create2 = function (o) {
           function F() {}
