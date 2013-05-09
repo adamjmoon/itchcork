@@ -35,3 +35,5 @@ define(['context'], function (c) {
        .add(1, function(c) {return c.shape.y;})
        .run();
 });
+ };
+});
