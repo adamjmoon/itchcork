@@ -14,7 +14,7 @@ requirejs.config({
         'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
         'underscore': 'cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min',
         'coffeescript': 'raw.github.com/adamjmoon/itchcork/master/vendor/coffeescript.min',
-        'js2coffee': 'raw.github.com/adamjmoon/itchcork/master/vendor/js2coffee.min',
+        'js2coffee': 'raw.github.com/adamjmoon/itchcork/master/vendor/js2coffee',
         'ItchCork': 'raw.github.com/adamjmoon/itchcork/master/itchcork.min',
         'ThemeManager': 'raw.github.com/adamjmoon/itchcork/master/itchcork.min',
         'lodash': 'cdnjs.cloudflare.com/ajax/libs/lodash.js/1.2.0/lodash.min',
