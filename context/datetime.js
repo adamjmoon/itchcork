@@ -4,7 +4,7 @@ define(function() {
          function() {
              var time = new Date().getTime();
              var date = new Date(time);
-             return date.toString();
+             return date.toString('mmddyyyy');
          };
 
          this.currentDateTime2 =
