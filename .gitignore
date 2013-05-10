@@ -46,7 +46,6 @@ log4net.config
 *.boo
 [Cc]ommon[Aa]ssembly[Ii]nfo.cs
 NUnit-TestDataOutput.xml
-OneTechnologies.Clients.MemberPortal/Content/js/test/specs.js
 *.log
 *.log.*
 *.InstallLog
@@ -56,9 +55,6 @@ InputOutput/
 [Dd]eployment/WWW/
 *crunch*
 packages/*
-!OneTechnologies.Credit.TransUnion.TestUtility/*.config
-ServiceBus*.xsd
-ServiceBus*.wsdl
 .idea/
 *app.css
 *app.min.css
@@ -66,8 +62,6 @@ core.js
 core.min.js
 *View.js
 *View.min.js
-OneTechnologies.Clients.MemberPortal/Content/js/app/googleMaps.js
-*main.min.js
 *configSettings.js
 *.spec.js
 *.js.html
