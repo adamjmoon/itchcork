@@ -2,9 +2,9 @@ if (Meteor.isClient) {
     
     Template.scripts.rendered = function() {
         var main = document.createElement('script');
-        main.type = 'text/javascript'; main.async = true;
-        main.src = '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js';
-        main['data-main'] = 'https://raw.github.com/adamjmoon/itchcork/master/main.min.js';
+        main.type = 'text/javascript';  
+        main.src = '//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.5/require.min.js';
+        main.setAttribute('data-main','//raw.github.com/adamjmoon/itchcork/master/main.min.js');
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(main, s);
     };
