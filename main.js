@@ -9,8 +9,7 @@ else
 requirejs.config({
     baseUrl: 'http://',
     paths: {
-        'jquery': 'cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min',
-        'history': 'raw.github.com/balupton/history.js/master/scripts/compressed/history',
+        'history': 'adamjmoon.github.io/itchcork/javascripts/history',
         'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
         'underscore': 'cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min',
         'coffeescript': 'adamjmoon.github.io/itchcork/javascripts/coffeescript.min',
@@ -25,7 +24,7 @@ requirejs.config({
         'test': 'adamjmoon.github.io/itchcork/test/' + testcase
     }
 });
-require(['jquery', 'underscore', 'knockout', 'history','bootstrap'], function () {
+require(['underscore', 'knockout', 'history','bootstrap'], function () {
     require(['coffeescript', 'platform', 'lodash', 'benchmark'], function (CoffeeScript) {
         this.CoffeeScript = CoffeeScript;
 //                var History = window.History; // Note: We are using a capital H instead of a lower h

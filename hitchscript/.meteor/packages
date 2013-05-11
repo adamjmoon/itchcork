@@ -6,7 +6,11 @@
 autopublish
 insecure
 preserve-inputs
+<<<<<<< Updated upstream
 accounts-github
 accounts-ui
+=======
+force-ssl
+>>>>>>> Stashed changes
 spiderable
 amplify
