@@ -7,22 +7,22 @@ else
     testcase = 'datetime';
 
 requirejs.config({
-    baseUrl: 'https://',
+    baseUrl: 'http://adamjmoon.github.io/itchcork/',
     paths: {
-        'jquery': 'cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min',
-        'history': 'raw.github.com/balupton/history.js/master/scripts/compressed/history',
-        'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
-        'underscore': 'cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min',
-        'coffeescript': 'raw.github.com/adamjmoon/itchcork/master/vendor/coffeescript.min',
-        'js2coffee': 'raw.github.com/adamjmoon/itchcork/master/vendor/js2coffee',
-        'ItchCork': 'raw.github.com/adamjmoon/itchcork/master/itchcork.min',
-        'ThemeManager': 'raw.github.com/adamjmoon/itchcork/master/itchcork.min',
-        'lodash': 'cdnjs.cloudflare.com/ajax/libs/lodash.js/1.2.0/lodash.min',
-        'platform': 'raw.github.com/adamjmoon/itchcork/master/vendor/platform.min',
-        'benchmark': 'raw.github.com/adamjmoon/itchcork/master/vendor/benchmark.min',
+        'jquery': '//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min',
+        'history': '//raw.github.com/balupton/history.js/master/scripts/compressed/history',
+        'bootstrap': '//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
+        'underscore': '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min',
+        'coffeescript': 'javascripts/coffeescript.min',
+        'js2coffee': 'javascripts/js2coffee',
+        'ItchCork': 'javascripts/itchcork.min',
+        'ThemeManager': 'javascripts/itchcork.min',
+        'lodash': 'javascripts/lodash.min',
+        'platform': 'javascripts/platform.min',
+        'benchmark': 'javascripts/benchmark.min',
         'knockout': 'ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1',
-        'context': 'raw.github.com/adamjmoon/itchcork/master/context/' + testcase,
-        'test': 'raw.github.com/adamjmoon/itchcork/master/test/' + testcase
+        'context': 'context/' + testcase,
+        'test': 'test/' + testcase
     }
 });
 require(['jquery', 'underscore', 'knockout', 'history','bootstrap'], function () {
