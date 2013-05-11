@@ -8,6 +8,5 @@ insecure
 preserve-inputs
 accounts-github
 accounts-ui
-force-ssl
 spiderable
 amplify
