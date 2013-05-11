@@ -9,7 +9,7 @@ else
 requirejs.config({
     baseUrl: 'http://',
     paths: {
-        'history': 'adamjmoon.github.io/itchcork/javascripts/history',
+        'history': 'adamjmoon.github.io/itchcork/javascripts/history.min',
         'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
         'underscore': 'cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min',
         'coffeescript': 'adamjmoon.github.io/itchcork/javascripts/coffeescript.min',
