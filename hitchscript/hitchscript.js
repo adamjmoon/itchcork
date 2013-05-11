@@ -1,5 +1,5 @@
-if (Meteor.isClient) {    
-    
+if (Meteor.isClient) {
+
     Template.scripts.rendered = function() {
         var main = document.createElement('script');
         main.type = 'text/javascript';  
