@@ -26,7 +26,7 @@ requirejs.config({
         'test': root + 'test/' + testcase
     }
 });
-require(['jquery', 'underscore', 'knockout','bootstrap'], function () {
+require(['underscore', 'knockout','bootstrap'], function () {
     require(['coffeescript', 'platform', 'lodash', 'benchmark'], function (CoffeeScript) {
         this.CoffeeScript = CoffeeScript;
         require(['test', 'ItchCork', 'js2coffee'], function (test, itchcork) {
