@@ -140,7 +140,7 @@
                                 </thead>
                                 <tbody data-bind="'foreach': tests">
                                 <tr data-bind="css: shouldEqual === actual ? 'success' : 'error'">
-                                    <td><code data-bind="text: expression"></code></td>
+                                    <td><code data-bind="text: comparing ? name : expression"></code></td>
                                     <td><code data-bind="text: shouldEqual"></code></td>
                                     <td><code data-bind="text: actual"></code></td>
                                     <td><code data-bind="text: typeOf"></code></td>
@@ -175,7 +175,7 @@
                                 </thead>
                                 <tbody data-bind="'foreach': benchmarks">
                                 <tr data-bind="css: fastest() ? 'success' : slowest() ? 'error' : ''">
-                                    <td><code data-bind="text: expression"></code></td>
+                                    <td><code data-bind="text: comparing ? name : expression"></code></td>
                                     <td><code style='display:none;'
                                               data-bind="text: timesFaster, visible:timesFaster"></code></td>
                                     <td><code data-bind="text: hz"></code></td>
