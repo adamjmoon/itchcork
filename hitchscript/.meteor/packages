@@ -6,7 +6,8 @@
 autopublish
 insecure
 preserve-inputs
-accounts-github
-accounts-ui
 spiderable
 amplify
+jquery-history
+random
+underscore

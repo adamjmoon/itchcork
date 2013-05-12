@@ -1,5 +1,5 @@
-if (Meteor.isClient) {    
-    
+if (Meteor.isClient) {
+
     Template.scripts.rendered = function() {
         
         var root = 'http://adamjmoon.github.io/itchcork/';
