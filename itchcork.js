@@ -14,6 +14,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
         self.benchmarkPlatform = ko.observable(Benchmark.platform.description);
         self.themeManager = new th();
         self.themeManager.init();
+        self.comparing(false);
 
         setupContextBreakdown(self.jsContext, 'context');
         function setupContextBreakdown(context, base) {
@@ -47,6 +48,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
             var b = event.target;
 
             self.benchmarks.push({
+                name: b.name,
                 expression: ko.observable(b.name.replace(/context\.(.*?)\(\)\;/gi, '$1')),
                 hz: ko.observable(b.hz.toFixed(0)),
                 relativateMarginError: ko.observable(b.stats.rme.toFixed(2) + '%'),
@@ -90,6 +92,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
         };
 
         self.compare = function () {
+            self.comparing(true);
             var func = function (c, tc) { return c[tc]();};
             for (var testcase in self.jsContext) {
                 self.add(self.shouldEqualValue, func, testcase);
@@ -115,7 +118,7 @@ define("Test", [], function() {
     
     if(testCaseName){     
       this.name = testCaseName;
-    this.expression =  expressionStr.replace(/\n    /,'')
+      this.expression =  expressionStr.replace(/\n    /,'')
                       .replace(/{ return/,'{return')
                           .replace(/(function \(c, tc\)\{return c\[tc\])/gi,'context.' + testCaseName).replace(/\}/,'');
           this.actual = func(context,testCaseName);
