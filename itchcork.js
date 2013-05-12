@@ -76,12 +76,30 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
                 self.benchmarksDone(true);
             });
 
-        self.add = function (shouldEqual, expression) {
-            var test = new Test(shouldEqual, expression, self.jsContext, null);
+        self.add = function(shouldEqual, func){
+            if(typeof func == 'function'){
+                self.addTestWithBenchmarks(shouldEqual, func, null);
+            }  
+            else{
+                var c = self.jsContext;
+                var realFunc = new Function("c","return c." + func)
+                self.addTestWithBenchmarks(shouldEqual, realFunc, null);
+            }
+        }
+
+        self.addTestWithBenchmarks = function (shouldEqual, func, name) {
+            var test = new Test(shouldEqual, func, self.jsContext, name);
             self.tests.push(test);
-            self.benchmarkSuite.add(test.expression, function () {
-                expression(self.jsContext, name);
-            }, { 'async': true, 'queued': true, 'minSamples': 100});
+
+            if(name){
+                self.benchmarkSuite.add(test.expression, function () { self.jsContext[name];}, 
+                    { 'async': true, 'queued': true, 'minSamples': 100});
+            }
+            else{
+                self.benchmarkSuite.add(test.expression, function () { func(self.jsContext);}, 
+                    { 'async': true, 'queued': true, 'minSamples': 100});
+            }
+            
             return self;
         };
 
@@ -93,7 +111,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
         self.compare = function () {
             var func = function (c, tc) { return c[tc]();};
             for (var testcase in self.jsContext) {
-                self.add(self.shouldEqualValue, func, testcase);
+                self.addTestWithBenchmarks(self.shouldEqualValue, func, testcase);
             }
             return self;
         };
