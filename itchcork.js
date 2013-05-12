@@ -14,7 +14,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
         self.benchmarkPlatform = ko.observable(Benchmark.platform.description);
         self.themeManager = new th();
         self.themeManager.init();
-        self.comparing(false);
+        self.comparing = ko.observable(false);
 
         setupContextBreakdown(self.jsContext, 'context');
         function setupContextBreakdown(context, base) {
