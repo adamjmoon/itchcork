@@ -128,20 +128,21 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
 });
 
 define("Test", [], function() {
-  return function(shouldEqual, func, context, testCaseName) {
+  return function(shouldEqual, func, context, testName) {
     
     var expressionStr = func.toString().trim();  
     
-    if(testCaseName){     
-      this.expression =  testCastName + '()';
-          this.actual = func(context,testCaseName);
+    if(testName){     
+          this.expression =  testName + '()';
+          this.actual = func(context,testName);
+          
     } else{
       this.expression = expressionStr.replace(/\n    /,'')
                    .replace(/{ return/,'{return')
              .replace(/function \(c\) {return /,'')
              .replace(/c\./gi,'context.')            
              .replace(/\}/,'');
-      this.name = this.expression.replace(/context\./g,'')
+      this.expression = this.expression.replace(/context\./g,'')
                .replace(/\;/,'');
       this.actual = func(context);
     }
