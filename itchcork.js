@@ -95,6 +95,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
 
             if(name){
                 var benchmarkFunc = function () { self.jsContext[name];}
+                console.log(benchmarkFunc.toString());
                 console.log(benchmarkFunc());
                 self.benchmarkSuite.add(test.expression, benchmarkFunc, 
                     { 'async': true, 'queued': true, 'minSamples': 100});
