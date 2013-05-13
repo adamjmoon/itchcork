@@ -100,7 +100,8 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
                 // console.log(benchmarkFunc.toString());
                 // console.log(benchmarkFunc());
                 
-                var fn = (function(context,name) { return function() { console.log(name);context[name];}; })(self.jsContext, name); 
+                var fn = (function(context,name) { return function() { console.log(context[name]());context[name]();}; })(self.jsContext, name); 
+                console.log(fn);
                 self.benchmarkSuite.add({ 
                     'name' : test.expression,
                     'fn': fn, 
