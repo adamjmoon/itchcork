@@ -99,12 +99,18 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
                 // }
                 // console.log(benchmarkFunc.toString());
                 // console.log(benchmarkFunc());
-                self.benchmarkSuite.add(test.expression, function () {
-                console.log(func);
-                console.log(name);
-                func(self.jsContext, name);
-            }, 
-                    { 'async': true, 'queued': true, 'minSamples': 100});
+                var setup = function() { var context = self.jsContext, n = this.name;} 
+                var fn = function () {
+                    console.log(n);
+                    context[name](); 
+                }
+                self.benchmarkSuite.add({ 
+                    'name' : test.expression,
+                    'setup': setup,
+                    'fn': fn, 
+                    'async': true, 
+                    'queued': true, 
+                    'minSamples': 100});
             }
             else{
                 self.benchmarkSuite.add(test.expression, function () { func(self.jsContext);}, 
