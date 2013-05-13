@@ -94,9 +94,11 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
             self.tests.push(test);
 
             if(name){
-                var benchmarkFunc = function () { self.jsContext[name];}
-                console.log(benchmarkFunc.toString());
-                console.log(benchmarkFunc());
+                // var benchmarkFunc = function () { 
+                //     self.jsContext[name];
+                // }
+                // console.log(benchmarkFunc.toString());
+                // console.log(benchmarkFunc());
                 self.benchmarkSuite.add(test.expression, function () {
                 console.log(expression);
                 console.log(name);
