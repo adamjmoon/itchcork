@@ -99,10 +99,11 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
                 // }
                 // console.log(benchmarkFunc.toString());
                 // console.log(benchmarkFunc());
-                var setup = function() { var context = self.jsContext, n = this.name;} 
+                var c = self.jsContext;
+                var setup = function() { var context = this.c, n = name;} 
                 var fn = function () {
                     console.log(n);
-                    context[name](); 
+                    context[n](); 
                 }
                 self.benchmarkSuite.add({ 
                     'name' : test.expression,
