@@ -1,4 +1,5 @@
 define(function() {
+     'use strict';
      return function context() {
          this.currentDateTime1 =
          function() {
