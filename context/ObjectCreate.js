@@ -1,4 +1,5 @@
 define(function() {
+  'use strict';
   return function context() {
       //CROCKFORD OBJECT.CREATE
       Object.create2 = function (o) {
