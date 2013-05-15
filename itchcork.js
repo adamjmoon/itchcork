@@ -1,4 +1,5 @@
 define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Test, Benchmark, ko, th) {
+    'use strict';
     return function (desc, js) {
         var self = this;
         self.suiteDesc = ko.observable(desc);
@@ -142,6 +143,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
 });
 
 define("Test", [], function() {
+  'use strict';
   return function(shouldEqual, func, context, testName) {
     
     var expressionStr = func.toString().trim();  
@@ -166,6 +168,7 @@ define("Test", [], function() {
   };
 });
 define("Spy", [], function() {
+    'use strict';
 	return function(F) {
 		function G() {
 			var args = Array.prototype.slice.call(arguments);
@@ -180,6 +183,7 @@ define("Spy", [], function() {
   };
 });
 define("Verify", [], function() {
+   'use strict';
 	return function(F) {
 		return function () {
 			var args = Array.prototype.slice.call(arguments),
@@ -232,6 +236,7 @@ define("ThemeManager", [], function () {
     };
 });
 define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify', 'ThemeManager'], function(Suite, Test, Spy, Verify, ThemeManager) {
+  'use strict';
   return function ItchCork() {
       ItchCork.prototype.Suite = Suite;
       ItchCork.prototype.Test = Test;
