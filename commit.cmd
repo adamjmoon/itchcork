@@ -1,3 +1,4 @@
+@ECHO OFF
 git add .
 git commit -m "fix"
 git pull upstream master
