@@ -1,6 +1,6 @@
 define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Test, Benchmark, ko, th) {
-    'use strict';
     return function (desc, js) {
+        'use strict';
         var self = this;
         self.suiteDesc = ko.observable(desc);
         self.jsContext = new js();
@@ -143,9 +143,9 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
 });
 
 define("Test", [], function() {
-  'use strict';
+
   return function(shouldEqual, func, context, testName) {
-    
+    'use strict';
     var expressionStr = func.toString().trim();  
     
     if(testName){     
@@ -183,8 +183,8 @@ define("Spy", [], function() {
   };
 });
 define("Verify", [], function() {
-   'use strict';
 	return function(F) {
+        'use strict';
 		return function () {
 			var args = Array.prototype.slice.call(arguments),
 				i,

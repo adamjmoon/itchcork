@@ -6,21 +6,20 @@ else if (window.location.hash && window.location.hash.length > 1)
 else
     testcase = 'datetime';
 
-//var root = 'file:///Users/moon/Projects/itchcork/';
-var root = 'adamjmoon.github.io/itchcork/';
+var root = 'raw.github.com/adamjmoon/itchcork/master/';
 
 requirejs.config({
-    baseUrl: 'http://',
+    baseUrl: 'https://',
     paths: {
         'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
         'underscore': 'cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min',
-        'coffeescript': 'adamjmoon.github.io/itchcork/javascripts/coffeescript.min',
-        'js2coffee': 'adamjmoon.github.io/itchcork/javascripts/js2coffee',
-        'ItchCork': root + 'javascripts/itchcork.min',
-        'ThemeManager': root + 'javascripts/itchcork.min',
-        'lodash': root + 'javascripts/lodash.min',
-        'platform': root + 'javascripts/platform.min',
-        'benchmark': 'adamjmoon.github.io/itchcork/javascripts/benchmark.min',
+        'coffeescript': root + 'vendor/coffeescript.min',
+        'js2coffee': root + 'vendor/js2coffee',
+        'ItchCork': root + 'itchcork.min',
+        'ThemeManager': root + 'itchcork.min',
+        'lodash': root + 'vendor/lodash.min',
+        'platform': root + 'vendor/platform.min',
+        'benchmark': root + 'vendor/benchmark.min',
         'knockout': 'ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1',
         'context': root + 'context/' + testcase,
         'test': root + 'test/' + testcase
