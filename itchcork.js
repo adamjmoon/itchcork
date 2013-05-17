@@ -1,4 +1,5 @@
 define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Test, Benchmark, ko, th) {
+    'use strict';
     return function (desc, js) {
         var self = this;
         self.suiteDesc = ko.observable(desc);
@@ -47,8 +48,8 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
             var b = event.target;
 
             self.benchmarks.push({
-                name: ko.observable(b.name.replace(/context\.(.*?)\(\)\;/gi, '$1')),
-                expression: ko.observable(b.name),
+                name: b.name,
+                expression: ko.observable(b.name.replace(/context\.(.*?)\(\)\;/gi, '$1')),
                 hz: ko.observable(b.hz.toFixed(0)),
                 relativateMarginError: ko.observable(b.stats.rme.toFixed(2) + '%'),
                 timesFaster: ko.observable('pending...'),
@@ -66,8 +67,6 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
                     var rightHz = parseInt(right.hz());
                     return leftHz == rightHz ? 0 : (leftHz > rightHz ? -1 : 1)
                 });
-                // var benchmarksCopy = self.benchmarks().slice();
-                // self.benchmarks.removeAll();
                 self.benchmarks()[0].fastest(true);
                 var length = self.benchmarks().length;
                 self.benchmarks()[length - 1].slowest(true);
@@ -78,12 +77,44 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
                 self.benchmarksDone(true);
             });
 
-        self.add = function (shouldEqual, expression, name) {
-            var test = new Test(shouldEqual, expression, self.jsContext, name);
+        self.add = function(shouldEqual, func){
+            if(typeof func == 'function'){
+                self.addTestWithBenchmarks(shouldEqual, func, null);
+            }  
+            else{
+                var c = self.jsContext;
+                var realFunc = new Function("c","return c." + func)
+                self.addTestWithBenchmarks(shouldEqual, realFunc, null);
+            }
+
+            return self;
+        }
+
+        self.addTestWithBenchmarks = function (shouldEqual, func, name) {
+            var test = new Test(shouldEqual, func, self.jsContext, name);
             self.tests.push(test);
-            self.benchmarkSuite.add(test.expression, function () {
-                expression(self.jsContext, name);
-            }, { 'async': true, 'queued': true, 'minSamples': 100});
+
+            if(name){
+                // var benchmarkFunc = function () { 
+                //     self.jsContext[name];
+                // }
+                // console.log(benchmarkFunc.toString());
+                // console.log(benchmarkFunc());
+                
+                var fn = (function(context,name) { return function() { context[name]();}; })(self.jsContext, name); 
+                console.log(fn);
+                self.benchmarkSuite.add({ 
+                    'name' : test.expression,
+                    'fn': fn, 
+                    'async': true, 
+                    'queued': true, 
+                    'minSamples': 100});
+            }
+            else{
+                self.benchmarkSuite.add(test.expression, function () { func(self.jsContext);}, 
+                    { 'async': true, 'qu=]ued': true, 'minSamples': 100});
+            }
+            
             return self;
         };
 
@@ -92,27 +123,13 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
             return self;
         };
 
-        self.compare = function (func) {
+        self.compare = function () {
+            var func = function (c, tc) { return c[tc]();};
             for (var testcase in self.jsContext) {
-                self.add(self.shouldEqualValue, func, testcase);
+                self.addTestWithBenchmarks(self.shouldEqualValue, func, testcase);
             }
             return self;
         };
-
-        function $(id) {
-            return typeof id == 'string' ? document.getElementById(id) : id;
-        }
-
-        function createElement(tagName) {
-            return document.createElement(tagName);
-        }
-
-        function setHTML(element, html) {
-            if ((element = $(element))) {
-                element.innerHTML = html == null ? '' : html;
-            }
-            return element;
-        }
 
         self.run = function () {
             self.benchmarksDone(false);
@@ -126,24 +143,22 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
 });
 
 define("Test", [], function() {
-  return function(shouldEqual, func, context, testCaseName) {
+  'use strict';
+  return function(shouldEqual, func, context, testName) {
     
     var expressionStr = func.toString().trim();  
     
-    if(testCaseName){     
-      this.name = testCaseName;
-    this.expression =  expressionStr.replace(/\n    /,'')
-                      .replace(/{ return/,'{return')
-                          .replace(/(function \(c, tc\)\{return c\[tc\])/gi,'context.' + testCaseName).replace(/\}/,'');
-          this.actual = func(context,testCaseName);
-    
+    if(testName){     
+          this.expression =  testName + '()';
+          this.actual = func(context,testName);
+          
     } else{
       this.expression = expressionStr.replace(/\n    /,'')
                    .replace(/{ return/,'{return')
              .replace(/function \(c\) {return /,'')
              .replace(/c\./gi,'context.')            
              .replace(/\}/,'');
-      this.name = this.expression.replace(/context\./g,'')
+      this.expression = this.expression.replace(/context\./g,'')
                .replace(/\;/,'');
       this.actual = func(context);
     }
@@ -153,6 +168,7 @@ define("Test", [], function() {
   };
 });
 define("Spy", [], function() {
+    'use strict';
 	return function(F) {
 		function G() {
 			var args = Array.prototype.slice.call(arguments);
@@ -167,6 +183,7 @@ define("Spy", [], function() {
   };
 });
 define("Verify", [], function() {
+   'use strict';
 	return function(F) {
 		return function () {
 			var args = Array.prototype.slice.call(arguments),
@@ -219,6 +236,7 @@ define("ThemeManager", [], function () {
     };
 });
 define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify', 'ThemeManager'], function(Suite, Test, Spy, Verify, ThemeManager) {
+  'use strict';
   return function ItchCork() {
       ItchCork.prototype.Suite = Suite;
       ItchCork.prototype.Test = Test;

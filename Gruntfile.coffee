@@ -52,18 +52,18 @@ module.exports = (grunt) ->
       main: 
         src: [r + 'main.js']
         dest: dest + 'main.min.js'
-      platform:
-        src: [v + 'platform.js']
-        dest: dest + 'platform.min.js'
-      benchmark:
-        src: [v + 'benchmark.js']
-        dest: dest + 'benchmark.min.js'
-      coffeescript:
-        src: [v + 'coffeescript.js']
-        dest: dest + 'coffeescript.min.js'
-      js2coffee:
-        src: [dest + 'js2coffee.js']
-        dest: dest + 'js2coffee.min.js'
+      # platform:
+      #   src: [v + 'platform.js']
+      #   dest: dest + 'platform.min.js'
+      # benchmark:
+      #   src: [v + 'benchmark.js']
+      #   dest: dest + 'benchmark.min.js'
+      # coffeescript:
+      #   src: [v + 'coffeescript.js']
+      #   dest: dest + 'coffeescript.min.js'
+      # js2coffee:
+      #   src: [dest + 'js2coffee.js']
+      #   dest: dest + 'js2coffee.min.js'
     
     # watch:
     #   gruntfile:
