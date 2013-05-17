@@ -32,10 +32,12 @@ require(['underscore', 'knockout', 'bootstrap'], function () {
     require(['coffeescript', 'platform', 'lodash', 'benchmark','chai', 'sinon', 'sinon-chai', 'mocha'], function (CoffeeScript) {
         this.CoffeeScript = CoffeeScript;
         require(['test', 'ItchCork','js2coffee'], function (test, itchcork) {
-
-            itchcork.ThemeManager.init();
-            if(itchcork.UnitTestFrameworkManager.init()==="itchcork"){
-                var runSpecs = new test(new itchcork());
+            var ic = new itchcork();
+            var themeManager = new ic.ThemeManager();
+            var unitTestFrameworkManager = new ic.UnitTestFrameworkManager();
+            themeManager.init();
+            if(unitTestFrameworkManager.init()==="itchcork"){
+                var runSpecs = new test(ic);
             }
             else{
                 chai.use(sinonChai);
