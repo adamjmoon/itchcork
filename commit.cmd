@@ -1,4 +1,4 @@
 git add .
 git commit -m "fix"
-git pull origin master
-git push origin master
+git pull upstream master
+git push upstream master
