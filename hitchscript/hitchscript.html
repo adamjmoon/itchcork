@@ -33,6 +33,13 @@
 
 <template name="hitchscript">
     <div class="frame">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <span><img id="logo" class="logo" data-toggle="collapse" data-target="#menu" src="/brand3.png"
+                           width="90" height="44"/></span>
+                <span class="badge badge-inverse" data-bind="text: suiteDesc"></span>
+            </div>
+        </div>
         <div id="menu" class="menu nav-collapse collapse width">
             <div class="collapse-inner">
                 <div class="navbar">
@@ -51,17 +58,31 @@
                     <li><a href=""
                            data-bind="click: function(){themeManager.set('cyborg');$('#logo').click();}">Cyborg</a>
                     </li>
-                    <li><a href="" data-bind="click: function(){themeManager.set('slate');$('#logo').click();}">Slate</a></li>
+                    <li><a href=""
+                           data-bind="click: function(){themeManager.set('slate');$('#logo').click();}">Slate</a></li>
                 </ul>
+                <div class="navbar">
+                    <div class="navbar-inner">Testing Framework</div>
+                </div>
+                <ul class="nav nav-tabs nav-stacked">
+                    <li><a href=""
+                           data-bind="click: function(){frameworkManager.set('itchcork');$('#logo').click();}">Itchcork</a>
+                    </li>
+                    <li><a href=""
+                           data-bind="click: function(){frameworkManager.set('mocha');$('#logo').click();}">Mocha</a>
+                    </li>
+                </ul>
+                <div class="navbar">
+                   <div class="navbar-inner">Github Source</div>
+               </div>
+               <ul class="nav nav-tabs nav-stacked">
+                   <li><input type="text" value="https://raw.github.com/adamjmoon/itchcork/master/"/>
+                   </li>
+               </ul>
             </div>
         </div>
         <div class="view" style="display:none;" data-bind="visible: shouldShow">
-            <div class="navbar">
-                <div class="navbar-inner">
-                    <span><img id="logo" class="logo" data-toggle="collapse" data-target="#menu" src="/brand3.png" width="90" height="44"/></span>
-                    <span class="badge badge-inverse" data-bind="text: suiteDesc"></span>
-                </div>
-            </div>
+
 
             <div class="accordion container-fluid" id="content">
                 <div class="accordion-group">
