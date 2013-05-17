@@ -1,6 +1,6 @@
 define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Test, Benchmark, ko, th) {
     return function (desc, js) {
-        "use strict';
+        "use strict";
         var self = this;
         self.suiteDesc = ko.observable(desc);
         self.jsContext = new js();
