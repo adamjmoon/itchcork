@@ -1,4 +1,4 @@
-define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Test, Benchmark, ko, th) {
+define("Suite", ['Test', 'benchmark', 'knockout'], function (Test, Benchmark, ko) {
     return function (desc, js) {
         "use strict";
         var self = this;
@@ -13,8 +13,6 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
         self.benchmarksDone = ko.observable(false);
         self.benchmarkSuite = new Benchmark.Suite;
         self.benchmarkPlatform = ko.observable(Benchmark.platform.description);
-        self.themeManager = new th();
-        self.themeManager.init();
 
         self.setupContextBreakdown(self.jsContext, 'context');
         self.setupContextBreakdown = function(context, base) {
@@ -205,8 +203,12 @@ define("Verify", [], function() {
 });
 define("ThemeManager", [], function () {
     return function ThemeManager() {
+
         ThemeManager.prototype.init = function () {
-            apply();
+            if (!amplify.store('currentTheme')) {
+                amplify.store('previousTheme', '');
+                this.set('cyborg');
+            }
         }
 
         function apply() {
@@ -227,7 +229,26 @@ define("ThemeManager", [], function () {
         };
     };
 });
-define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify', 'ThemeManager'], function(Suite, Test, Spy, Verify, ThemeManager) {
+define("UnitTestFrameworkManager", [], function () {
+    return function UnitTestFrameworkManager() {
+
+        UnitTestFrameworkManager.prototype.init = function () {
+            if (!amplify.store('currentUnitTestFramework')) {
+                this.set('itchcork');
+            }
+            return this.getFramework();
+        }
+        UnitTestFrameworkManager.prototype.set = function (framework) {
+            if (framework != amplify.store('currentUnitTestFramework')) {
+                amplify.store('currentUnitTestFramework', framework);
+            }
+        };
+        UnitTestFrameworkManager.prototype.getFramework = function () {
+            return amplify.store('currentUnitTestFramework');
+        };
+    };
+});
+define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify', 'ThemeManager','UnitTestFrameworkManager'], function(Suite, Test, Spy, Verify, ThemeManager, UnitTestFrameworkManager) {
   'use strict';
   return function ItchCork() {
       ItchCork.prototype.Suite = Suite;
@@ -235,5 +256,6 @@ define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify', 'ThemeManager'], function(
       ItchCork.prototype.Spy = Spy;
       ItchCork.prototype.Verify = Verify;
       ItchCork.prototype.ThemeManager = ThemeManager;
+      ItchCork.prototype.UnitTestFrameworkManager = UnitTestFrameworkManager;
   };
 });

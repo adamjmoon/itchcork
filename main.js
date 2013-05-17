@@ -1,4 +1,4 @@
- var testcase = '';
+var testcase = '';
 if (window.location.pathname && window.location.pathname.length > 1)
     testcase = window.location.pathname.split('/')[1];
 else if (window.location.hash && window.location.hash.length > 1)
@@ -16,8 +16,11 @@ requirejs.config({
         'coffeescript': root + 'vendor/coffeescript.min',
         'js2coffee': root + 'vendor/js2coffee',
         'ItchCork': root + 'itchcork.min',
-        'ThemeManager': root + 'itchcork.min',
         'lodash': root + 'vendor/lodash.min',
+        'mocha': root + 'vendor/mocha',
+        'sinon': root + 'vendor/sinon',
+        'chai': root + 'vendor/chai',
+        'sinon-chai': root + 'vendor/sinon-chai',
         'platform': root + 'vendor/platform.min',
         'benchmark': root + 'vendor/benchmark.min',
         'knockout': 'ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1',
@@ -25,15 +28,40 @@ requirejs.config({
         'test': root + 'test/' + testcase
     }
 });
-require(['underscore', 'knockout','bootstrap'], function () {
-    require(['coffeescript', 'platform', 'lodash', 'benchmark'], function (CoffeeScript) {
+require(['underscore', 'knockout', 'bootstrap'], function () {
+    require(['coffeescript', 'platform', 'lodash', 'benchmark','chai', 'sinon', 'sinon-chai', 'mocha'], function (CoffeeScript) {
         this.CoffeeScript = CoffeeScript;
-        require(['test', 'ItchCork', 'js2coffee'], function (test, itchcork) {
-            if(!amplify.store('currentTheme')){
-                amplify.store('previousTheme','');
-                amplify.store('currentTheme','cyborg');
+        require(['test', 'ItchCork','js2coffee'], function (test, itchcork) {
+
+            itchcork.ThemeManager.init();
+            if(itchcork.UnitTestFrameworkManager.init()==="itchcork"){
+                var runSpecs = new test(new itchcork());
             }
-            var runSpecs = new test(new itchcork());
+            else{
+                chai.use(sinonChai);
+                var assert = chai.assert;
+                var should = chai.should();
+                mocha.setup('bdd');
+                mocha.reporter('html');
+                var runner = mocha.run();
+                runner.on('end', function () {
+                    var suites = $("ul#mocha-report li.suite ul");
+                    $("#collapse").click(function () {
+                        $(suites).each(function (index, element) {
+                            element.hidden = true;
+                        });
+                        $("#collapse").hide();
+                        $("#expand").show();
+                    });
+                    $("#expand").click(function () {
+                        $(suites).each(function (index, element) {
+                            element.hidden = false;
+                        });
+                        $("#expand").hide();
+                        $("#collapse").show();
+                    });
+                });
+            }
         });
     });
 
