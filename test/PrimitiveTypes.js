@@ -5,7 +5,7 @@ define(['context'], function (context) {
        .add("number", function(c) {return typeof c.numberPrimitiveValue;})
        .add("string", function(c) {return typeof c.numberStringValue;})
        .add("boolean", function(c) {return typeof c.booleanPrimitiveValue;})
-       .add("null", function(c) {return typeof c.nullPrimitiveValue;})
+       .add("object", function(c) {return typeof c.nullPrimitiveValue;})
        .add("undefined", function(c) {return typeof c.undefinedPrimitiveValue;})       
        .run();
  };
