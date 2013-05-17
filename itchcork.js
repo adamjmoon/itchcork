@@ -159,21 +159,17 @@ define("Test", [], function() {
   this.typeOf = typeof(this.actual);
   };
 });
-define("Spy", [], function() {
-    'use strict';
-	return function(F) {
-		function G() {
-			var args = Array.prototype.slice.call(arguments);
-			G.calls.push(args);
-			F.apply(this, args);
-		}
-	
-		G.prototype = F.prototype;
-		G.calls = [];
-	
-		return G;
-  };
-});
+define "Spy", [], ->
+  "use strict"
+  (F) ->
+    G = ->
+      args = Array::slice.call(arguments_)
+      G.calls.push args
+      F.apply this, args
+    G:: = F::
+    G.calls = []
+    G
+
 define("Verify", [], function() {
 	return function(F) {
         'use strict';
