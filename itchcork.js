@@ -160,7 +160,7 @@ define("Test", [], function() {
   };
 });
 define "Spy", [], ->
-  "use strict"
+  
   (F) ->
     G = ->
       args = Array::slice.call(arguments_)
