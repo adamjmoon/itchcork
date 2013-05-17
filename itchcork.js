@@ -95,12 +95,6 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
             self.tests.push(test);
 
             if(name){
-                // var benchmarkFunc = function () { 
-                //     self.jsContext[name];
-                // }
-                // console.log(benchmarkFunc.toString());
-                // console.log(benchmarkFunc());
-                
                 var fn = (function(context,name) { return function() { context[name]();}; })(self.jsContext, name); 
                 console.log(fn);
                 self.benchmarkSuite.add({ 
@@ -154,12 +148,10 @@ define("Test", [], function() {
           
     } else{
       this.expression = expressionStr.replace(/\n    /,'')
-                   .replace(/{ return/,'{return')
+             .replace(/{ return/,'{return')
              .replace(/function \(c\) {return /,'')
-             .replace(/c\./gi,'context.')            
-             .replace(/\}/,'');
-      this.expression = this.expression.replace(/context\./g,'')
-               .replace(/\;/,'');
+             .replace(/\}/,'')
+             .replace(/\;/,'');
       this.actual = func(context);
     }
     
