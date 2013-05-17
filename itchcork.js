@@ -17,7 +17,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
         self.themeManager.init();
 
         setupContextBreakdown(self.jsContext, 'context');
-        function setupContextBreakdown(context, base) {
+        selffunction setupContextBreakdown(context, base) {
             var jsStr='', coffeeStr='';
 
             for (var prop in context) {
