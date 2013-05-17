@@ -5,7 +5,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
         self.suiteDesc = ko.observable(desc);
         self.jsContext = new js();
         self.jsContextStr = ko.observable(js.toString() + "\n var c = new context();");
-        self.coffeeContextStr = ko.observable(Js2coffee.build(js.toString()));
+        self.coffeeContextStr = ko.observable(Js2coffee.build(self.jsContextStr()));
         self.tests = ko.observableArray([]);
         self.testCases = ko.observableArray([]);
         self.shouldShow = ko.observable(true);
