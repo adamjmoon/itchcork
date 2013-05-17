@@ -160,7 +160,7 @@ define("Test", [], function() {
   };
 });
 define("Spy", [], function() {
-    'use strict';
+    "use strict';
 	return function(F) {
 		function G() {
 			var args = Array.prototype.slice.call(arguments);
