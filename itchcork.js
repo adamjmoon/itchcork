@@ -40,7 +40,7 @@ define("Suite", ['Test', 'benchmark', 'knockout'], function (Test, Benchmark, ko
                     setupContextBreakdown(context[prop].prototype, base + '.' + prop + '.prototype');
                 }
             }
-        }
+        };
 
         self.benchmarkSuite.on('cycle', function (event) {
             var b = event.target;
