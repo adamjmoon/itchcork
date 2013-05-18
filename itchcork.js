@@ -13,7 +13,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'UnitTestFrameworkManager'], f
         self.benchmarksDone = ko.observable(false);
         self.benchmarkSuite = new Benchmark.Suite;
         self.benchmarkPlatform = ko.observable(Benchmark.platform.description);
-        self.themeManager = window.ThemeManager();
+        self.themeManager = window.ThemeManager;
         self.unitTestFrameworkManager = new utfm();
 
         self.setupContextBreakdown = function (context, base) {
