@@ -1,4 +1,4 @@
-define("Suite", ['Test', 'benchmark', 'knockout'], function (Test, Benchmark, ko) {
+define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager', 'UnitTestFrameworkManager'], function (Test, Benchmark, ko, th, utfm) {
     return function (desc, js) {
         "use strict";
         var self = this;
@@ -13,6 +13,9 @@ define("Suite", ['Test', 'benchmark', 'knockout'], function (Test, Benchmark, ko
         self.benchmarksDone = ko.observable(false);
         self.benchmarkSuite = new Benchmark.Suite;
         self.benchmarkPlatform = ko.observable(Benchmark.platform.description);
+        self.themeManager = new th();
+        self.unitTestFrameworkManager = new utfm();
+
         self.setupContextBreakdown = function (context, base) {
             var jsStr = '', coffeeStr = '';
 
@@ -126,7 +129,6 @@ define("Suite", ['Test', 'benchmark', 'knockout'], function (Test, Benchmark, ko
             self.benchmarksDone(false);
             self.benchmarks.removeAll();
             self.benchmarkSuite.run();
-
         };
 
         ko.applyBindings(self);
