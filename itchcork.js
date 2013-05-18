@@ -146,12 +146,10 @@ define("Test", [], function () {
             this.actual = func(context, testName);
 
         } else {
-            console.log(expressionStr);
             this.expression = expressionStr.replace(/\n/gm, '')
                 .replace(/function +?\(c\) +?\{ +?return(.*?) +?}/g,'$1');
             this.actual = func(context);
         }
-
         this.shouldEqual = shouldEqual;
         this.typeOf = typeof(this.actual);
     };
