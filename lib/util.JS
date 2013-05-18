@@ -1,6 +1,6 @@
 define("util", [], function () {
-    'use strict';
     return function util() {
+        'use strict';
     	this.$ = function(id) {
             return typeof id == 'string' ? document.getElementById(id) : id;
         }

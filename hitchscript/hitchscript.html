@@ -33,6 +33,13 @@
 
 <template name="hitchscript">
     <div class="frame">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <span><img id="logo" class="logo" data-toggle="collapse" data-target="#menu" src="/brand3.png"
+                           width="90" height="44"/></span>
+                <span class="badge badge-inverse" data-bind="text: suiteDesc"></span>
+            </div>
+        </div>
         <div id="menu" class="menu nav-collapse collapse width">
             <div class="collapse-inner">
                 <div class="navbar">
@@ -51,18 +58,30 @@
                     <li><a href=""
                            data-bind="click: function(){themeManager.set('cyborg');$('#logo').click();}">Cyborg</a>
                     </li>
-                    <li><a href="" data-bind="click: function(){themeManager.set('slate');$('#logo').click();}">Slate</a></li>
+                    <li><a href=""
+                           data-bind="click: function(){themeManager.set('slate');$('#logo').click();}">Slate</a></li>
                 </ul>
+                <div class="navbar">
+                    <div class="navbar-inner">Testing Framework</div>
+                </div>
+                <ul class="nav nav-tabs nav-stacked">
+                    <li><a href=""
+                           data-bind="click: function(){unitTestFrameworkManager.set('itchcork');$('#logo').click();}">Itchcork</a>
+                    </li>
+                    <li><a href=""
+                           data-bind="click: function(){unitTestFrameworkManager.set('mocha');$('#logo').click();}">Mocha</a>
+                    </li>
+                </ul>
+                <div class="navbar">
+                   <div class="navbar-inner">Github Source</div>
+               </div>
+               <ul class="nav nav-tabs nav-stacked">
+                   <li><input type="text" value="https://raw.github.com/adamjmoon/itchcork/master/"/>
+                   </li>
+               </ul>
             </div>
         </div>
         <div class="view" style="display:none;" data-bind="visible: shouldShow">
-            <div class="navbar">
-                <div class="navbar-inner">
-                    <span><img id="logo" class="logo" data-toggle="collapse" data-target="#menu" src="/brand3.png" width="90" height="44"/></span>
-                    <span class="badge badge-inverse" data-bind="text: suiteDesc"></span>
-                </div>
-            </div>
-
             <div class="accordion container-fluid" id="content">
                 <div class="accordion-group">
                     <div class="accordion-heading">
@@ -128,7 +147,7 @@
                                 class="badge badge-info">TEST RESULTS</span></a>
                     </div>
                     <div id="collapseResults" class="accordion-body collapse in">
-                        <div class="accordion-inner">
+                        <div class="accordion-inner" id="itchcorkResults" data-bind="visible: unitTestFrameworkManager.getFramework() === 'itchcork'">
                             <table class="table table-condensed" id="results">
                                 <thead>
                                 <tr>
@@ -148,9 +167,13 @@
                                 </tbody>
                             </table>
                         </div>
+                        <div class="accordion-inner" id="mochaResults" data-bind="visible: unitTestFrameworkManager.getFramework() === 'mocha'">
+                            <div id="mocha" class="row-fluid"><a id="collapse" class="btn btn-alert" href="#">Collapse All</a>
+                            <a id="expand" class="btn btn-alert hide" href="#">Expand All</a></div>
+                        </div>
                     </div>
                 </div>
-                <div class="accordion-group">
+                <div class="accordion-group" data-bind="visible: unitTestFrameworkManager.getFramework() === 'itchcork'">
                     <div class="accordion-heading">
                         <a class="accordion-toggle" data-toggle="collapse" data-target="#collapseBenchmarks" href="#">
                             <span class="badge badge-info">BENCHMARKS</span> <span data-bind="text: benchmarkPlatform"

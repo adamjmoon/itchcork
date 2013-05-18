@@ -43,15 +43,16 @@ module.exports = (grunt) ->
               lib + 'spy.js', 
               lib + 'verify.js',
               lib + 'themeManager.js',
+              lib + 'unitTestFrameworkManager.js',
               lib + 'itchcork.js']
         dest: r + 'itchcork.js'
     min:
       module: 
         src: [r + 'itchcork.js']
-        dest: dest + 'itchcork.min.js'
+        dest: r + 'itchcork.min.js'
       main: 
         src: [r + 'main.js']
-        dest: dest + 'main.min.js'
+        dest: r + 'main.min.js'
       # platform:
       #   src: [v + 'platform.js']
       #   dest: dest + 'platform.min.js'

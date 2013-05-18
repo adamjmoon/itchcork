@@ -2,12 +2,12 @@ if (Meteor.isClient) {
 
     Template.scripts.rendered = function() {
         
-        var root = 'http://adamjmoon.github.io/itchcork/';
+        var root = 'https://raw.github.com/adamjmoon/itchcork/master/';
 
         var main = document.createElement('script');
         main.type = 'text/javascript';  
-        main.src = '//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.5/require.min.js';
-        main.setAttribute('data-main',root + 'javascripts/main.min.js');
+        main.src = 'https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.5/require.min.js';
+        main.setAttribute('data-main',root + 'main.min.js');
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(main, s);
     };

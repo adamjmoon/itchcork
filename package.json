@@ -23,9 +23,6 @@
       "grunt": "latest"
   },
   "devDependencies": {
-    "should": "latest",
-    "mocha": "latest",
-    "sinon": "latest",
     "coffee-script": "latest",
     "js2coffee": "latest",
     "growl": "1.7.x",

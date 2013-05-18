@@ -1,11 +1,11 @@
-define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Test, Benchmark, ko, th) {
-    'use strict';
+define("Suite", ['Test', 'benchmark', 'knockout'], function (Test, Benchmark, ko) {
     return function (desc, js) {
+        "use strict";
         var self = this;
         self.suiteDesc = ko.observable(desc);
         self.jsContext = new js();
-        self.jsContextStr = ko.observable(js.toString());
-        self.coffeeContextStr = ko.observable(Js2coffee.build(js.toString()));
+        self.jsContextStr = ko.observable(js.toString() + "\n var c = new context();");
+        self.coffeeContextStr = ko.observable(Js2coffee.build(self.jsContextStr()));
         self.tests = ko.observableArray([]);
         self.testCases = ko.observableArray([]);
         self.shouldShow = ko.observable(true);
@@ -13,11 +13,9 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
         self.benchmarksDone = ko.observable(false);
         self.benchmarkSuite = new Benchmark.Suite;
         self.benchmarkPlatform = ko.observable(Benchmark.platform.description);
-        self.themeManager = new th();
-        self.themeManager.init();
 
-        setupContextBreakdown(self.jsContext, 'context');
-        function setupContextBreakdown(context, base) {
+        self.setupContextBreakdown(self.jsContext, 'context');
+        self.setupContextBreakdown = function(context, base) {
             var jsStr='', coffeeStr='';
 
             for (var prop in context) {
@@ -95,12 +93,6 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
             self.tests.push(test);
 
             if(name){
-                // var benchmarkFunc = function () { 
-                //     self.jsContext[name];
-                // }
-                // console.log(benchmarkFunc.toString());
-                // console.log(benchmarkFunc());
-                
                 var fn = (function(context,name) { return function() { context[name]();}; })(self.jsContext, name); 
                 console.log(fn);
                 self.benchmarkSuite.add({ 
@@ -143,9 +135,9 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'ThemeManager'], function (Tes
 });
 
 define("Test", [], function() {
-  'use strict';
+
   return function(shouldEqual, func, context, testName) {
-    
+    'use strict';
     var expressionStr = func.toString().trim();  
     
     if(testName){     
@@ -154,12 +146,10 @@ define("Test", [], function() {
           
     } else{
       this.expression = expressionStr.replace(/\n    /,'')
-                   .replace(/{ return/,'{return')
+             .replace(/{ return/,'{return')
              .replace(/function \(c\) {return /,'')
-             .replace(/c\./gi,'context.')            
-             .replace(/\}/,'');
-      this.expression = this.expression.replace(/context\./g,'')
-               .replace(/\;/,'');
+             .replace(/\}/,'')
+             .replace(/\;/,'');
       this.actual = func(context);
     }
     
@@ -168,23 +158,23 @@ define("Test", [], function() {
   };
 });
 define("Spy", [], function() {
-    'use strict';
+    "use strict";
 	return function(F) {
 		function G() {
 			var args = Array.prototype.slice.call(arguments);
 			G.calls.push(args);
 			F.apply(this, args);
 		}
-	
+
 		G.prototype = F.prototype;
 		G.calls = [];
-	
+
 		return G;
   };
 });
 define("Verify", [], function() {
-   'use strict';
 	return function(F) {
+        'use strict';
 		return function () {
 			var args = Array.prototype.slice.call(arguments),
 				i,
@@ -213,8 +203,12 @@ define("Verify", [], function() {
 });
 define("ThemeManager", [], function () {
     return function ThemeManager() {
+
         ThemeManager.prototype.init = function () {
-            apply();
+            if (!amplify.store('currentTheme')) {
+                amplify.store('previousTheme', '');
+                this.set('cyborg');
+            }
         }
 
         function apply() {
@@ -235,7 +229,26 @@ define("ThemeManager", [], function () {
         };
     };
 });
-define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify', 'ThemeManager'], function(Suite, Test, Spy, Verify, ThemeManager) {
+define("UnitTestFrameworkManager", [], function () {
+    return function UnitTestFrameworkManager() {
+
+        UnitTestFrameworkManager.prototype.init = function () {
+            if (!amplify.store('currentUnitTestFramework')) {
+                this.set('itchcork');
+            }
+            return this.getFramework();
+        }
+        UnitTestFrameworkManager.prototype.set = function (framework) {
+            if (framework != amplify.store('currentUnitTestFramework')) {
+                amplify.store('currentUnitTestFramework', framework);
+            }
+        };
+        UnitTestFrameworkManager.prototype.getFramework = function () {
+            return amplify.store('currentUnitTestFramework');
+        };
+    };
+});
+define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify', 'ThemeManager','UnitTestFrameworkManager'], function(Suite, Test, Spy, Verify, ThemeManager, UnitTestFrameworkManager) {
   'use strict';
   return function ItchCork() {
       ItchCork.prototype.Suite = Suite;
@@ -243,5 +256,6 @@ define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify', 'ThemeManager'], function(
       ItchCork.prototype.Spy = Spy;
       ItchCork.prototype.Verify = Verify;
       ItchCork.prototype.ThemeManager = ThemeManager;
+      ItchCork.prototype.UnitTestFrameworkManager = UnitTestFrameworkManager;
   };
 });
