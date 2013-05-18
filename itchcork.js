@@ -209,6 +209,8 @@ define("ThemeManager", [], function () {
             if (!amplify.store('currentTheme')) {
                 amplify.store('previousTheme', '');
                 this.set('cyborg');
+            } else{
+                apply();
             }
         }
 
