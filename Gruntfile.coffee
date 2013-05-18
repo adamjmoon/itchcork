@@ -42,7 +42,6 @@ module.exports = (grunt) ->
               lib + 'test.js', 
               lib + 'spy.js', 
               lib + 'verify.js',
-              lib + 'themeManager.js',
               lib + 'unitTestFrameworkManager.js',
               lib + 'itchcork.js']
         dest: r + 'itchcork.js'
