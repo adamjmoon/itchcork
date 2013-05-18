@@ -1,4 +1,4 @@
-define("Suite", ['Test', 'benchmark', 'knockout', 'themeManager', 'UnitTestFrameworkManager'], function (Test, Benchmark, ko, th, utfm) {
+define("Suite", ['Test', 'benchmark', 'knockout', 'UnitTestFrameworkManager'], function (Test, Benchmark, ko, utfm) {
     return function (desc, js) {
         "use strict";
         var self = this;
