@@ -6,7 +6,7 @@ define(['context'], function (context) {
                 return typeof c.numberPrimitiveValue;
             })
             .add("number", function (c) {
-                return c.numberPrimitiveValue instanceof Number;
+                return c.numberPrimitiveValue instanceof Object;
             })
             .add("string", function (c) {
                 return typeof c.stringPrimitiveValue;
