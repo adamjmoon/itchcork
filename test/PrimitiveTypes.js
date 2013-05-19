@@ -1,5 +1,5 @@
 define(['context'], function (context) {
-    return function (itchcork) {
+    var test = function (itchcork) {
         var suite = new itchcork.Suite('Javascript Primitive Values and Types', context);
         suite
             .add("number", function (c) {
@@ -37,4 +37,5 @@ define(['context'], function (context) {
             })
             .run();
     };
+    return test;
 });
