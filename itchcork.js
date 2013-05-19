@@ -137,7 +137,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'UnitTestFrameworkManager'], f
 
 define("Test", [], function () {
 
-    return function (shouldEqual, func, context, testName) {
+    var test = function (shouldEqual, func, context, testName) {
         'use strict';
         var expressionStr = func.toString().trim();
 
@@ -153,6 +153,8 @@ define("Test", [], function () {
         this.shouldEqual = shouldEqual;
         this.typeOf = typeof(this.actual);
     };
+
+    return test;
 });
 define("Spy", [], function() {
     "use strict";
