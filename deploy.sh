@@ -1,2 +1,2 @@
 pushd 'hitchscript'
-meteor deploy itchscript.meteor.com
+meteor deploy itchc.meteor.com
