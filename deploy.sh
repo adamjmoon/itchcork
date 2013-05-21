@@ -1,6 +1,5 @@
 function deploy() {
-  cd hitchscript
+  cd /hitchscript
   cd /proc
 }
 
-meteor deploy itchcork.meteor.com
