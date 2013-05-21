@@ -1,4 +1,4 @@
 cd .
-  meteor deploy itchcork.meteor.com
+meteor deploy itchcork.meteor.com
 
 
