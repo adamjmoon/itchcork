@@ -8,9 +8,14 @@
 }
 
 pre code {
-    color: #4400f3 !important;
+
     white-space: pre;
     overflow: auto;
+    font-size: .8em;
+}
+
+code{
+    color: #4400f3 !important;
 }
 
 pre {
@@ -23,7 +28,10 @@ pre {
 }
 
 .navbar-inner {
-    min-height: 44px !important;
+    min-height: 24px !important;
+    color: #fff !important;
+    font-size: 1.0em !important;
+    line-height: 22px !important;
 }
 
 .alert {
@@ -108,11 +116,18 @@ body .frame .menu .collapse-inner {
 body .frame .menu .navbar .navbar-inner {
     text-align: center;
     font-size: 1.2em;
-    line-height: 38px;
+    line-height: 23px;
+    border-bottom: 1px solid #fff;
+    border-right:0px;
+    padding-bottom: 1px;
 }
 
 body .frame .menu .nav-stacked {
-    padding: 0 10px;
+    padding: 0px;
+}
+body .frame .menu .nav-stacked li input{
+    padding: 1px !important;
+    margin: 0px !important;
 }
 
 body .frame .view {
