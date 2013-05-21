@@ -4,5 +4,5 @@ function deploy() {
   echo "aaa ${A} bbb ${B} ccc"
   cd /proc
 }
-cd hitchscript
+
 meteor deploy itchcork.meteor.com
