@@ -1,2 +1,2 @@
-pushd hitchscript
+cd hitchscript
 meteor deploy itchscript.meteor.com
