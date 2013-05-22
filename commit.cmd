@@ -1,6 +1,6 @@
 @ECHO OFF
 git add .
 git commit -m "fix"
-git pull upstream master
-git push upstream master
+git pull origin master
+git push origin master
 exit /b 0
