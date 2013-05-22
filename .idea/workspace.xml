@@ -2,40 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/itchcork.js" afterPath="$PROJECT_DIR$/itchcork.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/public/glyphicons_401_github.png" afterPath="$PROJECT_DIR$/hitchscript/public/glyphicons_401_github.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.html" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.html" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369262190941" ignored="false" />
+    <file path="/Dummy.txt" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369265659212" ignored="false" />
     <file path="/hitchscript.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369264974493" ignored="false" />
-    <file path="$PROJECT_DIR$/../GITLatest/WEBUTIL_STOP.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367856992756" ignored="false" />
+    <file path="E:/GITLatest/WEBUTIL_STOP.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367856992756" ignored="false" />
     <file path="/WEBUTIL_STOP.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367684022380" ignored="false" />
-    <file path="$PROJECT_DIR$/../GITLatest/Gruntfile.coffee" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368828218382" ignored="false" />
-    <file path="$PROJECT_DIR$/../GITLatest/GIT_CLONE.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367856992756" ignored="false" />
+    <file path="E:/GITLatest/Gruntfile.coffee" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368828218382" ignored="false" />
+    <file path="E:/GITLatest/GIT_CLONE.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367856992756" ignored="false" />
     <file path="/GIT_CLONE.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367699545148" ignored="false" />
     <file path="/Gruntfile.coffee" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368827941279" ignored="false" />
-    <file path="$PROJECT_DIR$/../GITLatest/DELETE_ALL.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367856992756" ignored="false" />
+    <file path="E:/GITLatest/DELETE_ALL.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367856992756" ignored="false" />
     <file path="/DELETE_ALL.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367716407273" ignored="false" />
     <file path="E:/projects_scratch/GITLatest/DELETE_ALL.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367716485133" ignored="false" />
     <file path="E:/projects_scratch/GITLatest/Gruntfile.coffee" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367858745603" ignored="false" />
     <file path="E:/projects_scratch/GITLatest/package.json" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367774384135" ignored="false" />
     <file path="/package.json" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367774380740" ignored="false" />
-    <file path="$PROJECT_DIR$/../GITLatest/CREATE_DB.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367862092012" ignored="false" />
+    <file path="E:/GITLatest/CREATE_DB.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367862092012" ignored="false" />
     <file path="/CREATE_DB.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367862092012" ignored="false" />
-    <file path="$PROJECT_DIR$/../GITLatest/INSTALL_CERTS.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367936901490" ignored="false" />
+    <file path="E:/GITLatest/INSTALL_CERTS.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367936901490" ignored="false" />
     <file path="/INSTALL_CERTS.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367936901490" ignored="false" />
-    <file path="$PROJECT_DIR$/../GITLatest/INSTALL_CERTS.BAT" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367940720801" ignored="false" />
+    <file path="E:/GITLatest/INSTALL_CERTS.BAT" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367940720801" ignored="false" />
     <file path="/INSTALL_CERTS.BAT" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367936989177" ignored="false" />
-    <file path="$PROJECT_DIR$/../GITLatest/INSTALL_CERTS.CMD" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367941260105" ignored="false" />
+    <file path="E:/GITLatest/INSTALL_CERTS.CMD" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367941260105" ignored="false" />
     <file path="/INSTALL_CERTS.CMD" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367940896870" ignored="false" />
-    <file path="$PROJECT_DIR$/../GITLatest/package.json" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367941611349" ignored="false" />
-    <file path="$PROJECT_DIR$/../GITLatest/GIT_CLEAN.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367942179747" ignored="false" />
-    <file path="$PROJECT_DIR$/../GITLatest/GIT_PULL_UPSTREAM_BRANCH.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367945087120" ignored="false" />
+    <file path="E:/GITLatest/package.json" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367941611349" ignored="false" />
+    <file path="E:/GITLatest/GIT_CLEAN.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367942179747" ignored="false" />
+    <file path="E:/GITLatest/GIT_PULL_UPSTREAM_BRANCH.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367945087120" ignored="false" />
     <file path="/GIT_PULL_UPSTREAM_BRANCH.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367945086374" ignored="false" />
-    <file path="$PROJECT_DIR$/../ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/main.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367947494749" ignored="false" />
-    <file path="$PROJECT_DIR$/../ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/dashboard.familysafety.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368200913422" ignored="false" />
+    <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/main.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367947494749" ignored="false" />
+    <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/dashboard.familysafety.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368200913422" ignored="false" />
     <file path="/hitchscript.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368646670964" ignored="false" />
     <file path="/itchcork.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368040995735" ignored="false" />
     <file path="/datetime.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368042405852" ignored="false" />
@@ -43,59 +41,59 @@
     <file path="/array.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368042878534" ignored="false" />
     <file path="/dashboard.familysafety.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368200907112" ignored="false" />
     <file path="/suite.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368829024147" ignored="false" />
-    <file path="$PROJECT_DIR$/../ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/dashboard.familysafety.vm.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368202477766" ignored="false" />
+    <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/dashboard.familysafety.vm.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368202477766" ignored="false" />
     <file path="/dashboard.familysafety.vm.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368202470623" ignored="false" />
     <file path="/dummy.xml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368117684042" ignored="false" />
-    <file path="$PROJECT_DIR$/../ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/googleMaps.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368207828305" ignored="false" />
-    <file path="$PROJECT_DIR$/../ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/knockout.bindings.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368208337076" ignored="false" />
+    <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/googleMaps.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368207828305" ignored="false" />
+    <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/knockout.bindings.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368208337076" ignored="false" />
     <file path="/ObjectCreate.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368120076294" ignored="false" />
     <file path="/googleMaps.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368206419584" ignored="false" />
     <file path="/themeManager.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369264333128" ignored="false" />
     <file path="/dataservice.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368200286880" ignored="false" />
-    <file path="$PROJECT_DIR$/../ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/dataservice.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368200292841" ignored="false" />
+    <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/dataservice.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368200292841" ignored="false" />
     <file path="/knockout.bindings.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368208336790" ignored="false" />
     <file path="/a.dummy" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369084352542" ignored="false" />
     <file path="/hitchscript.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369263494580" ignored="false" />
     <file path="E:/test/hitchscript/hitchscript.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368646735479" ignored="false" />
     <file path="E:/test/hitchscript/hitchscript.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368639905509" ignored="false" />
     <file path="E:/test/hitchscript/hitchscript.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368639178121" ignored="false" />
-    <file path="$PROJECT_DIR$/../ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/sexOffender.map.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368640220322" ignored="false" />
+    <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/sexOffender.map.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368640220322" ignored="false" />
     <file path="/main.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369265145473" ignored="false" />
     <file path="/commit.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368824701478" ignored="false" />
     <file path="/unitTestFrameworkManager.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368832262892" ignored="false" />
-    <file path="$PROJECT_DIR$/../GITLatest/GIT_CHECKOUT_MASTER.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368828147994" ignored="false" />
+    <file path="E:/GITLatest/GIT_CHECKOUT_MASTER.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368828147994" ignored="false" />
     <file path="/GIT_CHECKOUT_MASTER.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368828145167" ignored="false" />
     <file path="/ArrayMocha.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368833564533" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/less/bootstrap/buttons.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369062315067" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/less/bootstrap/buttons.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369062315067" ignored="false" />
     <file path="/buttons.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369062314474" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/less/ScoreSense/navs.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369062228634" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/less/ScoreSense/navs.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369062228634" ignored="false" />
     <file path="/navs.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369062216418" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/brand/ScoreSense/css/app.min.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369079647970" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/brand/MyCreditHealth/css/app.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369079402092" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Views/Shared/Features/_header.cshtml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369062620052" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/brand/ScoreSense/css/app.min.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369079647970" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/brand/MyCreditHealth/css/app.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369079402092" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Views/Shared/Features/_header.cshtml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369062620052" ignored="false" />
     <file path="/_header.cshtml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369062618164" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/less/ScoreSense/app.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369264133328" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/less/ScoreSense/app.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369264133328" ignored="false" />
     <file path="/app.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369078538787" ignored="false" />
     <file path="/_accountInformation.cshtml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369063444390" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Views/Account/_accountInformation.cshtml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369063443343" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/less/ScoreSense/navbar.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369086180961" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Views/Account/_accountInformation.cshtml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369063443343" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/less/ScoreSense/navbar.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369086180961" ignored="false" />
     <file path="/navbar.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369085728197" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/js/content/bootstrap.min.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369069213764" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/less/bootstrap/navbar.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369068892376" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/brand/ScoreSense/css/app.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369066293299" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/less/ScoreSense/buttons.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369069747729" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/less/ScoreSense/accordion.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369077212514" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/less/ScoreSense/views/howitworks.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369080399308" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/js/content/bootstrap.min.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369069213764" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/less/bootstrap/navbar.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369068892376" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/brand/ScoreSense/css/app.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369066293299" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/less/ScoreSense/buttons.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369069747729" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/less/ScoreSense/accordion.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369077212514" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/less/ScoreSense/views/howitworks.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369080399308" ignored="false" />
     <file path="/howitworks.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369079616881" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Views/Info/About.cshtml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369078319796" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Views/Info/About.cshtml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369078319796" ignored="false" />
     <file path="/About.cshtml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369078317662" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Views/Shared/Features/_navigation.cshtml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369086837151" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Views/Shared/Features/_navigation.cshtml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369086837151" ignored="false" />
     <file path="/_navigation.cshtml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369080124501" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/js/app/navigation.vm.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369080324976" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/js/app/navigation.vm.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369080324976" ignored="false" />
     <file path="/navigation.vm.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369080323071" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/node_modules/jsdom/node_modules/htmlparser2/tests/Documents/RSS_Example.xml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369264133328" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/node_modules/jsdom/node_modules/htmlparser2/tests/Documents/Atom_Example.xml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369264133328" ignored="false" />
-    <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/node_modules/jsdom/node_modules/htmlparser2/tests/Documents/RDF_Example.xml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369264133328" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/node_modules/jsdom/node_modules/htmlparser2/tests/Documents/RSS_Example.xml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369264133328" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/node_modules/jsdom/node_modules/htmlparser2/tests/Documents/Atom_Example.xml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369264133328" ignored="false" />
+    <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/node_modules/jsdom/node_modules/htmlparser2/tests/Documents/RDF_Example.xml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369264133328" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,23 +113,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="36" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.8113208">
+            <state line="43" column="36" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hitchscript.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="hitchscript.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="62" selection-start="910" selection-end="910" vertical-scroll-proportion="-7.8461537">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#template#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="7" column="26" selection-start="664" selection-end="664" vertical-scroll-proportion="0.13805105">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -139,7 +134,7 @@
       <file leaf-file-name="themeManager.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="30" selection-start="0" selection-end="733290" vertical-scroll-proportion="-0.91071427">
+            <state line="3" column="30" selection-start="0" selection-end="733290" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -236,8 +231,8 @@
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
         <option value="$PROJECT_DIR$/lib/themeManager.js" />
         <option value="$PROJECT_DIR$/themeManager.min.js" />
-        <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
         <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
       </list>
     </option>
   </component>
@@ -384,10 +379,10 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="settings" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
+    <property name="last_opened_file_path" value="E:/WebClients/OneTechnologies.Clients.MemberPortal" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig">
     <servers>
@@ -593,9 +588,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/unitTestFrameworkManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="2" column="0" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/itchcork.js">
@@ -631,7 +624,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="30" selection-start="0" selection-end="733290" vertical-scroll-proportion="-0.91071427">
+        <state line="3" column="30" selection-start="0" selection-end="733290" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -640,16 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="25" selection-start="25" selection-end="25" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="62" selection-start="910" selection-end="910" vertical-scroll-proportion="-7.8461537">
-          <folding>
-            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#template#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -662,7 +645,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="36" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.8113208">
+        <state line="43" column="36" selection-start="1953" selection-end="1953" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="26" selection-start="664" selection-end="664" vertical-scroll-proportion="0.13805105">
           <folding />
         </state>
       </provider>
