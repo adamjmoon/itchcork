@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="tst" pattern="file:lib/*" />
+</component>

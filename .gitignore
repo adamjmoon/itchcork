@@ -55,7 +55,6 @@ InputOutput/
 [Dd]eployment/WWW/
 *crunch*
 packages/*
-.idea/
 *app.css
 *app.min.css
 core.js

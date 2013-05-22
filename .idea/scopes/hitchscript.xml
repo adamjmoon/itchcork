@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="hitchscript" pattern="(file:hitchscript/*||file:hitchscript//*)&amp;&amp;!file:hitchscript/.meteor/local/db/*&amp;&amp;!file:hitchscript/.meteor/*||file:hitchscript/.meteor/packages" />
+</component>

@@ -11,6 +11,7 @@ var root = 'raw.github.com/adamjmoon/itchcork/master/';
 requirejs.config({
     baseUrl: 'https://',
     paths: {
+        'themeManager' : root + 'themeManager.min',
         'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
         'underscore': 'cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min',
         'coffeescript': root + 'vendor/coffeescript.min',
@@ -28,7 +29,9 @@ requirejs.config({
         'test': root + 'test/' + testcase
     }
 });
-require(['underscore', 'knockout', 'bootstrap'], function () {
+require(['themeManager','underscore', 'knockout', 'bootstrap'], function () {
+    $("#topNav").show();
+    $('div.frame').show();
     require(['coffeescript', 'platform', 'lodash', 'benchmark', 'chai', 'sinon', 'sinon-chai', 'mocha'], function (CoffeeScript) {
         this.CoffeeScript = CoffeeScript;
         require(['test', 'ItchCork', 'js2coffee'], function (test, itchcork) {
@@ -64,5 +67,4 @@ require(['underscore', 'knockout', 'bootstrap'], function () {
             }
         });
     });
-
 });

@@ -7,21 +7,16 @@
     overflow: auto !important;
 }
 
+.coffee{
+    margin-left: 15px !important;
+}
+
 pre code {
-
-    white-space: pre;
-    overflow: auto;
-    font-size: .8em;
-}
-
-code{
-    color: #4400f3 !important;
-}
-
-pre {
     white-space: pre;
     overflow: auto;
 }
+
+table tr td code {color: #000066 !important;}
 
 .navbar {
     margin-bottom: 0px !important;
@@ -32,7 +27,10 @@ pre {
     color: #fff !important;
     font-size: 1.0em !important;
     line-height: 22px !important;
+    padding: 0px !important;
 }
+
+.nav-tabs.nav-stacked>li>a {border: 0px !important;}
 
 .alert {
     margin-bottom: 0px !important;
@@ -46,43 +44,28 @@ pre {
     margin-right: 15px;
 }
 
-body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+.frame {
+    margin-top: 44px;
 }
-
-body .frame {
-    position: absolute;
-    width: 200%;
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-}
-
 body .frame .navbar .navbar-inner {
     border-radius: 0;
     padding-left: 5px;
 }
 
 body .frame .menu {
-    height: 100%;
-    /* background-color: #3D6AA2; */
+    height: 100% !important;
 }
 
 body .frame .menu.collapse {
     float: left;
-    height: 100% !important;
+
     width: auto;
 }
 
 body .frame .menu.collapse.height {
     position: relative;
     height: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     -webkit-transition: height 0.35s ease;
     -moz-transition: height 0.35s ease;
     -o-transition: height 0.35s ease;
@@ -92,7 +75,7 @@ body .frame .menu.collapse.height {
 body .frame .menu.collapse.width {
     position: relative;
     width: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     -webkit-transition: width 0.35s ease;
     -moz-transition: width 0.35s ease;
     -o-transition: width 0.35s ease;
@@ -109,21 +92,20 @@ body .frame .menu.collapse.in.height {
 
 body .frame .menu .collapse-inner {
     position: relative;
-    width: 250px;
-    height: 100%;
 }
 
 body .frame .menu .navbar .navbar-inner {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 23px;
-    border-bottom: 1px solid #fff;
     border-right:0px;
-    padding-bottom: 1px;
 }
 
 body .frame .menu .nav-stacked {
     padding: 0px;
+}
+body .frame .menu .nav-stacked{
+    margin: 0px !important;
 }
 body .frame .menu .nav-stacked li input{
     padding: 1px !important;
@@ -131,7 +113,6 @@ body .frame .menu .nav-stacked li input{
 }
 
 body .frame .view {
-    width: 50%;
     height: 100%;
     overflow: auto;
 }
@@ -143,13 +124,6 @@ body .frame .view .navbar .navbar-inner .btn-navbar {
 
 body .frame .view #content {
     text-align: justify;
-}
-
-@charset
-"UTF-8"
-;
-body {
-
 }
 
 #mocha ul, #mocha li {
@@ -437,4 +411,43 @@ li.suite h1 a {
     float: right;
     width: 100px;
 }
+@media screen and (max-width: 60em){
+    pre code{ font-size: 7pt !important;}
+    code{ font-size: 7pt !important; }
+    .js{width:100% !important;}
+    .coffee{width:100% !important; margin-left: 0px !important;}
+}
 
+div.accordion{
+    margin-top:0px;
+    border-top:0px;
+}
+
+.well{
+    padding: 0px !important;
+    border: 0px !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+    margin-bottom: 2px !important;
+}
+
+.accordion-group {
+    border: 0px !important;
+}
+
+.accordion-inner {
+padding: 5px 4px 0px 4px!important;
+}
+.accordion-heading .accordion-toggle {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
+a.accordian-toggle, a.accordian-toggle:hover {
+    text-decoration: none !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+.btn{
+    padding: 7px 10px !important;
+}
