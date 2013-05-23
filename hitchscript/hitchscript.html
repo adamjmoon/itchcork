@@ -205,7 +205,7 @@
                         </thead>
                         <tbody data-bind="'foreach': benchmarks">
                         <tr data-bind="css: fastest() ? 'success' : slowest() ? 'error' : ''">
-                            <td><code class="well help-inline" data-bind="text: expression"></code></td>
+                            <td><div class="well help-inline" data-bind="text: expression"></div></td>
                             <td><code class="well help-inline" style='display:none;'
                                       data-bind="text: timesFaster, visible:timesFaster"></code></td>
                             <td><code class="well help-inline" data-bind="text: hz"></code></td>
