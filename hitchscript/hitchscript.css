@@ -21,6 +21,9 @@ table tr td code {color: #000066 !important;}
 .navbar {
     margin-bottom: 0px !important;
 }
+.navbar-fixed-top{
+  height: 44px !important;
+}
 
 .navbar-inner {
     min-height: 24px !important;
