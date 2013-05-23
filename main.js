@@ -11,7 +11,7 @@ var root = 'raw.github.com/adamjmoon/itchcork/master/';
 requirejs.config({
     baseUrl: 'https://',
     paths: {
-        'themeManager' : root + 'themeManager.min',
+        'themeManager': root + 'themeManager.min',
         'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
         'underscore': 'cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min',
         'coffeescript': root + 'vendor/coffeescript.min',
@@ -29,41 +29,46 @@ requirejs.config({
         'test': root + 'test/' + testcase
     }
 });
-require(['themeManager','underscore', 'knockout', 'bootstrap'], function () {
+require(['themeManager', 'underscore', 'knockout', 'bootstrap'], function () {
     $("#topNav").show();
     $('div.frame').show();
     require(['coffeescript', 'platform', 'lodash', 'benchmark', 'chai', 'sinon', 'sinon-chai', 'mocha'], function (CoffeeScript) {
         this.CoffeeScript = CoffeeScript;
-        require(['test', 'ItchCork', 'js2coffee'], function (test, itchcork) {
+        require(['ItchCork', 'js2coffee'], function (itchcork) {
             var ic = new itchcork();
             var unitTestFrameworkManager = new ic.UnitTestFrameworkManager();
             if (unitTestFrameworkManager.init() === "itchcork") {
-                var runSpecs = new test(ic);
+                require(['test'], function (test) {
+                    var runSpecs = new test(ic);
+                });
             }
             else {
-                chai.use(sinonChai);
-                var assert = chai.assert;
-                var should = chai.should();
-                mocha.setup('bdd');
-                mocha.reporter('html');
-                var runner = mocha.run();
-                runner.on('end', function () {
-                    var suites = $("ul#mocha-report li.suite ul");
-                    $("#collapse").click(function () {
-                        $(suites).each(function (index, element) {
-                            element.hidden = true;
+                require(['test'], function (test) {
+                    chai.use(sinonChai);
+                    var assert = chai.assert;
+                    var should = chai.should();
+                    mocha.setup('bdd');
+                    mocha.reporter('html');
+                    var runner = mocha.run();
+                    runner.on('end', function () {
+                        var suites = $("ul#mocha-report li.suite ul");
+                        $("#collapse").click(function () {
+                            $(suites).each(function (index, element) {
+                                element.hidden = true;
+                            });
+                            $("#collapse").hide();
+                            $("#expand").show();
                         });
-                        $("#collapse").hide();
-                        $("#expand").show();
-                    });
-                    $("#expand").click(function () {
-                        $(suites).each(function (index, element) {
-                            element.hidden = false;
+                        $("#expand").click(function () {
+                            $(suites).each(function (index, element) {
+                                element.hidden = false;
+                            });
+                            $("#expand").hide();
+                            $("#collapse").show();
                         });
-                        $("#expand").hide();
-                        $("#collapse").show();
                     });
                 });
+
             }
         });
     });
