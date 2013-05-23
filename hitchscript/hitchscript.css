@@ -54,13 +54,11 @@ body .frame .navbar .navbar-inner {
 
 body .frame .menu {
     height: 100% !important;
-    width: 300px;
 }
 
 body .frame .menu.collapse {
     float: left;
-
-    width: auto;
+    width: 300px;
 }
 
 body .frame .menu.collapse.height {
@@ -83,9 +81,6 @@ body .frame .menu.collapse.width {
     transition: width 0.35s ease;
 }
 
-body .frame .menu.collapse.in.width {
-    width: auto;
-}
 
 body .frame .menu.collapse.in.height {
     height: auto;
@@ -420,7 +415,9 @@ li.suite h1 a {
 }
 
 @media screen and (max-width: 40em){
-    body .frame .menu { width: 640px;!important;}
+    body .frame .menu.collapse {
+       width: 320px;!important;
+    }
 }
 
 div.accordion{
