@@ -54,6 +54,7 @@ body .frame .navbar .navbar-inner {
 
 body .frame .menu {
     height: 100% !important;
+    width: 300px;
 }
 
 body .frame .menu.collapse {
@@ -418,8 +419,8 @@ li.suite h1 a {
     .coffee{width:100% !important; margin-left: 0px !important;}
 }
 
-@media screen and (max-width: 640px){
-    div#menu { width: 640px;!important;}
+@media screen and (max-width: 40em){
+    body .frame .menu { width: 640px;!important;}
 }
 
 div.accordion{
