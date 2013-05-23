@@ -7,7 +7,7 @@
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369319669597" ignored="false" />
-    <file path="/hitchscript.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369322675248" ignored="false" />
+    <file path="/hitchscript.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369324373730" ignored="false" />
     <file path="E:/GITLatest/WEBUTIL_STOP.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367856992756" ignored="false" />
     <file path="/WEBUTIL_STOP.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367684022380" ignored="false" />
     <file path="E:/GITLatest/Gruntfile.coffee" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368828218382" ignored="false" />
@@ -117,8 +117,9 @@
       <file leaf-file-name="hitchscript.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="62" selection-start="6673" selection-end="6673" vertical-scroll-proportion="0.32946634">
+            <state line="115" column="43" selection-start="6655" selection-end="6655" vertical-scroll-proportion="0.21113689">
               <folding>
+                <element signature="n#style#0;n#input#0;n#li#0;n#ul#2;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -137,7 +138,7 @@
       <file leaf-file-name="hitchscript.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="1" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
+            <state line="106" column="39" selection-start="1957" selection-end="1962" vertical-scroll-proportion="-10.777778">
               <folding />
             </state>
           </provider>
@@ -630,13 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="1" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="61" selection-start="0" selection-end="853339" vertical-scroll-proportion="-6.296296">
@@ -651,10 +645,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="106" column="39" selection-start="1957" selection-end="1962" vertical-scroll-proportion="-10.777778">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="62" selection-start="6673" selection-end="6673" vertical-scroll-proportion="0.32946634">
+        <state line="115" column="43" selection-start="6655" selection-end="6655" vertical-scroll-proportion="0.21113689">
           <folding>
+            <element signature="n#style#0;n#input#0;n#li#0;n#ul#2;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
