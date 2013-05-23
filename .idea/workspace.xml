@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/ArrayMocha.js" afterPath="$PROJECT_DIR$/test/ArrayMocha.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -148,10 +149,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArrayMocha.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ArrayMocha.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/ArrayMocha.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="34" selection-start="48" selection-end="48" vertical-scroll-proportion="0.018867925">
+            <state line="0" column="34" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -193,10 +194,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="45" selection-start="2117" selection-end="2117" vertical-scroll-proportion="0.0">
+            <state line="70" column="16" selection-start="3128" selection-end="3128" vertical-scroll-proportion="0.8867925">
               <folding />
             </state>
           </provider>
@@ -252,8 +253,8 @@
         <option value="$PROJECT_DIR$/lib/themeManager.js" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
         <option value="$PROJECT_DIR$/vendor/mocha.js" />
-        <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/test/ArrayMocha.js" />
+        <option value="$PROJECT_DIR$/main.js" />
       </list>
     </option>
   </component>
@@ -621,13 +622,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/context/ArrayMocha.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/mocha.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5333" column="0" selection-start="110904" selection-end="110904" vertical-scroll-proportion="0.0">
@@ -655,16 +649,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
+    <entry file="file://$PROJECT_DIR$/context/ArrayMocha.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="45" selection-start="2117" selection-end="2117" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/ArrayMocha.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="34" selection-start="48" selection-end="48" vertical-scroll-proportion="0.018867925">
+        <state line="0" column="34" selection-start="34" selection-end="34" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="16" selection-start="3128" selection-end="3128" vertical-scroll-proportion="0.8867925">
           <folding />
         </state>
       </provider>

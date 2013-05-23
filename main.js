@@ -43,12 +43,13 @@ require(['themeManager', 'underscore', 'knockout', 'bootstrap'], function () {
                 });
             }
             else {
+
+                chai.use(sinonChai);
+                var assert = chai.assert;
+                var should = chai.should();
+                mocha.setup('bdd');
+                mocha.reporter('html');
                 require(['test'], function (test) {
-                    chai.use(sinonChai);
-                    var assert = chai.assert;
-                    var should = chai.should();
-                    mocha.setup('bdd');
-                    mocha.reporter('html');
                     var runner = mocha.run();
                     runner.on('end', function () {
                         var suites = $("ul#mocha-report li.suite ul");
