@@ -105,7 +105,7 @@
                 </div>
             </div>
         </div>
-        <div class="accordion-group" style="display: none;" data-bind="visible: testCases.count > 0">
+        <div class="accordion-group" style="display: none;" data-bind="visible: testCases().length > 0">
             <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-target="#collapseContext"
                    href="#"><span
@@ -130,10 +130,10 @@
                         <tr>
                             <td><label data-bind="text: name"></label></td>
                             <td>
-                                <pre><code data-bind="text: jsStr"></code></pre>
+                                <pre class="well"><code data-bind="text: jsStr"></code></pre>
                             </td>
                             <td>
-                                <pre><code data-bind="text: coffeeStr"></code></pre>
+                                <pre class="well"><code data-bind="text: coffeeStr"></code></pre>
                             </td>
                         </tr>
                         </tbody>
@@ -161,10 +161,10 @@
                         </thead>
                         <tbody data-bind="'foreach': tests">
                         <tr data-bind="css: shouldEqual === actual ? 'success' : 'error'">
-                            <td><code data-bind="text: expression"></code></td>
-                            <td><code data-bind="text: shouldEqual"></code></td>
-                            <td><code data-bind="text: actual"></code></td>
-                            <td><code data-bind="text: typeOf"></code></td>
+                            <td><code class="well help-inline" data-bind="text: expression"></code></td>
+                            <td><code class="well help-inline" data-bind="text: shouldEqual"></code></td>
+                            <td><code class="well help-inline" data-bind="text: actual"></code></td>
+                            <td><code class="well help-inline" data-bind="text: typeOf"></code></td>
                         </tr>
                         </tbody>
                     </table>
@@ -190,7 +190,7 @@
 
             </div>
             <div id="collapseBenchmarks" class="accordion-body collapse in">
-                <div class="accordion-inner">
+                <div class="accordion-inner control-group info">
                     <table class="table">
                         <thead>
                         <tr>
@@ -205,14 +205,14 @@
                         </thead>
                         <tbody data-bind="'foreach': benchmarks">
                         <tr data-bind="css: fastest() ? 'success' : slowest() ? 'error' : ''">
-                            <td><code data-bind="text: expression"></code></td>
-                            <td><code style='display:none;'
+                            <td><code class="well help-inline" data-bind="text: expression"></code></td>
+                            <td><code class="well help-inline" style='display:none;'
                                       data-bind="text: timesFaster, visible:timesFaster"></code></td>
-                            <td><code data-bind="text: hz"></code></td>
-                            <td><code data-bind="text: relativateMarginError"></code></td>
-                            <td><code data-bind="text: numAnalysisCycles"></code></td>
-                            <td><code data-bind="text: numSampleCycles"></code></td>
-                            <td><code data-bind="text: iterationPerSampleCycle"></code></td>
+                            <td><code class="well help-inline" data-bind="text: hz"></code></td>
+                            <td><code class="well help-inline" data-bind="text: relativateMarginError"></code></td>
+                            <td><code class="well help-inline" data-bind="text: numAnalysisCycles"></code></td>
+                            <td><code class="well help-inline" data-bind="text: numSampleCycles"></code></td>
+                            <td><code class="well help-inline" data-bind="text: iterationPerSampleCycle"></code></td>
                         </tr>
                         </tbody>
                     </table>
