@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.css" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.html" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.nonmin.html" afterPath="$PROJECT_DIR$/index.nonmin.html" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,7 +53,7 @@
     <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/dataservice.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368200292841" ignored="false" />
     <file path="/knockout.bindings.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368208336790" ignored="false" />
     <file path="/a.dummy" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369271167585" ignored="false" />
-    <file path="/hitchscript.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369272301392" ignored="false" />
+    <file path="/hitchscript.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369272518175" ignored="false" />
     <file path="E:/test/hitchscript/hitchscript.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368646735479" ignored="false" />
     <file path="E:/test/hitchscript/hitchscript.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368639905509" ignored="false" />
     <file path="E:/test/hitchscript/hitchscript.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368639178121" ignored="false" />
@@ -116,10 +114,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="hitchscript.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="hitchscript.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="7643" selection-start="7643" selection-end="7643" vertical-scroll-proportion="0.0">
+            <state line="0" column="7643" selection-start="7643" selection-end="7643" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -134,10 +132,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hitchscript.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="hitchscript.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="421" column="28" selection-start="7170" selection-end="7170" vertical-scroll-proportion="0.0">
+            <state line="458" column="18" selection-start="7892" selection-end="7892" vertical-scroll-proportion="0.8869347">
               <folding />
             </state>
           </provider>
@@ -239,9 +237,9 @@
         <option value="$PROJECT_DIR$/vendor/sinon.js" />
         <option value="$PROJECT_DIR$/lib/suite.js" />
         <option value="$PROJECT_DIR$/lib/test.js" />
-        <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
         <option value="$PROJECT_DIR$/index.nonmin.html" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
+        <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
       </list>
     </option>
   </component>
@@ -641,13 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="421" column="28" selection-start="7170" selection-end="7170" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.nonmin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="233" selection-start="0" selection-end="13018" vertical-scroll-proportion="-11.875">
@@ -658,6 +649,13 @@
     <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="7643" selection-start="7643" selection-end="7643" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="458" column="18" selection-start="7892" selection-end="7892" vertical-scroll-proportion="0.8869347">
           <folding />
         </state>
       </provider>
