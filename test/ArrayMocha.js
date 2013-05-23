@@ -1,4 +1,5 @@
 define(['context'], function (c) {
+    console.log(mocha);
     describe('Array Test', function () {
         describe('#indexOf()', function () {
             it('should return -1 when the value is not present', function () {
