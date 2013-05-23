@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themeManager.js" afterPath="$PROJECT_DIR$/lib/themeManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.html" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.nonmin.html" afterPath="$PROJECT_DIR$/index.nonmin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themeManager.min.js" afterPath="$PROJECT_DIR$/themeManager.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
@@ -95,7 +97,7 @@
     <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/node_modules/jsdom/node_modules/htmlparser2/tests/Documents/RSS_Example.xml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369264133328" ignored="false" />
     <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/node_modules/jsdom/node_modules/htmlparser2/tests/Documents/Atom_Example.xml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369264133328" ignored="false" />
     <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/node_modules/jsdom/node_modules/htmlparser2/tests/Documents/RDF_Example.xml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369264133328" ignored="false" />
-    <file path="/index.nonmin.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369276943001" ignored="false" />
+    <file path="/index.nonmin.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369281261755" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,8 +120,21 @@
       <file leaf-file-name="hitchscript.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="7741" selection-start="7741" selection-end="7741" vertical-scroll-proportion="-0.0">
-              <folding />
+            <state line="190" column="24" selection-start="10455" selection-end="10474" vertical-scroll-proportion="-5.375">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#li#0;n#ul#2;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#code#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#3;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,7 +142,7 @@
       <file leaf-file-name="index.nonmin.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.nonmin.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="118" selection-start="0" selection-end="13155" vertical-scroll-proportion="-10.0">
+            <state line="47" column="113" selection-start="0" selection-end="13158" vertical-scroll-proportion="-28.125">
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -144,10 +159,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="themeManager.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="themeManager.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="120045" selection-start="120109" selection-end="120109" vertical-scroll-proportion="0.040983606">
+            <state line="7" column="119829" selection-start="0" selection-end="853339" vertical-scroll-proportion="-2.0588236">
               <folding />
             </state>
           </provider>
@@ -162,10 +177,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="themeManager.min.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="themeManager.min.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themeManager.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="804680" selection-end="804680" vertical-scroll-proportion="0.0">
+            <state line="29" column="0" selection-start="853339" selection-end="853339" vertical-scroll-proportion="0.5555556">
               <folding />
             </state>
           </provider>
@@ -238,11 +253,11 @@
         <option value="$PROJECT_DIR$/lib/suite.js" />
         <option value="$PROJECT_DIR$/lib/test.js" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
+        <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/lib/themeManager.js" />
         <option value="$PROJECT_DIR$/index.nonmin.html" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
         <option value="$PROJECT_DIR$/themeManager.min.js" />
-        <option value="$PROJECT_DIR$/main.js" />
-        <option value="$PROJECT_DIR$/lib/themeManager.js" />
       </list>
     </option>
   </component>
@@ -628,9 +643,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="49" selection-start="453" selection-end="456" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.nonmin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="118" selection-start="0" selection-end="13155" vertical-scroll-proportion="-10.0">
+        <state line="47" column="113" selection-start="0" selection-end="13158" vertical-scroll-proportion="-28.125">
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
           </folding>
@@ -639,28 +661,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="7741" selection-start="7741" selection-end="7741" vertical-scroll-proportion="0.0">
+        <state line="190" column="24" selection-start="10455" selection-end="10474" vertical-scroll-proportion="-5.375">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#li#0;n#ul#2;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#code#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#3;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="119829" selection-start="0" selection-end="853339" vertical-scroll-proportion="-2.0588236">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themeManager.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="804680" selection-end="804680" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="49" selection-start="453" selection-end="456" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="120045" selection-start="120109" selection-end="120109" vertical-scroll-proportion="0.040983606">
+        <state line="29" column="0" selection-start="853339" selection-end="853339" vertical-scroll-proportion="0.5555556">
           <folding />
         </state>
       </provider>
