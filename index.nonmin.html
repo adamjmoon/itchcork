@@ -4,7 +4,8 @@
 <title>itchcork</title>
 <meta name="description" content="share javascript standards, compare javascript to coffeescript, unit test javascript, run benchmarks on javascript">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-<meta name="apple-mobile-web-app-capable" content="yes"/><!--/* Bootstrap v2.3.1** Copyright 2012 Twitter, Inc* Licensed under the Apache License v2.0* http://www.apache.org/licenses/LICENSE-2.0** Designed and built with all the love in the world @twitter by @mdo and @fat.*/-->
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!--/* Bootstrap v2.3.1** Copyright 2012 Twitter, Inc* Licensed under the Apache License v2.0* http://www.apache.org/licenses/LICENSE-2.0** Designed and built with all the love in the world @twitter by @mdo and @fat.*/-->
 <style id="theme"></style>
 </head>
 <body>{{> hitchscript}}{{> scripts}}{{> ga}}</body>
@@ -12,11 +13,11 @@
 <div id="topNav" class="navbar-fixed-top" style="display:none;">
     <div class="navbar-inner">
                 <span><img id="logo" class="logo" src="/brand2.png"
-                           data-bind="click: function(){ var menu = document.getElementById('menu'); if(menu.style.display == 'block') { menu.style.display = 'none';} else {menu.style.display = 'block'; $('.frame').scrollTop(0);}}"
+                           data-bind="click: function(){ var menu = document.getElementById('menu'); if(menu.style.display == 'block') { menu.style.display = 'none';} else {menu.style.display = 'block';window.scrollTo(0,44);}}"
                            width="90" height="44"/></span>
 
         <div class="btn btn-info pull-right" style="margin-right: 3px; margin-top:4px;"
-             data-bind="click: function(){var menu = document.getElementById('menu'); if(document.getElementById('menu').style.display == 'block') { menu.style.display = 'none';} else {menu.style.display = 'block';$('.frame').scrollTop(0);}}">
+             data-bind="click: function(){var menu = document.getElementById('menu'); if(document.getElementById('menu').style.display == 'block') { menu.style.display = 'none';} else {menu.style.display = 'block';window.scrollTo(0,44);}}">
             <img id="rightMenu" style="margin-bottom: 2px;"
                  src="/glyphicons_158_show_lines.png" width="24"
                  height="15"/></div>
@@ -75,7 +76,7 @@
         <div class="accordion" id="content">
             <div class="accordion-group">
                 <div class="navbar navbar-inverse accordion-toggle">
-                    <div class="navbar-inner"><span class="badge badge-info" data-bind="text: suiteDesc"></span>
+                    <div class="navbar-inner suiteDesc"><span class="badge badge-info" data-bind="text: suiteDesc"></span>
                     </div>
                 </div>
                 <div class="accordion-heading">
