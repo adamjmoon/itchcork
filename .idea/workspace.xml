@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/itchcork.js" afterPath="$PROJECT_DIR$/itchcork.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.min.js" afterPath="$PROJECT_DIR$/main.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commit.cmd" afterPath="$PROJECT_DIR$/commit.cmd" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,7 +59,7 @@
     <file path="E:/test/hitchscript/hitchscript.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368639178121" ignored="false" />
     <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/sexOffender.map.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368640220322" ignored="false" />
     <file path="/main.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369351730405" ignored="false" />
-    <file path="/commit.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368824701478" ignored="false" />
+    <file path="/commit.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369353386978" ignored="false" />
     <file path="/unitTestFrameworkManager.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368832262892" ignored="false" />
     <file path="E:/GITLatest/GIT_CHECKOUT_MASTER.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368828147994" ignored="false" />
     <file path="/GIT_CHECKOUT_MASTER.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368828145167" ignored="false" />
@@ -198,7 +196,7 @@
       <file leaf-file-name="commit.cmd" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/commit.cmd">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="10" selection-end="10" vertical-scroll-proportion="0.018867925">
+            <state line="2" column="13" selection-start="33" selection-end="33" vertical-scroll-proportion="0.03773585">
               <folding />
             </state>
           </provider>
@@ -628,7 +626,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/commit.cmd">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="10" selection-end="10" vertical-scroll-proportion="0.018867925">
+        <state line="2" column="13" selection-start="33" selection-end="33" vertical-scroll-proportion="0.03773585">
           <folding />
         </state>
       </provider>
