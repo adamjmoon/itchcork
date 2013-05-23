@@ -95,8 +95,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'UnitTestFrameworkManager'], f
             self.tests.push(test);
 
             if(name){
-                var fn = (function(context,name) { return function() { context[name]();}; })(self.jsContext, name); 
-                console.log(fn);
+                var fn = (function(context,name) { return function() { context[name]();}; })(self.jsContext, name);
                 self.benchmarkSuite.add({ 
                     'name' : test.expression,
                     'fn': fn, 
@@ -147,7 +146,7 @@ define("Test", [], function () {
 
         } else {
             this.expression = expressionStr.replace(/\n/gm, '')
-                .replace(/function +?\(c\) +?\{ +?return(.*?) +?; +?}/g,'$1');
+                .replace(/function +?\(c\) +?\{ +?return(.*?) +?;/g,'$1');
 
             this.actual = func(context);
         }
