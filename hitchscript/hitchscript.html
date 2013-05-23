@@ -2,11 +2,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>itchcork</title>
-    <meta name="description" content="share javascript standards, compare javascript to coffeescript, unit test javascript, run benchmarks on javascript">
+    <meta name="description"
+          content="share javascript standards, compare javascript to coffeescript, unit test javascript, run benchmarks on javascript">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <!--/* Bootstrap v2.3.1** Copyright 2012 Twitter, Inc* Licensed under the Apache License v2.0* http://www.apache.org/licenses/LICENSE-2.0** Designed and built with all the love in the world @twitter by @mdo and @fat.*/-->
     <style id="theme"></style>
+    <script type="text/javascript">/mobi/i.test(navigator.userAgent) && !pageYOffset && setTimeout(function () {
+        window.scrollTo(0, 1);
+    }, 1000);</script>
 </head>
 <body>{{> hitchscript}}{{> scripts}}{{> ga}}</body>
 <template name="hitchscript">
@@ -67,7 +71,7 @@
         </div>
         <ul class="nav nav-tabs nav-stacked">
             <li>
-                <input type="text" value="raw.github.com/adamjmoon/itchcork/master" style="width: 100%"/>
+                <input type="text" value="raw.github.com/adamjmoon/itchcork/master" style="width: 99%"/>
             </li>
             <li></li>
         </ul>
@@ -89,7 +93,7 @@
             <div id="collapseContextJS" class="accordion-body collapse in">
                 <div class="accordion-inner">
                     <div class="row-fluid">
-                        <div class="span6 js">
+                        <div class="span6 js ">
                             <div class="badge badge-success">Javascript</div>
                             <br/>
                                                        <pre class="well"><code class='help-inline'
@@ -130,10 +134,10 @@
                         <tr>
                             <td><label data-bind="text: name"></label></td>
                             <td>
-                                <pre class="well"><code class="help-info" data-bind="text: jsStr"></code></pre>
+                                <pre class="well"><code class="help-inline" data-bind="text: jsStr"></code></pre>
                             </td>
                             <td>
-                                <pre class="well"><code class="help-info" data-bind="text: coffeeStr"></code></pre>
+                                <pre class="well"><code class="help-inline" data-bind="text: coffeeStr"></code></pre>
                             </td>
                         </tr>
                         </tbody>
@@ -148,7 +152,7 @@
                         class="badge badge-info">TEST RESULTS</span></a>
             </div>
             <div id="collapseResults" class="accordion-body collapse in">
-                <div class="accordion-inner control-group info" id="itchcorkResults"
+                <div class="accordion-inner" id="itchcorkResults"
                      data-bind="visible: unitTestFrameworkManager.getFramework() === 'itchcork'">
                     <table class="table table-condensed" id="results">
                         <thead>
@@ -190,7 +194,7 @@
 
             </div>
             <div id="collapseBenchmarks" class="accordion-body collapse in">
-                <div class="accordion-inner control-group info">
+                <div class="accordion-inner">
                     <table class="table">
                         <thead>
                         <tr>
@@ -205,7 +209,9 @@
                         </thead>
                         <tbody data-bind="'foreach': benchmarks">
                         <tr data-bind="css: fastest() ? 'success' : slowest() ? 'error' : ''">
-                            <td><div class="well help-inline" data-bind="text: expression"></div></td>
+                            <td>
+                                <div class="well help-inline" data-bind="text: expression"></div>
+                            </td>
                             <td><code class="well help-inline" style='display:none;'
                                       data-bind="text: timesFaster, visible:timesFaster"></code></td>
                             <td><code class="well help-inline" data-bind="text: hz"></code></td>

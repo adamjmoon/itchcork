@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="" />
+    <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.css" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.html" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themeManager.min.js" afterPath="$PROJECT_DIR$/themeManager.min.js" />
+    </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369319669597" ignored="false" />
-    <file path="/hitchscript.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369324588540" ignored="false" />
+    <file path="/hitchscript.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369332234108" ignored="false" />
     <file path="E:/GITLatest/WEBUTIL_STOP.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367856992756" ignored="false" />
     <file path="/WEBUTIL_STOP.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367684022380" ignored="false" />
     <file path="E:/GITLatest/Gruntfile.coffee" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368828218382" ignored="false" />
@@ -51,7 +55,7 @@
     <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/dataservice.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368200292841" ignored="false" />
     <file path="/knockout.bindings.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368208336790" ignored="false" />
     <file path="/a.dummy" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369271167585" ignored="false" />
-    <file path="/hitchscript.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369281612363" ignored="false" />
+    <file path="/hitchscript.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369334328418" ignored="false" />
     <file path="E:/test/hitchscript/hitchscript.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368646735479" ignored="false" />
     <file path="E:/test/hitchscript/hitchscript.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368639905509" ignored="false" />
     <file path="E:/test/hitchscript/hitchscript.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368639178121" ignored="false" />
@@ -93,6 +97,8 @@
     <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/node_modules/jsdom/node_modules/htmlparser2/tests/Documents/Atom_Example.xml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369264133328" ignored="false" />
     <file path="E:/WebClients/OneTechnologies.Clients.MemberPortal/Content/node_modules/jsdom/node_modules/htmlparser2/tests/Documents/RDF_Example.xml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369264133328" ignored="false" />
     <file path="/index.nonmin.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369281261755" ignored="false" />
+    <file path="E:/Projects/WebClients/OneTechnologies.Clients.MemberPortal/Content/less/ScoreSense/app.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369325718175" ignored="false" />
+    <file path="E:/Projects/WebClients/OneTechnologies.Clients.MemberPortal/Content/less/ScoreSense/buttons.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369325808066" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,13 +118,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="hitchscript.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="hitchscript.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="190" column="18" selection-start="10659" selection-end="10659" vertical-scroll-proportion="0.2703016">
+            <state line="6" column="70" selection-start="364" selection-end="364" vertical-scroll-proportion="35.865852">
               <folding>
+                <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#li#0;n#ul#2;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#code#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#3;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,7 +152,7 @@
       <file leaf-file-name="hitchscript.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="39" selection-start="1957" selection-end="1962" vertical-scroll-proportion="-10.777778">
+            <state line="438" column="16" selection-start="7459" selection-end="7459" vertical-scroll-proportion="-14.111111">
               <folding />
             </state>
           </provider>
@@ -160,10 +176,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="themeManager.min.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="themeManager.min.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themeManager.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="853339" selection-end="853339" vertical-scroll-proportion="0.0">
+            <state line="6" column="22216" selection-start="631329" selection-end="631329" vertical-scroll-proportion="0.1184669">
               <folding />
             </state>
           </provider>
@@ -235,10 +251,10 @@
         <option value="$PROJECT_DIR$/lib/test.js" />
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/index.nonmin.html" />
-        <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
         <option value="$PROJECT_DIR$/lib/themeManager.js" />
-        <option value="$PROJECT_DIR$/themeManager.min.js" />
+        <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
+        <option value="$PROJECT_DIR$/themeManager.min.js" />
       </list>
     </option>
   </component>
@@ -636,27 +652,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themeManager.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="853339" selection-end="853339" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="39" selection-start="1957" selection-end="1962" vertical-scroll-proportion="-10.777778">
+        <state line="438" column="16" selection-start="7459" selection-end="7459" vertical-scroll-proportion="-14.111111">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="18" selection-start="10659" selection-end="10659" vertical-scroll-proportion="0.2703016">
+        <state line="6" column="70" selection-start="364" selection-end="364" vertical-scroll-proportion="35.865852">
           <folding>
+            <element signature="n#style#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#li#0;n#ul#2;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#code#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#3;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themeManager.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="22216" selection-start="631329" selection-end="631329" vertical-scroll-proportion="0.1184669">
+          <folding />
         </state>
       </provider>
     </entry>
