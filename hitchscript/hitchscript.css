@@ -418,6 +418,10 @@ li.suite h1 a {
     .coffee{width:100% !important; margin-left: 0px !important;}
 }
 
+@media screen and (max-width: 640px){
+    div#menu { width: 640px;!important;}
+}
+
 div.accordion{
     margin-top:0px;
     border-top:0px;
