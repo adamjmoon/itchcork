@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.html" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.html" />
-    </list>
+    <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="" />
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369319669597" ignored="false" />
@@ -117,7 +115,7 @@
       <file leaf-file-name="hitchscript.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="207" column="96" selection-start="11578" selection-end="11578" vertical-scroll-proportion="0.60556847">
+            <state line="190" column="18" selection-start="10659" selection-end="10659" vertical-scroll-proportion="0.2703016">
               <folding>
                 <element signature="n#style#0;n#input#0;n#li#0;n#ul#2;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
@@ -654,7 +652,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="207" column="96" selection-start="11578" selection-end="11578" vertical-scroll-proportion="0.60556847">
+        <state line="190" column="18" selection-start="10659" selection-end="10659" vertical-scroll-proportion="0.2703016">
           <folding>
             <element signature="n#style#0;n#input#0;n#li#0;n#ul#2;n#div#0;n#div#0;n#div#1;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
