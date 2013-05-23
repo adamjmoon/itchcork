@@ -1,7 +1,7 @@
+(function() {
 define(['context'], function (c) {
-    console.log(mocha);
-    describe('Array Test', function () {
-        describe('#indexOf()', function () {
+    return describe('Array Test', function () {
+        return describe('#indexOf()', function () {
             it('should return -1 when the value is not present', function () {
                 c.arr.indexOf(5).should.equal(-1);
                 c.arr.indexOf(0).should.equal(-1);
@@ -9,3 +9,4 @@ define(['context'], function (c) {
         });
     });
 });
+}).call(this);
