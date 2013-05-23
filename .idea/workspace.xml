@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.css" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.html" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themeManager.js" afterPath="$PROJECT_DIR$/lib/themeManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themeManager.min.js" afterPath="$PROJECT_DIR$/themeManager.min.js" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -117,10 +114,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="hitchscript.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="hitchscript.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="225" column="6" selection-start="12644" selection-end="12644" vertical-scroll-proportion="-25.961538">
+            <state line="115" column="62" selection-start="6673" selection-end="6673" vertical-scroll-proportion="0.32946634">
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -164,10 +161,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="themeManager.min.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="themeManager.min.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themeManager.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="853339" selection-end="853339" vertical-scroll-proportion="0.5551802">
+            <state line="29" column="0" selection-start="853339" selection-end="853339" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -240,9 +237,9 @@
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/index.nonmin.html" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
-        <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
         <option value="$PROJECT_DIR$/lib/themeManager.js" />
         <option value="$PROJECT_DIR$/themeManager.min.js" />
+        <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
       </list>
     </option>
   </component>
@@ -640,15 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="225" column="6" selection-start="12644" selection-end="12644" vertical-scroll-proportion="-25.961538">
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="61" selection-start="0" selection-end="853339" vertical-scroll-proportion="-6.296296">
@@ -658,8 +646,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themeManager.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="853339" selection-end="853339" vertical-scroll-proportion="0.5551802">
+        <state line="29" column="0" selection-start="853339" selection-end="853339" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="115" column="62" selection-start="6673" selection-end="6673" vertical-scroll-proportion="0.32946634">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#1;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
