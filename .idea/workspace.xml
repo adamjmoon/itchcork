@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themeManager.js" afterPath="$PROJECT_DIR$/lib/themeManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themeManager.min.js" afterPath="$PROJECT_DIR$/themeManager.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
@@ -147,7 +149,7 @@
       <file leaf-file-name="themeManager.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="8" selection-start="804524" selection-end="804524" vertical-scroll-proportion="-5.2941175">
+            <state line="9" column="71158" selection-start="0" selection-end="804680" vertical-scroll-proportion="-2.6470587">
               <folding />
             </state>
           </provider>
@@ -156,7 +158,7 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="45" selection-start="452" selection-end="452" vertical-scroll-proportion="0.24497488">
+            <state line="13" column="49" selection-start="453" selection-end="456" vertical-scroll-proportion="0.24497488">
               <folding />
             </state>
           </provider>
@@ -165,7 +167,7 @@
       <file leaf-file-name="themeManager.min.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themeManager.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="5" selection-start="804679" selection-end="804679" vertical-scroll-proportion="0.0">
+            <state line="29" column="0" selection-start="804680" selection-end="804680" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -238,10 +240,10 @@
         <option value="$PROJECT_DIR$/lib/suite.js" />
         <option value="$PROJECT_DIR$/lib/test.js" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
-        <option value="$PROJECT_DIR$/themeManager.min.js" />
         <option value="$PROJECT_DIR$/index.nonmin.html" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
         <option value="$PROJECT_DIR$/lib/themeManager.js" />
+        <option value="$PROJECT_DIR$/themeManager.min.js" />
         <option value="$PROJECT_DIR$/main.js" />
       </list>
     </option>
@@ -628,13 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themeManager.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="5" selection-start="804679" selection-end="804679" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.nonmin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="118" selection-start="0" selection-end="13155" vertical-scroll-proportion="-10.0">
@@ -653,14 +648,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="8" selection-start="804524" selection-end="804524" vertical-scroll-proportion="-5.2941175">
+        <state line="9" column="71158" selection-start="0" selection-end="804680" vertical-scroll-proportion="-2.6470587">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themeManager.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="0" selection-start="804680" selection-end="804680" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="45" selection-start="452" selection-end="452" vertical-scroll-proportion="0.24497488">
+        <state line="13" column="49" selection-start="453" selection-end="456" vertical-scroll-proportion="0.24497488">
           <folding />
         </state>
       </provider>
