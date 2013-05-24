@@ -67,7 +67,7 @@ define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkView
                     return leftHz == rightHz ? 0 : (leftHz > rightHz ? -1 : 1)
                 });
                 self.vm.benchmarks()[0].fastest(true);
-                var length = self.benchmarks().length;
+                var length = self.vm.benchmarks().length;
                 self.vm.benchmarks()[length - 1].slowest(true);
                 var slowestHz = self.vm.benchmarks()[length - 1].hz();
                 for (var i = 0; i < length; i++) {

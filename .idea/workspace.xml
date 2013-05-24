@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.html" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/suite.js" afterPath="$PROJECT_DIR$/lib/suite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,7 +42,7 @@
     <file path="E:/fiddleSticks/hitchscript/hitchscript.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368042622753" ignored="false" />
     <file path="/array.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369366300876" ignored="false" />
     <file path="/dashboard.familysafety.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368200907112" ignored="false" />
-    <file path="/suite.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369375705902" ignored="false" />
+    <file path="/suite.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369376149695" ignored="false" />
     <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/dashboard.familysafety.vm.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368202477766" ignored="false" />
     <file path="/dashboard.familysafety.vm.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368202470623" ignored="false" />
     <file path="/dummy.xml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368117684042" ignored="false" />
@@ -123,16 +125,16 @@
       <file leaf-file-name="hitchscript.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="55" selection-start="4622" selection-end="4622" vertical-scroll-proportion="0.0">
+            <state line="79" column="33" selection-start="4600" selection-end="4600" vertical-scroll-proportion="-25.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="suite.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="suite.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/suite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="50" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
+            <state line="66" column="67" selection-start="2665" selection-end="2665" vertical-scroll-proportion="0.69825435">
               <folding />
             </state>
           </provider>
@@ -192,10 +194,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="39" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.4638404">
+            <state line="41" column="39" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -239,11 +241,11 @@
         <option value="$PROJECT_DIR$/lib/benchmarkViewModel.js" />
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
         <option value="$PROJECT_DIR$/lib/itchcork.js" />
-        <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
         <option value="$PROJECT_DIR$/lib/suiteView.js" />
         <option value="$PROJECT_DIR$/test/datetime.js" />
-        <option value="$PROJECT_DIR$/lib/suite.js" />
         <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
+        <option value="$PROJECT_DIR$/lib/suite.js" />
       </list>
     </option>
   </component>
@@ -570,13 +572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="55" selection-start="4622" selection-end="4622" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/suiteViewModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
@@ -619,16 +614,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/suite.js">
+    <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="50" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
+        <state line="41" column="39" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
+    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="39" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.4638404">
+        <state line="79" column="33" selection-start="4600" selection-end="4600" vertical-scroll-proportion="-25.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/suite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="67" selection-start="2665" selection-end="2665" vertical-scroll-proportion="0.69825435">
           <folding />
         </state>
       </provider>
