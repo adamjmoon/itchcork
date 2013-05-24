@@ -149,7 +149,7 @@ define("SuiteView", ['knockout'], function(ko) {
     return view;
 });
 
-define("SuiteViewModel", ['knockout'], function(ko, utfm) {
+define("SuiteViewModel", ['knockout', 'UnitTestFrameworkManager'], function(ko, utfm) {
   var vm =  function() {
       this.suiteDesc = ko.observable('');
       this.jsContextStr = ko.observable('');
