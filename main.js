@@ -7,7 +7,6 @@ else
     testcase = 'datetime';
 
 var root = 'raw.github.com/adamjmoon/itchcork/master/';
-
 requirejs.config({
     baseUrl: 'https://',
     paths: {
