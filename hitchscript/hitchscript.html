@@ -20,11 +20,11 @@
                            data-bind="click: function(){ var menu = document.getElementById('menu'); if(menu.style.display == 'block') { menu.style.display = 'none';} else {menu.style.display = 'block';window.scrollTo(0,0);}}"
                            width="90" height="44"/></span>
 
-        <div class="btn btn-info pull-right" style="margin-right: 3px; margin-top:4px;"
+        <div class="btn btn-info pull-right" style="padding:1px !important;"
              data-bind="click: function(){var menu = document.getElementById('menu'); if(document.getElementById('menu').style.display == 'block') { menu.style.display = 'none';} else {menu.style.display = 'block';window.scrollTo(0,0);}}">
             <img id="rightMenu" style="margin-bottom: 2px;"
-                 src="/glyphicons_158_show_lines.png" width="24"
-                 height="15"/></div>
+                 src="/menulogo.png" width="21"
+                 height="44"/></div>
     </div>
 </div>
 <div class="container-fluid frame" id="frame" style="display: none;">
@@ -35,21 +35,21 @@
         </div>
         <ul class="nav nav-tabs nav-stacked">
             <li><a href=""
-                   data-bind="click: function(){setTheme('amelia');$('#logo').click();}">Amelia</a>
+                   data-bind="click: function(){setTheme('amelia');}">Amelia</a>
             </li>
             <li><a href=""
-                   data-bind="click: function(){setTheme('curelean');$('#logo').click();}">Cerulean</a>
+                   data-bind="click: function(){setTheme('curelean');}">Cerulean</a>
             </li>
             <li><a href=""
-                   data-bind="click: function(){setTheme('cosmo');$('#logo').click();}">Cosmo</a>
+                   data-bind="click: function(){setTheme('cosmo');}">Cosmo</a>
             </li>
             <li><a href=""
-                   data-bind="click: function(){setTheme('cyborg');$('#logo').click();}">Cyborg</a>
+                   data-bind="click: function(){setTheme('cyborg');}">Cyborg</a>
             </li>
             <li><a href=""
-                   data-bind="click: function(){setTheme('slate');$('#logo').click();}">Slate</a></li>
+                   data-bind="click: function(){setTheme('slate');}">Slate</a></li>
             <li><a href=""
-                   data-bind="click: function(){setTheme('superhero');$('#logo').click();}">Superhero</a></li>
+                   data-bind="click: function(){setTheme('superhero');}">Superhero</a></li>
         </ul>
         <div class="navbar navbar-inverse">
             <div class="navbar-inner"><span class="badge badge-info">Testing Framework</span></div>
