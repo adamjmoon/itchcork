@@ -78,8 +78,8 @@
     </div>
 </div>
 <div class="view container-fluid">
-    <div class="accordion" id="content">
-        <div class="accordion-group" data-bind="'foreach': suites">
+    <div class="accordion" id="content" data-bind="'foreach': suites">
+        <div class="accordion-group">
             <div class="navbar navbar-inverse accordion-toggle">
                 <div class="navbar-inner suiteDesc"><span class="badge badge-info" data-bind="text: suiteDesc"></span>
                 </div>
@@ -109,7 +109,7 @@
                 </div>
             </div>
         </div>
-        <div class="accordion-group" style="display: none;" data-bind="visible: testCases().length > 0">
+        <div class="accordion-group" style="display: none;" data-bind="visible: testCases.length > 0">
             <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-target="#collapseContext"
                    href="#"><span
@@ -153,7 +153,7 @@
             </div>
             <div id="collapseResults" class="accordion-body collapse in">
                 <div class="accordion-inner" id="itchcorkResults"
-                     data-bind="visible: unitTestFrameworkManager.getFramework() === 'itchcork'">
+                     data-bind="visible: unitTestFrameworkManager().getFramework() === 'itchcork'">
                     <table class="table table-condensed" id="results">
                         <thead>
                         <tr>
@@ -174,7 +174,7 @@
                     </table>
                 </div>
                 <div class="accordion-inner" id="mochaResults"
-                     data-bind="visible: unitTestFrameworkManager.getFramework() === 'mocha'">
+                     data-bind="visible: unitTestFrameworkManager().getFramework() === 'mocha'">
                     <div id="mocha" class="row-fluid"><a id="collapse" class="btn btn-alert" href="#">Collapse
                         All</a>
                         <a id="expand" class="btn btn-alert hide" href="#">Expand All</a></div>

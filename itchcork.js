@@ -2,7 +2,7 @@ define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkView
     var suite =  function (desc, js) {
         "use strict";
         var self = this;
-        self.vm
+        self.vm = nothing;
         self.jsContext;
         self.benchmarkSuite = new Benchmark.Suite;
 
@@ -162,8 +162,8 @@ define("SuiteViewModel", ['knockout', 'UnitTestFrameworkManager'], function(ko, 
       this.benchmarks = ko.observableArray([]);
       this.benchmarksDone = ko.observable(false);
       this.benchmarkPlatform = ko.observable('');
-      this.themeManager = ko.observable(window.ThemeManager);
-      this.unitTestFrameworkManager = ko.observable(new utfm());
+      this.themeManager = window.ThemeManager;
+      this.unitTestFrameworkManager = new utfm();
   };
 
   return vm;
