@@ -40,7 +40,7 @@
     <file path="E:/fiddleSticks/hitchscript/hitchscript.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368042622753" ignored="false" />
     <file path="/array.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369366300876" ignored="false" />
     <file path="/dashboard.familysafety.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368200907112" ignored="false" />
-    <file path="/suite.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369375633667" ignored="false" />
+    <file path="/suite.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369375675053" ignored="false" />
     <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/dashboard.familysafety.vm.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368202477766" ignored="false" />
     <file path="/dashboard.familysafety.vm.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368202470623" ignored="false" />
     <file path="/dummy.xml" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368117684042" ignored="false" />
@@ -132,7 +132,7 @@
       <file leaf-file-name="suite.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/suite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="61" selection-start="552" selection-end="552" vertical-scroll-proportion="0.14962594">
+            <state line="18" column="14" selection-start="772" selection-end="772" vertical-scroll-proportion="0.2244389">
               <folding />
             </state>
           </provider>
@@ -628,7 +628,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/suite.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="61" selection-start="552" selection-end="552" vertical-scroll-proportion="0.14962594">
+        <state line="18" column="14" selection-start="772" selection-end="772" vertical-scroll-proportion="0.2244389">
           <folding />
         </state>
       </provider>

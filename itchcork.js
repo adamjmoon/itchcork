@@ -6,7 +6,7 @@ define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkView
         self.jsContext;
         self.benchmarkSuite = new Benchmark.Suite;
 
-        (self.map = function(){
+        self.map = function(){
             self.vm = new sVM();
             self.vm.suiteDesc(desc);
             self.vm.jsContextStr(js.toString() + "\n var c = new context();");
@@ -14,7 +14,9 @@ define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkView
             self.vm.benchmarkPlatform(Benchmark.platform.description);
             self.jsContext = new js();
             self.setupContextBreakdown(self.jsContext, 'context');
-        })();
+        };
+
+        map();
 
 
         self.setupContextBreakdown = function (context, base) {
