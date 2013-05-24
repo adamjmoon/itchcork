@@ -2,7 +2,7 @@ define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkView
     var suite =  function (desc, js) {
         "use strict";
         var self = this;
-        self.vm,self.jsContext,self.benchmarkSuite = new Benchmark.Suite;
+        self.vm,self.jsContext,self.benchmarkSuite = new Benchmark.Suite;self.themeManager = window.ThemeManager;
 
         self.setupContextBreakdown = function (context, base) {
             var jsStr = '', coffeeStr = '';
@@ -149,7 +149,7 @@ define("SuiteView", ['knockout'], function(ko) {
     return view;
 });
 
-define("SuiteViewModel", ['knockout', 'UnitTestFrameworkManager'], function(ko, utfm) {
+define("SuiteViewModel", ['knockout'], function(ko, utfm) {
   var vm =  function() {
       this.suiteDesc = ko.observable('');
       this.jsContextStr = ko.observable('');
@@ -160,7 +160,6 @@ define("SuiteViewModel", ['knockout', 'UnitTestFrameworkManager'], function(ko, 
       this.benchmarks = ko.observableArray([]);
       this.benchmarksDone = ko.observable(false);
       this.benchmarkPlatform = ko.observable('');
-      this.themeManager = window.ThemeManager;
       this.unitTestFrameworkManager = new utfm();
   };
 
