@@ -153,7 +153,7 @@
             </div>
             <div id="collapseResults" class="accordion-body collapse in">
                 <div class="accordion-inner" id="itchcorkResults"
-                     data-bind="visible: unitTestFrameworkManager().getFramework() === 'itchcork'">
+                     data-bind="visible: unitTestFrameworkManager.getFramework() === 'itchcork'">
                     <table class="table table-condensed" id="results">
                         <thead>
                         <tr>
@@ -174,7 +174,7 @@
                     </table>
                 </div>
                 <div class="accordion-inner" id="mochaResults"
-                     data-bind="visible: unitTestFrameworkManager().getFramework() === 'mocha'">
+                     data-bind="visible: unitTestFrameworkManager.getFramework() === 'mocha'">
                     <div id="mocha" class="row-fluid"><a id="collapse" class="btn btn-alert" href="#">Collapse
                         All</a>
                         <a id="expand" class="btn btn-alert hide" href="#">Expand All</a></div>
