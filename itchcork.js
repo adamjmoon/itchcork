@@ -143,7 +143,7 @@ define("SuiteView", ['knockout'], function(ko) {
 
         self.add = function(suite){
            self.suites.push(suite.vm);
-           if(self.suites.length == 1){
+           if(self.suites().length == 1){
                ko.applyBindings(self);
            }
         }

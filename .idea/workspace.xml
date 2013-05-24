@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.html" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/suite.js" afterPath="$PROJECT_DIR$/lib/suite.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="" />
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369375610580" ignored="false" />
@@ -131,10 +127,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="suite.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="suite.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/suite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="67" selection-start="2665" selection-end="2665" vertical-scroll-proportion="0.69825435">
+            <state line="74" column="40" selection-start="3125" selection-end="3125" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -149,10 +145,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="suiteView.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="suiteView.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/suiteView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="36" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
+            <state line="9" column="27" selection-start="258" selection-end="258" vertical-scroll-proportion="0.11221945">
               <folding />
             </state>
           </provider>
@@ -241,11 +237,11 @@
         <option value="$PROJECT_DIR$/lib/benchmarkViewModel.js" />
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
         <option value="$PROJECT_DIR$/lib/itchcork.js" />
-        <option value="$PROJECT_DIR$/lib/suiteView.js" />
         <option value="$PROJECT_DIR$/test/datetime.js" />
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
         <option value="$PROJECT_DIR$/lib/suite.js" />
+        <option value="$PROJECT_DIR$/lib/suiteView.js" />
       </list>
     </option>
   </component>
@@ -579,13 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/suiteView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="36" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/commit.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="37" selection-end="42" vertical-scroll-proportion="0.0">
@@ -630,7 +619,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/suite.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="67" selection-start="2665" selection-end="2665" vertical-scroll-proportion="0.69825435">
+        <state line="74" column="40" selection-start="3125" selection-end="3125" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/suiteView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="27" selection-start="258" selection-end="258" vertical-scroll-proportion="0.11221945">
           <folding />
         </state>
       </provider>
