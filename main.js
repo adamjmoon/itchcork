@@ -32,7 +32,7 @@ requirejs.config({
 require(['themeManager', 'underscore', 'knockout', 'bootstrap'], function () {
     $("#topNav").show();
     $('div.frame').show();
-    require(['coffeescript', 'platform', 'lodash', 'benchmark', 'chai', 'sinon', 'sinon-chai', 'mocha'], function (CoffeeScript) {
+    require(['coffeescript', 'platform', 'lodash', 'benchmark'], function (CoffeeScript) {
         this.CoffeeScript = CoffeeScript;
         require(['ItchCork', 'js2coffee'], function (itchcork) {
             var ic = new itchcork();
@@ -44,32 +44,36 @@ require(['themeManager', 'underscore', 'knockout', 'bootstrap'], function () {
             }
             else {
 
-                chai.use(sinonChai);
-                var assert = chai.assert;
-                var should = chai.should();
-                mocha.setup('bdd');
-                mocha.reporter('html');
-                require(['test'], function (test) {
-                    var runner = mocha.run();
-                    runner.on('end', function () {
-                        var suites = $("ul#mocha-report li.suite ul");
-                        $("#collapse").click(function () {
-                            $(suites).each(function (index, element) {
-                                element.hidden = true;
+                define('sinon', [], function () {
+                    return sinon;
+                });
+                require(['mocha', 'chai', 'sinon', 'sinon-chai'], function (chai, sinon, sinonChai) {
+                    chai.use(sinonChai);
+                    var assert = chai.assert;
+                    var should = chai.should();
+                    mocha.setup('bdd');
+                    mocha.reporter('html');
+                    require(['test'], function (test) {
+                        var runner = mocha.run();
+                        runner.on('end', function () {
+                            var suites = $("ul#mocha-report li.suite ul");
+                            $("#collapse").click(function () {
+                                $(suites).each(function (index, element) {
+                                    element.hidden = true;
+                                });
+                                $("#collapse").hide();
+                                $("#expand").show();
                             });
-                            $("#collapse").hide();
-                            $("#expand").show();
-                        });
-                        $("#expand").click(function () {
-                            $(suites).each(function (index, element) {
-                                element.hidden = false;
+                            $("#expand").click(function () {
+                                $(suites).each(function (index, element) {
+                                    element.hidden = false;
+                                });
+                                $("#expand").hide();
+                                $("#collapse").show();
                             });
-                            $("#expand").hide();
-                            $("#collapse").show();
                         });
                     });
                 });
-
             }
         });
     });
