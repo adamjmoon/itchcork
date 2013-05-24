@@ -26,9 +26,9 @@
     "coffee-script": "latest",
     "js2coffee": "latest",
     "growl": "1.7.x",
-    "grunt-contrib-jshint": "",
-    "grunt-contrib-concat": "",
-    "grunt-yui-compressor": "latest",
+    "grunt-contrib-jshint": "0.4.x",
+    "grunt-contrib-concat": "0.3.x",
+    "grunt-yui-compressor": "0.3.x",
     "grunt-parallel" : "latest",
     "istanbul" : "latest",
     "recess" : "latest"

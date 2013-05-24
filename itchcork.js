@@ -147,7 +147,6 @@ define("SuiteView", ['knockout'], function(ko) {
 
         self.setTheme = function(theme){
             window.ThemeManager.set(theme);
-            $('#logo').click();
         }
     };
     return view;

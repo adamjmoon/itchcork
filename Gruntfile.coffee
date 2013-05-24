@@ -37,7 +37,7 @@ module.exports = (grunt) ->
     jshint:
       files: [r + '*.js']
     concat:
-      module: 
+      m:
         src: [lib + 'suite.js',
               lib + 'suiteView.js',
               lib + 'suiteViewModel.js',
@@ -49,10 +49,10 @@ module.exports = (grunt) ->
               lib + 'itchcork.js']
         dest: r + 'itchcork.js'
     min:
-      module: 
+      m:
         src: [r + 'itchcork.js']
         dest: r + 'itchcork.min.js'
-      main: 
+      mainmin:
         src: [r + 'main.js']
         dest: r + 'main.min.js'
       # platform:
