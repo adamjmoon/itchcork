@@ -121,6 +121,8 @@ define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkView
             return self;
         };
 
+
+
         self.run = function () {
             self.vm.benchmarksDone(false);
             self.vm.benchmarks.removeAll();
@@ -144,6 +146,10 @@ define("SuiteView", ['knockout'], function(ko) {
            if(self.suites().length == 1){
                ko.applyBindings(self);
            }
+        }
+
+        self.setTheme = function(theme){
+            window.ThemeManager.set(theme);
         }
     };
     return view;
