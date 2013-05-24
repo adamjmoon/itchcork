@@ -2,9 +2,7 @@ define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkView
     var suite =  function (desc, js) {
         "use strict";
         var self = this;
-        self.vm = nothing;
-        self.jsContext;
-        self.benchmarkSuite = new Benchmark.Suite;
+        self.vm,self.jsContext,self.benchmarkSuite = new Benchmark.Suite;
 
         self.setupContextBreakdown = function (context, base) {
             var jsStr = '', coffeeStr = '';
