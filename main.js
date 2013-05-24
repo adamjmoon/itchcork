@@ -26,7 +26,7 @@ requirejs.config({
         'benchmark': root + 'vendor/benchmark.min',
         'knockout': 'ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1',
         'context': root + 'context/' + testcase,
-        'test': root + 'test/' + testcase
+        'suite': root + 'test/' + testcase
     }
 });
 require(['themeManager', 'underscore', 'knockout', 'bootstrap'], function () {
@@ -35,11 +35,12 @@ require(['themeManager', 'underscore', 'knockout', 'bootstrap'], function () {
     require(['coffeescript', 'platform', 'lodash', 'benchmark','sinonM'], function (CoffeeScript) {
         this.CoffeeScript = CoffeeScript;
         require(['ItchCork', 'js2coffee'], function (itchcork) {
-            var ic = new itchcork();
-            var unitTestFrameworkManager = new ic.UnitTestFrameworkManager();
+
+            var unitTestFrameworkManager = new itchcork.UnitTestFrameworkManager();
             if (unitTestFrameworkManager.init() === "itchcork") {
-                require(['test'], function (test) {
-                    var runSpecs = new test(ic);
+                require(['suite'], function (suite) {
+                    var suiteView = new itchcork.SuiteView();
+                    suiteView.add(new suite());
                 });
             }
             else {

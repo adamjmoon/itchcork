@@ -8,9 +8,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <!--/* Bootstrap v2.3.1** Copyright 2012 Twitter, Inc* Licensed under the Apache License v2.0* http://www.apache.org/licenses/LICENSE-2.0** Designed and built with all the love in the world @twitter by @mdo and @fat.*/-->
     <style id="theme"></style>
-    <script type="text/javascript">/mobi/i.test(navigator.userAgent) && !pageYOffset && setTimeout(function () {
+    <script type="text/javascript">/mobi/i.test(navigator.userAgent) && !pageYOffset && !location.hash && setTimeout(function () {
         window.scrollTo(0, 1);
-    }, 1000);</script>
+    }, 200);</script>
 </head>
 <body>{{> hitchscript}}{{> scripts}}{{> ga}}</body>
 <template name="hitchscript">
@@ -79,7 +79,7 @@
 </div>
 <div class="view container-fluid" style="display:none;" data-bind="visible: shouldShow">
     <div class="accordion" id="content">
-        <div class="accordion-group">
+        <div class="accordion-group" data-bind="'foreach': suites">
             <div class="navbar navbar-inverse accordion-toggle">
                 <div class="navbar-inner suiteDesc"><span class="badge badge-info" data-bind="text: suiteDesc"></span>
                 </div>
