@@ -52,7 +52,7 @@ require(['themeManager', 'underscore', 'knockout', 'bootstrap'], function () {
                     var should = chai.should();
                     mocha.setup('bdd');
                     mocha.reporter('html');
-                    require(['test'], function (test) {
+                    require(['suite'], function (suite) {
                         var runner = mocha.run();
                         runner.on('end', function () {
                             var suites = $("ul#mocha-report li.suite ul");

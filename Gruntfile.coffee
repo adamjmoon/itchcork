@@ -48,13 +48,19 @@ module.exports = (grunt) ->
               lib + 'unitTestFrameworkManager.js',
               lib + 'itchcork.js']
         dest: r + 'itchcork.js'
-    min:
-      m:
-        src: [r + 'itchcork.js']
-        dest: r + 'itchcork.min.js'
-      mainmin:
-        src: [r + 'main.js']
-        dest: r + 'main.min.js'
+    'min':
+      'm':
+        'src': ['itchcork.js']
+        'dest': 'itchcork.min.js'
+      'main':
+        'src': ['main.js']
+        'dest': 'main.min.js'
+    uglify:
+          mangle:
+            toplevel: true
+            squeeze:
+              dead_code: false
+              codegen: quote_keys: true
       # platform:
       #   src: [v + 'platform.js']
       #   dest: dest + 'platform.min.js'
@@ -85,28 +91,7 @@ module.exports = (grunt) ->
     #   cover:
     #     files: [coverage + 'coverage.json']
     #     tasks: ['makeReport']
-    parallel:
-      default:
-        tasks:
-          [
-            {grunt: true, args: ['jshint']},
-            {grunt: true, args: ['recess']},
-            {grunt: true, args: ['concat']}
-          ]
-      build:
-       tasks:
-         [
-           {grunt: true, args: ['jshint']},
-           {grunt: true, args: ['recess']},
-           {grunt: true, args: ['concat','min']}
-         ]
-      ci:
-         tasks:
-           [
-             {grunt: true, args: ['startUnitTestServer']},
-             {grunt: true, args: ['recess']},
-             {grunt: true, args: ['concat','min']}
-           ]
+
     # makeReport:
     #   src: coverage + 'coverage.json'
     #   options:
