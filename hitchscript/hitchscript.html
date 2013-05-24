@@ -81,7 +81,7 @@
     <div class="accordion" id="content" data-bind="'foreach': suites">
         <div class="accordion-group">
             <div class="navbar navbar-inverse accordion-toggle">
-                <div class="navbar-inner suiteDesc"><span class="badge badge-info" data-bind="text: suiteDesc"></span>
+                <div class="navbar-inner suiteDesc"><span class="badge badge-info" data-bind="text: vm.suiteDesc"></span>
                 </div>
             </div>
             <div class="accordion-heading">
@@ -97,19 +97,19 @@
                             <div class="badge badge-success">Javascript</div>
                             <br/>
                                                        <pre class="well"><code class='help-inline'
-                                                                               data-bind="text: jsContextStr"></code></pre>
+                                                                               data-bind="text: vm.jsContextStr"></code></pre>
                         </div>
                         <div class="span6 coffee">
                             <div class="badge badge-warning">Coffeescript</div>
                             <br/>
                                                           <pre class="well"><code class='help-inline'
-                                                                                  data-bind="text: coffeeContextStr"></code></pre>
+                                                                                  data-bind="text: vm.coffeeContextStr"></code></pre>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="accordion-group" style="display: none;" data-bind="visible: testCases.length > 0">
+        <div class="accordion-group" style="display: none;" data-bind="visible: vm.testCases.length > 0">
             <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-target="#collapseContext"
                    href="#"><span
@@ -130,7 +130,7 @@
                             <div class="badge badge-warning">Coffeescript</div>
                         </th>
                         </thead>
-                        <tbody data-bind="'foreach': testCases">
+                        <tbody data-bind="'foreach': vm.testCases">
                         <tr>
                             <td><label data-bind="text: name"></label></td>
                             <td>
@@ -153,7 +153,7 @@
             </div>
             <div id="collapseResults" class="accordion-body collapse in">
                 <div class="accordion-inner" id="itchcorkResults"
-                     data-bind="visible: unitTestFrameworkManager.getFramework() === 'itchcork'">
+                     data-bind="visible: vm.unitTestFrameworkManager.getFramework() === 'itchcork'">
                     <table class="table table-condensed" id="results">
                         <thead>
                         <tr>
@@ -163,7 +163,7 @@
                             <th>typeof</th>
                         </tr>
                         </thead>
-                        <tbody data-bind="'foreach': tests">
+                        <tbody data-bind="'foreach': vm.tests">
                         <tr data-bind="css: shouldEqual === actual ? 'success' : 'error'">
                             <td><code class="well help-inline" data-bind="text: expression"></code></td>
                             <td><code class="well help-inline" data-bind="text: shouldEqual"></code></td>
@@ -182,7 +182,7 @@
             </div>
         </div>
         <div class="accordion-group"
-             data-bind="visible: unitTestFrameworkManager.getFramework() === 'itchcork'">
+             data-bind="visible: vm.unitTestFrameworkManager.getFramework() === 'itchcork'">
             <div class="accordion-heading">
                 <a class="accordion-toggle" data-toggle="collapse" data-target="#collapseBenchmarks"
                    href="#">
@@ -207,7 +207,7 @@
                             <th>iterations/sample cycle</th>
                         </tr>
                         </thead>
-                        <tbody data-bind="'foreach': benchmarks">
+                        <tbody data-bind="'foreach': vm.benchmarks">
                         <tr data-bind="css: fastest() ? 'success' : slowest() ? 'error' : ''">
                             <td>
                                 <code class="well help-inline" data-bind="text: expression"></code>
