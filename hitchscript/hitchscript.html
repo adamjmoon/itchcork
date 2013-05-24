@@ -174,7 +174,7 @@
                     </table>
                 </div>
                 <div class="accordion-inner" id="mochaResults"
-                     data-bind="visible: unitTestFrameworkManager.getFramework() === 'mocha'">
+                     data-bind="visible: vm.unitTestFrameworkManager.getFramework() === 'mocha'">
                     <div id="mocha" class="row-fluid"><a id="collapse" class="btn btn-alert" href="#">Collapse
                         All</a>
                         <a id="expand" class="btn btn-alert hide" href="#">Expand All</a></div>
@@ -187,9 +187,9 @@
                 <a class="accordion-toggle" data-toggle="collapse" data-target="#collapseBenchmarks"
                    href="#">
                     <span class="badge badge-info">BENCHMARKS</span> <span
-                        data-bind="text: benchmarkPlatform"
+                        data-bind="text: vm.benchmarkPlatform"
                         class="badge badge-inverse"></span> <span
-                        data-bind="text: !benchmarksDone() ? 'RUNNING...': 'COMPLETED', css: benchmarksDone() ? 'badge badge-success' : 'badge badge-warning'"></span>
+                        data-bind="text: !vm.benchmarksDone() ? 'RUNNING...': 'COMPLETED', css: vm.benchmarksDone() ? 'badge badge-success' : 'badge badge-warning'"></span>
                 </a>
 
             </div>
@@ -224,7 +224,7 @@
                     </table>
                 </div>
                 <button style="display:none;margin:0 0 15px 15px" class='btn btn-large btn-inverse'
-                        data-bind="click: run,visible: benchmarksDone">RUN AGAIN
+                        data-bind="click: run,visible: vm.benchmarksDone">RUN AGAIN
                 </button>
             </div>
         </div>
