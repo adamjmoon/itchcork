@@ -133,23 +133,6 @@ define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkView
     return suite;
 });
 
-define("SuiteView", ['knockout'], function(ko) {
-
-    var view =  function() {
-        var self = this;
-        self.suites = new ko.observableArray([]);
-
-
-        self.add = function(suite){
-           self.suites.push(suite.vm);
-           if(self.suites.length == 1){
-               ko.applyBindings(self);
-           }
-        }
-    };
-    return view;
-});
-
 define("SuiteViewModel", ['knockout', 'UnitTestFrameworkManager'], function(ko, utfm) {
   var vm =  function() {
       this.suiteDesc = ko.observable('');
