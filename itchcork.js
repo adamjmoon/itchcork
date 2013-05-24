@@ -217,7 +217,7 @@ define("UnitTestFrameworkManager", [], function () {
         };
     };
 });
-define("ItchCork", ['SuiteViewModel','BenchmarkViewModel','Suite', 'SuiteView','Test', 'Spy', 'Verify', 'UnitTestFrameworkManager'], function (SuiteViewModel, BenchmarkViewModel, Suite, SuiteView, Test, Spy, Verify, UnitTestFrameworkManager) {
+define("ItchCork", ['Suite', 'SuiteView', 'Test', 'Spy', 'Verify', 'UnitTestFrameworkManager'], function (Suite, SuiteView, Test, Spy, Verify, UnitTestFrameworkManager) {
     'use strict';
     var ItchCork = function() {
         ItchCork.prototype.Suite = Suite;
