@@ -66,3 +66,4 @@ core.min.js
 *.js.html
 */Content/js/app-cov/*
 */Content/js/coverage/*
+/.idea/workspace.xml
