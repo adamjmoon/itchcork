@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/itchcork.js" afterPath="$PROJECT_DIR$/lib/itchcork.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.coffee" afterPath="$PROJECT_DIR$/Gruntfile.coffee" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -139,10 +138,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="itchcork.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="itchcork.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/itchcork.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="106" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gruntfile.coffee" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="30" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.5475382">
               <folding />
             </state>
           </provider>
@@ -202,15 +210,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="commit.cmd" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/commit.cmd">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="9" selection-start="97" selection-end="97" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -229,7 +228,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/test.js" />
         <option value="$PROJECT_DIR$/index.nonmin.html" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
         <option value="$PROJECT_DIR$/themeManager.min.js" />
@@ -245,6 +243,7 @@
         <option value="$PROJECT_DIR$/lib/benchmarkViewModel.js" />
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/lib/itchcork.js" />
+        <option value="$PROJECT_DIR$/Gruntfile.coffee" />
       </list>
     </option>
   </component>
@@ -528,13 +527,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/themeManager.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="61" selection-start="0" selection-end="853360" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="23" selection-start="368019" selection-end="368019" vertical-scroll-proportion="0.0">
@@ -636,6 +628,13 @@
     <entry file="file://$PROJECT_DIR$/lib/itchcork.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="106" selection-start="106" selection-end="106" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="30" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.5475382">
           <folding />
         </state>
       </provider>

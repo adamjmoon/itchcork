@@ -132,6 +132,53 @@ define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkView
     return suite;
 });
 
+define("SuiteView", ['knockout'], function(ko) {
+
+    var view =  function() {
+        var self = this;
+        self.suites = new ko.observableArray([]);
+        ko.applyBindings(self.suites);
+
+        self.add = function(suite){
+           self.suites.push(suite.vm);
+        }
+    };
+    return view;
+});
+
+define("SuiteViewModel", ['knockout', 'UnitTestFrameworkManager'], function(ko, utfm) {
+  var vm =  function() {
+      this.suiteDesc = ko.observable('');
+      this.jsContextStr = ko.observable('');
+      this.coffeeContextStr = ko.observable('');
+      this.tests = ko.observableArray([]);
+      this.testCases = ko.observableArray([]);
+      this.shouldShow = ko.observable(true);
+      this.benchmarks = ko.observableArray([]);
+      this.benchmarksDone = ko.observable(false);
+      this.benchmarkPlatform = ko.observable('');
+      this.themeManager = ko.observable(window.ThemeManager);
+      this.unitTestFrameworkManager = ko.observable(new utfm());
+  };
+
+  return vm;
+});
+define("BenchmarkViewModel", ['knockout'], function(ko) {
+  var vm =  function() {
+      this.name= ko.observable('');
+      this.expression= ko.observable('');
+      this.hz= ko.observable(0);
+      this.relativateMarginError= ko.observable('');
+      this.timesFaster= ko.observable('pending...');
+      this.slowest= ko.observable(false);
+      this.fastest= ko.observable(false);
+      this.iterationPerSampleCycle= ko.observable(0);
+      this.numAnalysisCycles= ko.observable(0);
+      this.numSampleCycles= ko.observable(0);
+  };
+
+  return vm;
+});
 define("Test", [], function () {
 
     var test = function (shouldEqual, func, context, testName) {

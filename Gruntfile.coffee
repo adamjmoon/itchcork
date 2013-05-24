@@ -38,7 +38,10 @@ module.exports = (grunt) ->
       files: [r + '*.js']
     concat:
       module: 
-        src: [lib + 'suite.js', 
+        src: [lib + 'suite.js',
+              lib + 'suiteView.js',
+              lib + 'suiteViewModel.js',
+              lib + 'benchmarkViewModel.js',
               lib + 'test.js', 
               lib + 'spy.js', 
               lib + 'verify.js',
