@@ -46,7 +46,7 @@ require(['themeManager', 'underscore', 'knockout', 'bootstrap'], function () {
                 define('sinon', [], function () {
                     return sinon;
                 });
-                require(['mocha', 'chai', 'sinon', 'sinon-chai'], function (chai, sinon, sinonChai) {
+                require(['chai', 'sinon', 'sinon-chai','mocha'], function (chai, sinon, sinonChai) {
                     chai.use(sinonChai);
                     var assert = chai.assert;
                     var should = chai.should();
