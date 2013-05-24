@@ -19,7 +19,7 @@ requirejs.config({
         'ItchCork': root + 'itchcork.min',
         'lodash': root + 'vendor/lodash.min',
         'mocha': root + 'vendor/mocha',
-        'sinon': root + 'vendor/sinon',
+        'sinonM': root + 'vendor/sinon',
         'chai': root + 'vendor/chai',
         'sinon-chai': root + 'vendor/sinon-chai',
         'platform': root + 'vendor/platform.min',
@@ -32,7 +32,7 @@ requirejs.config({
 require(['themeManager', 'underscore', 'knockout', 'bootstrap'], function () {
     $("#topNav").show();
     $('div.frame').show();
-    require(['coffeescript', 'platform', 'lodash', 'benchmark'], function (CoffeeScript) {
+    require(['coffeescript', 'platform', 'lodash', 'benchmark','sinonM'], function (CoffeeScript) {
         this.CoffeeScript = CoffeeScript;
         require(['ItchCork', 'js2coffee'], function (itchcork) {
             var ic = new itchcork();
@@ -43,7 +43,6 @@ require(['themeManager', 'underscore', 'knockout', 'bootstrap'], function () {
                 });
             }
             else {
-
                 define('sinon', [], function () {
                     return sinon;
                 });
