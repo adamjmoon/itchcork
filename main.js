@@ -39,7 +39,7 @@ require(['themeManager', 'underscore', 'knockout', 'bootstrap'], function () {
             if (unitTestFrameworkManager.init() === "itchcork") {
                 require(['suite'], function (suite) {
                     var suiteView = new itchcork.SuiteView();
-                    suiteView.add(new suite());
+                    suiteView.add(suite);
                 });
             }
             else {

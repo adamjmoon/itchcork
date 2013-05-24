@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/suite.js" afterPath="$PROJECT_DIR$/lib/suite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,7 +58,7 @@
     <file path="E:/test/hitchscript/hitchscript.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368639905509" ignored="false" />
     <file path="E:/test/hitchscript/hitchscript.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368639178121" ignored="false" />
     <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/sexOffender.map.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368640220322" ignored="false" />
-    <file path="/main.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369368767157" ignored="false" />
+    <file path="/main.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369375906927" ignored="false" />
     <file path="/commit.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369353386978" ignored="false" />
     <file path="/unitTestFrameworkManager.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368832262892" ignored="false" />
     <file path="E:/GITLatest/GIT_CHECKOUT_MASTER.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368828147994" ignored="false" />
@@ -129,10 +129,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="suite.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="suite.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/suite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="50" selection-start="308" selection-end="308" vertical-scroll-proportion="0.07481297">
+            <state line="6" column="50" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -192,10 +192,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="30" selection-start="1579" selection-end="1579" vertical-scroll-proportion="0.0">
+            <state line="41" column="39" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.4638404">
               <folding />
             </state>
           </provider>
@@ -237,13 +237,13 @@
         <option value="$PROJECT_DIR$/test/array.js" />
         <option value="$PROJECT_DIR$/lib/suiteViewModel.js" />
         <option value="$PROJECT_DIR$/lib/benchmarkViewModel.js" />
-        <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
         <option value="$PROJECT_DIR$/lib/itchcork.js" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
         <option value="$PROJECT_DIR$/lib/suiteView.js" />
         <option value="$PROJECT_DIR$/test/datetime.js" />
         <option value="$PROJECT_DIR$/lib/suite.js" />
+        <option value="$PROJECT_DIR$/main.js" />
       </list>
     </option>
   </component>
@@ -577,13 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="30" selection-start="1579" selection-end="1579" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/suiteViewModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
@@ -628,7 +621,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/suite.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="50" selection-start="308" selection-end="308" vertical-scroll-proportion="0.07481297">
+        <state line="6" column="50" selection-start="308" selection-end="308" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="39" selection-start="1920" selection-end="1920" vertical-scroll-proportion="0.4638404">
           <folding />
         </state>
       </provider>
