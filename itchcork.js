@@ -150,6 +150,7 @@ define("SuiteView", ['knockout'], function(ko) {
         self.setTheme = function(theme){
             window.ThemeManager.set(theme);
             $('#logo').click();
+            console.log(window.innerHeight - 44 + 'px');
             self.menu.setAttribute('height',  (window.innerHeight - 44) + 'px');
         }
     };
