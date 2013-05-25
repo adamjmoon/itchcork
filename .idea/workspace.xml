@@ -100,7 +100,7 @@
     <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/js/scripts.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369336188208" ignored="false" />
     <file path="/suiteViewModel.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369378667403" ignored="false" />
     <file path="/benchmarkViewModel.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369360601334" ignored="false" />
-    <file path="/suiteView.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369450169337" ignored="false" />
+    <file path="/suiteView.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369450307455" ignored="false" />
     <file path="$PROJECT_DIR$/hitchscript/.meteor/local/build/static_cacheable/packages/jquery/jquery.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369378525165" ignored="false" />
     <file path="$PROJECT_DIR$/hitchscript/.meteor/local/build/app/packages/livedata/livedata_server.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369378525165" ignored="false" />
     <file path="$PROJECT_DIR$/hitchscript/.meteor/local/build/static_cacheable/packages/livedata/livedata_connection.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369378525165" ignored="false" />
@@ -163,7 +163,7 @@
       <file leaf-file-name="suiteView.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/suiteView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="60" selection-start="364" selection-end="364" vertical-scroll-proportion="0.16182573">
+            <state line="16" column="78" selection-start="519" selection-end="519" vertical-scroll-proportion="0.19917013">
               <folding />
             </state>
           </provider>
@@ -181,7 +181,7 @@
       <file leaf-file-name="itchcork.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/itchcork.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="56" selection-start="0" selection-end="9301" vertical-scroll-proportion="0.0">
+            <state line="13" column="56" selection-start="0" selection-end="9417" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -565,7 +565,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/itchcork.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="56" selection-start="0" selection-end="9301" vertical-scroll-proportion="0.0">
+        <state line="13" column="56" selection-start="0" selection-end="9417" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -607,7 +607,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/suiteView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="60" selection-start="364" selection-end="364" vertical-scroll-proportion="0.16182573">
+        <state line="16" column="78" selection-start="519" selection-end="519" vertical-scroll-proportion="0.19917013">
           <folding />
         </state>
       </provider>
