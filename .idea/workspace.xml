@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.html" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/suiteView.js" afterPath="$PROJECT_DIR$/lib/suiteView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commit.sh" afterPath="$PROJECT_DIR$/commit.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
@@ -107,7 +106,7 @@
     <file path="$PROJECT_DIR$/hitchscript/.meteor/local/build/app/packages/livedata/livedata_server.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369378525165" ignored="false" />
     <file path="$PROJECT_DIR$/hitchscript/.meteor/local/build/static_cacheable/packages/livedata/livedata_connection.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369378525165" ignored="false" />
     <file path="$PROJECT_DIR$/node_modules/grunt-yui-compressor/node_modules/node-minify/node_modules/uglify-js/node_modules/optimist/test/_/bin.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369416772100" ignored="false" />
-    <file path="/commit.sh" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369515950043" ignored="false" />
+    <file path="/commit.sh" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369520873633" ignored="false" />
     <file path="/deploy.sh" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369516147949" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,10 +145,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="suiteView.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="suiteView.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/suiteView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="57" selection-start="264" selection-end="264" vertical-scroll-proportion="0.15332198">
+            <state line="6" column="57" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -178,10 +177,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="commit.sh" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="commit.sh" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/commit.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
+            <state line="6" column="4" selection-start="115" selection-end="115" vertical-scroll-proportion="0.15332198">
               <folding />
             </state>
           </provider>
@@ -243,11 +242,11 @@
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/commit.cmd" />
-        <option value="$PROJECT_DIR$/deploy.sh" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
-        <option value="$PROJECT_DIR$/commit.sh" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
         <option value="$PROJECT_DIR$/lib/suiteView.js" />
+        <option value="$PROJECT_DIR$/deploy.sh" />
+        <option value="$PROJECT_DIR$/commit.sh" />
       </list>
     </option>
   </component>
@@ -600,20 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="38" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commit.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="69" selection-start="1032" selection-end="1032" vertical-scroll-proportion="-10.625">
@@ -623,7 +608,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/suiteView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="57" selection-start="264" selection-end="264" vertical-scroll-proportion="0.15332198">
+        <state line="6" column="57" selection-start="264" selection-end="264" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="38" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commit.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="4" selection-start="115" selection-end="115" vertical-scroll-proportion="0.15332198">
           <folding />
         </state>
       </provider>
