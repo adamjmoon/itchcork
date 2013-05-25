@@ -456,3 +456,7 @@ a.accordian-toggle, a.accordian-toggle:hover {
 }
 
 .suiteDesc{padding-left: 4px !important;}
+
+.table { margin-bottom: 0px !important; }
+.run-again{ margin-left: 4px !important;}
+.accordion-heading .accordion-toggle { padding: 4px 4px !important; margin: 0px !important; }
