@@ -1,4 +1,4 @@
-pushd /Users/moon/Projects/itchcork/hitchscript
+pushd hitchscript
 meteor deploy hitchscript.meteor.com
 
 

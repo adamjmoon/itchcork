@@ -188,28 +188,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="commit.sh" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="commit.sh" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commit.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="22" selection-start="120" selection-end="120" vertical-scroll-proportion="0.12820514">
+            <state line="5" column="22" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deploy.sh" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="deploy.cmd" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deploy.cmd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deploy.sh" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/deploy.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="47" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="45" selection-start="2267" selection-end="2267" vertical-scroll-proportion="0.0">
+            <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -247,8 +247,8 @@
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
         <option value="$PROJECT_DIR$/commit.cmd" />
-        <option value="$PROJECT_DIR$/deploy.sh" />
         <option value="$PROJECT_DIR$/commit.sh" />
+        <option value="$PROJECT_DIR$/deploy.sh" />
       </list>
     </option>
   </component>
@@ -507,13 +507,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/suite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="0" selection-start="4832" selection-end="4832" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/grunt/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="31" selection-start="52" selection-end="52" vertical-scroll-proportion="0.0" />
@@ -602,16 +595,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.sh">
+    <entry file="file://$PROJECT_DIR$/commit.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="47" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0">
+        <state line="5" column="22" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commit.sh">
+    <entry file="file://$PROJECT_DIR$/deploy.cmd">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="22" selection-start="120" selection-end="120" vertical-scroll-proportion="0.12820514">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deploy.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="6" selection-start="6" selection-end="6" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
