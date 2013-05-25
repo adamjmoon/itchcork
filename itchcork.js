@@ -140,7 +140,7 @@ define("SuiteView", ['knockout'], function(ko) {
         var self = this;
         self.suites = new ko.observableArray([]);
         self.menu = document.getElementById('menu');
-        self.menu.style.height = (window.innerHeight - 44) + "px";
+        self.menu.style.height = (window.innerHeight - 50) + "px";
 
         ko.applyBindings(self);
 
