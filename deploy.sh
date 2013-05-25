@@ -1,4 +1,4 @@
-pushd hitchscript
+pushd ~/hitchscript
 meteor deploy hitchscript.meteor.com
 
 
