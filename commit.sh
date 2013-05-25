@@ -1,7 +1,9 @@
-pushd /Users/moon/Projects/itchcork/
+pushd ~/projects/itchcork/
 grunt
 git add .
 git commit . -m "fix"
-git pull upstream master
-git push upstream master
+git pull origin master
+git push origin master
+popd
+./deploy.sh
 

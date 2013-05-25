@@ -8,9 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <!--/* Bootstrap v2.3.1** Copyright 2012 Twitter, Inc* Licensed under the Apache License v2.0* http://www.apache.org/licenses/LICENSE-2.0** Designed and built with all the love in the world @twitter by @mdo and @fat.*/-->
     <style id="theme"></style>
-    <script type="text/javascript">/mobi/i.test(navigator.userAgent) && !pageYOffset && !location.hash && setTimeout(function () {
-        window.scrollTo(0, 1);
-    }, 200);</script>
+
 </head>
 <body>{{> hitchscript}}{{> scripts}}{{> ga}}</body>
 <template name="hitchscript">
@@ -20,11 +18,11 @@
                            data-bind="click: function(){ var menu = document.getElementById('menu'); if(menu.style.display == 'block') { menu.style.display = 'none';} else {menu.style.display = 'block';window.scrollTo(0,0);}}"
                            width="90" height="44"/></span>
 
-        <div class="btn btn-info pull-right" style="margin-right: 3px; margin-top:4px;"
+        <div class="btn pull-right" style="padding: 0px 12px !important;margin: 0px 1px;background-color: inherit !important;"
              data-bind="click: function(){var menu = document.getElementById('menu'); if(document.getElementById('menu').style.display == 'block') { menu.style.display = 'none';} else {menu.style.display = 'block';window.scrollTo(0,0);}}">
-            <img id="rightMenu" style="margin-bottom: 2px;"
-                 src="/glyphicons_158_show_lines.png" width="24"
-                 height="15"/></div>
+            <img id="rightMenu"
+                 src="/menulogo.png" width="19"
+                 height="40"/></div>
     </div>
 </div>
 <div class="container-fluid frame" id="frame" style="display: none;">
@@ -96,14 +94,14 @@
                             <div id="collapseContextJS" class="accordion-body collapse in">
                                 <div class="accordion-inner">
                                     <div class="row-fluid">
-                                        <div class="span6 js ">
-                                            <div class="badge badge-success">Javascript</div>
+                                        <div class="span6 js well">
+                                            <div class="badge badge-success offset5">Javascript</div>
                                             <br/>
                                                        <pre class="well"><code class='help-inline'
                                                                                data-bind="text: vm.jsContextStr"></code></pre>
                                         </div>
-                                        <div class="span6 coffee">
-                                            <div class="badge badge-warning">Coffeescript</div>
+                                        <div class="span6 coffee well">
+                                            <div class="badge badge-warning offset5">Coffeescript</div>
                                             <br/>
                                                           <pre class="well"><code class='help-inline'
                                                                                   data-bind="text: vm.coffeeContextStr"></code></pre>
@@ -234,7 +232,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <button style="display:none;margin:0 0 15px 15px" class='btn btn-large btn-inverse'
+                                <button style="display:none;" class='btn btn-large btn-inverse run-again'
                                         data-bind="click: run,visible: vm.benchmarksDone">RUN AGAIN
                                 </button>
                             </div>
