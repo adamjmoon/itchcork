@@ -1,4 +1,4 @@
-pushd /Users/moon/Projects/itchcork/
+pushd ~/projects/itchcork/
 grunt
 git add .
 git commit . -m "fix"
