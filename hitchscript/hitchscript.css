@@ -61,34 +61,6 @@ body .frame .menu.collapse {
     width: 300px;
 }
 
-body .frame .menu.collapse.height {
-    position: relative;
-    height: 0;
-    overflow-x: hidden;
-    -webkit-transition: height 0.35s ease;
-    -moz-transition: height 0.35s ease;
-    -o-transition: height 0.35s ease;
-    transition: height 0.35s ease;
-}
-
-body .frame .menu.collapse.width {
-    position: relative;
-    width: 0;
-    overflow-x: hidden;
-    -webkit-transition: width 0.35s ease;
-    -moz-transition: width 0.35s ease;
-    -o-transition: width 0.35s ease;
-    transition: width 0.35s ease;
-}
-
-
-body .frame .menu.collapse.in.height {
-    height: auto;
-}
-
-body .frame .menu .collapse-inner {
-    position: relative;
-}
 
 body .frame .menu .navbar .navbar-inner {
     text-align: center;
