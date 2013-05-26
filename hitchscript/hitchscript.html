@@ -12,7 +12,7 @@
 </head>
 <body>{{> hitchscript}}{{> scripts}}{{> ga}}</body>
 <template name="hitchscript">
-<div class="container-fluid frame" id="frame" style="display: none;" data-bind="event: {scroll: setMenuHeight}">
+<div class="container-fluid frame" id="frame" style="display: none;height:100%;" data-bind="event: {scroll: setMenuHeight}">
 <div id="topNav" class="navbar-fixed-top" style="display:none;">
     <div class="navbar-inner">
                 <span><img id="logo" class="logo" src="/brand2.png"
@@ -26,7 +26,6 @@
                  height="40"/></div>
     </div>
 </div>
-
 <div id="menu" class="menu nav-collapse collapse well" style="display:none;height:inherit;">
     <div class="collapse-inner">
         <div class="navbar navbar-inverse">
