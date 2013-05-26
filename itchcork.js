@@ -146,9 +146,9 @@ define("SuiteView", ['knockout'], function(ko) {
         self.setMenuHeight = function(){
             self.menu.style.height = self.frame.scrollHeight-topNavNeight + "px";
         }
-
-        ko.applyBindings(self);
         self.setMenuHeight();
+        ko.applyBindings(self);
+
 
         self.add = function(suite){
            self.suites.push(suite);
@@ -165,7 +165,7 @@ define("SuiteView", ['knockout'], function(ko) {
             {
                 self.menu.style.display = 'none';
             } else {
-
+                self.setMenuHeight();
                 menu.style.display = 'block';
                 window.scrollTo(0,0);
             }
