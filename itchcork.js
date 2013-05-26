@@ -138,7 +138,6 @@ define("SuiteView", ['knockout'], function(ko) {
 
     var view =  function() {
         var self = this;
-        var topNavNeight=45;
         self.suites = new ko.observableArray([]);
         self.menu = document.getElementById('menu');
         self.view = document.getElementById('view');
@@ -146,7 +145,7 @@ define("SuiteView", ['knockout'], function(ko) {
         self.setMenuHeight = function(){
             self.menu.style.height = document.body.scrollHeight + "px";
         }
-        self.setMenuHeight();
+        //self.setMenuHeight();
         ko.applyBindings(self);
 
 
@@ -165,7 +164,7 @@ define("SuiteView", ['knockout'], function(ko) {
             {
                 self.menu.style.display = 'none';
             } else {
-                self.setMenuHeight();
+           //     self.setMenuHeight();
                 menu.style.display = 'block';
                 window.scrollTo(0,0);
             }
