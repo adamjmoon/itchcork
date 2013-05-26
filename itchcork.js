@@ -159,7 +159,7 @@ define("SuiteView", ['knockout'], function(ko) {
             {
                 self.menu.style.display = 'none';
             } else {
-                self.menu.style.height = self.view.clientHeight;
+                self.menu.style.height = self.view.offsetHeight;
                 menu.style.display = 'block';
                 window.scrollTo(0,0);
             }
