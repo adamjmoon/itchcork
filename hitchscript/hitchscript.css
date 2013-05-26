@@ -63,6 +63,7 @@ body .frame .menu.collapse {
 
 div#menu{
    margin-bottom: 0px !important;
+    margin-right: 1px;
 }
 body .frame .menu .navbar .navbar-inner {
     text-align: center;
@@ -439,3 +440,4 @@ a:hover, a:focus {
 .navbar .btn, .navbar .btn-group {
     margin-top: 10px;
 }
+
