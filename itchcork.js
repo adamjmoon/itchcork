@@ -170,11 +170,7 @@ define("SuiteView", ['knockout'], function(ko) {
 
         self.setMenuHeight = function(){
             self.menu.style.height = document.body.scrollHeight-topNavNeight + "px";
-        };
-
-        document.body.scrollHeight.subscribe(function(height){
-            self.setMenuHeight();
-        });
+        }
     };
     return view;
 });
