@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.css" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.html" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/suiteView.js" afterPath="$PROJECT_DIR$/lib/suiteView.js" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -102,7 +100,7 @@
     <file path="$PROJECT_DIR$/../WebClients/OneTechnologies.Clients.MemberPortal/Content/js/scripts.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369336188208" ignored="false" />
     <file path="/suiteViewModel.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369378667403" ignored="false" />
     <file path="/benchmarkViewModel.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369360601334" ignored="false" />
-    <file path="/suiteView.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369538680784" ignored="false" />
+    <file path="/suiteView.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369602772844" ignored="false" />
     <file path="$PROJECT_DIR$/hitchscript/.meteor/local/build/static_cacheable/packages/jquery/jquery.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369378525165" ignored="false" />
     <file path="$PROJECT_DIR$/hitchscript/.meteor/local/build/app/packages/livedata/livedata_server.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369378525165" ignored="false" />
     <file path="$PROJECT_DIR$/hitchscript/.meteor/local/build/static_cacheable/packages/livedata/livedata_connection.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369378525165" ignored="false" />
@@ -144,19 +142,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hitchscript.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="hitchscript.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="442" column="0" selection-start="7535" selection-end="7535" vertical-scroll-proportion="0.82051283">
+            <state line="442" column="0" selection-start="7535" selection-end="7535" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="suiteView.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="suiteView.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/suiteView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="62" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
+            <state line="8" column="64" selection-start="365" selection-end="365" vertical-scroll-proportion="0.20512821">
               <folding />
             </state>
           </provider>
@@ -252,9 +250,9 @@
         <option value="$PROJECT_DIR$/commit.cmd" />
         <option value="$PROJECT_DIR$/commit.sh" />
         <option value="$PROJECT_DIR$/deploy.sh" />
-        <option value="$PROJECT_DIR$/lib/suiteView.js" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
+        <option value="$PROJECT_DIR$/lib/suiteView.js" />
       </list>
     </option>
   </component>
@@ -608,13 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/suiteView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="62" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="62" column="52" selection-start="3127" selection-end="3127" vertical-scroll-proportion="-21.25">
@@ -631,7 +622,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="442" column="0" selection-start="7535" selection-end="7535" vertical-scroll-proportion="0.82051283">
+        <state line="442" column="0" selection-start="7535" selection-end="7535" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/suiteView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="64" selection-start="365" selection-end="365" vertical-scroll-proportion="0.20512821">
           <folding />
         </state>
       </provider>
