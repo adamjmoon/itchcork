@@ -30,7 +30,7 @@ pre code {
     min-height: 24px !important;
     color: #fff !important;
     font-size: 1.0em !important;
-    line-height: 22px !important;
+    line-height: 24px !important;
     padding: 0px !important;
 }
 
@@ -104,7 +104,7 @@ body .frame .menu .nav-stacked{
     margin: 0px !important;
 }
 body .frame .menu .nav-stacked li input{
-    padding: 1px !important;
+    padding: 0px !important;
     margin: 0px !important;
 }
 
@@ -438,6 +438,7 @@ code.well {
     padding: 1px !important;
 }
 
+.accordion{margin-bottom: 0px !important;}
 .accordion-group {
     border: 0px !important;
 }
@@ -461,3 +462,6 @@ a:hover, a:focus {
 .table { margin-bottom: 0px !important; }
 .run-again{ margin-left: 4px !important;}
 .accordion-heading .accordion-toggle { padding: 4px 4px !important; margin: 0px !important; }
+.navbar .btn, .navbar .btn-group {
+    margin-top: 10px;
+}
