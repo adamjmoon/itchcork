@@ -75,7 +75,7 @@
         </ul>
     </div>
 </div>
-<div id="view" class="view container-fluid" data-bind="event: {scroll: setMenuHeight()}">
+<div id="view" class="view container-fluid" style="min-height: 100%; overflow-y: scroll">
     <div class="accordion" id="content" data-bind="'visible':suites().length>0" style="display: none;">
         <div class="accordion-group" data-bind="'foreach': suites">
             <div class="navbar navbar-inverse accordion-toggle">
