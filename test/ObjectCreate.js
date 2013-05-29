@@ -34,4 +34,6 @@ define(['context', 'ItchCork'], function (c, ic) {
        .add(1, function(c) {return c.shape.x;})
        .add(1, function(c) {return c.shape.y;})
        .run();
+       
+       return suite;
  });
