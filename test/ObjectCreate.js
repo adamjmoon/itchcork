@@ -1,6 +1,6 @@
-define(['context'], function (context) {
-    return function (itchcork) {       
-      var suite = new itchcork.Suite('Classical inheritance with Object.create vs CROCKFORD Object.Create', context);
+define(['context', 'ItchCork'], function (c, ic) {
+      var suite = new ic.Suite('Classical inheritance with Object.create vs CROCKFORD Object.Create', c);
+      
       suite.add(true, function(c) {return c.rectangle instanceof c.Rectangle;})
        .add(true, function(c) {return c.rectangle instanceof c.Shape;})
        .add(true, function(c) {return c.rectangle2 instanceof c.Rectangle2;})
