@@ -1,0 +1,35 @@
+{
+  "name": "itchcork",
+  "version": "0.0.1",
+  "description": "simple test framework for validating javascript expressions and viewing results and bemchmarks in html table.",
+  "keywords": [
+    "",
+    "test",
+    "bdd",
+    "knockout",
+    "bootstrap",
+    "benchmark"
+  ],
+  "author": "Adam Moon <itchcork@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/adamjmoon/itchcork.git"
+  },
+  "engines": {
+    "node": ">= 0.4.x"
+  },
+  "dependencies": {
+      "async": ">= 0.1.22",
+      "grunt": "latest"
+  },
+  "devDependencies": {
+    "coffee-script": "latest",
+    "growl": "1.7.x",
+    "grunt-contrib-jshint": "0.4.x",
+    "grunt-contrib-concat": "0.3.x",
+    "grunt-yui-compressor": "0.3.x",
+    "grunt-parallel" : "latest",
+    "istanbul" : "latest",
+    "recess" : "latest"
+  }
+}

@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/theme.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hitchscript/.htaccess" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.html" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
@@ -129,10 +126,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="hitchscript.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="hitchscript.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="-26.875">
+            <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="0.54614735">
               <folding>
                 <element signature="tag#div#0;tag#div#0;tag#template#0" expanded="false" />
                 <element signature="tag#div#1;tag#div#0;tag#template#0" expanded="false" />
@@ -141,10 +138,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="theme.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="theme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="282" column="1" selection-start="8248" selection-end="8248" vertical-scroll-proportion="0.15352698">
+            <state line="311" column="65" selection-start="9096" selection-end="9096" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -616,20 +613,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="311" column="65" selection-start="9096" selection-end="9096" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="-26.875">
+        <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="0.54614735">
           <folding>
             <element signature="tag#div#0;tag#div#0;tag#template#0" expanded="false" />
             <element signature="tag#div#1;tag#div#0;tag#template#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/theme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="282" column="1" selection-start="8248" selection-end="8248" vertical-scroll-proportion="0.15352698">
-          <folding />
         </state>
       </provider>
     </entry>
