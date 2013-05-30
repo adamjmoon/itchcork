@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="" />
+    <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/theme.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hitchscript/.htaccess" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.html" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369681696862" ignored="false" />
+    <file path="/Dummy.txt" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369879886860" ignored="false" />
     <file path="/hitchscript.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369601821386" ignored="false" />
     <file path="E:/GITLatest/WEBUTIL_STOP.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367856992756" ignored="false" />
     <file path="/WEBUTIL_STOP.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367684022380" ignored="false" />
@@ -124,15 +129,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="hitchscript.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="hitchscript.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="24" selection-start="823" selection-end="823" vertical-scroll-proportion="0.17781541">
+            <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="-26.875">
               <folding>
                 <element signature="tag#div#0;tag#div#0;tag#template#0" expanded="false" />
                 <element signature="tag#div#1;tag#div#0;tag#template#0" expanded="false" />
-                <element signature="tag#div#2;tag#div#0;tag#template#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="theme.css" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/theme.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="282" column="1" selection-start="8248" selection-end="8248" vertical-scroll-proportion="0.15352698">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -155,26 +168,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="suite.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/suite.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="60" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="commit.cmd" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commit.cmd">
           <provider selected="true" editor-type-id="text-editor">
             <state line="5" column="12" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menulogo.png" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hitchscript/public/menulogo.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menuCork.png" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hitchscript/public/menuCork.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -232,7 +240,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/benchmarkViewModel.js" />
         <option value="$PROJECT_DIR$/lib/itchcork.js" />
         <option value="$PROJECT_DIR$/test/datetime.js" />
         <option value="$PROJECT_DIR$/lib/suiteViewModel.js" />
@@ -245,9 +252,10 @@
         <option value="$PROJECT_DIR$/commit.cmd" />
         <option value="$PROJECT_DIR$/commit.sh" />
         <option value="$PROJECT_DIR$/deploy.sh" />
-        <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
         <option value="$PROJECT_DIR$/lib/suiteView.js" />
+        <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
+        <option value="$PROJECT_DIR$/lib/theme.css" />
       </list>
     </option>
   </component>
@@ -282,6 +290,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -348,7 +357,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -520,20 +528,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/itchcork.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="56" selection-start="0" selection-end="9493" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/itchcork.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="56" column="17" selection-start="1874" selection-end="1874" vertical-scroll-proportion="0.0" />
@@ -615,14 +609,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/suite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="60" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="24" selection-start="823" selection-end="823" vertical-scroll-proportion="0.17781541">
+        <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="-26.875">
           <folding>
             <element signature="tag#div#0;tag#div#0;tag#template#0" expanded="false" />
             <element signature="tag#div#1;tag#div#0;tag#template#0" expanded="false" />
-            <element signature="tag#div#2;tag#div#0;tag#template#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="282" column="1" selection-start="8248" selection-end="8248" vertical-scroll-proportion="0.15352698">
+          <folding />
         </state>
       </provider>
     </entry>
