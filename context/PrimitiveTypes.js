@@ -1,10 +1,11 @@
 define(function() {
   'use strict';
-  return function context() {
+  var context = function() {
      this.numberPrimitiveValue = 1;
      this.stringPrimitiveValue = "string";
      this.booleanPrimitiveValue = true;
      this.nullPrimitiveValue = null;
      this.undefinedPrimiteValue;
   };
+  return context;
 });
