@@ -26,7 +26,7 @@ define(function() {
     f=f+1;
     return f;
    };
-   
-   return context;
   };
+   return context;
+  
 });
