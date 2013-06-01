@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/suite.js" afterPath="$PROJECT_DIR$/lib/suite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/theme.css" afterPath="$PROJECT_DIR$/lib/theme.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
@@ -126,10 +128,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="hitchscript.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="hitchscript.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="0.54614735">
+            <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="-26.875">
               <folding>
                 <element signature="tag#div#0;tag#div#0;tag#template#0" expanded="false" />
                 <element signature="tag#div#1;tag#div#0;tag#template#0" expanded="false" />
@@ -141,7 +143,7 @@
       <file leaf-file-name="theme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="311" column="65" selection-start="9096" selection-end="9096" vertical-scroll-proportion="0.0">
+            <state line="255" column="0" selection-start="7721" selection-end="7721" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -165,10 +167,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="suite.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="suite.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/suite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="60" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
+            <state line="13" column="52" selection-start="675" selection-end="675" vertical-scroll-proportion="0.16182573">
               <folding />
             </state>
           </provider>
@@ -240,7 +242,6 @@
         <option value="$PROJECT_DIR$/lib/itchcork.js" />
         <option value="$PROJECT_DIR$/test/datetime.js" />
         <option value="$PROJECT_DIR$/lib/suiteViewModel.js" />
-        <option value="$PROJECT_DIR$/lib/suite.js" />
         <option value="$PROJECT_DIR$/main.min.js" />
         <option value="$PROJECT_DIR$/itchcork.min.js" />
         <option value="$PROJECT_DIR$/main.js" />
@@ -253,6 +254,7 @@
         <option value="$PROJECT_DIR$/lib/suiteView.js" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
         <option value="$PROJECT_DIR$/lib/theme.css" />
+        <option value="$PROJECT_DIR$/lib/suite.js" />
       </list>
     </option>
   </component>
@@ -606,27 +608,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/suite.js">
+    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="60" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="-26.875">
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#template#0" expanded="false" />
+            <element signature="tag#div#1;tag#div#0;tag#template#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/theme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="311" column="65" selection-start="9096" selection-end="9096" vertical-scroll-proportion="0.0">
+        <state line="255" column="0" selection-start="7721" selection-end="7721" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
+    <entry file="file://$PROJECT_DIR$/lib/suite.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="0.54614735">
-          <folding>
-            <element signature="tag#div#0;tag#div#0;tag#template#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#template#0" expanded="false" />
-          </folding>
+        <state line="13" column="52" selection-start="675" selection-end="675" vertical-scroll-proportion="0.16182573">
+          <folding />
         </state>
       </provider>
     </entry>

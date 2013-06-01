@@ -11,7 +11,7 @@ define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkView
                 if (context[prop] instanceof Function) {
                     try {
                         jsStr = context[prop].toString();
-                        coffeeStr = Js2coffee.build('var func = ' + jsStr);
+                        coffeeStr = Js2coffee.build(jsStr);
                         var tc = { name: base + '.' + prop, jsStr: jsStr, coffeeStr: coffeeStr};
                         self.vm.testCases.push(tc);
                     } catch (err) {
