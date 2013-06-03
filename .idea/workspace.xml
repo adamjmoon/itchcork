@@ -2,21 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.coffee" afterPath="$PROJECT_DIR$/Gruntfile.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/hitchscript.xml" afterPath="$PROJECT_DIR$/.idea/scopes/hitchscript.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.js" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/tst.xml" afterPath="$PROJECT_DIR$/.idea/scopes/tst.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\Projects\itchcork\context\ArrayMocha.js" afterPath="$PROJECT_DIR$/examples/context/ArrayMocha.js" />
-      <change type="MOVED" beforePath="E:\Projects\itchcork\context\ObjectCreate.js" afterPath="$PROJECT_DIR$/examples/context/ObjectCreate.js" />
-      <change type="MOVED" beforePath="E:\Projects\itchcork\context\PrimitiveTypes.js" afterPath="$PROJECT_DIR$/examples/context/PrimitiveTypes.js" />
-      <change type="MOVED" beforePath="E:\Projects\itchcork\context\array.js" afterPath="$PROJECT_DIR$/examples/context/array.js" />
-      <change type="MOVED" beforePath="E:\Projects\itchcork\context\datetime.js" afterPath="$PROJECT_DIR$/examples/context/datetime.js" />
-      <change type="MOVED" beforePath="E:\Projects\itchcork\test\ArrayMocha.js" afterPath="$PROJECT_DIR$/examples/test/ArrayMocha.js" />
-      <change type="MOVED" beforePath="E:\Projects\itchcork\test\ObjectCreate.js" afterPath="$PROJECT_DIR$/examples/test/ObjectCreate.js" />
-      <change type="MOVED" beforePath="E:\Projects\itchcork\test\PrimitiveTypes.js" afterPath="$PROJECT_DIR$/examples/test/PrimitiveTypes.js" />
-      <change type="MOVED" beforePath="E:\Projects\itchcork\test\array.js" afterPath="$PROJECT_DIR$/examples/test/array.js" />
-      <change type="MOVED" beforePath="E:\Projects\itchcork\test\datetime.js" afterPath="$PROJECT_DIR$/examples/test/datetime.js" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -143,7 +131,16 @@
       <file leaf-file-name="hitchscript.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="0.0">
+            <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="-0.65384614">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hitchscript.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="43" selection-start="511" selection-end="511" vertical-scroll-proportion="0.31428573">
               <folding />
             </state>
           </provider>
@@ -152,7 +149,7 @@
       <file leaf-file-name="theme.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="257" column="0" selection-start="7723" selection-end="7723" vertical-scroll-proportion="0.0">
+            <state line="2" column="48" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -203,28 +200,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gruntfile.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gruntfile.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="13" selection-start="1829" selection-end="1829" vertical-scroll-proportion="0.6857143">
+            <state line="54" column="13" selection-start="1829" selection-end="1829" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="deploy.cmd" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/deploy.cmd">
+      <file leaf-file-name="themeManager.min.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themeManager.min.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deploy.sh" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/deploy.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="17" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -248,7 +236,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/test/datetime.js" />
         <option value="$PROJECT_DIR$/lib/suiteViewModel.js" />
         <option value="$PROJECT_DIR$/main.min.js" />
         <option value="$PROJECT_DIR$/itchcork.min.js" />
@@ -264,6 +251,7 @@
         <option value="$PROJECT_DIR$/context/array.js" />
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
+        <option value="$PROJECT_DIR$/hitchscript/hitchscript.js" />
       </list>
     </option>
   </component>
@@ -314,6 +302,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="itchcork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itchcork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itchcork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itchcork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itchcork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hitchscript" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -524,18 +540,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="30" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hitchscript/public/menuCork.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hitchscript/public/menulogo.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -588,20 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/theme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="257" column="0" selection-start="7723" selection-end="7723" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/suite.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="52" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0">
@@ -625,7 +615,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="13" selection-start="1829" selection-end="1829" vertical-scroll-proportion="0.6857143">
+        <state line="54" column="13" selection-start="1829" selection-end="1829" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themeManager.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="48" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="43" selection-start="511" selection-end="511" vertical-scroll-proportion="0.31428573">
           <folding />
         </state>
       </provider>
@@ -635,7 +653,7 @@
     <states>
       <state key="ScopeChooserConfigurable.UI">
         <settings>
-          <last-edited>hitchscript</last-edited>
+          <last-edited>tst</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

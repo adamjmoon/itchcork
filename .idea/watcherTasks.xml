@@ -38,10 +38,10 @@
       <option name="program" value="C:\windows\system32\WindowsPowerShell\v1.0\powershell.exe" />
       <option name="scopeName" value="hitchscript" />
       <option name="trackOnlyRoot" value="false" />
-      <option name="workingDir" value="E:\itchcork" />
+      <option name="workingDir" value="E:\projects\itchcork" />
       <envs />
     </TaskOptions>
-    <TaskOptions isEnabled="false">
+    <TaskOptions isEnabled="true">
       <option name="arguments" value="./deploy.cmd" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" value="Meteor Deploy" />
@@ -56,9 +56,9 @@
       <option name="outputFromStdout" value="false" />
       <option name="passParentEnvs" value="true" />
       <option name="program" value="C:\windows\system32\WindowsPowerShell\v1.0\powershell.exe" />
-      <option name="scopeName" value="hitchscript" />
+      <option name="scopeName" value="tst" />
       <option name="trackOnlyRoot" value="false" />
-      <option name="workingDir" value="E:\itchcork" />
+      <option name="workingDir" value="E:\projects\itchcork" />
       <envs />
     </TaskOptions>
   </component>
