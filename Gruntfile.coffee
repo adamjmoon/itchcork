@@ -51,10 +51,10 @@ module.exports = (grunt) ->
     'min':
       'm':
         'src': ['itchcork.js']
-        'dest': 'itchcork.min.js'
+        'dest': 'itchcork.min.js',
       'main':
         'src': ['main.js']
-        'dest': 'main.min.js'
+        'dest': 'main.min.js',
       'themeManager':
               'src': [lib + 'themeManager.js']
               'dest': 'themeManager.min.js'
