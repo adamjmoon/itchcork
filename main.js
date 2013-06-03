@@ -24,8 +24,8 @@ requirejs.config({
         'platform': root + 'vendor/platform.min',
         'benchmark': root + 'vendor/benchmark.min',
         'knockout': 'ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1',
-        'context': root + 'context/' + testcase,
-        'suite': root + 'test/' + testcase
+        'context': root + 'examples/context/' + testcase,
+        'suite': root + 'examples/test/' + testcase
     }
 });
 require(['themeManager', 'underscore', 'knockout', 'bootstrap'], function () {

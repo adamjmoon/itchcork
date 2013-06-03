@@ -55,6 +55,9 @@ module.exports = (grunt) ->
       'main':
         'src': ['main.js']
         'dest': 'main.min.js'
+      'themeManager':
+              'src': [lib + 'themeManager.js']
+              'dest': 'themeManager.min.js'
     uglify:
           mangle:
             toplevel: true
