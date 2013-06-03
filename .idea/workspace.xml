@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grunt.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.coffee" afterPath="$PROJECT_DIR$/Gruntfile.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commit.cmd" afterPath="$PROJECT_DIR$/commit.cmd" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/itchcork.js" afterPath="$PROJECT_DIR$/itchcork.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.min.js" afterPath="$PROJECT_DIR$/main.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themeManager.min.js" afterPath="$PROJECT_DIR$/themeManager.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/theme.css" afterPath="$PROJECT_DIR$/lib/theme.css" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -114,6 +108,7 @@
     <file path="/commit.sh" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369520873633" ignored="false" />
     <file path="/deploy.sh" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369516147949" ignored="false" />
     <file path="/grunt.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370299536060" ignored="false" />
+    <file path="/theme.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370301658703" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +131,7 @@
       <file leaf-file-name="hitchscript.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="-0.65384614">
+            <state line="121" column="37" selection-start="6982" selection-end="6982" vertical-scroll-proportion="-6.5384617">
               <folding />
             </state>
           </provider>
@@ -151,7 +146,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="commit.cmd" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="commit.cmd" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/commit.cmd">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -178,10 +173,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="theme.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="theme.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/theme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="24" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0">
+            <state line="22" column="1" selection-start="357" selection-end="357" vertical-scroll-proportion="0.41509435">
               <folding />
             </state>
           </provider>
@@ -249,7 +244,6 @@
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
         <option value="$PROJECT_DIR$/lib/suiteView.js" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
-        <option value="$PROJECT_DIR$/lib/theme.css" />
         <option value="$PROJECT_DIR$/lib/suite.js" />
         <option value="$PROJECT_DIR$/context/array.js" />
         <option value="$PROJECT_DIR$/main.js" />
@@ -257,6 +251,7 @@
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
         <option value="$PROJECT_DIR$/grunt.cmd" />
         <option value="$PROJECT_DIR$/commit.cmd" />
+        <option value="$PROJECT_DIR$/lib/theme.css" />
       </list>
     </option>
   </component>
@@ -608,13 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="-0.65384614">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="43" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
@@ -643,16 +631,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/theme.css">
+    <entry file="file://$PROJECT_DIR$/commit.cmd">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="24" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/commit.cmd">
+    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="121" column="37" selection-start="6982" selection-end="6982" vertical-scroll-proportion="-6.5384617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="1" selection-start="357" selection-end="357" vertical-scroll-proportion="0.41509435">
           <folding />
         </state>
       </provider>
