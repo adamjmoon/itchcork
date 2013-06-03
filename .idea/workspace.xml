@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grunt.cmd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.coffee" afterPath="$PROJECT_DIR$/Gruntfile.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/commit.cmd" afterPath="$PROJECT_DIR$/commit.cmd" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/itchcork.js" afterPath="$PROJECT_DIR$/itchcork.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.min.js" afterPath="$PROJECT_DIR$/main.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themeManager.min.js" afterPath="$PROJECT_DIR$/themeManager.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,7 +65,7 @@
     <file path="E:/test/hitchscript/hitchscript.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368639178121" ignored="false" />
     <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/sexOffender.map.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368640220322" ignored="false" />
     <file path="/main.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370295779787" ignored="false" />
-    <file path="/commit.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369515732773" ignored="false" />
+    <file path="/commit.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370299211034" ignored="false" />
     <file path="/unitTestFrameworkManager.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368832262892" ignored="false" />
     <file path="E:/GITLatest/GIT_CHECKOUT_MASTER.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368828147994" ignored="false" />
     <file path="/GIT_CHECKOUT_MASTER.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368828145167" ignored="false" />
@@ -107,6 +113,7 @@
     <file path="$PROJECT_DIR$/node_modules/grunt-yui-compressor/node_modules/node-minify/node_modules/uglify-js/node_modules/optimist/test/_/bin.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369416772100" ignored="false" />
     <file path="/commit.sh" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369520873633" ignored="false" />
     <file path="/deploy.sh" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369516147949" ignored="false" />
+    <file path="/grunt.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370299536060" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,33 +142,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hitchscript.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="40" selection-start="551" selection-end="551" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="theme.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/theme.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="48" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="suiteView.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/suiteView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="1130" selection-end="1130" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="suite.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/suite.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -171,10 +151,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="array.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/context/array.js">
+      <file leaf-file-name="commit.cmd" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/commit.cmd">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grunt.cmd" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grunt.cmd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="themeManager.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="4" selection-start="722916" selection-end="722916" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="theme.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/theme.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="24" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="themeManager.min.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/themeManager.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deploy.cmd" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/deploy.cmd">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -189,28 +214,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gruntfile.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gruntfile.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="30" selection-start="1888" selection-end="1888" vertical-scroll-proportion="0.49056605">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="themeManager.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/themeManager.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="16" column="43" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -234,11 +241,9 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/suiteViewModel.js" />
         <option value="$PROJECT_DIR$/main.min.js" />
         <option value="$PROJECT_DIR$/itchcork.min.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/commit.cmd" />
         <option value="$PROJECT_DIR$/commit.sh" />
         <option value="$PROJECT_DIR$/deploy.sh" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
@@ -250,6 +255,8 @@
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.js" />
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
+        <option value="$PROJECT_DIR$/grunt.cmd" />
+        <option value="$PROJECT_DIR$/commit.cmd" />
       </list>
     </option>
   </component>
@@ -379,11 +386,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Projects\itchcork" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="E:\itchcork\context" />
       <recent name="E:\itchcork\hitchscript\public" />
       <recent name="E:\itchcork\lib" />
-      <recent name="E:\itchcork" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Projects\itchcork\examples" />
@@ -450,7 +457,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952693" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16675462" sideWeight="0.67096776" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16675462" sideWeight="0.67096776" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.49656993" order="7" side_tool="true" content_ui="tabs" />
@@ -538,32 +545,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/commit.cmd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="12" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grunt.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/commit.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/deploy.cmd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/deploy.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="17" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
@@ -585,37 +566,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/suite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="52" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/context/array.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="0" selection-start="208" selection-end="208" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themeManager.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/theme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="48" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="-0.65384614">
           <folding />
         </state>
       </provider>
@@ -641,9 +594,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/suite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="52" selection-start="617" selection-end="617" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/deploy.cmd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="9" selection-start="9" selection-end="9" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="-0.65384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="30" selection-start="1888" selection-end="1888" vertical-scroll-proportion="0.49056605">
+        <state line="16" column="43" selection-start="436" selection-end="436" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grunt.cmd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themeManager.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="4" selection-start="722916" selection-end="722916" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="24" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commit.cmd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

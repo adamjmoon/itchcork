@@ -15,7 +15,6 @@ module.exports = (grunt) ->
    # Load external tasks
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-jshint'
-  grunt.loadNpmTasks 'grunt-recess'
   grunt.loadNpmTasks 'grunt-yui-compressor'
   # grunt.loadNpmTasks 'grunt-istanbul'
   # grunt.loadNpmTasks 'grunt-parallel'
