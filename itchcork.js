@@ -1,17 +1,3 @@
-define("ItchCork", ['Suite', 'SuiteView', '../test', 'Spy', 'Verify', 'UnitTestFrameworkManager'], function (Suite, SuiteView, Test, Spy, Verify, UnitTestFrameworkManager) {
-    'use strict';
-    var ItchCork = function() {
-
-        ItchCork.prototype.Suite = Suite;
-        ItchCork.prototype.SuiteView = SuiteView;
-        ItchCork.prototype.Test = Test;
-        ItchCork.prototype.Spy = Spy;
-        ItchCork.prototype.Verify = Verify;
-        ItchCork.prototype.UnitTestFrameworkManager = UnitTestFrameworkManager;
-    };
-
-    return new ItchCork();
-});
 define("Spy", [], function() {
     "use strict";
 	return function(F) {
@@ -223,6 +209,28 @@ define("SuiteViewModel", ['knockout', 'UnitTestFrameworkManager'], function(ko, 
 
   return vm;
 });
+define("Test", [], function () {
+
+    var test = function (shouldEqual, func, context, testName) {
+        'use strict';
+        var expressionStr = func.toString().trim();
+
+        if (testName) {
+            this.expression = testName + '()';
+            this.actual = func(context, testName);
+
+        } else {
+            this.expression = expressionStr.replace(/\n/gm, '')
+                .replace(/function +?\(c\) +?\{ +?return(.*?) +?;/g,'$1');
+
+            this.actual = func(context);
+        }
+        this.shouldEqual = shouldEqual;
+        this.typeOf = typeof(this.actual);
+    };
+
+    return test;
+});
 define("UnitTestFrameworkManager", [], function () {
     return function UnitTestFrameworkManager() {
 
@@ -270,4 +278,18 @@ define("Verify", [], function() {
 			return count > 0;
 		};
 	};
+});
+define("ItchCork", ['Suite', 'SuiteView', 'Test', 'Spy', 'Verify', 'UnitTestFrameworkManager'], function (Suite, SuiteView, Test, Spy, Verify, UnitTestFrameworkManager) {
+    'use strict';
+    var ItchCork = function() {
+
+        ItchCork.prototype.Suite = Suite;
+        ItchCork.prototype.SuiteView = SuiteView;
+        ItchCork.prototype.Test = Test;
+        ItchCork.prototype.Spy = Spy;
+        ItchCork.prototype.Verify = Verify;
+        ItchCork.prototype.UnitTestFrameworkManager = UnitTestFrameworkManager;
+    };
+
+    return new ItchCork();
 });
