@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/less_compile.cmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/less_compress.cmd" />
-      <change type="DELETED" beforePath="E:\Projects\itchcork\less\accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\itchcork\less\alerts_labels_badges.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\itchcork\less\bootstrap-min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\itchcork\less\buttons.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\itchcork\less\dropdowns.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\itchcork\less\forms.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\itchcork\less\media.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\itchcork\less\misc.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\itchcork\less\nav.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\itchcork\less\navbar.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\itchcork\less\scaffolding.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\itchcork\less\tables.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\itchcork\less\typography.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/app.less" afterPath="$PROJECT_DIR$/less/app.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap.css" afterPath="$PROJECT_DIR$/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/bootstrap.css" afterPath="$PROJECT_DIR$/less/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/bootstrap.less" afterPath="$PROJECT_DIR$/less/bootstrap.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/buttons.less" afterPath="$PROJECT_DIR$/less/buttons.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.css" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/misc.less" afterPath="$PROJECT_DIR$/less/misc.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/mixins.less" afterPath="$PROJECT_DIR$/less/mixins.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/navbar.less" afterPath="$PROJECT_DIR$/less/navbar.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/tables.less" afterPath="$PROJECT_DIR$/less/tables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themeManager.js" afterPath="$PROJECT_DIR$/lib/themeManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themeManager.min.js" afterPath="$PROJECT_DIR$/themeManager.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/variables.less" afterPath="$PROJECT_DIR$/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -170,10 +142,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="themeManager.min.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="themeManager.min.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/themeManager.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="741609" selection-end="741609" vertical-scroll-proportion="0.5551802">
+            <state line="29" column="0" selection-start="741609" selection-end="741609" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -197,10 +169,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hitchscript.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="hitchscript.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="401" column="6" selection-start="6615" selection-end="6615" vertical-scroll-proportion="0.0">
+            <state line="46" column="0" selection-start="788" selection-end="788" vertical-scroll-proportion="0.62857145">
               <folding />
             </state>
           </provider>
@@ -273,7 +245,6 @@
         <option value="$PROJECT_DIR$/less/accordion.less" />
         <option value="$PROJECT_DIR$/less.bat" />
         <option value="$PROJECT_DIR$/less.cmd" />
-        <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
         <option value="$PROJECT_DIR$/less/misc.less" />
         <option value="$PROJECT_DIR$/bootstrap.css" />
         <option value="$PROJECT_DIR$/less/navbar.less" />
@@ -285,6 +256,7 @@
         <option value="$PROJECT_DIR$/less/bootstrap.less" />
         <option value="$PROJECT_DIR$/lib/themeManager.js" />
         <option value="$PROJECT_DIR$/themeManager.min.js" />
+        <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
       </list>
     </option>
   </component>
@@ -504,7 +476,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.49656993" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.49973616" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32903227" sideWeight="0.49973616" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -651,13 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="401" column="6" selection-start="6615" selection-end="6615" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/less/variables.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="176" column="0" selection-start="5029" selection-end="5029" vertical-scroll-proportion="0.0">
@@ -695,7 +660,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themeManager.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="741609" selection-end="741609" vertical-scroll-proportion="0.5551802">
+        <state line="29" column="0" selection-start="741609" selection-end="741609" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="0" selection-start="788" selection-end="788" vertical-scroll-proportion="0.62857145">
           <folding />
         </state>
       </provider>

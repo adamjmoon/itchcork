@@ -22,9 +22,6 @@ pre code {
 .navbar {
     margin-bottom: 0px !important;
 }
-.navbar-fixed-top{
-  height: 44px !important;
-}
 
 .navbar-inner {
     min-height: 24px !important;
@@ -48,9 +45,6 @@ pre code {
     margin-right: 15px;
 }
 
-.frame {
-    margin-top: 44px;
-}
 body .frame .navbar .navbar-inner {
     border-radius: 0;
     padding-left: 5px;
