@@ -1,4 +1,3 @@
-'use strict';
 /**
 * CoffeeScript Compiler v1.3.3
 * http://coffeescript.org

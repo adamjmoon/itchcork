@@ -1,4 +1,3 @@
-'use strict';
 define("BenchmarkViewModel", ['knockout'], function(ko) {
   var vm =  function() {
       this.name= ko.observable('');

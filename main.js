@@ -35,7 +35,6 @@ require(['themeManager', 'underscore', 'knockout', 'bootstrap'], function () {
         this.CoffeeScript = CoffeeScript;
         require(['js2coffee'], function () {
             require(['ItchCork'], function (itchcork) {
-
                 var unitTestFrameworkManager = new itchcork.UnitTestFrameworkManager();
                 if (unitTestFrameworkManager.init() === "itchcork") {
                     require(['suite'], function (suite) {

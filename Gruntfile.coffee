@@ -37,8 +37,7 @@ module.exports = (grunt) ->
       files: [r + '*.js']
     concat:
       options: {
-        separator: ';',
-        banner: "'use strict';\n",
+        separator: ';'
       },
       ic:
         src: lib + '/itchcork/*.js'
