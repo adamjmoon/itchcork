@@ -13,7 +13,7 @@ define("Spy", [], function() {
 		return G;
   };
 });
-define("Suite", ['../test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkViewModel'], function (Test, Benchmark, ko, sVM, bVM) {
+define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkViewModel'], function (Test, Benchmark, ko, sVM, bVM) {
     var suite =  function (desc, js) {
         "use strict";
         var self = this;
