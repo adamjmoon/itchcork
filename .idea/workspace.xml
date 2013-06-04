@@ -2,8 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/bootstrap-min.css" afterPath="$PROJECT_DIR$/less/bootstrap-min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/bootstrap.css" afterPath="$PROJECT_DIR$/less/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/bootstrap.less" afterPath="$PROJECT_DIR$/less/bootstrap.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/forms.less" afterPath="$PROJECT_DIR$/less/forms.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/mixins.less" afterPath="$PROJECT_DIR$/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/reset.less" afterPath="$PROJECT_DIR$/less/reset.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/scaffolding.less" afterPath="$PROJECT_DIR$/less/scaffolding.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themeManager.js" afterPath="$PROJECT_DIR$/lib/themeManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themeManager.min.js" afterPath="$PROJECT_DIR$/themeManager.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/variables.less" afterPath="$PROJECT_DIR$/less/variables.less" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,7 +60,7 @@
     <file path="/dataservice.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368200286880" ignored="false" />
     <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/dataservice.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368200292841" ignored="false" />
     <file path="/knockout.bindings.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368208336790" ignored="false" />
-    <file path="/a.dummy" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370360752219" ignored="false" />
+    <file path="/a.dummy" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370364137899" ignored="false" />
     <file path="/hitchscript.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369602351933" ignored="false" />
     <file path="E:/test/hitchscript/hitchscript.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368646735479" ignored="false" />
     <file path="E:/test/hitchscript/hitchscript.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368639905509" ignored="false" />
@@ -131,33 +138,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="media.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/less/media.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="74" selection-end="74" vertical-scroll-proportion="-0.60714287">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="misc.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/less/misc.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navbar.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/less/navbar.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="67" selection-end="67" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="tables.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/less/tables.less">
           <provider selected="true" editor-type-id="text-editor">
@@ -170,7 +150,16 @@
       <file leaf-file-name="bootstrap-min.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/less/bootstrap-min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="0" selection-end="17999" vertical-scroll-proportion="0.0">
+            <state line="0" column="155" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.less" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/less/bootstrap.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="45" selection-end="45" vertical-scroll-proportion="0.057142857">
               <folding />
             </state>
           </provider>
@@ -185,10 +174,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="themeManager.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="themeManager.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="740940" selection-end="740940" vertical-scroll-proportion="0.23367697">
+            <state line="7" column="29" selection-start="722941" selection-end="722941" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mixins.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/less/mixins.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="21" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="accordion.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/less/accordion.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="38" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -239,7 +246,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/lib/theme.css" />
         <option value="$PROJECT_DIR$/less/nav.less" />
         <option value="$PROJECT_DIR$/less/accordion.less" />
         <option value="$PROJECT_DIR$/less/alerts_labels_badges.less" />
@@ -255,6 +261,7 @@
         <option value="$PROJECT_DIR$/less/app.less" />
         <option value="$PROJECT_DIR$/themeManager.min.js" />
         <option value="$PROJECT_DIR$/lib/themeManager.js" />
+        <option value="$PROJECT_DIR$/less/bootstrap-min.css" />
       </list>
     </option>
   </component>
@@ -540,20 +547,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/less/accordion.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/alerts_labels_badges.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/less/buttons.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -564,13 +557,6 @@
     <entry file="file://$PROJECT_DIR$/less/dropdowns.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="0" selection-start="70" selection-end="70" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/bootstrap.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="45" selection-end="45" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -638,16 +624,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/less/bootstrap-min.css">
+    <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="0" selection-end="17999" vertical-scroll-proportion="0.0">
+        <state line="7" column="29" selection-start="722941" selection-end="722941" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
+    <entry file="file://$PROJECT_DIR$/less/mixins.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="740940" selection-end="740940" vertical-scroll-proportion="0.23367697">
+        <state line="17" column="21" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/accordion.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="38" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/bootstrap-min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="155" selection-start="155" selection-end="155" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/bootstrap.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="45" selection-end="45" vertical-scroll-proportion="0.057142857">
           <folding />
         </state>
       </provider>
