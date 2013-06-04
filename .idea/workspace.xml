@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MOVED" beforePath="E:\Projects\itchcork\lib\benchmarkViewModel.js" afterPath="$PROJECT_DIR$/lib/itchcork/benchmarkViewModel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,7 +58,7 @@
     <file path="E:/test/hitchscript/hitchscript.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368639905509" ignored="false" />
     <file path="E:/test/hitchscript/hitchscript.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368639178121" ignored="false" />
     <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/sexOffender.map.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368640220322" ignored="false" />
-    <file path="/main.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370295779787" ignored="false" />
+    <file path="/main.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370384294965" ignored="false" />
     <file path="/commit.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370299211034" ignored="false" />
     <file path="/unitTestFrameworkManager.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368832262892" ignored="false" />
     <file path="E:/GITLatest/GIT_CHECKOUT_MASTER.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368828147994" ignored="false" />
@@ -134,15 +134,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="itchcork.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/itchcork.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="9" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="itchcork.min.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/itchcork.min.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -179,15 +170,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="6" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="test.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/itchcork/test.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -215,10 +197,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spy.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="spy.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/itchcork/spy.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="z_itchcork.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/itchcork/z_itchcork.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="40" selection-start="1607" selection-end="1607" vertical-scroll-proportion="0.4716981">
               <folding />
             </state>
           </provider>
@@ -242,7 +242,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/less/responsive-767px-max.less" />
         <option value="$PROJECT_DIR$/less/app.less" />
         <option value="$PROJECT_DIR$/less/bootstrap-min.css" />
         <option value="$PROJECT_DIR$/less/bootstrap.css" />
@@ -258,6 +257,7 @@
         <option value="$PROJECT_DIR$/lib/itchcork/itchcork.js" />
         <option value="$PROJECT_DIR$/itchcork.js" />
         <option value="$PROJECT_DIR$/lib/itchcork/suite.js" />
+        <option value="$PROJECT_DIR$/main.js" />
       </list>
     </option>
   </component>
@@ -454,13 +454,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.119212344" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16675462" sideWeight="0.67096776" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16675462" sideWeight="0.67096776" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.49656993" order="10" side_tool="true" content_ui="tabs" />
@@ -578,13 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/itchcork/z_itchcork.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="39" column="35" selection-start="1360" selection-end="1360" vertical-scroll-proportion="-18.36">
@@ -592,16 +585,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="6" selection-start="399" selection-end="399" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/itchcork.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="9" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
+        <state line="24" column="0" selection-start="747" selection-end="747" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -658,6 +644,20 @@
     <entry file="file://$PROJECT_DIR$/lib/itchcork/spy.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/itchcork/z_itchcork.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="44" selection-start="44" selection-end="44" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="40" selection-start="1607" selection-end="1607" vertical-scroll-proportion="0.4716981">
           <folding />
         </state>
       </provider>
