@@ -31,49 +31,51 @@ requirejs.config({
 require(['themeManager', 'underscore', 'knockout', 'bootstrap'], function () {
     $("#topNav").show();
     $('div.frame').show();
-    require(['coffeescript', 'platform', 'lodash', 'benchmark','sinonM'], function (CoffeeScript) {
+    require(['coffeescript', 'platform', 'lodash', 'benchmark', 'sinonM'], function (CoffeeScript) {
         this.CoffeeScript = CoffeeScript;
-        require(['js2coffee', 'ItchCork'], function (itchcork) {
+        require(['js2coffee'], function () {
+            require(['ItchCork'], function (itchcork) {
 
-            var unitTestFrameworkManager = new itchcork.UnitTestFrameworkManager();
-            if (unitTestFrameworkManager.init() === "itchcork") {
-                require(['suite'], function (suite) {
-                    var suiteView = new itchcork.SuiteView();
-                    suiteView.add(suite);
-                });
-            }
-            else {
-                define('sinon', [], function () {
-                    return sinon;
-                });
-                require(['chai', 'sinon', 'sinon-chai','mocha'], function (chai, sinon, sinonChai) {
-                    chai.use(sinonChai);
-                    var assert = chai.assert;
-                    var should = chai.should();
-                    mocha.setup('bdd');
-                    mocha.reporter('html');
+                var unitTestFrameworkManager = new itchcork.UnitTestFrameworkManager();
+                if (unitTestFrameworkManager.init() === "itchcork") {
                     require(['suite'], function (suite) {
-                        var runner = mocha.run();
-                        runner.on('end', function () {
-                            var suites = $("ul#mocha-report li.suite ul");
-                            $("#collapse").click(function () {
-                                $(suites).each(function (index, element) {
-                                    element.hidden = true;
+                        var suiteView = new itchcork.SuiteView();
+                        suiteView.add(suite);
+                    });
+                }
+                else {
+                    define('sinon', [], function () {
+                        return sinon;
+                    });
+                    require(['chai', 'sinon', 'sinon-chai', 'mocha'], function (chai, sinon, sinonChai) {
+                        chai.use(sinonChai);
+                        var assert = chai.assert;
+                        var should = chai.should();
+                        mocha.setup('bdd');
+                        mocha.reporter('html');
+                        require(['suite'], function (suite) {
+                            var runner = mocha.run();
+                            runner.on('end', function () {
+                                var suites = $("ul#mocha-report li.suite ul");
+                                $("#collapse").click(function () {
+                                    $(suites).each(function (index, element) {
+                                        element.hidden = true;
+                                    });
+                                    $("#collapse").hide();
+                                    $("#expand").show();
                                 });
-                                $("#collapse").hide();
-                                $("#expand").show();
-                            });
-                            $("#expand").click(function () {
-                                $(suites).each(function (index, element) {
-                                    element.hidden = false;
+                                $("#expand").click(function () {
+                                    $(suites).each(function (index, element) {
+                                        element.hidden = false;
+                                    });
+                                    $("#expand").hide();
+                                    $("#collapse").show();
                                 });
-                                $("#expand").hide();
-                                $("#collapse").show();
                             });
                         });
                     });
-                });
-            }
+                }
+            });
         });
     });
 });
