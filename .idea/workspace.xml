@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/context/array.js" afterPath="$PROJECT_DIR$/context/array.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/ui.browserscope.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/lib/nano.jar" afterPath="$PROJECT_DIR$/hitchscript/public/nano.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.html" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.js" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369879886860" ignored="false" />
-    <file path="/hitchscript.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369601821386" ignored="false" />
+    <file path="/hitchscript.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370054834485" ignored="false" />
     <file path="E:/GITLatest/WEBUTIL_STOP.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367856992756" ignored="false" />
     <file path="/WEBUTIL_STOP.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367684022380" ignored="false" />
     <file path="E:/GITLatest/Gruntfile.coffee" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368828218382" ignored="false" />
@@ -34,7 +38,7 @@
     <file path="/GIT_PULL_UPSTREAM_BRANCH.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367945086374" ignored="false" />
     <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/main.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367947494749" ignored="false" />
     <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/dashboard.familysafety.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368200913422" ignored="false" />
-    <file path="/hitchscript.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368646670964" ignored="false" />
+    <file path="/hitchscript.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370055900886" ignored="false" />
     <file path="/itchcork.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369364516673" ignored="false" />
     <file path="/datetime.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369370736455" ignored="false" />
     <file path="E:/fiddleSticks/hitchscript/hitchscript.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368042622753" ignored="false" />
@@ -129,9 +133,9 @@
       <file leaf-file-name="hitchscript.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="-26.875">
+            <state line="15" column="63" selection-start="932" selection-end="932" vertical-scroll-proportion="71.416664">
               <folding>
-                <element signature="tag#div#0;tag#div#0;tag#template#0" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="tag#div#1;tag#div#0;tag#template#0" expanded="false" />
               </folding>
             </state>
@@ -174,28 +178,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="array.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="array.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/context/array.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="25" selection-start="61" selection-end="61" vertical-scroll-proportion="0.024896266">
+            <state line="2" column="25" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="commit.sh" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/commit.sh">
+      <file leaf-file-name="ui.browserscope.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/ui.browserscope.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="58" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
+            <state line="856" column="48" selection-start="34179" selection-end="34179" vertical-scroll-proportion="-189.72">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="grunt.sh" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grunt.sh">
+      <file leaf-file-name="hitchscript.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="7" column="5" selection-start="255" selection-end="255" vertical-scroll-proportion="0.08713693">
               <folding />
             </state>
           </provider>
@@ -237,8 +241,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/test/datetime.js" />
-        <option value="$PROJECT_DIR$/lib/suiteViewModel.js" />
         <option value="$PROJECT_DIR$/main.min.js" />
         <option value="$PROJECT_DIR$/itchcork.min.js" />
         <option value="$PROJECT_DIR$/main.js" />
@@ -249,10 +251,12 @@
         <option value="$PROJECT_DIR$/deploy.sh" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
         <option value="$PROJECT_DIR$/lib/suiteView.js" />
-        <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
         <option value="$PROJECT_DIR$/lib/theme.css" />
         <option value="$PROJECT_DIR$/lib/suite.js" />
         <option value="$PROJECT_DIR$/context/array.js" />
+        <option value="$PROJECT_DIR$/vendor/ui.browserscope.js" />
+        <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
+        <option value="$PROJECT_DIR$/hitchscript/hitchscript.js" />
       </list>
     </option>
   </component>
@@ -316,6 +320,66 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itchcork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itchcork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itchcork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itchcork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hitchscript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itchcork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itchcork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hitchscript" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itchcork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itchcork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="context" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -342,6 +406,7 @@
       <recent name="E:\itchcork" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hitchscript/public" />
       <recent name="E:\itchcork\vendor" />
       <recent name="E:\itchcork\lib" />
     </key>
@@ -493,16 +558,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="45" selection-start="2267" selection-end="2267" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="25" column="30" selection-start="591" selection-end="591" vertical-scroll-proportion="0.0">
@@ -569,16 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="89" selection-start="6396" selection-end="6396" vertical-scroll-proportion="-26.875">
-          <folding>
-            <element signature="tag#div#0;tag#div#0;tag#template#0" expanded="false" />
-            <element signature="tag#div#1;tag#div#0;tag#template#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/theme.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="255" column="0" selection-start="7721" selection-end="7721" vertical-scroll-proportion="0.0">
@@ -595,7 +640,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/context/array.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="25" selection-start="61" selection-end="61" vertical-scroll-proportion="0.024896266">
+        <state line="2" column="25" selection-start="61" selection-end="61" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/ui.browserscope.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="856" column="48" selection-start="34179" selection-end="34179" vertical-scroll-proportion="-189.72">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="63" selection-start="932" selection-end="932" vertical-scroll-proportion="71.416664">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="tag#div#1;tag#div#0;tag#template#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="5" selection-start="255" selection-end="255" vertical-scroll-proportion="0.08713693">
           <folding />
         </state>
       </provider>
