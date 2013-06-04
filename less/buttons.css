@@ -1,0 +1,13 @@
+The term 'E:\dahlbyk-posh-git-827b835\profile.example.ps1' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct 
+and try again.
+At C:\Users\amoon\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1:8 char:2
++ . <<<<  'E:\dahlbyk-posh-git-827b835\profile.example.ps1'
+    + CategoryInfo          : ObjectNotFound: (E:\dahlbyk-posh...ile.example.ps1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+Missing expression after unary operator '--'.
+At line:1 char:3
++ -- <<<< no-color buttons.less
+    + CategoryInfo          : ParserError: (--:String) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingExpressionAfterOperator
+ 

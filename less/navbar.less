@@ -1,0 +1,157 @@
+// NAVBAR
+// -----------------------------------------------------
+
+.navbar {
+
+	.navbar-inner {
+		.border-radius(0);
+		.box-shadow(none);
+		border-bottom: 1px solid @grayDark;
+	}
+
+	.brand {
+		padding: 15px 20px 15px;
+		color: @grayLighter;
+		font-weight: normal;
+		text-shadow: none;
+	}
+
+	.nav > li > a {
+		padding: 15px 15px 14px;
+		border-bottom: 1px solid transparent;
+	}
+
+	.nav > li > a:hover,
+	.nav > .active > a,
+	.nav > .active > a:hover {
+		border-bottom: 1px solid @blue;
+	}
+
+	.nav > .active > a,
+	.nav > .active > a:hover,
+	.nav > .active > a:focus {
+		.box-shadow(none);
+	}
+
+	.navbar-text {
+		margin-bottom: 1px;
+		padding: 15px 15px 14px;
+		line-height: inherit;
+	}
+
+	.divider-vertical {
+		margin: 0;
+		border-left: 1px solid @grayDark;
+		border-right-width: 0;
+	}
+
+	.search-query,
+	.search-query:focus,
+	.search-query.focused {
+		.border-radius(1px);
+		background-color: @grayDark;
+		line-height: normal;
+		color: @grayLight;
+		text-shadow: none;
+		.placeholder(@gray);
+	}
+
+	&-inverse {
+
+	}
+}
+
+@media (max-width: @navbarCollapseWidth) {
+
+	.navbar .nav-collapse {
+
+		.nav li > a {
+			border: none;
+			color: @grayLighter;
+			font-weight: normal;
+			text-shadow: none;
+
+			&:hover {
+				border: none;
+				background-color: @blue;
+			}
+		}
+
+		.nav .active > a {
+			border: none;
+			background-color: @blue;
+		}
+
+		.dropdown-menu a:hover {
+			background-color: @blue;
+		}
+
+		.navbar-form,
+		.navbar-search {
+			border-top: none;
+			border-bottom: none;
+		}
+
+		.nav-header {
+			color: rgba(128, 128, 128, 0.6);
+		}
+	}
+
+	.navbar-inverse .nav-collapse {
+
+		.nav li > a:hover {
+			background-color: #111;
+		}
+
+		.nav .active > a {
+			background-color: #111;
+		}
+
+		.nav li.dropdown.open > .dropdown-toggle,
+		.nav li.dropdown.active > .dropdown-toggle,
+		.nav li.dropdown.open.active > .dropdown-toggle {
+			background-color: #111;
+		}
+	}
+}
+
+div.subnav {
+
+	margin: 0 1px;
+	background-color: @grayDarker;
+	background-image: none;
+	border: none;
+	border-bottom: 1px solid @grayDark;
+
+	.nav > li > a,
+	.nav > li:first-child > a,
+	.nav > li:first-child > a:hover {
+		padding: 11px 12px;
+		border: none;
+		background-color: @grayDarker;
+		color: @grayLight;
+	}
+
+	.nav > li > a:hover,
+	.nav > li.active > a,
+	.nav > li.active > a:hover,
+	.nav > li:first-child > a:hover {
+		padding: 11px 12px;
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid @blue;
+		color: @white;
+	}
+
+	.nav li.nav-header {
+		text-shadow: none;
+	}
+
+
+
+
+	&-fixed {
+		top: @navbarHeight;
+		margin: 0;
+	}
+}

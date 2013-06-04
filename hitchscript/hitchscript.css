@@ -382,62 +382,6 @@ li.suite h1 a {
     float: right;
     width: 100px;
 }
-@media screen and (max-width: 60em){
-    pre code{ font-size: 7pt !important;}
-    code{ font-size: 7pt !important; }
-    .js{width:100% !important;}
-    .coffee{width:100% !important; margin-left: 0px !important;}
-}
 
-@media screen and (max-width: 40em){
-    body .frame .menu.collapse {
-       width: 320px;!important;
-    }
-}
 
-div.accordion{
-    margin-top:0px;
-    border-top:0px;
-}
-
-.well{
-    padding: 0px !important;
-    border: 0px !important;
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
-    border-radius: 0 !important;
-    margin-bottom: 2px !important;
-}
-
-code.well {
-    padding: 1px !important;
-}
-
-.accordion{margin-bottom: 0px !important;}
-.accordion-group {
-    border: 0px !important;
-}
-
-.accordion-inner {
-padding: 5px 4px 0px 4px!important;
-}
-.accordion-heading .accordion-toggle {
-    padding-left: 4px !important;
-    padding-right: 4px !important;
-}
-a:hover, a:focus {
-    text-decoration: none !important;
-}
-.btn{
-    padding: 7px 10px !important;
-}
-
-.suiteDesc{padding-left: 4px !important;}
-
-.table { margin-bottom: 0px !important; }
-.run-again{ margin-left: 4px !important;}
-.accordion-heading .accordion-toggle { padding: 4px 4px !important; margin: 0px !important; }
-.navbar .btn, .navbar .btn-group {
-    margin-top: 10px;
-}
 
