@@ -36,13 +36,23 @@ module.exports = (grunt) ->
     jshint:
       files: [r + '*.js']
     concat:
-      m:
+      options: {
+        separator: ';',
+        banner: "'use strict';\n",
+      },
+      ic:
         src: lib + '/itchcork/*.js'
-        dest: r + 'itchcork.js'
+        dest: r + 'itchcork.js',
+      scripts:
+        src: v + '*.js',
+        dest: r + 'scripts.js'
     'min':
-      'm':
+      'ic':
         'src': ['itchcork.js']
         'dest': 'itchcork.min.js',
+      'scripts':
+        'src': ['scripts.js']
+        'dest': 'scripts.min.js',
       'main':
         'src': ['main.js']
         'dest': 'main.min.js',

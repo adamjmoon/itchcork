@@ -1,3 +1,4 @@
+'use strict';
 define("BenchmarkViewModel", ['knockout'], function(ko) {
   var vm =  function() {
       this.name= ko.observable('');
@@ -13,8 +14,7 @@ define("BenchmarkViewModel", ['knockout'], function(ko) {
   };
 
   return vm;
-});
-define("Spy", [], function() {
+});;define("Spy", [], function() {
     "use strict";
 	return function(F) {
 		function G() {
@@ -28,8 +28,7 @@ define("Spy", [], function() {
 
 		return G;
   };
-});
-define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkViewModel'], function (Test, Benchmark, ko, sVM, bVM) {
+});;define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkViewModel'], function (Test, Benchmark, ko, sVM, bVM) {
     var suite =  function (desc, js) {
         "use strict";
         var self = this;
@@ -164,52 +163,7 @@ define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkView
     };
     return suite;
 });
-
-define("SuiteView", ['knockout'], function(ko) {
-
-    var view =  function() {
-        var self = this;
-        self.suites = new ko.observableArray([]);
-        self.menu = document.getElementById('menu');
-        self.view = document.getElementById('view');
-        self.setMenuHeight = function(){
-            self.menu.style.height = document.body.scrollHeight + "px";
-        };
-        ko.applyBindings(self);
-
-
-        self.add = function(suite){
-           self.suites.push(suite);
-            suite.vm.benchmarksDone.subscribe(function(newValue) {
-                self.setMenuHeight();
-            });
-        };
-
-        self.setTheme = function(theme){
-            window.ThemeManager.set(theme);
-            $('#logo').click();
-        };
-
-        self.toggleMenu = function(){
-            var menu = document.getElementById('menu');
-            if(self.menu.style.display == 'block')
-            {
-                self.menu.style.display = 'none';
-            } else {
-                self.setMenuHeight();
-                menu.style.display = 'block';
-                window.scrollTo(0,0);
-            }
-        };
-
-
-
-
-    };
-    return view;
-});
-
-define("SuiteViewModel", ['knockout', 'UnitTestFrameworkManager'], function(ko, utfm) {
+;define("SuiteViewModel", ['knockout', 'UnitTestFrameworkManager'], function(ko, utfm) {
   var vm =  function() {
       this.suiteDesc = ko.observable('');
       this.jsContextStr = ko.observable('');
@@ -224,8 +178,7 @@ define("SuiteViewModel", ['knockout', 'UnitTestFrameworkManager'], function(ko, 
   };
 
   return vm;
-});
-define("Test", [], function () {
+});;define("Test", [], function () {
 
     var test = function (shouldEqual, func, context, testName) {
         'use strict';
@@ -246,8 +199,7 @@ define("Test", [], function () {
     };
 
     return test;
-});
-define("UnitTestFrameworkManager", [], function () {
+});;define("UnitTestFrameworkManager", [], function () {
     return function UnitTestFrameworkManager() {
 
         UnitTestFrameworkManager.prototype.init = function () {
@@ -265,8 +217,7 @@ define("UnitTestFrameworkManager", [], function () {
             return amplify.store('currentUnitTestFramework');
         };
     };
-});
-define("Verify", [], function() {
+});;define("Verify", [], function() {
 	return function(F) {
         'use strict';
 		return function () {
@@ -294,8 +245,7 @@ define("Verify", [], function() {
 			return count > 0;
 		};
 	};
-});
-define("ItchCork", ['Suite', 'SuiteView', 'Test', 'Spy', 'Verify', 'UnitTestFrameworkManager'], function (Suite, SuiteView, Test, Spy, Verify, UnitTestFrameworkManager) {
+});;define("ItchCork", ['Suite', 'SuiteView', 'Test', 'Spy', 'Verify', 'UnitTestFrameworkManager'], function (Suite, SuiteView, Test, Spy, Verify, UnitTestFrameworkManager) {
     'use strict';
     var ItchCork = function() {
 
