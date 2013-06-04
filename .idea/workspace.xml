@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.coffee" afterPath="$PROJECT_DIR$/Gruntfile.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -193,7 +192,7 @@
       <file leaf-file-name="Gruntfile.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="40" selection-start="1878" selection-end="2027" vertical-scroll-proportion="0.7354839">
+            <state line="56" column="29" selection-start="1755" selection-end="1755" vertical-scroll-proportion="0.5612903">
               <folding />
             </state>
           </provider>
@@ -675,7 +674,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="40" selection-start="1878" selection-end="2027" vertical-scroll-proportion="0.7354839">
+        <state line="56" column="29" selection-start="1755" selection-end="1755" vertical-scroll-proportion="0.5612903">
           <folding />
         </state>
       </provider>
