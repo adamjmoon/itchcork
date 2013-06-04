@@ -15,7 +15,6 @@ module.exports = (grunt) ->
    # Load external tasks
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-jshint'
-  grunt.loadNpmTasks 'grunt-recess'
   grunt.loadNpmTasks 'grunt-yui-compressor'
   # grunt.loadNpmTasks 'grunt-istanbul'
   # grunt.loadNpmTasks 'grunt-parallel'
@@ -51,10 +50,13 @@ module.exports = (grunt) ->
     'min':
       'm':
         'src': ['itchcork.js']
-        'dest': 'itchcork.min.js'
+        'dest': 'itchcork.min.js',
       'main':
         'src': ['main.js']
-        'dest': 'main.min.js'
+        'dest': 'main.min.js',
+      'themeManager':
+              'src': [lib + 'themeManager.js']
+              'dest': 'themeManager.min.js'
     uglify:
           mangle:
             toplevel: true
