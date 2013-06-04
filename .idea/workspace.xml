@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/less/extra.less" />
-      <change type="DELETED" beforePath="E:\Projects\itchcork\less\bootstrap-min.css" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\itchcork\less\bootstrap.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/app.less" afterPath="$PROJECT_DIR$/less/app.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/bootstrap.less" afterPath="$PROJECT_DIR$/less/bootstrap.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.css" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/responsive-767px-max.less" afterPath="$PROJECT_DIR$/less/responsive-767px-max.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/scaffolding.less" afterPath="$PROJECT_DIR$/less/scaffolding.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themeManager.min.js" afterPath="$PROJECT_DIR$/themeManager.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/utilities.less" afterPath="$PROJECT_DIR$/less/utilities.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -209,7 +199,7 @@
       <file leaf-file-name="themeManager.min.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themeManager.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="0" selection-start="751470" selection-end="751470" vertical-scroll-proportion="0.15315315">
+            <state line="15" column="56" selection-start="751752" selection-end="751752" vertical-scroll-proportion="0.29616725">
               <folding />
             </state>
           </provider>
@@ -659,7 +649,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/themeManager.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="751470" selection-end="751470" vertical-scroll-proportion="0.15315315">
+        <state line="15" column="56" selection-start="751752" selection-end="751752" vertical-scroll-proportion="0.29616725">
           <folding />
         </state>
       </provider>
