@@ -2,41 +2,50 @@
 // -----------------------------------------------------
 
 .well, .hero-unit {
-	.border-radius(1px);
+  .border-radius(1px);
 }
 
 .well, .hero-unit {
-	border-top: solid 1px lighten(@grayDark, 5%);
-	.box-shadow(0 2px 4px rgba(0,0,0,.8));
+  .box-shadow(0 2px 4px rgba(0,0,0,.8));
+  padding: 0px;
+  border: 0px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  margin-bottom: 2px;
 }
 
 .thumbnail {
-	border-color: @grayDark;
+  border-color: @grayDark;
 }
 
 .progress {
-	background-color: #060606;
-	background-image: none;
-	.border-radius(0);
+  background-color: #060606;
+  background-image: none;
+  .border-radius(0);
 }
 
 .modal {
- 	.border-radius(1px);
-	border-top: solid 1px lighten(@grayDark, 5%);
-	background-color: @grayDark;
+  .border-radius(1px);
+  border-top: solid 1px lighten(@grayDark, 5%);
+  background-color: @grayDark;
 }
 
 .modal-header {
-	border-bottom: 1px solid @grayDark;
+  border-bottom: 1px solid @grayDark;
 }
 
 .modal-footer {
-	background-color: @grayDark;
-	border-top: 1px solid @grayDark;
-	.border-radius(0 0 6px 6px);
-	.box-shadow(none);
+  background-color: @grayDark;
+  border-top: 1px solid @grayDark;
+  .border-radius(0 0 6px 6px);
+  .box-shadow(none);
 }
 
 .footer {
-	border-top: 1px solid @grayDark;
+  border-top: 1px solid @grayDark;
+}
+
+code.well {
+  padding: 1px;
 }
