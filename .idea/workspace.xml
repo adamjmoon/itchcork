@@ -28,6 +28,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/navbar.less" afterPath="$PROJECT_DIR$/less/navbar.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/tables.less" afterPath="$PROJECT_DIR$/less/tables.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/themeManager.js" afterPath="$PROJECT_DIR$/lib/themeManager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themeManager.min.js" afterPath="$PROJECT_DIR$/themeManager.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/variables.less" afterPath="$PROJECT_DIR$/less/variables.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -169,19 +170,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="themeManager.min.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="themeManager.min.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/themeManager.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="54" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
+            <state line="29" column="0" selection-start="741609" selection-end="741609" vertical-scroll-proportion="0.5551802">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="themeManager.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="themeManager.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="18175" selection-start="741087" selection-end="741087" vertical-scroll-proportion="0.134009">
+            <state line="12" column="6" selection-start="0" selection-end="741609" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -268,7 +269,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/less-compile-compress.cmd" />
         <option value="$PROJECT_DIR$/less_compile.bat" />
         <option value="$PROJECT_DIR$/less/accordion.less" />
         <option value="$PROJECT_DIR$/less.bat" />
@@ -284,6 +284,7 @@
         <option value="$PROJECT_DIR$/less/bootstrap-min.css" />
         <option value="$PROJECT_DIR$/less/bootstrap.less" />
         <option value="$PROJECT_DIR$/lib/themeManager.js" />
+        <option value="$PROJECT_DIR$/themeManager.min.js" />
       </list>
     </option>
   </component>
@@ -685,16 +686,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themeManager.min.js">
+    <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="54" selection-start="54" selection-end="54" vertical-scroll-proportion="0.0">
+        <state line="12" column="6" selection-start="0" selection-end="741609" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
+    <entry file="file://$PROJECT_DIR$/themeManager.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18175" selection-start="741087" selection-end="741087" vertical-scroll-proportion="0.134009">
+        <state line="29" column="0" selection-start="741609" selection-end="741609" vertical-scroll-proportion="0.5551802">
           <folding />
         </state>
       </provider>
