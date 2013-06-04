@@ -58,12 +58,12 @@ module.exports = (grunt) ->
 #      'themeManager':
 #              'src': [lib + 'themeManager.js']
 #              'dest': 'themeManager.min.js'
-    uglify:
-          mangle:
-            toplevel: true
-            squeeze:
-              dead_code: false
-              codegen: quote_keys: true
+#    uglify:
+#          mangle:
+#            toplevel: true
+#            squeeze:
+#              dead_code: false
+#              codegen: quote_keys: true
       # platform:
       #   src: [v + 'platform.js']
       #   dest: dest + 'platform.min.js'
