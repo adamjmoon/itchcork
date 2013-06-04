@@ -1,4 +1,4 @@
-define("BenchmarkViewModel", ['knockout'], function(ko) {
+define("BenchmarkViewModel", [], function() {
   var vm =  function() {
       this.name= ko.observable('');
       this.expression= ko.observable('');
@@ -165,7 +165,7 @@ define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkView
     return suite;
 });
 
-define("SuiteView", ['knockout'], function(ko) {
+define("SuiteView", [], function() {
 
     var view =  function() {
         var self = this;
@@ -209,7 +209,7 @@ define("SuiteView", ['knockout'], function(ko) {
     return view;
 });
 
-define("SuiteViewModel", ['knockout', 'UnitTestFrameworkManager'], function(ko, utfm) {
+define("SuiteViewModel", ['UnitTestFrameworkManager'], function(utfm) {
   var vm =  function() {
       this.suiteDesc = ko.observable('');
       this.jsContextStr = ko.observable('');
