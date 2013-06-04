@@ -25,9 +25,9 @@
   "devDependencies": {
     "coffee-script": "latest",
     "growl": "1.7.x",
-    "grunt-contrib-jshint": "0.4.x",
-    "grunt-contrib-concat": "0.3.x",
-    "grunt-yui-compressor": "0.3.x",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-yui-compressor": "latest",
     "grunt-parallel" : "latest",
     "istanbul" : "latest",
     "recess" : "latest"

@@ -1,4 +1,33 @@
-define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkViewModel'], function (Test, Benchmark, ko, sVM, bVM) {
+define("ItchCork", ['Suite', 'SuiteView', '../test', 'Spy', 'Verify', 'UnitTestFrameworkManager'], function (Suite, SuiteView, Test, Spy, Verify, UnitTestFrameworkManager) {
+    'use strict';
+    var ItchCork = function() {
+
+        ItchCork.prototype.Suite = Suite;
+        ItchCork.prototype.SuiteView = SuiteView;
+        ItchCork.prototype.Test = Test;
+        ItchCork.prototype.Spy = Spy;
+        ItchCork.prototype.Verify = Verify;
+        ItchCork.prototype.UnitTestFrameworkManager = UnitTestFrameworkManager;
+    };
+
+    return new ItchCork();
+});
+define("Spy", [], function() {
+    "use strict";
+	return function(F) {
+		function G() {
+			var args = Array.prototype.slice.call(arguments);
+			G.calls.push(args);
+			F.apply(this, args);
+		}
+
+		G.prototype = F.prototype;
+		G.calls = [];
+
+		return G;
+  };
+});
+define("Suite", ['../test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkViewModel'], function (Test, Benchmark, ko, sVM, bVM) {
     var suite =  function (desc, js) {
         "use strict";
         var self = this;
@@ -194,58 +223,24 @@ define("SuiteViewModel", ['knockout', 'UnitTestFrameworkManager'], function(ko, 
 
   return vm;
 });
-define("BenchmarkViewModel", ['knockout'], function(ko) {
-  var vm =  function() {
-      this.name= ko.observable('');
-      this.expression= ko.observable('');
-      this.hz= ko.observable(0);
-      this.relativateMarginError= ko.observable('');
-      this.timesFaster= ko.observable('pending...');
-      this.slowest= ko.observable(false);
-      this.fastest= ko.observable(false);
-      this.iterationPerSampleCycle= ko.observable(0);
-      this.numAnalysisCycles= ko.observable(0);
-      this.numSampleCycles= ko.observable(0);
-  };
+define("UnitTestFrameworkManager", [], function () {
+    return function UnitTestFrameworkManager() {
 
-  return vm;
-});
-define("Test", [], function () {
-
-    var test = function (shouldEqual, func, context, testName) {
-        'use strict';
-        var expressionStr = func.toString().trim();
-
-        if (testName) {
-            this.expression = testName + '()';
-            this.actual = func(context, testName);
-
-        } else {
-            this.expression = expressionStr.replace(/\n/gm, '')
-                .replace(/function +?\(c\) +?\{ +?return(.*?) +?;/g,'$1');
-
-            this.actual = func(context);
+        UnitTestFrameworkManager.prototype.init = function () {
+            if (!amplify.store('currentUnitTestFramework')) {
+                this.set('itchcork');
+            }
+            return this.getFramework();
         }
-        this.shouldEqual = shouldEqual;
-        this.typeOf = typeof(this.actual);
+        UnitTestFrameworkManager.prototype.set = function (framework) {
+            if (framework != amplify.store('currentUnitTestFramework')) {
+                amplify.store('currentUnitTestFramework', framework);
+            }
+        };
+        UnitTestFrameworkManager.prototype.getFramework = function () {
+            return amplify.store('currentUnitTestFramework');
+        };
     };
-
-    return test;
-});
-define("Spy", [], function() {
-    "use strict";
-	return function(F) {
-		function G() {
-			var args = Array.prototype.slice.call(arguments);
-			G.calls.push(args);
-			F.apply(this, args);
-		}
-
-		G.prototype = F.prototype;
-		G.calls = [];
-
-		return G;
-  };
 });
 define("Verify", [], function() {
 	return function(F) {
@@ -275,37 +270,4 @@ define("Verify", [], function() {
 			return count > 0;
 		};
 	};
-});
-define("UnitTestFrameworkManager", [], function () {
-    return function UnitTestFrameworkManager() {
-
-        UnitTestFrameworkManager.prototype.init = function () {
-            if (!amplify.store('currentUnitTestFramework')) {
-                this.set('itchcork');
-            }
-            return this.getFramework();
-        }
-        UnitTestFrameworkManager.prototype.set = function (framework) {
-            if (framework != amplify.store('currentUnitTestFramework')) {
-                amplify.store('currentUnitTestFramework', framework);
-            }
-        };
-        UnitTestFrameworkManager.prototype.getFramework = function () {
-            return amplify.store('currentUnitTestFramework');
-        };
-    };
-});
-define("ItchCork", ['Suite', 'SuiteView', 'Test', 'Spy', 'Verify', 'UnitTestFrameworkManager'], function (Suite, SuiteView, Test, Spy, Verify, UnitTestFrameworkManager) {
-    'use strict';
-    var ItchCork = function() {
-
-        ItchCork.prototype.Suite = Suite;
-        ItchCork.prototype.SuiteView = SuiteView;
-        ItchCork.prototype.Test = Test;
-        ItchCork.prototype.Spy = Spy;
-        ItchCork.prototype.Verify = Verify;
-        ItchCork.prototype.UnitTestFrameworkManager = UnitTestFrameworkManager;
-    };
-
-    return new ItchCork();
 });

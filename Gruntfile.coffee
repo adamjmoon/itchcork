@@ -37,15 +37,7 @@ module.exports = (grunt) ->
       files: [r + '*.js']
     concat:
       m:
-        src: [lib + 'suite.js',
-              lib + 'suiteView.js',
-              lib + 'suiteViewModel.js',
-              lib + 'benchmarkViewModel.js',
-              lib + 'test.js', 
-              lib + 'spy.js', 
-              lib + 'verify.js',
-              lib + 'unitTestFrameworkManager.js',
-              lib + 'itchcork.js']
+        src: lib + '/itchcork/*.js'
         dest: r + 'itchcork.js'
     'min':
       'm':
