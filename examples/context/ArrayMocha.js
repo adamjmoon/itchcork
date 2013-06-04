@@ -1,6 +1,7 @@
 define(function() {
   'use strict';
-  return function context() {
+  var context = function c() {
     this.arr = [1, 2, 3];
   };
+  return context;
 });

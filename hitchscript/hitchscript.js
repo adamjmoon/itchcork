@@ -1,15 +1,27 @@
 if (Meteor.isClient) {
 
+    function addClass(element, className) {
+        if ((element = $(element)) && !hasClass(element, className)) {
+            element.className += (element.className ? ' ' : '') + className;
+        }
+        return element;
+    }
+
     Template.scripts.rendered = function() {
-        
+
         var root = 'https://raw.github.com/adamjmoon/itchcork/master/';
 
         var main = document.createElement('script');
-        main.type = 'text/javascript';  
+        main.type = 'text/javascript';
         main.src = 'https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.5/require.min.js';
         main.setAttribute('data-main',root + 'main.min.js');
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(main, s);
+    };
+
+    Template.nanojar.rendered = function() {
+        var n = document.getElementById('nanojar');
+        n.innerHTML = '<applet code=nano archive=' + '/nano.jar' + '>';
     };
 
     Template.ga.rendered = function () {
