@@ -21,7 +21,7 @@
       <option name="workingDir" value="E:\itchcork" />
       <envs />
     </TaskOptions>
-    <TaskOptions isEnabled="true">
+    <TaskOptions isEnabled="false">
       <option name="arguments" value="./commit.cmd" />
       <option name="checkSyntaxErrors" value="false" />
       <option name="description" value="Git Commit" />
