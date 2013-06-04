@@ -10,7 +10,7 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  // Negative indent the now static "fixed" navbar
+  // Negative indent the now static 'fixed' navbar
   .navbar-fixed-top,
   .navbar-fixed-bottom,
   .navbar-static-top {
@@ -57,8 +57,8 @@
     margin-left: 0; // Reset the default margin for all li elements when no .span* classes are present
   }
   // Make all grid-sized elements block level again
-  [class*="span"],
-  .row-fluid [class*="span"] {
+  [class*='span'],
+  .row-fluid [class*='span'] {
     float: none;
     display: block;
     width: 100%;
@@ -77,21 +77,21 @@
   .input-large,
   .input-xlarge,
   .input-xxlarge,
-  input[class*="span"],
-  select[class*="span"],
-  textarea[class*="span"],
+  input[class*='span'],
+  select[class*='span'],
+  textarea[class*='span'],
   .uneditable-input {
     .input-block-level();
   }
   // But don't let it screw up prepend/append inputs
   .input-prepend input,
   .input-append input,
-  .input-prepend input[class*="span"],
-  .input-append input[class*="span"] {
+  .input-prepend input[class*='span'],
+  .input-append input[class*='span'] {
     display: inline-block; // redeclare so they don't wrap to new lines
     width: auto;
   }
-  .controls-row [class*="span"] + [class*="span"] {
+  .controls-row [class*='span'] + [class*='span'] {
     margin-left: 0;
   }
 
@@ -127,8 +127,8 @@
   }
 
   // Update checkboxes for iOS
-  input[type="checkbox"],
-  input[type="radio"] {
+  input[type='checkbox'],
+  input[type='radio'] {
     border: 1px solid #ccc;
   }
 

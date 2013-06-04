@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/bootstrap-min.css" afterPath="$PROJECT_DIR$/less/bootstrap-min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/bootstrap.css" afterPath="$PROJECT_DIR$/less/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/less/extra.less" />
+      <change type="DELETED" beforePath="E:\Projects\itchcork\less\bootstrap-min.css" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\itchcork\less\bootstrap.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/app.less" afterPath="$PROJECT_DIR$/less/app.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/bootstrap.less" afterPath="$PROJECT_DIR$/less/bootstrap.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.css" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/responsive-767px-max.less" afterPath="$PROJECT_DIR$/less/responsive-767px-max.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/scaffolding.less" afterPath="$PROJECT_DIR$/less/scaffolding.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themeManager.min.js" afterPath="$PROJECT_DIR$/themeManager.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/less/utilities.less" afterPath="$PROJECT_DIR$/less/utilities.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,7 +119,7 @@
     <file path="/deploy.sh" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369516147949" ignored="false" />
     <file path="/grunt.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370299536060" ignored="false" />
     <file path="/theme.css" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370301658703" ignored="false" />
-    <file path="/bootstrap.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370372255430" ignored="false" />
+    <file path="/bootstrap.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370373283075" ignored="false" />
     <file path="/scaffolding.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370359157947" ignored="false" />
     <file path="/less.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370366597893" ignored="false" />
     <file path="/less_compile.bat" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370365181998" ignored="false" />
@@ -136,69 +143,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="bootstrap.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/less/bootstrap.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="26" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="themeManager.min.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/themeManager.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="4" selection-start="722916" selection-end="722916" vertical-scroll-proportion="0.134009">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="themeManager.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="6" selection-start="0" selection-end="741609" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/less/app.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="18" selection-start="1124" selection-end="1124" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hitchscript.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="0" selection-start="788" selection-end="788" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="buttons.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/less/buttons.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="4" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tables.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/less/tables.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="25" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="responsive.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/less/responsive.less">
           <provider selected="true" editor-type-id="text-editor">
@@ -208,19 +152,82 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="variables.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/less/variables.less">
+      <file leaf-file-name="utilities.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/less/utilities.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="0" selection-start="5029" selection-end="5029" vertical-scroll-proportion="0.0">
+            <state line="2" column="53" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accordion.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/less/accordion.less">
+      <file leaf-file-name="misc.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/less/misc.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="26" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="responsive-utilities.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/less/responsive-utilities.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="1" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="extra.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/less/extra.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="1" selection-start="103" selection-end="103" vertical-scroll-proportion="-2.4285715">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/less/bootstrap.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="0" selection-start="449" selection-end="449" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap-min.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/less/bootstrap-min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="0" selection-start="0" selection-end="28529" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="themeManager.min.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/themeManager.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="0" selection-start="751470" selection-end="751470" vertical-scroll-proportion="0.15315315">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scaffolding.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/less/scaffolding.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="56" selection-start="71" selection-end="71" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="buttons.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/less/buttons.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -244,21 +251,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/less/accordion.less" />
-        <option value="$PROJECT_DIR$/less.bat" />
-        <option value="$PROJECT_DIR$/less.cmd" />
-        <option value="$PROJECT_DIR$/less/misc.less" />
-        <option value="$PROJECT_DIR$/bootstrap.css" />
         <option value="$PROJECT_DIR$/less/navbar.less" />
         <option value="$PROJECT_DIR$/less/variables.less" />
         <option value="$PROJECT_DIR$/less/tables.less" />
         <option value="$PROJECT_DIR$/less/buttons.less" />
+        <option value="$PROJECT_DIR$/lib/themeManager.js" />
+        <option value="$PROJECT_DIR$/less/responsive.less" />
+        <option value="$PROJECT_DIR$/less/responsive-767px-max.less" />
+        <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
         <option value="$PROJECT_DIR$/less/app.less" />
         <option value="$PROJECT_DIR$/less/bootstrap-min.css" />
-        <option value="$PROJECT_DIR$/lib/themeManager.js" />
-        <option value="$PROJECT_DIR$/hitchscript/hitchscript.css" />
+        <option value="$PROJECT_DIR$/less/bootstrap.css" />
+        <option value="$PROJECT_DIR$/less/scaffolding.less" />
+        <option value="$PROJECT_DIR$/less/utilities.less" />
+        <option value="$PROJECT_DIR$/less/extra.less" />
         <option value="$PROJECT_DIR$/less/bootstrap.less" />
-        <option value="$PROJECT_DIR$/less/responsive.less" />
         <option value="$PROJECT_DIR$/themeManager.min.js" />
       </list>
     </option>
@@ -365,24 +372,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="less" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap.less" />
-              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itchcork" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="itchcork" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="hitchscript" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -475,19 +464,19 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16675462" sideWeight="0.67096776" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16675462" sideWeight="0.67096776" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.49656993" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.49656993" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.49973616" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24973261" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -563,100 +552,65 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/less/nav.less">
+    <entry file="file://$PROJECT_DIR$/less/responsive-767px-max.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="1" selection-start="1976" selection-end="1976" vertical-scroll-proportion="0.0">
+        <state line="130" column="20" selection-start="2632" selection-end="2632" vertical-scroll-proportion="-28.446428">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/less/misc.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="791" selection-end="791" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less_compress.cmd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="18" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap-min.css">
+    <entry file="file://$PROJECT_DIR$/less/responsive-768px-979px.less">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap.css">
+    <entry file="file://$PROJECT_DIR$/less/responsive-1200px-min.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/less/navbar.less">
+    <entry file="file://$PROJECT_DIR$/less/responsive-navbar.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="11" selection-start="2465" selection-end="2470" vertical-scroll-proportion="-26.074074">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/accordion.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="26" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/variables.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="0" selection-start="5029" selection-end="5029" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/app.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="18" selection-start="1124" selection-end="1124" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/less/buttons.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="4" selection-start="207" selection-end="207" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/themeManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="6" selection-start="0" selection-end="741609" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="1.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="0" selection-start="788" selection-end="788" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/less/tables.less">
+    <entry file="file://$PROJECT_DIR$/less/app.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="25" selection-start="147" selection-end="147" vertical-scroll-proportion="0.0">
+        <state line="6" column="30" selection-start="0" selection-end="2472" vertical-scroll-proportion="0.11630559">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/less/bootstrap.less">
+    <entry file="file://$PROJECT_DIR$/less/responsive-utilities.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="26" selection-start="152" selection-end="152" vertical-scroll-proportion="0.0">
+        <state line="10" column="1" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/scaffolding.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="56" selection-start="71" selection-end="71" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/buttons.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -668,9 +622,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/less/misc.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/utilities.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="53" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/extra.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="1" selection-start="103" selection-end="103" vertical-scroll-proportion="-2.4285715">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/bootstrap.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="449" selection-end="449" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/less/bootstrap-min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="0" selection-end="28529" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/themeManager.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="4" selection-start="722916" selection-end="722916" vertical-scroll-proportion="0.134009">
+        <state line="8" column="0" selection-start="751470" selection-end="751470" vertical-scroll-proportion="0.15315315">
           <folding />
         </state>
       </provider>
