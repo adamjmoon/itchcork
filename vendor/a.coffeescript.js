@@ -2781,4 +2781,4 @@
    typeof define == "function" && define.amd ? define(function() {
        return CoffeeScript
    }) : root.CoffeeScript = CoffeeScript
-})(this)
+})(this);
