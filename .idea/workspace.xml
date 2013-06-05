@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/knockout-min.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/benchmark.js" afterPath="$PROJECT_DIR$/vendor/benchmark.js" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -153,11 +150,34 @@
       <file leaf-file-name="scripts.min.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="16" selection-start="176380" selection-end="176380" vertical-scroll-proportion="-9.6">
+            <state line="2" column="16" selection-start="128" selection-end="128" vertical-scroll-proportion="-1.2">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1370403743000" expanded="true" signature="147968:147980" placeholder="/*...*/" />
-                <marker date="1370403743000" expanded="true" signature="307738:307803" placeholder="/*...*/" />
+                <marker date="1370403920000" expanded="true" signature="238030:238095" placeholder="/*...*/" />
+                <marker date="1370403920000" expanded="true" signature="237393:238769" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="237416:238933" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="237577:237586" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="237547:237552" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="237758:238101" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="237885:238100" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="237824:237877" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="238026:238099" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="237982:238292" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="238085:238251" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="238054:238230" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="237958:237981" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="238025:238317" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="238137:238544" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="238416:238512" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="238200:238377" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="238404:238450" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="238753:238779" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="238467:238977" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="238490:238976" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="238818:238975" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="238520:238714" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="238907:239077" placeholder="{...}" />
+                <marker date="1370403920000" expanded="true" signature="239025:239128" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -216,10 +236,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="86" selection-start="543" selection-end="543" vertical-scroll-proportion="0.24436091">
+            <state line="13" column="86" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="benchmark.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/benchmark.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="19665" selection-start="19665" selection-end="19665" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -243,7 +272,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Gruntfile.coffee" />
         <option value="$PROJECT_DIR$/vendor/mocha.js" />
         <option value="$PROJECT_DIR$/vendor/a.jquery-2.0.0b1.js" />
         <option value="$PROJECT_DIR$/vendor/js2coffee.js" />
@@ -259,6 +287,7 @@
         <option value="$PROJECT_DIR$/vendor/knockout-min.js" />
         <option value="$PROJECT_DIR$/vendor/chai.js" />
         <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/vendor/benchmark.js" />
       </list>
     </option>
   </component>
@@ -562,13 +591,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/benchmark.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19664" selection-start="19664" selection-end="19664" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="34" selection-start="1469" selection-end="1469" vertical-scroll-proportion="-10.8">
@@ -621,11 +643,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="16" selection-start="176380" selection-end="176380" vertical-scroll-proportion="-9.6">
+        <state line="2" column="16" selection-start="128" selection-end="128" vertical-scroll-proportion="-1.2">
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1370403743000" expanded="true" signature="147968:147980" placeholder="/*...*/" />
-            <marker date="1370403743000" expanded="true" signature="307738:307803" placeholder="/*...*/" />
+            <marker date="1370403920000" expanded="true" signature="238030:238095" placeholder="/*...*/" />
+            <marker date="1370403920000" expanded="true" signature="237393:238769" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="237416:238933" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="237577:237586" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="237547:237552" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="237758:238101" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="237885:238100" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="237824:237877" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="238026:238099" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="237982:238292" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="238085:238251" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="238054:238230" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="237958:237981" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="238025:238317" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="238137:238544" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="238416:238512" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="238200:238377" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="238404:238450" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="238753:238779" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="238467:238977" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="238490:238976" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="238818:238975" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="238520:238714" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="238907:239077" placeholder="{...}" />
+            <marker date="1370403920000" expanded="true" signature="239025:239128" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -675,7 +720,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="86" selection-start="543" selection-end="543" vertical-scroll-proportion="0.24436091">
+        <state line="13" column="86" selection-start="543" selection-end="543" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/benchmark.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="19665" selection-start="19665" selection-end="19665" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
