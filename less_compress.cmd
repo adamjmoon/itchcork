@@ -1,4 +1,4 @@
 @ECHO OFF
 PUSHD "%~dp0\less"
-recess ./bootstrap.less --compress  > ./bootstrap-min.css
+recess ./itchcork.less --compress  > ./itchcork-min.css
 POPD
