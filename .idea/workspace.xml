@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/a.underscore.min.js" afterPath="$PROJECT_DIR$/examples/a.underscore.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/a.coffeescript.js" afterPath="$PROJECT_DIR$/vendor/a.coffeescript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -156,10 +157,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="a.coffeescript.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="a.coffeescript.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vendor/a.coffeescript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2783" column="8" selection-start="279390" selection-end="279390" vertical-scroll-proportion="0.0">
+            <state line="7" column="46017" selection-start="46156" selection-end="46156" vertical-scroll-proportion="0.0882353">
               <folding />
             </state>
           </provider>
@@ -196,10 +197,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mocha.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mocha.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/mocha.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="12" selection-start="26" selection-end="26" vertical-scroll-proportion="0.012468828">
+            <state line="1" column="12" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -219,18 +220,18 @@
       <file leaf-file-name="scripts.min.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1370400627000" expanded="true" signature="559071:559263" placeholder="/*...*/" />
-                <marker date="1370400627000" expanded="true" signature="559287:560975" placeholder="{...}" />
-                <marker date="1370400627000" expanded="true" signature="559301:560582" placeholder="{...}" />
-                <marker date="1370400627000" expanded="true" signature="559755:559973" placeholder="{...}" />
-                <marker date="1370400627000" expanded="true" signature="559673:559798" placeholder="{...}" />
-                <marker date="1370400627000" expanded="true" signature="560585:560892" placeholder="{...}" />
-                <marker date="1370400627000" expanded="true" signature="560727:560890" placeholder="/*...*/" />
-                <marker date="1370400627000" expanded="true" signature="560931:560943" placeholder="/*...*/" />
-                <marker date="1370400627000" expanded="true" signature="560990:561071" placeholder="/*...*/" />
-                <marker date="1370400627000" expanded="true" signature="8495:20316" placeholder="{...}" />
+                <marker date="1370401028000" expanded="true" signature="545620:545812" placeholder="/*...*/" />
+                <marker date="1370401028000" expanded="true" signature="545836:547524" placeholder="{...}" />
+                <marker date="1370401028000" expanded="true" signature="545850:547131" placeholder="{...}" />
+                <marker date="1370401028000" expanded="true" signature="546304:546522" placeholder="{...}" />
+                <marker date="1370401028000" expanded="true" signature="546222:546347" placeholder="{...}" />
+                <marker date="1370401028000" expanded="true" signature="547134:547441" placeholder="{...}" />
+                <marker date="1370401028000" expanded="true" signature="547276:547439" placeholder="/*...*/" />
+                <marker date="1370401028000" expanded="true" signature="547480:547492" placeholder="/*...*/" />
+                <marker date="1370401028000" expanded="true" signature="547539:547620" placeholder="/*...*/" />
+                <marker date="1370401028000" expanded="true" signature="8495:20316" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -305,9 +306,9 @@
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
         <option value="$PROJECT_DIR$/vendor/chai.js" />
         <option value="$PROJECT_DIR$/vendor/mocha.js" />
-        <option value="$PROJECT_DIR$/vendor/a.coffeescript.js" />
         <option value="$PROJECT_DIR$/vendor/a.jquery-2.0.0b1.js" />
         <option value="$PROJECT_DIR$/vendor/js2coffee.js" />
+        <option value="$PROJECT_DIR$/vendor/a.coffeescript.js" />
       </list>
     </option>
   </component>
@@ -499,13 +500,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2560" height="1351" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.119212344" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12573907" sideWeight="0.67099917" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12573907" sideWeight="0.67099917" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.49656993" order="10" side_tool="true" content_ui="tabs" />
@@ -697,18 +698,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1370400627000" expanded="true" signature="559071:559263" placeholder="/*...*/" />
-            <marker date="1370400627000" expanded="true" signature="559287:560975" placeholder="{...}" />
-            <marker date="1370400627000" expanded="true" signature="559301:560582" placeholder="{...}" />
-            <marker date="1370400627000" expanded="true" signature="559755:559973" placeholder="{...}" />
-            <marker date="1370400627000" expanded="true" signature="559673:559798" placeholder="{...}" />
-            <marker date="1370400627000" expanded="true" signature="560585:560892" placeholder="{...}" />
-            <marker date="1370400627000" expanded="true" signature="560727:560890" placeholder="/*...*/" />
-            <marker date="1370400627000" expanded="true" signature="560931:560943" placeholder="/*...*/" />
-            <marker date="1370400627000" expanded="true" signature="560990:561071" placeholder="/*...*/" />
-            <marker date="1370400627000" expanded="true" signature="8495:20316" placeholder="{...}" />
+            <marker date="1370401028000" expanded="true" signature="545620:545812" placeholder="/*...*/" />
+            <marker date="1370401028000" expanded="true" signature="545836:547524" placeholder="{...}" />
+            <marker date="1370401028000" expanded="true" signature="545850:547131" placeholder="{...}" />
+            <marker date="1370401028000" expanded="true" signature="546304:546522" placeholder="{...}" />
+            <marker date="1370401028000" expanded="true" signature="546222:546347" placeholder="{...}" />
+            <marker date="1370401028000" expanded="true" signature="547134:547441" placeholder="{...}" />
+            <marker date="1370401028000" expanded="true" signature="547276:547439" placeholder="/*...*/" />
+            <marker date="1370401028000" expanded="true" signature="547480:547492" placeholder="/*...*/" />
+            <marker date="1370401028000" expanded="true" signature="547539:547620" placeholder="/*...*/" />
+            <marker date="1370401028000" expanded="true" signature="8495:20316" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -725,13 +726,6 @@
     <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="94" selection-start="1469" selection-end="1469" vertical-scroll-proportion="-10.8">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/a.coffeescript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2783" column="8" selection-start="279390" selection-end="279390" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -754,10 +748,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/mocha.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="12" selection-start="26" selection-end="26" vertical-scroll-proportion="0.012468828">
+        <state line="1" column="12" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/a.coffeescript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="46017" selection-start="46156" selection-end="46156" vertical-scroll-proportion="0.0882353">
+          <folding />
         </state>
       </provider>
     </entry>
