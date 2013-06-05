@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/a.coffeescript.js" afterPath="$PROJECT_DIR$/vendor/a.coffeescript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/a.jquery-2.0.0b1.js" afterPath="$PROJECT_DIR$/vendor/aa.jquery-2.0.0b1.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/a.lodash.min.js" afterPath="$PROJECT_DIR$/vendor/aa.lodash.min.js" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -116,8 +116,8 @@
     <file path="/less_compile.bat" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370365181998" ignored="false" />
     <file path="/less.bat" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370366294911" ignored="false" />
     <file path="/base.less" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370374154862" ignored="false" />
-    <file path="$PROJECT_DIR$/node_modules/grunt/node_modules/lodash/package.json" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370392115650" ignored="false" />
-    <file path="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/lodash/package.json" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370392115650" ignored="false" />
+    <file path="$PROJECT_DIR$/node_modules/grunt/node_modules/lodash/package.json" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370401170631" ignored="false" />
+    <file path="$PROJECT_DIR$/node_modules/grunt/node_modules/findup-sync/node_modules/lodash/package.json" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370401170631" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,16 +160,16 @@
       <file leaf-file-name="a.coffeescript.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vendor/a.coffeescript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="46017" selection-start="46156" selection-end="46156" vertical-scroll-proportion="0.0882353">
+            <state line="7" column="45738" selection-start="45877" selection-end="45877" vertical-scroll-proportion="0.13375796">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="a.jquery-2.0.0b1.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/a.jquery-2.0.0b1.js">
+      <file leaf-file-name="aa.jquery-2.0.0b1.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/aa.jquery-2.0.0b1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="45760" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+            <state line="4" column="34" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -211,7 +211,7 @@
       <file leaf-file-name="Gruntfile.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="94" selection-start="1469" selection-end="1469" vertical-scroll-proportion="-10.8">
+            <state line="43" column="34" selection-start="1469" selection-end="1469" vertical-scroll-proportion="-10.8">
               <folding />
             </state>
           </provider>
@@ -222,16 +222,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1370401028000" expanded="true" signature="545620:545812" placeholder="/*...*/" />
-                <marker date="1370401028000" expanded="true" signature="545836:547524" placeholder="{...}" />
-                <marker date="1370401028000" expanded="true" signature="545850:547131" placeholder="{...}" />
-                <marker date="1370401028000" expanded="true" signature="546304:546522" placeholder="{...}" />
-                <marker date="1370401028000" expanded="true" signature="546222:546347" placeholder="{...}" />
-                <marker date="1370401028000" expanded="true" signature="547134:547441" placeholder="{...}" />
-                <marker date="1370401028000" expanded="true" signature="547276:547439" placeholder="/*...*/" />
-                <marker date="1370401028000" expanded="true" signature="547480:547492" placeholder="/*...*/" />
-                <marker date="1370401028000" expanded="true" signature="547539:547620" placeholder="/*...*/" />
-                <marker date="1370401028000" expanded="true" signature="8495:20316" placeholder="{...}" />
+                <marker date="1370401125000" expanded="true" signature="312385:312577" placeholder="/*...*/" />
+                <marker date="1370401125000" expanded="true" signature="312601:314289" placeholder="{...}" />
+                <marker date="1370401125000" expanded="true" signature="312615:313896" placeholder="{...}" />
+                <marker date="1370401125000" expanded="true" signature="313069:313287" placeholder="{...}" />
+                <marker date="1370401125000" expanded="true" signature="312987:313112" placeholder="{...}" />
+                <marker date="1370401125000" expanded="true" signature="313899:314206" placeholder="{...}" />
+                <marker date="1370401125000" expanded="true" signature="314041:314204" placeholder="/*...*/" />
+                <marker date="1370401125000" expanded="true" signature="314245:314257" placeholder="/*...*/" />
+                <marker date="1370401125000" expanded="true" signature="314304:314385" placeholder="/*...*/" />
               </folding>
             </state>
           </provider>
@@ -240,7 +239,7 @@
       <file leaf-file-name="scripts.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="70" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+            <state line="1" column="29" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
               <folding>
                 <marker date="1370393607000" expanded="true" signature="16:156200" placeholder="{...}" />
                 <marker date="1370393607000" expanded="true" signature="70:146570" placeholder="{&quot;architecture&quot;: 32...}" />
@@ -504,7 +503,7 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.119212344" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12573907" sideWeight="0.67099917" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -608,7 +607,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/a.lodash.min.js">
+    <entry file="file://$PROJECT_DIR$/vendor/aa.lodash.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="1" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
           <folding>
@@ -646,7 +645,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="70" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+        <state line="1" column="29" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
           <folding>
             <marker date="1370393607000" expanded="true" signature="16:156200" placeholder="{...}" />
             <marker date="1370393607000" expanded="true" signature="70:146570" placeholder="{&quot;architecture&quot;: 32...}" />
@@ -700,16 +699,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1370401028000" expanded="true" signature="545620:545812" placeholder="/*...*/" />
-            <marker date="1370401028000" expanded="true" signature="545836:547524" placeholder="{...}" />
-            <marker date="1370401028000" expanded="true" signature="545850:547131" placeholder="{...}" />
-            <marker date="1370401028000" expanded="true" signature="546304:546522" placeholder="{...}" />
-            <marker date="1370401028000" expanded="true" signature="546222:546347" placeholder="{...}" />
-            <marker date="1370401028000" expanded="true" signature="547134:547441" placeholder="{...}" />
-            <marker date="1370401028000" expanded="true" signature="547276:547439" placeholder="/*...*/" />
-            <marker date="1370401028000" expanded="true" signature="547480:547492" placeholder="/*...*/" />
-            <marker date="1370401028000" expanded="true" signature="547539:547620" placeholder="/*...*/" />
-            <marker date="1370401028000" expanded="true" signature="8495:20316" placeholder="{...}" />
+            <marker date="1370401125000" expanded="true" signature="312385:312577" placeholder="/*...*/" />
+            <marker date="1370401125000" expanded="true" signature="312601:314289" placeholder="{...}" />
+            <marker date="1370401125000" expanded="true" signature="312615:313896" placeholder="{...}" />
+            <marker date="1370401125000" expanded="true" signature="313069:313287" placeholder="{...}" />
+            <marker date="1370401125000" expanded="true" signature="312987:313112" placeholder="{...}" />
+            <marker date="1370401125000" expanded="true" signature="313899:314206" placeholder="{...}" />
+            <marker date="1370401125000" expanded="true" signature="314041:314204" placeholder="/*...*/" />
+            <marker date="1370401125000" expanded="true" signature="314245:314257" placeholder="/*...*/" />
+            <marker date="1370401125000" expanded="true" signature="314304:314385" placeholder="/*...*/" />
           </folding>
         </state>
       </provider>
@@ -725,14 +723,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="94" selection-start="1469" selection-end="1469" vertical-scroll-proportion="-10.8">
+        <state line="43" column="34" selection-start="1469" selection-end="1469" vertical-scroll-proportion="-10.8">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/a.jquery-2.0.0b1.js">
+    <entry file="file://$PROJECT_DIR$/vendor/aa.jquery-2.0.0b1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="45760" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
+        <state line="4" column="34" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -757,7 +755,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/a.coffeescript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="46017" selection-start="46156" selection-end="46156" vertical-scroll-proportion="0.0882353">
+        <state line="7" column="45738" selection-start="45877" selection-end="45877" vertical-scroll-proportion="0.13375796">
           <folding />
         </state>
       </provider>
