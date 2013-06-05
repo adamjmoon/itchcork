@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/platform.js" afterPath="$PROJECT_DIR$/vendor/platform.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.coffee" afterPath="$PROJECT_DIR$/Gruntfile.coffee" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -157,10 +156,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="platform.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="platform.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/platform.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="10276" selection-start="10453" selection-end="10453" vertical-scroll-proportion="0.0955414">
+            <state line="5" column="10276" selection-start="10453" selection-end="10453" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -210,10 +209,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gruntfile.coffee" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Gruntfile.coffee" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="34" selection-start="1554" selection-end="1554" vertical-scroll-proportion="-13.2">
+            <state line="43" column="31" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.22920203">
               <folding />
             </state>
           </provider>
@@ -222,8 +221,37 @@
       <file leaf-file-name="scripts.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="829" column="70" selection-start="553784" selection-end="553784" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="1" column="70" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1370393607000" expanded="true" signature="16:156200" placeholder="{...}" />
+                <marker date="1370393607000" expanded="true" signature="70:146570" placeholder="{&quot;architecture&quot;: 32...}" />
+                <marker date="1370393607000" expanded="true" signature="13192:137449" placeholder="{...}" />
+                <marker date="1370393607000" expanded="true" signature="176593:260810" placeholder="{...}" />
+                <marker date="1370393607000" expanded="true" signature="177697:177811" placeholder="{...}" />
+                <marker date="1370393607000" expanded="true" signature="242016:260800" placeholder="{...}" />
+                <marker date="1370393607000" expanded="true" signature="260958:261034" placeholder="/*...*/" />
+                <marker date="1370393607000" expanded="true" signature="262009:264688" placeholder="/** The platform object. ...*/" />
+                <marker date="1370393607000" expanded="true" signature="265209:476372" placeholder="{...}" />
+                <marker date="1370393607000" expanded="true" signature="266289:269066" placeholder="/** The browser/environment version. ...*/" />
+                <marker date="1370393607000" expanded="true" signature="271120:273860" placeholder="/** The name of the browser/environment. ...*/" />
+                <marker date="1370393607000" expanded="true" signature="275420:278236" placeholder="/** The name of the operating system. ...*/" />
+                <marker date="1370393607000" expanded="true" signature="280884:448000" placeholder="{&quot;architecture&quot;: null...}" />
+                <marker date="1370393607000" expanded="true" signature="282044:315492" placeholder="/** The CPU architecture the OS is built for. ...*/" />
+                <marker date="1370393607000" expanded="true" signature="315572:374901" placeholder="/** The family of the OS. ...*/" />
+                <marker date="1370393607000" expanded="true" signature="443035:443199" placeholder="/** The version of the OS. ...*/" />
+                <marker date="1370393607000" expanded="true" signature="444369:446953" placeholder="/** Returns the OS string. ...*/" />
+                <marker date="1370393607000" expanded="true" signature="449017:451611" placeholder="/** The platform description. ...*/" />
+                <marker date="1370393607000" expanded="true" signature="453136:455720" placeholder="/** The name of the browser layout engine. ...*/" />
+                <marker date="1370393607000" expanded="true" signature="457236:459827" placeholder="/** The name of the product's manufacturer. ...*/" />
+                <marker date="1370393607000" expanded="true" signature="461407:464021" placeholder="/** The alpha/beta release indicator. ...*/" />
+                <marker date="1370393607000" expanded="true" signature="465550:468125" placeholder="/** The name of the product hosting the browser. ...*/" />
+                <marker date="1370393607000" expanded="true" signature="469708:472282" placeholder="/** The browser's user agent string. ...*/" />
+                <marker date="1370393607000" expanded="true" signature="477914:477992" placeholder="/*...*/" />
+                <marker date="1370393607000" expanded="true" signature="480052:482536" placeholder="{...}" />
+                <marker date="1370393607000" expanded="true" signature="481012:482008" placeholder="{...}" />
+                <marker date="1370393607000" expanded="true" signature="483662:533221" placeholder="{...}" />
+                <marker date="1370393607000" expanded="true" signature="533277:533394" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -271,8 +299,8 @@
         <option value="$PROJECT_DIR$/vendor/mocha.js" />
         <option value="$PROJECT_DIR$/vendor/sinon-chai.js" />
         <option value="$PROJECT_DIR$/vendor/ui.browserscope.js" />
-        <option value="$PROJECT_DIR$/Gruntfile.coffee" />
         <option value="$PROJECT_DIR$/vendor/platform.js" />
+        <option value="$PROJECT_DIR$/Gruntfile.coffee" />
       </list>
     </option>
   </component>
@@ -472,9 +500,9 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.119212344" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12573907" sideWeight="0.67099917" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.12573907" sideWeight="0.67099917" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.49656993" order="10" side_tool="true" content_ui="tabs" />
@@ -662,17 +690,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="34" selection-start="1554" selection-end="1554" vertical-scroll-proportion="-13.2">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="829" column="70" selection-start="553784" selection-end="553784" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="1" column="70" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1370393607000" expanded="true" signature="16:156200" placeholder="{...}" />
+            <marker date="1370393607000" expanded="true" signature="70:146570" placeholder="{&quot;architecture&quot;: 32...}" />
+            <marker date="1370393607000" expanded="true" signature="13192:137449" placeholder="{...}" />
+            <marker date="1370393607000" expanded="true" signature="176593:260810" placeholder="{...}" />
+            <marker date="1370393607000" expanded="true" signature="177697:177811" placeholder="{...}" />
+            <marker date="1370393607000" expanded="true" signature="242016:260800" placeholder="{...}" />
+            <marker date="1370393607000" expanded="true" signature="260958:261034" placeholder="/*...*/" />
+            <marker date="1370393607000" expanded="true" signature="262009:264688" placeholder="/** The platform object. ...*/" />
+            <marker date="1370393607000" expanded="true" signature="265209:476372" placeholder="{...}" />
+            <marker date="1370393607000" expanded="true" signature="266289:269066" placeholder="/** The browser/environment version. ...*/" />
+            <marker date="1370393607000" expanded="true" signature="271120:273860" placeholder="/** The name of the browser/environment. ...*/" />
+            <marker date="1370393607000" expanded="true" signature="275420:278236" placeholder="/** The name of the operating system. ...*/" />
+            <marker date="1370393607000" expanded="true" signature="280884:448000" placeholder="{&quot;architecture&quot;: null...}" />
+            <marker date="1370393607000" expanded="true" signature="282044:315492" placeholder="/** The CPU architecture the OS is built for. ...*/" />
+            <marker date="1370393607000" expanded="true" signature="315572:374901" placeholder="/** The family of the OS. ...*/" />
+            <marker date="1370393607000" expanded="true" signature="443035:443199" placeholder="/** The version of the OS. ...*/" />
+            <marker date="1370393607000" expanded="true" signature="444369:446953" placeholder="/** Returns the OS string. ...*/" />
+            <marker date="1370393607000" expanded="true" signature="449017:451611" placeholder="/** The platform description. ...*/" />
+            <marker date="1370393607000" expanded="true" signature="453136:455720" placeholder="/** The name of the browser layout engine. ...*/" />
+            <marker date="1370393607000" expanded="true" signature="457236:459827" placeholder="/** The name of the product's manufacturer. ...*/" />
+            <marker date="1370393607000" expanded="true" signature="461407:464021" placeholder="/** The alpha/beta release indicator. ...*/" />
+            <marker date="1370393607000" expanded="true" signature="465550:468125" placeholder="/** The name of the product hosting the browser. ...*/" />
+            <marker date="1370393607000" expanded="true" signature="469708:472282" placeholder="/** The browser's user agent string. ...*/" />
+            <marker date="1370393607000" expanded="true" signature="477914:477992" placeholder="/*...*/" />
+            <marker date="1370393607000" expanded="true" signature="480052:482536" placeholder="{...}" />
+            <marker date="1370393607000" expanded="true" signature="481012:482008" placeholder="{...}" />
+            <marker date="1370393607000" expanded="true" signature="483662:533221" placeholder="{...}" />
+            <marker date="1370393607000" expanded="true" signature="533277:533394" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -685,10 +735,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/platform.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="10276" selection-start="10453" selection-end="10453" vertical-scroll-proportion="0.0955414">
+        <state line="5" column="10276" selection-start="10453" selection-end="10453" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="31" selection-start="1466" selection-end="1466" vertical-scroll-proportion="0.22920203">
+          <folding />
         </state>
       </provider>
     </entry>
