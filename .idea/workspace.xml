@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\Projects\itchcork\vendor\aa.jquery-1.10.1.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
+      <change type="DELETED" beforePath="E:\Projects\itchcork\scripts.js" afterPath="" />
+      <change type="DELETED" beforePath="E:\Projects\itchcork\scripts.min.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.coffee" afterPath="$PROJECT_DIR$/Gruntfile.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/benchmark.js" afterPath="$PROJECT_DIR$/vendor/benchmark.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mocha.js" afterPath="$PROJECT_DIR$/vendor/mocha.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/platform.js" afterPath="$PROJECT_DIR$/vendor/platform.js" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -146,15 +150,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scripts.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="16" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="aa.underscore.min.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/aa.underscore.min.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -176,10 +171,31 @@
       <file leaf-file-name="platform.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/platform.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1005" column="0" selection-start="31858" selection-end="31858" vertical-scroll-proportion="0.0">
+            <state line="5" column="10599" selection-start="10776" selection-end="10776" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <marker date="1370444227650" expanded="true" signature="59:176" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sinon.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/sinon.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mocha.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/mocha.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5305" column="0" selection-start="110243" selection-end="110243" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -202,19 +218,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.js">
+      <file leaf-file-name="benchmark.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/benchmark.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="40" selection-start="929" selection-end="929" vertical-scroll-proportion="0.3773585">
-              <folding />
+            <state line="7" column="20988" selection-start="21285" selection-end="21285" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="benchmark.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/benchmark.js">
+      <file leaf-file-name="Gruntfile.coffee" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="19665" selection-start="19665" selection-end="19665" vertical-scroll-proportion="0.0">
+            <state line="31" column="32" selection-start="803" selection-end="803" vertical-scroll-proportion="0.4097222">
               <folding />
             </state>
           </provider>
@@ -238,8 +256,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/vendor/mocha.js" />
-        <option value="$PROJECT_DIR$/vendor/a.jquery-2.0.0b1.js" />
         <option value="$PROJECT_DIR$/vendor/js2coffee.js" />
         <option value="$PROJECT_DIR$/vendor/a.coffeescript.js" />
         <option value="$PROJECT_DIR$/vendor/aa.jquery-2.0.0b1.js" />
@@ -251,9 +267,11 @@
         <option value="$PROJECT_DIR$/vendor/ui.browserscope.js" />
         <option value="$PROJECT_DIR$/vendor/knockout-min.js" />
         <option value="$PROJECT_DIR$/vendor/chai.js" />
-        <option value="$PROJECT_DIR$/vendor/benchmark.js" />
-        <option value="$PROJECT_DIR$/vendor/platform.js" />
         <option value="$PROJECT_DIR$/main.js" />
+        <option value="$PROJECT_DIR$/vendor/platform.js" />
+        <option value="$PROJECT_DIR$/vendor/mocha.js" />
+        <option value="$PROJECT_DIR$/vendor/benchmark.js" />
+        <option value="$PROJECT_DIR$/Gruntfile.coffee" />
       </list>
     </option>
   </component>
@@ -568,14 +586,9 @@
     <entry file="file://$PROJECT_DIR$/vendor/benchmark.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="19665" selection-start="19665" selection-end="19665" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="34" selection-start="1469" selection-end="1469" vertical-scroll-proportion="-10.8">
-          <folding />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -584,14 +597,11 @@
         <state line="2868" column="0" selection-start="107151" selection-end="107151" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/mocha.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="12" selection-start="26" selection-end="26" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/coffee/coffeescript.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="176835" selection-start="176974" selection-end="176974" vertical-scroll-proportion="0.0" />
+        <state line="7" column="176835" selection-start="176974" selection-end="176974" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/aa.lodash.min.js">
@@ -601,23 +611,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="16" selection-start="145" selection-end="145" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/aa.underscore.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="66" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/sinon-chai.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2229" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -636,25 +632,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/benchmark.js">
+    <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19665" selection-start="19665" selection-end="19665" vertical-scroll-proportion="0.0">
+        <state line="20" column="40" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/mocha.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5305" column="0" selection-start="110243" selection-end="110243" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/platform.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1005" column="0" selection-start="31858" selection-end="31858" vertical-scroll-proportion="0.0">
+        <state line="5" column="10599" selection-start="10776" selection-end="10776" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1370444227650" expanded="true" signature="59:176" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sinon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
+    <entry file="file://$PROJECT_DIR$/vendor/sinon-chai.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="40" selection-start="929" selection-end="929" vertical-scroll-proportion="0.3773585">
+        <state line="1" column="2229" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/benchmark.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="20988" selection-start="21285" selection-end="21285" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="32" selection-start="803" selection-end="803" vertical-scroll-proportion="0.4097222">
           <folding />
         </state>
       </provider>

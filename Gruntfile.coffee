@@ -21,15 +21,6 @@ module.exports = (grunt) ->
 
   # Make task shortcuts
   grunt.registerTask 'default', ['concat','min']
-  # grunt.registerTask 'build', ['default', 'min']
-  # grunt.registerTask 'run', ['parallel:test']
-  # grunt.registerTask 'css', ['recess']
-  # grunt.registerTask 'optimize', ['concat', 'min', 'recess', 'cssmin']
-  # grunt.registerTask 'start', ['startUnitTestServer']
-  # grunt.registerTask 'kill', ['killUnitTestServer']
-  # grunt.registerTask 'test', ['parallel:a']
-  # grunt.registerTask 'cover', ['instrument', 'compileSpecs', 'start', 'run', 'makeReport', 'kill']
-  # grunt.registerTask 'ci', ['instrument', 'compileSpecs', 'start', 'run', 'makeReport', 'openCoverageReport', 'watch']
 
   # Configure Grunt
   grunt.initConfig
@@ -39,9 +30,6 @@ module.exports = (grunt) ->
       ic:
         src: lib + '/itchcork/*.js'
         dest: r + 'itchcork.js',
-      scripts:
-        src: v + '*.js',
-        dest: r + 'scripts.min.js'
     'min':
       'ic':
         'src': ['itchcork.js']

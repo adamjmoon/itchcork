@@ -1,5 +1,6 @@
-/*!mocha.js*/
-(function(){
+;(function(){
+
+
 // CommonJS require()
 
 function require(p){
@@ -1711,9 +1712,9 @@ exports.colors = {
  */
  
 exports.symbols = {
-  ok: '?',
-  err: '?',
-  dot: '?'
+  ok: '✓',
+  err: '✖',
+  dot: '․'
 };
 
 // With node.js on Windows: use symbols available in terminal default fonts
@@ -2347,11 +2348,11 @@ function HTML(runner, root) {
 
     // test
     if ('passed' == test.state) {
-      var el = fragment('<li class="test pass %e"><h2>%e<span class="duration">%ems</span> <a href="?grep=%e" class="replay">?</a></h2></li>', test.speed, test.title, test.duration, encodeURIComponent(test.fullTitle()));
+      var el = fragment('<li class="test pass %e"><h2>%e<span class="duration">%ems</span> <a href="?grep=%e" class="replay">‣</a></h2></li>', test.speed, test.title, test.duration, encodeURIComponent(test.fullTitle()));
     } else if (test.pending) {
       var el = fragment('<li class="test pass pending"><h2>%e</h2></li>', test.title);
     } else {
-      var el = fragment('<li class="test fail"><h2>%e <a href="?grep=%e" class="replay">?</a></h2></li>', test.title, encodeURIComponent(test.fullTitle()));
+      var el = fragment('<li class="test fail"><h2>%e <a href="?grep=%e" class="replay">‣</a></h2></li>', test.title, encodeURIComponent(test.fullTitle()));
       var str = test.err.stack || test.err.toString();
 
       // FF / Opera do not add the message
@@ -2835,7 +2836,7 @@ function Landing(runner) {
     , width = Base.window.width * .75 | 0
     , total = runner.total
     , stream = process.stdout
-    , plane = color('plane', '?')
+    , plane = color('plane', '✈')
     , crashed = -1
     , n = 0;
 
@@ -2857,7 +2858,7 @@ function Landing(runner) {
 
     // show the crash
     if ('failed' == test.state) {
-      plane = color('plane crash', '?');
+      plane = color('plane crash', '✈');
       crashed = col;
     }
 
@@ -2865,9 +2866,9 @@ function Landing(runner) {
     stream.write('\u001b[4F\n\n');
     stream.write(runway());
     stream.write('\n  ');
-    stream.write(color('runway', Array(col).join('?')));
+    stream.write(color('runway', Array(col).join('⋅')));
     stream.write(plane)
-    stream.write(color('runway', Array(width - col).join('?') + '\n'));
+    stream.write(color('runway', Array(width - col).join('⋅') + '\n'));
     stream.write(runway());
     stream.write('\u001b[0m');
   });
@@ -3411,7 +3412,7 @@ function Progress(runner, options) {
 
   // default chars
   options.open = options.open || '[';
-  options.complete = options.complete || '?';
+  options.complete = options.complete || '▬';
   options.incomplete = options.incomplete || Base.symbols.dot;
   options.close = options.close || ']';
   options.verbose = false;
@@ -3512,7 +3513,7 @@ function Spec(runner) {
   });
 
   runner.on('test', function(test){
-    process.stdout.write(indent() + color('pass', '  ? ' + test.title + ': '));
+    process.stdout.write(indent() + color('pass', '  ◦ ' + test.title + ': '));
   });
 
   runner.on('pending', function(test){
