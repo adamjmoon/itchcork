@@ -11,7 +11,7 @@ requirejs.config({
     baseUrl: 'https://',
     paths: {
         'themeManager': root + 'themeManager.min',
-        'bootstrap': root + 'scripts.min',
+        'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min',
         'underscore': root + 'scripts.min',
         'coffeescript': root + 'vendor/coffee/coffeescript.min',
         'js2coffee': root + 'vendor/coffee/js2coffee',
@@ -23,7 +23,7 @@ requirejs.config({
         'sinon-chai': root + 'scripts.min',
         'platform': root + 'scripts.min',
         'benchmark': root + 'scripts.min',
-        'knockout': root + 'scripts.min',
+        'knockout': 'ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1',
         'context': root + 'examples/context/' + testcase,
         'suite': root + 'examples/test/' + testcase
     }

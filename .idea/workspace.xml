@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/examples/aa.lodash.min.js" afterPath="$PROJECT_DIR$/vendor/aa.lodash.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/chai.js" afterPath="$PROJECT_DIR$/vendor/chai.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/knockout-min.js" afterPath="$PROJECT_DIR$/vendor/knockout-min.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/bootstrap.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/knockout-min.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
@@ -139,15 +139,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="bootstrap.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/bootstrap.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="28345" selection-start="28762" selection-end="28762" vertical-scroll-proportion="-3.6">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="aa.lodash.min.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/aa.lodash.min.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -162,9 +153,11 @@
       <file leaf-file-name="scripts.min.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="16" selection-start="155135" selection-end="155135" vertical-scroll-proportion="-9.6">
+            <state line="62" column="16" selection-start="176380" selection-end="176380" vertical-scroll-proportion="-9.6">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <marker date="1370403743000" expanded="true" signature="147968:147980" placeholder="/*...*/" />
+                <marker date="1370403743000" expanded="true" signature="307738:307803" placeholder="/*...*/" />
               </folding>
             </state>
           </provider>
@@ -212,33 +205,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="40" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="knockout-min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/knockout-min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="1" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="chai.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="chai.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/chai.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="30884" selection-start="30897" selection-end="30897" vertical-scroll-proportion="0.01910828">
+            <state line="1" column="30884" selection-start="30897" selection-end="30897" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="86" selection-start="543" selection-end="543" vertical-scroll-proportion="0.24436091">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -274,9 +256,9 @@
         <option value="$PROJECT_DIR$/vendor/sinon-chai.js" />
         <option value="$PROJECT_DIR$/vendor/platform.js" />
         <option value="$PROJECT_DIR$/vendor/ui.browserscope.js" />
-        <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/vendor/knockout-min.js" />
         <option value="$PROJECT_DIR$/vendor/chai.js" />
+        <option value="$PROJECT_DIR$/main.js" />
       </list>
     </option>
   </component>
@@ -628,13 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="28345" selection-start="28762" selection-end="28762" vertical-scroll-proportion="-3.6">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/aa.lodash.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="654" selection-start="9983" selection-end="9984" vertical-scroll-proportion="-13.8">
@@ -646,9 +621,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="16" selection-start="155135" selection-end="155135" vertical-scroll-proportion="-9.6">
+        <state line="62" column="16" selection-start="176380" selection-end="176380" vertical-scroll-proportion="-9.6">
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <marker date="1370403743000" expanded="true" signature="147968:147980" placeholder="/*...*/" />
+            <marker date="1370403743000" expanded="true" signature="307738:307803" placeholder="/*...*/" />
           </folding>
         </state>
       </provider>
@@ -687,28 +664,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="40" selection-start="1326" selection-end="1326" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/knockout-min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="1" selection-start="162" selection-end="162" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/chai.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="30884" selection-start="30897" selection-end="30897" vertical-scroll-proportion="0.01910828">
+        <state line="1" column="30884" selection-start="30897" selection-end="30897" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="86" selection-start="543" selection-end="543" vertical-scroll-proportion="0.24436091">
+          <folding />
         </state>
       </provider>
     </entry>
