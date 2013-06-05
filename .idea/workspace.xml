@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="" />
+    <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/aa.jquery-2.0.0b1.js" afterPath="$PROJECT_DIR$/vendor/aa.jquery-2.0.0b1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370386761174" ignored="false" />
@@ -163,10 +166,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aa.jquery-2.0.0b1.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="aa.jquery-2.0.0b1.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vendor/aa.jquery-2.0.0b1.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="1" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
+            <state line="3" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="0.037815128">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -216,13 +219,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scripts.min.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="scripts.min.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="32133" selection-end="32133" vertical-scroll-proportion="0.037815128">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="1" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -297,8 +298,8 @@
         <option value="$PROJECT_DIR$/vendor/a.jquery-2.0.0b1.js" />
         <option value="$PROJECT_DIR$/vendor/js2coffee.js" />
         <option value="$PROJECT_DIR$/vendor/a.coffeescript.js" />
-        <option value="$PROJECT_DIR$/vendor/aa.jquery-2.0.0b1.js" />
         <option value="$PROJECT_DIR$/scripts.min.js" />
+        <option value="$PROJECT_DIR$/vendor/aa.jquery-2.0.0b1.js" />
       </list>
     </option>
   </component>
@@ -431,10 +432,10 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/examples" />
+      <recent name="$PROJECT_DIR$/vendor" />
       <recent name="E:\Projects\itchcork\lib\itchcork" />
       <recent name="E:\Projects\itchcork\less" />
       <recent name="E:\Projects\itchcork\examples" />
-      <recent name="E:\itchcork\vendor" />
     </key>
   </component>
   <component name="RunManager">
@@ -591,14 +592,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/a.underscore.min.js">
+    <entry file="file://$PROJECT_DIR$/vendor/aa.underscore.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/aa.lodash.min.js">
+    <entry file="file://$PROJECT_DIR$/examples/aa.lodash.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="1" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
           <folding>
@@ -727,18 +728,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/aa.jquery-2.0.0b1.js">
+    <entry file="file://$PROJECT_DIR$/scripts.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="1" selection-start="130" selection-end="130" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state line="1" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts.min.js">
+    <entry file="file://$PROJECT_DIR$/vendor/aa.jquery-2.0.0b1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="32133" selection-end="32133" vertical-scroll-proportion="0.037815128">
+        <state line="3" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="0.037815128">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
