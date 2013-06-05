@@ -202,7 +202,7 @@
       <file leaf-file-name="mocha.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vendor/mocha.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="49012" selection-start="49023" selection-end="49023" vertical-scroll-proportion="0.012605042">
+            <state line="1" column="12" selection-start="26" selection-end="26" vertical-scroll-proportion="0.012468828">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -223,7 +223,9 @@
         <entry file="file://$PROJECT_DIR$/scripts.min.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <marker date="1370394690000" expanded="true" signature="8494:20315" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -709,17 +711,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="94" selection-start="1469" selection-end="1469" vertical-scroll-proportion="-10.8">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1370394690000" expanded="true" signature="8494:20315" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -739,9 +736,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="94" selection-start="1469" selection-end="1469" vertical-scroll-proportion="-10.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/mocha.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="49012" selection-start="49023" selection-end="49023" vertical-scroll-proportion="0.012605042">
+        <state line="1" column="12" selection-start="26" selection-end="26" vertical-scroll-proportion="0.012468828">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
