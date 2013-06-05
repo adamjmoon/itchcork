@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/bootstrap.min.js" afterPath="$PROJECT_DIR$/vendor/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="" />
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370386761174" ignored="false" />
@@ -137,15 +134,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="benchmark.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/benchmark.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="19664" selection-start="19664" selection-end="19664" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="platform.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/platform.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -166,11 +154,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bootstrap.min.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="bootstrap.min.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/bootstrap.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="28345" selection-start="28762" selection-end="28762" vertical-scroll-proportion="0.075630255">
+            <state line="6" column="28345" selection-start="28762" selection-end="28762" vertical-scroll-proportion="-3.6">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="aa.lodash.min.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/examples/aa.lodash.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="654" selection-start="9983" selection-end="9984" vertical-scroll-proportion="0.29613733">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -233,7 +232,8 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="1" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1370402023000" expanded="true" signature="398407:406506" placeholder="{...}" />
+                <marker date="1370402228000" expanded="true" signature="398498:406597" placeholder="{...}" />
+                <marker date="1370402228000" expanded="true" signature="378182:378305" placeholder="/*...*/" />
               </folding>
             </state>
           </provider>
@@ -470,7 +470,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12573907" sideWeight="0.67099917" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12573907" sideWeight="0.67099917" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.49656993" order="10" side_tool="true" content_ui="tabs" />
@@ -562,15 +562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/aa.lodash.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -691,7 +682,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="81" selection-end="81" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1370402023000" expanded="true" signature="398407:406506" placeholder="{...}" />
+            <marker date="1370402228000" expanded="true" signature="398498:406597" placeholder="{...}" />
+            <marker date="1370402228000" expanded="true" signature="378182:378305" placeholder="/*...*/" />
           </folding>
         </state>
       </provider>
@@ -714,8 +706,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="28345" selection-start="28762" selection-end="28762" vertical-scroll-proportion="0.075630255">
+        <state line="6" column="28345" selection-start="28762" selection-end="28762" vertical-scroll-proportion="-3.6">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/aa.lodash.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="654" selection-start="9983" selection-end="9984" vertical-scroll-proportion="0.29613733">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
