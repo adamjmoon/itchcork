@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.coffee" afterPath="$PROJECT_DIR$/Gruntfile.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/benchmark.js" afterPath="$PROJECT_DIR$/vendor/benchmark.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mocha.js" afterPath="$PROJECT_DIR$/vendor/mocha.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sinon-chai.js" afterPath="$PROJECT_DIR$/vendor/sinon-chai.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/ui.browserscope.js" afterPath="$PROJECT_DIR$/vendor/ui.browserscope.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/platform.js" afterPath="$PROJECT_DIR$/vendor/platform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -160,10 +157,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="platform.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="platform.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vendor/platform.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="5" column="10276" selection-start="10453" selection-end="10453" vertical-scroll-proportion="0.0955414">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -213,10 +210,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gruntfile.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gruntfile.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="34" selection-start="1554" selection-end="1554" vertical-scroll-proportion="0.42690814">
+            <state line="47" column="34" selection-start="1554" selection-end="1554" vertical-scroll-proportion="-13.2">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scripts.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="829" column="70" selection-start="553784" selection-end="553784" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -226,17 +232,6 @@
         <entry file="file://$PROJECT_DIR$/vendor/a.jquery-2.0.0b1.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="3" column="1" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="a.lodash.min.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/a.lodash.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="1" selection-start="166" selection-end="166" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -267,7 +262,6 @@
         <option value="$PROJECT_DIR$/vendor/underscore.min.js" />
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/vendor/instrumenter.js" />
-        <option value="$PROJECT_DIR$/vendor/platform.js" />
         <option value="$PROJECT_DIR$/vendor/chai.js" />
         <option value="$PROJECT_DIR$/vendor/bootstrap.min.js" />
         <option value="$PROJECT_DIR$/vendor/a.lodash.min.js" />
@@ -278,6 +272,7 @@
         <option value="$PROJECT_DIR$/vendor/sinon-chai.js" />
         <option value="$PROJECT_DIR$/vendor/ui.browserscope.js" />
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
+        <option value="$PROJECT_DIR$/vendor/platform.js" />
       </list>
     </option>
   </component>
@@ -599,51 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="829" column="70" selection-start="322775" selection-end="322775" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="/*...*/" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="/**...*/" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="/** Detect if Java is enabled/exposed. ...*/" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="/** Timer object used by `clock()` and `Deferred#resolve`. ...*/" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="/** The timer namespace object or constructor. ...*/" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="/** Starts the deferred timer. ...*/" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="/*...*/" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="/*...*/" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="/** Registers a listener for the specified event type(s). ...*/" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="/*...*/" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="/** The number of times a test was executed. ...*/" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="/** The number of executions per second. ...*/" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="/** A flag to indicate if the benchmark is aborted. ...*/" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="/*...*/" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="/*...*/" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="/*...*/" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1370392148000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/a.underscore.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -669,25 +619,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/benchmark.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="19664" selection-start="19664" selection-end="19664" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/mocha.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="13" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/platform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -730,8 +664,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="34" selection-start="1554" selection-end="1554" vertical-scroll-proportion="0.42690814">
+        <state line="47" column="34" selection-start="1554" selection-end="1554" vertical-scroll-proportion="-13.2">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="829" column="70" selection-start="553784" selection-end="553784" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/benchmark.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="19664" selection-start="19664" selection-end="19664" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/platform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="10276" selection-start="10453" selection-end="10453" vertical-scroll-proportion="0.0955414">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
