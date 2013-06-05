@@ -11,18 +11,18 @@ requirejs.config({
     baseUrl: 'https://',
     paths: {
         'themeManager': root + 'themeManager.min',
-        'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min',
-        'underscore': root + 'scripts.min',
+        'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
+        'underscore': 'cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min',
         'coffeescript': root + 'vendor/coffee/coffeescript.min',
         'js2coffee': root + 'vendor/coffee/js2coffee',
         'ItchCork': root + 'itchcork.min',
-        'lodash': root + 'scripts.min',
-        'mocha': root + 'scripts.min',
-        'sinonM': root + 'scripts.min',
-        'chai': root + 'scripts.min',
-        'sinon-chai': root + 'scripts.min',
-        'platform': root + 'scripts.min',
-        'benchmark': root + 'scripts.min',
+        'lodash': root + 'vendor/aa.lodash.min',
+        'mocha': root + 'vendor/mocha',
+        'sinonM': root + 'vendor/sinon',
+        'chai': root + 'vendor/chai',
+        'sinon-chai': root + 'vendor/sinon-chai',
+        'platform': root + 'vendor/platform.min',
+        'benchmark': root + 'vendor/benchmark.min',
         'knockout': 'ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1',
         'context': root + 'examples/context/' + testcase,
         'suite': root + 'examples/test/' + testcase
@@ -31,7 +31,7 @@ requirejs.config({
 require(['themeManager', 'underscore', 'knockout', 'bootstrap'], function () {
     $("#topNav").show();
     $('div.frame').show();
-    require(['coffeescript'], function (CoffeeScript) {
+    require(['coffeescript', 'platform', 'benchmark', 'sinonM'], function (CoffeeScript) {
         this.CoffeeScript = CoffeeScript;
         require(['js2coffee'], function () {
             require(['ItchCork'], function (itchcork) {
