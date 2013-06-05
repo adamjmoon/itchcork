@@ -31,7 +31,7 @@ requirejs.config({
 require(['themeManager', 'underscore', 'knockout', 'bootstrap'], function () {
     $("#topNav").show();
     $('div.frame').show();
-    require(['coffeescript', 'platform', 'lodash', 'benchmark', 'sinonM'], function (CoffeeScript) {
+    require(['coffeescript', 'platform', 'benchmark', 'sinonM'], function (CoffeeScript) {
         this.CoffeeScript = CoffeeScript;
         require(['js2coffee'], function () {
             require(['ItchCork'], function (itchcork) {
