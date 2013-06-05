@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/sinon-chai.js" afterPath="$PROJECT_DIR$/vendor/sinon-chai.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/platform.js" afterPath="$PROJECT_DIR$/vendor/platform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -176,17 +177,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="js2coffee.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/coffee/js2coffee.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2868" column="0" selection-start="107151" selection-end="107151" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="mocha.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/mocha.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -201,7 +191,7 @@
       <file leaf-file-name="scripts.min.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="16" selection-start="186036" selection-end="186036" vertical-scroll-proportion="-9.6">
+            <state line="21" column="16" selection-start="186075" selection-end="186075" vertical-scroll-proportion="-9.6">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -220,11 +210,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sinon-chai.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sinon-chai.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/sinon-chai.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="2229" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.01910828">
+            <state line="1" column="2229" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="platform.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/platform.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="10535" selection-start="10712" selection-end="10712" vertical-scroll-proportion="0.0955414">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -258,7 +259,6 @@
       <list>
         <option value="$PROJECT_DIR$/vendor/benchmark.js" />
         <option value="$PROJECT_DIR$/vendor/ui.browserscope.js" />
-        <option value="$PROJECT_DIR$/vendor/platform.js" />
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
         <option value="$PROJECT_DIR$/vendor/chai.js" />
         <option value="$PROJECT_DIR$/vendor/mocha.js" />
@@ -272,6 +272,7 @@
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/vendor/aa.underscore.min.js" />
         <option value="$PROJECT_DIR$/vendor/sinon-chai.js" />
+        <option value="$PROJECT_DIR$/vendor/platform.js" />
       </list>
     </option>
   </component>
@@ -487,7 +488,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12573907" sideWeight="0.67099917" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12573907" sideWeight="0.67099917" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.49656993" order="10" side_tool="true" content_ui="tabs" />
@@ -627,15 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/platform.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="10276" selection-start="10453" selection-end="10453" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/chai.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="30585" selection-start="30598" selection-end="30598" vertical-scroll-proportion="0.0">
@@ -711,7 +703,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="16" selection-start="186036" selection-end="186036" vertical-scroll-proportion="-9.6">
+        <state line="21" column="16" selection-start="186075" selection-end="186075" vertical-scroll-proportion="-9.6">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -729,8 +721,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/sinon-chai.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="2229" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.01910828">
+        <state line="1" column="2229" selection-start="2244" selection-end="2244" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/platform.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="10535" selection-start="10712" selection-end="10712" vertical-scroll-proportion="0.0955414">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
