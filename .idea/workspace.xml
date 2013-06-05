@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="DELETED" beforePath="E:\Projects\itchcork\scripts.js" afterPath="" />
-      <change type="DELETED" beforePath="E:\Projects\itchcork\scripts.min.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.coffee" afterPath="$PROJECT_DIR$/Gruntfile.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/benchmark.js" afterPath="$PROJECT_DIR$/vendor/benchmark.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/mocha.js" afterPath="$PROJECT_DIR$/vendor/mocha.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/platform.js" afterPath="$PROJECT_DIR$/vendor/platform.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -218,21 +213,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="benchmark.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/benchmark.js">
+      <file leaf-file-name="Gruntfile.coffee" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="20988" selection-start="21285" selection-end="21285" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state line="31" column="32" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gruntfile.coffee" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="32" selection-start="803" selection-end="803" vertical-scroll-proportion="0.4097222">
+            <state line="24" column="45" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.3295325">
               <folding />
             </state>
           </provider>
@@ -267,11 +260,11 @@
         <option value="$PROJECT_DIR$/vendor/ui.browserscope.js" />
         <option value="$PROJECT_DIR$/vendor/knockout-min.js" />
         <option value="$PROJECT_DIR$/vendor/chai.js" />
-        <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/vendor/platform.js" />
         <option value="$PROJECT_DIR$/vendor/mocha.js" />
         <option value="$PROJECT_DIR$/vendor/benchmark.js" />
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
+        <option value="$PROJECT_DIR$/main.js" />
       </list>
     </option>
   </component>
@@ -632,13 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="40" selection-start="929" selection-end="929" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/mocha.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="5305" column="0" selection-start="110243" selection-end="110243" vertical-scroll-proportion="0.0">
@@ -683,7 +669,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="32" selection-start="803" selection-end="803" vertical-scroll-proportion="0.4097222">
+        <state line="31" column="32" selection-start="803" selection-end="803" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="45" selection-start="1109" selection-end="1109" vertical-scroll-proportion="0.3295325">
           <folding />
         </state>
       </provider>

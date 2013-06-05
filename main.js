@@ -21,8 +21,8 @@ requirejs.config({
         'sinonM': root + 'vendor/sinon',
         'chai': root + 'vendor/chai',
         'sinon-chai': root + 'vendor/sinon-chai',
-        'platform': root + 'vendor/platform.min',
-        'benchmark': root + 'vendor/benchmark.min',
+        'platform': root + 'vendor/platform',
+        'benchmark': root + 'vendor/benchmark',
         'knockout': 'ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1',
         'context': root + 'examples/context/' + testcase,
         'suite': root + 'examples/test/' + testcase
