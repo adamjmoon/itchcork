@@ -46,9 +46,6 @@ module.exports = (grunt) ->
       'ic':
         'src': ['itchcork.js']
         'dest': 'itchcork.min.js',
-      'scripts':
-        'src': ['scripts.js']
-        'dest': 'scripts.min.js',
       'main':
         'src': ['main.js']
         'dest': 'main.min.js'
