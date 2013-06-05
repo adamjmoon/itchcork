@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/ui.browserscope.js" afterPath="$PROJECT_DIR$/vendor/ui.browserscope.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/ui.browserscope.js" afterPath="$PROJECT_DIR$/ui.browserscope.js" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -179,7 +179,7 @@
       <file leaf-file-name="scripts.min.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="16" selection-start="186075" selection-end="186075" vertical-scroll-proportion="-9.6">
+            <state line="22" column="16" selection-start="186124" selection-end="186124" vertical-scroll-proportion="-9.6">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -219,7 +219,7 @@
         </entry>
       </file>
       <file leaf-file-name="ui.browserscope.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vendor/ui.browserscope.js">
+        <entry file="file://$PROJECT_DIR$/ui.browserscope.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="1" column="8643" selection-start="8667" selection-end="8667" vertical-scroll-proportion="0.01910828">
               <folding>
@@ -421,9 +421,9 @@
       <recent name="E:\itchcork\hitchscript\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/vendor/coffee" />
       <recent name="$PROJECT_DIR$/vendor" />
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/examples" />
       <recent name="E:\Projects\itchcork\lib\itchcork" />
     </key>
@@ -481,13 +481,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2560" height="1351" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.119212344" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12573907" sideWeight="0.67099917" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12573907" sideWeight="0.67099917" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.49656993" order="10" side_tool="true" content_ui="tabs" />
@@ -693,7 +693,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="16" selection-start="186075" selection-end="186075" vertical-scroll-proportion="-9.6">
+        <state line="22" column="16" selection-start="186124" selection-end="186124" vertical-scroll-proportion="-9.6">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -725,7 +725,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/ui.browserscope.js">
+    <entry file="file://$PROJECT_DIR$/ui.browserscope.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="8643" selection-start="8667" selection-end="8667" vertical-scroll-proportion="0.01910828">
           <folding>
