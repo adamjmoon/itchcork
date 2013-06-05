@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/a.jquery-2.0.0b1.js" afterPath="$PROJECT_DIR$/vendor/a.jquery-2.0.0b1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/js2coffee.js" afterPath="$PROJECT_DIR$/vendor/js2coffee.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/vendor/a.underscore.min.js" afterPath="$PROJECT_DIR$/examples/a.underscore.min.js" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -223,7 +221,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state line="1" column="0" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0">
               <folding>
-                <marker date="1370400445000" expanded="true" signature="8495:20316" placeholder="{...}" />
+                <marker date="1370400627000" expanded="true" signature="559071:559263" placeholder="/*...*/" />
+                <marker date="1370400627000" expanded="true" signature="559287:560975" placeholder="{...}" />
+                <marker date="1370400627000" expanded="true" signature="559301:560582" placeholder="{...}" />
+                <marker date="1370400627000" expanded="true" signature="559755:559973" placeholder="{...}" />
+                <marker date="1370400627000" expanded="true" signature="559673:559798" placeholder="{...}" />
+                <marker date="1370400627000" expanded="true" signature="560585:560892" placeholder="{...}" />
+                <marker date="1370400627000" expanded="true" signature="560727:560890" placeholder="/*...*/" />
+                <marker date="1370400627000" expanded="true" signature="560931:560943" placeholder="/*...*/" />
+                <marker date="1370400627000" expanded="true" signature="560990:561071" placeholder="/*...*/" />
+                <marker date="1370400627000" expanded="true" signature="8495:20316" placeholder="{...}" />
               </folding>
             </state>
           </provider>
@@ -396,6 +403,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itchcork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="itchcork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -418,11 +439,11 @@
       <recent name="E:\itchcork\hitchscript\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/examples" />
       <recent name="E:\Projects\itchcork\lib\itchcork" />
       <recent name="E:\Projects\itchcork\less" />
       <recent name="E:\Projects\itchcork\examples" />
       <recent name="E:\itchcork\vendor" />
-      <recent name="E:\itchcork\lib" />
     </key>
   </component>
   <component name="RunManager">
@@ -478,13 +499,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="2560" height="1351" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.119212344" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290008" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12573907" sideWeight="0.67099917" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12573907" sideWeight="0.67099917" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.49656993" order="10" side_tool="true" content_ui="tabs" />
@@ -579,7 +600,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/a.underscore.min.js">
+    <entry file="file://$PROJECT_DIR$/examples/a.underscore.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -678,7 +699,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0">
           <folding>
-            <marker date="1370400445000" expanded="true" signature="8495:20316" placeholder="{...}" />
+            <marker date="1370400627000" expanded="true" signature="559071:559263" placeholder="/*...*/" />
+            <marker date="1370400627000" expanded="true" signature="559287:560975" placeholder="{...}" />
+            <marker date="1370400627000" expanded="true" signature="559301:560582" placeholder="{...}" />
+            <marker date="1370400627000" expanded="true" signature="559755:559973" placeholder="{...}" />
+            <marker date="1370400627000" expanded="true" signature="559673:559798" placeholder="{...}" />
+            <marker date="1370400627000" expanded="true" signature="560585:560892" placeholder="{...}" />
+            <marker date="1370400627000" expanded="true" signature="560727:560890" placeholder="/*...*/" />
+            <marker date="1370400627000" expanded="true" signature="560931:560943" placeholder="/*...*/" />
+            <marker date="1370400627000" expanded="true" signature="560990:561071" placeholder="/*...*/" />
+            <marker date="1370400627000" expanded="true" signature="8495:20316" placeholder="{...}" />
           </folding>
         </state>
       </provider>
