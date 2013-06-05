@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/a.coffeescript.js" afterPath="$PROJECT_DIR$/vendor/a.coffeescript.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/chai.js" afterPath="$PROJECT_DIR$/vendor/chai.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
@@ -146,17 +146,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mocha.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/mocha.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="13" selection-start="13" selection-end="13" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="platform.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/platform.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -201,11 +190,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="a.coffeescript.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="a.coffeescript.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/a.coffeescript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1236" column="19" selection-start="176488" selection-end="176488" vertical-scroll-proportion="6.4663863">
+            <state line="1236" column="19" selection-start="176488" selection-end="176488" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chai.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendor/chai.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="30585" selection-start="30598" selection-end="30598" vertical-scroll-proportion="0.012605042">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -289,7 +289,6 @@
         <option value="$PROJECT_DIR$/vendor/underscore.min.js" />
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/vendor/instrumenter.js" />
-        <option value="$PROJECT_DIR$/vendor/chai.js" />
         <option value="$PROJECT_DIR$/vendor/bootstrap.min.js" />
         <option value="$PROJECT_DIR$/vendor/a.lodash.min.js" />
         <option value="$PROJECT_DIR$/vendor/a.jquery-2.0.0b1.js" />
@@ -300,6 +299,7 @@
         <option value="$PROJECT_DIR$/vendor/platform.js" />
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
         <option value="$PROJECT_DIR$/vendor/a.coffeescript.js" />
+        <option value="$PROJECT_DIR$/vendor/chai.js" />
       </list>
     </option>
   </component>
@@ -598,15 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/chai.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="12" selection-start="12" selection-end="12" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/itchcork.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="264" column="0" selection-start="8860" selection-end="8860" vertical-scroll-proportion="-26.12">
@@ -743,8 +734,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/a.coffeescript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1236" column="19" selection-start="176488" selection-end="176488" vertical-scroll-proportion="6.4663863">
+        <state line="1236" column="19" selection-start="176488" selection-end="176488" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/chai.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="30585" selection-start="30598" selection-end="30598" vertical-scroll-proportion="0.012605042">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
