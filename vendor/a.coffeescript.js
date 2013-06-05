@@ -1,4 +1,4 @@
-/*
+/**
 * CoffeeScript Compiler v1.3.3
 * http://coffeescript.org
 *
@@ -2781,4 +2781,4 @@
    typeof define == "function" && define.amd ? define(function() {
        return CoffeeScript
    }) : root.CoffeeScript = CoffeeScript
-})(this);
+})(this)
