@@ -36,9 +36,6 @@ module.exports = (grunt) ->
     jshint:
       files: [r + '*.js']
     concat:
-      options: {
-        separator: ';'
-      },
       ic:
         src: lib + '/itchcork/*.js'
         dest: r + 'itchcork.js',

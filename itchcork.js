@@ -13,7 +13,8 @@ define("BenchmarkViewModel", ['knockout'], function(ko) {
   };
 
   return vm;
-});;define("Spy", [], function() {
+});
+define("Spy", [], function() {
     "use strict";
 	return function(F) {
 		function G() {
@@ -27,7 +28,8 @@ define("BenchmarkViewModel", ['knockout'], function(ko) {
 
 		return G;
   };
-});;define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkViewModel'], function (Test, Benchmark, ko, sVM, bVM) {
+});
+define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkViewModel'], function (Test, Benchmark, ko, sVM, bVM) {
     var suite =  function (desc, js) {
         "use strict";
         var self = this;
@@ -162,7 +164,8 @@ define("BenchmarkViewModel", ['knockout'], function(ko) {
     };
     return suite;
 });
-;define("SuiteViewModel", ['knockout', 'UnitTestFrameworkManager'], function(ko, utfm) {
+
+define("SuiteViewModel", ['knockout', 'UnitTestFrameworkManager'], function(ko, utfm) {
   var vm =  function() {
       this.suiteDesc = ko.observable('');
       this.jsContextStr = ko.observable('');
@@ -177,7 +180,8 @@ define("BenchmarkViewModel", ['knockout'], function(ko) {
   };
 
   return vm;
-});;define("Test", [], function () {
+});
+define("Test", [], function () {
 
     var test = function (shouldEqual, func, context, testName) {
         'use strict';
@@ -198,7 +202,8 @@ define("BenchmarkViewModel", ['knockout'], function(ko) {
     };
 
     return test;
-});;define("UnitTestFrameworkManager", [], function () {
+});
+define("UnitTestFrameworkManager", [], function () {
     return function UnitTestFrameworkManager() {
 
         UnitTestFrameworkManager.prototype.init = function () {
@@ -216,7 +221,8 @@ define("BenchmarkViewModel", ['knockout'], function(ko) {
             return amplify.store('currentUnitTestFramework');
         };
     };
-});;define("Verify", [], function() {
+});
+define("Verify", [], function() {
 	return function(F) {
         'use strict';
 		return function () {
@@ -244,7 +250,8 @@ define("BenchmarkViewModel", ['knockout'], function(ko) {
 			return count > 0;
 		};
 	};
-});;define("ItchCork", ['Suite', 'SuiteView', 'Test', 'Spy', 'Verify', 'UnitTestFrameworkManager'], function (Suite, SuiteView, Test, Spy, Verify, UnitTestFrameworkManager) {
+});
+define("ItchCork", ['Suite', 'SuiteView', 'Test', 'Spy', 'Verify', 'UnitTestFrameworkManager'], function (Suite, SuiteView, Test, Spy, Verify, UnitTestFrameworkManager) {
     'use strict';
     var ItchCork = function() {
 
