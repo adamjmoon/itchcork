@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/itchcork.js" afterPath="$PROJECT_DIR$/itchcork.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/itchcork.min.js" afterPath="$PROJECT_DIR$/itchcork.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.js" afterPath="$PROJECT_DIR$/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.min.js" afterPath="$PROJECT_DIR$/main.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/almond.js" afterPath="$PROJECT_DIR$/scripts/almond.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/z.main.js" afterPath="$PROJECT_DIR$/scripts/z.main.js" />
     </list>
     <ignored path="fiddleSticks.iws" />
@@ -128,6 +124,7 @@
     <file path="/themeManager.min.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370466056713" ignored="false" />
     <file path="/README.md" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370473618455" ignored="false" />
     <file path="/build.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370482799387" ignored="false" />
+    <file path="$PROJECT_DIR$/itchcork.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370487372995" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,19 +171,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="z.main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="z.main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/z.main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="10" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.373444">
+            <state line="11" column="12" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="almond.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="almond.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/almond.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="51" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0">
+            <state line="34" column="261" selection-start="16479" selection-end="16479" vertical-scroll-proportion="0.42785236">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -267,12 +264,12 @@
         <option value="$PROJECT_DIR$/scripts/suiteView.js" />
         <option value="$PROJECT_DIR$/build.js" />
         <option value="$PROJECT_DIR$/main.js" />
-        <option value="$PROJECT_DIR$/scripts/almond.js" />
         <option value="$PROJECT_DIR$/Gruntfile.coffee" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.js" />
         <option value="$PROJECT_DIR$/themeManager.js" />
         <option value="$PROJECT_DIR$/scripts/themeManager.js" />
         <option value="$PROJECT_DIR$/scripts/z.main.js" />
+        <option value="$PROJECT_DIR$/scripts/almond.js" />
       </list>
     </option>
   </component>
@@ -682,15 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/almond.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="51" selection-start="588" selection-end="588" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gruntfile.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="6" selection-start="807" selection-end="807" vertical-scroll-proportion="-20.4">
@@ -735,8 +723,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/z.main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="10" selection-start="1263" selection-end="1263" vertical-scroll-proportion="0.373444">
+        <state line="11" column="12" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/almond.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="261" selection-start="16479" selection-end="16479" vertical-scroll-proportion="0.42785236">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

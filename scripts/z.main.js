@@ -10,7 +10,6 @@ var root = 'raw.github.com/adamjmoon/itchcork/master/';
 requirejs.config({
     baseUrl: 'https://',
     paths: {
-
         'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
         'underscore': 'cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min',
         'coffeescript': root + 'vendor/coffee/coffeescript.min',
