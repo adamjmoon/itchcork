@@ -13,8 +13,7 @@ if (Meteor.isClient) {
 
         var main = document.createElement('script');
         main.type = 'text/javascript';
-        main.src = 'https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.5/require.min.js';
-        main.setAttribute('data-main',root + 'main.min.js');
+        main.src = 'https://raw.github.com/adamjmoon/itchcork/master/itchcork.min.js';
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(main, s);
     };

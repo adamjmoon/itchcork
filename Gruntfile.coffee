@@ -1,7 +1,7 @@
 module.exports = (grunt) ->
   r = __dirname + "/"
   theme = r + 'theme/'
-  lib = r + 'lib/'
+  lib = r + 'scripts/'
   #vendor root
   v = r + 'vendor/'
   dest = r + 'javascripts/'
@@ -16,8 +16,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-jshint'
   grunt.loadNpmTasks 'grunt-yui-compressor'
-  # grunt.loadNpmTasks 'grunt-istanbul'
-  # grunt.loadNpmTasks 'grunt-parallel'
 
   # Make task shortcuts
   grunt.registerTask 'default', ['concat','min']
@@ -28,15 +26,13 @@ module.exports = (grunt) ->
       files: [r + '*.js']
     concat:
       ic:
-        src: lib + '/itchcork/*.js'
+        src: lib + '/*.js'
         dest: r + 'itchcork.js'
     'min':
       'ic':
         'src': ['itchcork.js']
         'dest': 'itchcork.min.js',
-      'main':
-        'src': ['main.js']
-        'dest': 'main.min.js'
+
 #      'themeManager':
 #              'src': [lib + 'themeManager.js']
 #              'dest': 'themeManager.min.js'
