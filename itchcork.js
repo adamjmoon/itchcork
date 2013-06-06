@@ -744,7 +744,7 @@ requirejs.config({
         'suite': root + 'examples/test/' + testcase
     }
 });
-require(['themeManager', 'underscore', 'knockout', 'bootstrap'], function () {
+require(['underscore', 'knockout', 'bootstrap'], function () {
     $("#topNav").show();
     $('div.frame').show();
     require(['coffeescript', 'platform', 'benchmark', 'sinonM'], function (CoffeeScript) {
