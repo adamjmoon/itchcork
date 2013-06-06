@@ -1,4 +1,3 @@
-define("ThemeManager", [], function () {
     window.ThemeManager = (function () {
         var themeManager = {};
         themeManager['cosmo'] =
@@ -93,4 +92,3 @@ define("ThemeManager", [], function () {
 
         return themeManager;
     }());
-});

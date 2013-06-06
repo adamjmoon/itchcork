@@ -279,7 +279,6 @@ define("Test", [], function () {
 define("ThemeManager", ['Theme'], function (theme) {
 
 });
-define("ThemeManager", [], function () {
     window.ThemeManager = (function () {
         var themeManager = {};
         themeManager['cosmo'] =
@@ -374,7 +373,7 @@ define("ThemeManager", [], function () {
 
         return themeManager;
     }());
-});
+
 define("UnitTestFrameworkManager", [], function () {
     return function UnitTestFrameworkManager() {
 
