@@ -291,13 +291,13 @@ window.ThemeManager = (function () {
     badgeWarning:"#f80",
     codeColor:"#fff",
     hoverColor:"#33b5e5",
-    wellBackgroundColor:"",
-    navBackgroundColor:"",
-    navBarInnerBackgroundColor:"",
+    wellBackgroundColor:"#131517",
+    navBackgroundColor:"#020202",
+    navBarInnerBackgroundColor:"#252a30",
     inverseColor:"#9933CC",
-    successColor: "#48ca3b",
-    errorColor: "#ad1d28",
-    completedColor: "#48ca3b"};
+    successColor: "#5c8a00",
+    errorColor: "#c00",
+    completedColor: "#5c8a00"};
 
     var apply = function() {
         var themeStyleTag = document.getElementById('theme');
