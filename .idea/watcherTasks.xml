@@ -41,7 +41,7 @@
       <option name="workingDir" value="E:\projects\itchcork" />
       <envs />
     </TaskOptions>
-    <TaskOptions isEnabled="true">
+    <TaskOptions isEnabled="false">
       <option name="arguments" value="./deploy.cmd" />
       <option name="checkSyntaxErrors" value="true" />
       <option name="description" value="Meteor Deploy" />
