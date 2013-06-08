@@ -286,7 +286,7 @@ define("ThemeManager", ['Theme'], function (theme) {
             bodyBackgroundColor:"#fff",
             bodyGradientFromColor:"#fff",
             bodyGradientToColor:"#fff",
-            infoColor: "#33b5e5",
+            infoColor: "#9954bb",
             badgeSuccess: "#3FB618",
             badgeRadius: "0px",
             badgeWarning: "#FE6600",
