@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/itchcork.js" afterPath="$PROJECT_DIR$/itchcork.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/itchcork.min.js" afterPath="$PROJECT_DIR$/itchcork.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/themeManager.js" afterPath="$PROJECT_DIR$/scripts/themeManager.js" />
     </list>
     <ignored path="fiddleSticks.iws" />
@@ -50,7 +48,7 @@
     <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/knockout.bindings.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368208337076" ignored="false" />
     <file path="/ObjectCreate.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368120076294" ignored="false" />
     <file path="/googleMaps.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368206419584" ignored="false" />
-    <file path="/themeManager.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370709258869" ignored="false" />
+    <file path="/themeManager.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370710791047" ignored="false" />
     <file path="/dataservice.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368200286880" ignored="false" />
     <file path="E:/ProductFulfillment/Portals/OneTechnologies.Portals.CreditPortal/C/js/app/dataservice.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368200292841" ignored="false" />
     <file path="/knockout.bindings.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368208336790" ignored="false" />
@@ -210,7 +208,7 @@
       <file leaf-file-name="themeManager.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/themeManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="40" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.41201717">
+            <state line="27" column="27" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.35557505">
               <folding />
             </state>
           </provider>
@@ -766,7 +764,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/themeManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="40" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.41201717">
+        <state line="27" column="27" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.35557505">
           <folding />
         </state>
       </provider>
