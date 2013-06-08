@@ -13,7 +13,7 @@
             hoverColor: "#0072E6",
             wellBackgroundColor: "#131517",
             navBackgroundColor: "#020202",
-            navBarInnerBackgroundColor: "#fff",
+            navBarInnerBackgroundColor: "#0072EB",
             inverseColor: "#000",
             successColor: "#41BB19",
             errorColor: "#E60033",

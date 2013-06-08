@@ -208,7 +208,7 @@
       <file leaf-file-name="themeManager.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/themeManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="27" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.35557505">
+            <state line="15" column="41" selection-start="592" selection-end="592" vertical-scroll-proportion="0.1975417">
               <folding />
             </state>
           </provider>
@@ -764,7 +764,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/themeManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="27" selection-start="1026" selection-end="1026" vertical-scroll-proportion="0.35557505">
+        <state line="15" column="41" selection-start="592" selection-end="592" vertical-scroll-proportion="0.1975417">
           <folding />
         </state>
       </provider>
