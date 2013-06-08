@@ -311,7 +311,7 @@ define("ThemeManager", ['Theme'], function (theme) {
             codeColor: "#fff",
             hoverColor: "#33b5e5",
             wellBackgroundColor: "#0a1366",
-            navBackgroundColor: "#0a1366",
+            navBackgroundColor: "#4cc6ef",
             navBarInnerBackgroundColor: "#0a1366",
             inverseColor: "#9933CC",
             successColor: "#5c8a00",
