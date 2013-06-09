@@ -1,7 +1,7 @@
 module.exports = (grunt) ->
   r = __dirname + "/"
   theme = r + 'theme/'
-  lib = r + 'lib/'
+  lib = r + 'scripts/'
   #vendor root
   v = r + 'vendor/'
   dest = r + 'javascripts/'
@@ -15,52 +15,33 @@ module.exports = (grunt) ->
    # Load external tasks
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-jshint'
-  grunt.loadNpmTasks 'grunt-recess'
   grunt.loadNpmTasks 'grunt-yui-compressor'
-  # grunt.loadNpmTasks 'grunt-istanbul'
-  # grunt.loadNpmTasks 'grunt-parallel'
 
   # Make task shortcuts
   grunt.registerTask 'default', ['concat','min']
-  # grunt.registerTask 'build', ['default', 'min']
-  # grunt.registerTask 'run', ['parallel:test']
-  # grunt.registerTask 'css', ['recess']
-  # grunt.registerTask 'optimize', ['concat', 'min', 'recess', 'cssmin']
-  # grunt.registerTask 'start', ['startUnitTestServer']
-  # grunt.registerTask 'kill', ['killUnitTestServer']
-  # grunt.registerTask 'test', ['parallel:a']
-  # grunt.registerTask 'cover', ['instrument', 'compileSpecs', 'start', 'run', 'makeReport', 'kill']
-  # grunt.registerTask 'ci', ['instrument', 'compileSpecs', 'start', 'run', 'makeReport', 'openCoverageReport', 'watch']
 
   # Configure Grunt
   grunt.initConfig
     jshint:
       files: [r + '*.js']
     concat:
-      m:
-        src: [lib + 'suite.js',
-              lib + 'suiteView.js',
-              lib + 'suiteViewModel.js',
-              lib + 'benchmarkViewModel.js',
-              lib + 'test.js', 
-              lib + 'spy.js', 
-              lib + 'verify.js',
-              lib + 'unitTestFrameworkManager.js',
-              lib + 'itchcork.js']
+      ic:
+        src: lib + '/*.js'
         dest: r + 'itchcork.js'
     'min':
-      'm':
+      'ic':
         'src': ['itchcork.js']
-        'dest': 'itchcork.min.js'
-      'main':
-        'src': ['main.js']
-        'dest': 'main.min.js'
-    uglify:
-          mangle:
-            toplevel: true
-            squeeze:
-              dead_code: false
-              codegen: quote_keys: true
+        'dest': 'itchcork.min.js',
+
+#      'themeManager':
+#              'src': [lib + 'themeManager.js']
+#              'dest': 'themeManager.min.js'
+#    uglify:
+#          mangle:
+#            toplevel: true
+#            squeeze:
+#              dead_code: false
+#              codegen: quote_keys: true
       # platform:
       #   src: [v + 'platform.js']
       #   dest: dest + 'platform.min.js'

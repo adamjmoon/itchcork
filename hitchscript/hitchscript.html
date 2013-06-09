@@ -110,8 +110,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-group" style="display: none;"
-                             data-bind="visible: vm.testCases.length > 0">
+                        <div class="accordion-group" data-bind="'visible': vm.testCases().length > 0">
                             <div class="accordion-heading">
                                 <a class="accordion-toggle" data-toggle="collapse" data-target="#collapseContext"
                                    href="#"><span
@@ -247,4 +246,5 @@
 </div>
 </template>
 <template name="scripts"></template>
+<template name="nanojar"><div id="nanojarWrap"></div></template>
 <template name="ga"></template>

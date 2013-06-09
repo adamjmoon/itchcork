@@ -1,3 +1,3 @@
 <component name="DependencyValidationManager">
-  <scope name="hitchscript" pattern="(file:hitchscript/*||file:hitchscript//*)&amp;&amp;!file:hitchscript/.meteor/local/db/*&amp;&amp;!file:hitchscript/.meteor/*||file:hitchscript/.meteor/packages" />
+  <scope name="hitchscript" pattern="file:main.js||file:package.json||file:lib/*||file:hitchscript/public/*||file:hitchscript/hitchscript.css||file:hitchscript/hitchscript.html||file:hitchscript/hitchscript.js||file:vendor/benchmark.js||file:vendor/benchmark.min.js||file:vendor/bootstrap.min.js||file:vendor/chai.js||file:vendor/coffeescript.js||file:vendor/coffeescript.min.js||file:vendor/instrumenter.js||file:vendor/jquery-2.0.0b1.js||file:vendor/js2coffee.js||file:vendor/js2coffee.min.js||file:vendor/knockout-min.js||file:vendor/lodash.min.js||file:vendor/mocha.js||file:vendor/platform.js||file:vendor/platform.min.js||file:vendor/sinon-chai.js||file:vendor/sinon.js" />
 </component>
