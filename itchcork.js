@@ -1,7 +1,7 @@
     window.ThemeManager = (function () {
         var themeManager = {};
         themeManager['cosmo'] =
-        {bodyFontColor: "#999",
+        {bodyFontColor: "#000",
             bodyBackgroundColor:"#fff",
             bodyGradientFromColor:"#fff",
             bodyGradientToColor:"#fff",
