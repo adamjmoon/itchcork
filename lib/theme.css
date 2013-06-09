@@ -409,3 +409,26 @@ li {
     list-style: none;
 }
 
+.btn-inverse, .btn-inverse:hover {
+    -webkit-box-shadow: -2px 2px 0 #121212;
+    -moz-box-shadow: -2px 2px 0 #121212;
+    box-shadow: -2px 2px 0 #121212;
+}
+.btn, .btn:hover {
+    text-shadow: none;
+    background-image: none;
+    border: 0;
+    -webkit-box-shadow: -2px 2px 0 #121212;
+    -moz-box-shadow: -2px 2px 0 #121212;
+    box-shadow: -2px 2px 0 #121212;
+}
+.btn:hover, .btn:focus {
+    color: #333;
+    text-decoration: none;
+    background-position: 0 -15px;
+    -webkit-transition: background-position .1s linear;
+    -moz-transition: background-position .1s linear;
+    -o-transition: background-position .1s linear;
+    transition: background-position .1s linear;
+}
+
