@@ -1,7 +1,6 @@
 module.exports = (grunt) ->
   r = __dirname + "/"
-  theme = r + 'theme/'
-  lib = r + 'scripts/'
+  lib = r + 'lib/itchcork'
   #vendor root
   v = r + 'vendor/'
   dest = r + 'javascripts/'
