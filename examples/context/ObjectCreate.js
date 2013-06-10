@@ -1,6 +1,6 @@
 define(function() {
   'use strict';
-  var context = function() {
+  var c = function context() {
       //CROCKFORD OBJECT.CREATE
       Object.create2 = function (o) {
           function F() {}
@@ -47,5 +47,5 @@ define(function() {
       this.cube = new Cube(1,1,1);
   };
   
-  return context;
+  return c;
 });
