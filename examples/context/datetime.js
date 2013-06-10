@@ -1,6 +1,6 @@
 define(function() {
      'use strict';
-     var context = function c() {
+     var c = function context() {
          this.currentDateTime1 =
          function() {
              var time = new Date().getTime();
