@@ -19,7 +19,7 @@ if (Meteor.isClient) {
     };
 
     Template.nanojar.rendered = function() {
-        var n = document.getElementById('nanojar');
+        var n = document.getElementById('nanojarWrap');
         n.innerHTML = '<applet code=nano archive=' + '/nano.jar' + '>';
     };
 
