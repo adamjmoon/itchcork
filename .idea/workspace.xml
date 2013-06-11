@@ -7,7 +7,7 @@
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370980234149" ignored="false" />
-    <file path="/hitchscript.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1369601821386" ignored="false" />
+    <file path="/hitchscript.html" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370985010722" ignored="false" />
     <file path="E:/GITLatest/WEBUTIL_STOP.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367856992756" ignored="false" />
     <file path="/WEBUTIL_STOP.cmd" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1367684022380" ignored="false" />
     <file path="E:/GITLatest/Gruntfile.coffee" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1368828218382" ignored="false" />
@@ -198,7 +198,7 @@
       <file leaf-file-name="hitchscript.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="53" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.41415313">
+            <state line="21" column="95" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.41415313">
               <folding />
             </state>
           </provider>
@@ -713,7 +713,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="53" selection-start="1218" selection-end="1218" vertical-scroll-proportion="0.41415313">
+        <state line="21" column="95" selection-start="1260" selection-end="1260" vertical-scroll-proportion="0.41415313">
           <folding />
         </state>
       </provider>
