@@ -14,7 +14,7 @@
 <body>{{> hitchscript}}{{> scripts}}{{> ga}}</body>
 <template name="hitchscript">
 <div class="container-fluid frame" id="frame" style="display: none;">
-<div id="topNav" class="navbar-fixed-top" style="display:none;">
+<div id="topNav" class="navbar-fixed-top" style="display:none;position: fixed;right: 0;left: 0;z-index: 1030;margin-bottom: 0;">
     <div class="navbar-inner">
                 <span><img id="logo" class="logo" src="/brand2.png"
                            data-bind="click: function(){toggleMenu();}"
