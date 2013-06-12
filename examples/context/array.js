@@ -1,7 +1,8 @@
 define(function() {
   'use strict';
   var c = function context() {
-   var my_array = [0,1,2, ,f=0;
+   var my_array = [0,1,2,3,4,5,6,7,8,9];
+
 
    //private method
    function myMethod(){
