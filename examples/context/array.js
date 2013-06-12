@@ -1,8 +1,7 @@
 define(function() {
   'use strict';
   var c = function context() {
-   var my_array = [0,1,2,3,4,5,6,7,8,9];
-   var s=0,f=0;
+   var my_array = [0,1,2, ,f=0;
 
    //private method
    function myMethod(){
@@ -11,6 +10,7 @@ define(function() {
 
    //privileged method
    this.slow = function() {
+       var s=0;
         for(var i = 0; i < my_array.length; i++){};
         for(var i = 0; i < myMethod(); i++){};
         s=s+1;
@@ -19,6 +19,7 @@ define(function() {
       
    //privileged method
    this.fast = function() {
+    var f=0;
     var length = my_array.length;
     for(var i = 0; i < length; i++){};
     var length = myMethod();
