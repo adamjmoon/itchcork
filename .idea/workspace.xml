@@ -189,9 +189,8 @@
       <file leaf-file-name="hitchscript.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="30" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.15777262">
+            <state line="22" column="53" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.2563805">
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -633,7 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="81" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -710,9 +708,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="30" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.15777262">
+        <state line="22" column="53" selection-start="1290" selection-end="1290" vertical-scroll-proportion="0.2563805">
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
