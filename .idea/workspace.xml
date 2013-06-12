@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hitchscript/hitchscript.html" afterPath="$PROJECT_DIR$/hitchscript/hitchscript.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/itchcork/aaa.themeManager.js" afterPath="$PROJECT_DIR$/lib/itchcork/aaa.themeManager.js" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -177,19 +177,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aaa.themeManager.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="aaa.themeManager.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/itchcork/aaa.themeManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="206" column="1909" selection-start="134323" selection-end="134323" vertical-scroll-proportion="0.0">
+            <state line="169" column="212" selection-start="121106" selection-end="121106" vertical-scroll-proportion="0.09639954">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hitchscript.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="hitchscript.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="69" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.2563805">
+            <state line="22" column="69" selection-start="1306" selection-end="1306" vertical-scroll-proportion="-8.5">
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -229,8 +229,8 @@
         <option value="$PROJECT_DIR$/scripts/theme.js" />
         <option value="$PROJECT_DIR$/scripts/themeManager.js" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.js" />
-        <option value="$PROJECT_DIR$/lib/itchcork/aaa.themeManager.js" />
         <option value="$PROJECT_DIR$/hitchscript/hitchscript.html" />
+        <option value="$PROJECT_DIR$/lib/itchcork/aaa.themeManager.js" />
       </list>
     </option>
   </component>
@@ -699,19 +699,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/itchcork/aaa.themeManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="206" column="1909" selection-start="134323" selection-end="134323" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="69" selection-start="1306" selection-end="1306" vertical-scroll-proportion="0.2563805">
+        <state line="22" column="69" selection-start="1306" selection-end="1306" vertical-scroll-proportion="-8.5">
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/itchcork/aaa.themeManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="169" column="212" selection-start="121106" selection-end="121106" vertical-scroll-proportion="0.09639954">
+          <folding />
         </state>
       </provider>
     </entry>

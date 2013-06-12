@@ -167,7 +167,7 @@ window.ThemeManager = (function () {
             + t.hoverColor + "}.nav-list .nav-header{text-shadow:none}.nav-list .divider{background-color:transparent;border-bottom:1px solid " + t.tableBorderColor + "}.nav-stacked li>a{border:1px solid " + t.tableBorderColor + "!important}.nav-stacked li>a:hover,.nav-stacked li.active>a{color:#fff;background-color:"
             + t.hoverColor + "}.tabbable .nav-tabs,.tabbable .nav-tabs li.active>a{border-color:#222}.breadcrumb{font-size:14px;background-color:transparent;background-image:none;border-width:0;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none}.breadcrumb li{text-shadow:none}.breadcrumb li>a{color:"
             + t.hoverColor + ";text-shadow:none}.pagination ul{-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none}.pagination ul>.disabled>a,.pagination ul>.disabled>a:hover,.pagination ul>.disabled>span,.pagination ul>.disabled>span:hover{background-color:rgba(0,0,0,0.2)}.pager li>a,.pager li>span{background-color:" + t.bodyGradientFromColor + ";border:0}.pager li>a:hover,.pager li>span:hover{background-color:"
-            + t.hoverColor + "}.pager .disabled a,.pager .disabled a:hover{background-color:" + t.bodyGradientFromColor + "}.btn{padding:7px 10px;color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);text-shadow:none;background-color:#5c5c5c;*background-color:#4d4d4d;background-image:-moz-linear-gradient(top,#666,#4d4d4d);background-image:-webkit-gradient(linear,0 0,0 100%,from(#666),to(#4d4d4d));background-image:-webkit-linear-gradient(top,#666,#4d4d4d);background-image:-o-linear-gradient(top,#666,#4d4d4d);background-image:linear-gradient(to bottom,#666,#4d4d4d);background-repeat:repeat-x;border-color:#4d4d4d #4d4d4d #262626;border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff666666',endColorstr='#ff4d4d4d',GradientType=0);filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);-webkit-box-shadow:1px 1px 2px #111;-moz-box-shadow:1px 1px 2px #111;box-shadow:1px 1px 2px #111}.btn:hover,.btn:focus,.btn:active,.btn.active,.btn.disabled,.btn[disabled]{color:#fff;background-color:#4d4d4d;*background-color:#404040}.btn:active,.btn.active{background-color:#333}.btn:hover{color:#fff;text-shadow:none}.btn-primary{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#008ab8;*background-color:#007399;background-image:-moz-linear-gradient(top,"
+            + t.hoverColor + "}.pager .disabled a,.pager .disabled a:hover{background-color:" + t.bodyGradientFromColor + "}.btn{padding:7px 10px;color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);text-shadow:none;background-image:-moz-linear-gradient(top,#666,#4d4d4d);background-image:-webkit-gradient(linear,0 0,0 100%,from(#666),to(#4d4d4d));background-image:-webkit-linear-gradient(top,#666,#4d4d4d);background-image:-o-linear-gradient(top,#666,#4d4d4d);background-image:linear-gradient(to bottom,#666,#4d4d4d);background-repeat:repeat-x;border-color:#4d4d4d #4d4d4d #262626;border-color:rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff666666',endColorstr='#ff4d4d4d',GradientType=0);filter:progid:DXImageTransform.Microsoft.gradient(enabled=false);-webkit-box-shadow:1px 1px 2px #111;-moz-box-shadow:1px 1px 2px #111;box-shadow:1px 1px 2px #111}.btn:hover,.btn:focus,.btn:active,.btn.active,.btn.disabled,.btn[disabled]{color:#fff;background-color:#4d4d4d;*background-color:#404040}.btn:active,.btn.active{background-color:#333}.btn:hover{color:#fff;text-shadow:none}.btn-primary{color:#fff;text-shadow:0 -1px 0 rgba(0,0,0,0.25);background-color:#008ab8;*background-color:#007399;background-image:-moz-linear-gradient(top,"
             + t.infoColor + ",#007399);background-image:-webkit-gradient(linear,0 0,0 100%,from("
             + t.infoColor + "),to(#007399));background-image:-webkit-linear-gradient(top,"
             + t.infoColor + ",#007399);background-image:-o-linear-gradient(top,"
@@ -433,13 +433,13 @@ define("SuiteView", ['knockout'], function(ko) {
         self.menu = document.getElementById('menu');
         self.view = document.getElementById('view');
         self.setMenuHeight = function(){
-            self.menu.style.height = document.body.scrollHeight-45 + "px";
+            self.menu.style.height = document.body.scrollHeight + "px";
         };
         ko.applyBindings(self);
 
 
         self.add = function(suite){
-            self.suites.push(suite);
+           self.suites.push(suite);
             suite.vm.benchmarksDone.subscribe(function(newValue) {
                 self.setMenuHeight();
             });
@@ -461,6 +461,10 @@ define("SuiteView", ['knockout'], function(ko) {
                 window.scrollTo(0,0);
             }
         };
+
+
+
+
     };
     return view;
 });
