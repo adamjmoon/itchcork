@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/itchcork/aaa.themeManager.js" afterPath="$PROJECT_DIR$/lib/itchcork/aaa.themeManager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -181,7 +180,7 @@
       <file leaf-file-name="aaa.themeManager.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/itchcork/aaa.themeManager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="206" column="556" selection-start="132970" selection-end="132970" vertical-scroll-proportion="0.71208227">
+            <state line="145" column="42069" selection-start="112238" selection-end="112238" vertical-scroll-proportion="0.33333334">
               <folding />
             </state>
           </provider>
@@ -704,7 +703,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/itchcork/aaa.themeManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="206" column="556" selection-start="132970" selection-end="132970" vertical-scroll-proportion="0.71208227">
+        <state line="145" column="42069" selection-start="112238" selection-end="112238" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
