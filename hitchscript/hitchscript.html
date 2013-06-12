@@ -1,1 +1,226 @@
-<head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>itchcork</title><meta name="description" content="share javascript standards, compare javascript to coffeescript, unit test javascript, run benchmarks on javascript"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-status-bar-style" content="black"><style id="theme"></style></head><body>{{> hitchscript}}{{> scripts}}{{> ga}}</body><template name="hitchscript"><div class="container-fluid frame" id="frame" style="display: none;"><div id="topNav" class="navbar-fixed-top" style="display:none;position: fixed;right: 0;left: 0;z-index: 1030;margin-bottom: 0;"><div class="navbar-inner"><span><img id="logo" class="logo" src="/brand2.png" data-bind="click: function(){toggleMenu();}" width="90" height="44"/></span><div class="btn pull-right" style="padding: 1px 10px 2px 10px !important;margin: 0px 0px 0px 0px;background-color: inherit !important;" data-bind="click: function(){toggleMenu();}"><img id="rightMenu" src="/menulogo.png" width="19" height="40"/></div></div></div><div id="menu" class="menu nav-collapse collapse well" style="display:none;"><div class="collapse-inner"><div class="navbar navbar-inverse menu-title"><div class="navbar-inner"><span class="badge badge-info">Theme</span></div></div><ul class="nav nav-tabs nav-stacked"><li><a href="" data-bind="click: function(){setTheme('curelean');}">Cerulean</a></li><li><a href="" data-bind="click: function(){setTheme('cosmo');}">Cosmo</a></li><li><a href="" data-bind="click: function(){setTheme('cyborg');}">Cyborg</a></li><li><a href="" data-bind="click: function(){setTheme('superhero');}">Superhero</a></li></ul><div class="navbar navbar-inverse menu-title"><div class="navbar-inner"><span class="badge badge-info">Testing Framework</span></div></div><ul class="nav nav-tabs nav-stacked"><li><a href="" data-bind="click: function(){unitTestFrameworkManager.set('itchcork');}">Itchcork</a></li><li><a href="" data-bind="click: function(){unitTestFrameworkManager.set('mocha');}">Mocha</a></li></ul><div class="navbar navbar-inverse menu-title"><div class="navbar-inner"><span class="badge badge-info"><span><img style="float: left;" src="/glyphicons_401_github.png" width="24" height="24"/></span><span style="top: 5px;position: relative">Github Source</span></span></div></div><ul class="nav nav-tabs nav-stacked"><li><input type="text" value="raw.github.com/adamjmoon/itchcork/master" style="width: 99%"/></li><li></li></ul></div></div><div id="view" class="view container-fluid"><div class="accordion" id="content" data-bind="'visible':suites().length>0" style="display: none;"><div class="accordion-group" data-bind="'foreach': suites"><div class="navbar navbar-inverse accordion-toggle"><div class="navbar-inner suiteDesc" data-toggle="collapse" data-target="#suiteContent"><span class="badge badge-info" data-bind="text: vm.suiteDesc"></span></div><div id="suiteContent" class="accordion-body collapse in"><div class="accordion"><div class="accordion-group"><div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse" data-target="#collapseContextJS" href="#"><span class="badge badge-info">CONTEXT SOURCE</span></a></div><div id="collapseContextJS" class="accordion-body collapse in"><div class="accordion-inner"><div class="row-fluid"><div class="span6 js well"><div class="badge badge-success offset5">Javascript</div><br/><pre class="well"><code class='help-inline' data-bind="text: vm.jsContextStr"></code></pre></div><div class="span6 coffee well"><div class="badge badge-warning offset5">Coffeescript</div><br/><pre class="well"><code class='help-inline' data-bind="text: vm.coffeeContextStr"></code></pre></div></div></div></div></div><div class="accordion-group" data-bind="'visible': vm.testCases().length > 0"><div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse" data-target="#collapseContext" href="#"><span class="badge badge-info">CONTEXT BREAKDOWN</span></a></div><div id="collapseContext" class="accordion-body collapse"><div class="accordion-inner"><table class="table" id="testCaseList"><thead><th><div class="badge badge-info">function</div></th><th><div class="badge badge-success">Javascript</div></th><th><div class="badge badge-warning">Coffeescript</div></th></thead><tbody data-bind="'foreach': vm.testCases"><tr><td><label data-bind="text: name"></label></td><td><pre class="well"><code class="help-inline" data-bind="text: jsStr"></code></pre></td><td><pre class="well"><code class="help-inline" data-bind="text: coffeeStr"></code></pre></td></tr></tbody></table></div></div></div><div class="accordion-group"><div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse" data-target="#collapseResults" href="#"><span class="badge badge-info">TEST RESULTS</span></a></div><div id="collapseResults" class="accordion-body collapse in"><div class="accordion-inner results" id="itchcorkResults" data-bind="visible: vm.unitTestFrameworkManager.getFramework()==='itchcork'"><table class="table table-condensed" id="results"><thead><tr><th>expression</th><th>should.equal</th><th>actual</th><th>typeof</th></tr></thead><tbody data-bind="'foreach': vm.tests"><tr data-bind="css: shouldEqual===actual ? 'success' : 'error'"><td><code class="well help-inline" data-bind="text: expression"></code></td><td><code class="well help-inline" data-bind="text: shouldEqual"></code></td><td><code class="well help-inline" data-bind="text: actual"></code></td><td><code class="well help-inline" data-bind="text: typeOf"></code></td></tr></tbody></table></div><div class="accordion-inner" id="mochaResults" data-bind="visible: vm.unitTestFrameworkManager.getFramework()==='mocha'"><div id="mocha" class="row-fluid"><a id="collapse" class="btn btn-alert" href="#">Collapse All</a><a id="expand" class="btn btn-alert hide" href="#">Expand All</a></div></div></div></div><div class="accordion-group" data-bind="visible: vm.unitTestFrameworkManager.getFramework()==='itchcork'"><div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse" data-target="#collapseBenchmarks" href="#"><span class="badge badge-info">BENCHMARKS</span><span data-bind="text: vm.benchmarkPlatform" class="badge badge-inverse"></span><span data-bind="text: !vm.benchmarksDone() ? 'RUNNING...': 'COMPLETED', css: vm.benchmarksDone() ? 'badge badge-success' : 'badge badge-warning'"></span></a></div><div id="collapseBenchmarks" class="accordion-body collapse in"><div class="accordion-inner results"><table class="table"><thead><tr><th>expression</th><th>times faster</th><th>ops/sec</th><th>+/-</th><th># analysis cycles</th><th># sample cycles</th><th>iterations/sample cycle</th></tr></thead><tbody data-bind="'foreach': vm.benchmarks"><tr data-bind="css: fastest() ? 'success' : slowest() ? 'error' : ''"><td><code class="well help-inline" data-bind="text: expression"></code></td><td><code class="well help-inline" style='display:none;' data-bind="text: timesFaster, visible:timesFaster"></code></td><td><code class="well help-inline" data-bind="text: hz"></code></td><td><code class="well help-inline" data-bind="text: relativateMarginError"></code></td><td><code class="well help-inline" data-bind="text: numAnalysisCycles"></code></td><td><code class="well help-inline" data-bind="text: numSampleCycles"></code></td><td><code class="well help-inline" data-bind="text: iterationPerSampleCycle"></code></td></tr></tbody></table></div><button style="display:none;" class='btn btn-large run-again' data-bind="click: run,visible: vm.benchmarksDone">RUN AGAIN </button></div></div></div></div></div></div></div></div></div></template><template name="scripts"></template><template name="nanojar"><div id="nanojarWrap"></div></template><template name="ga"></template>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>itchcork</title>
+    <meta name="description"
+          content="share javascript standards, compare javascript to coffeescript, unit test javascript, run benchmarks on javascript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <style id="theme"></style>
+</head>
+<body>{{> hitchscript}}{{> scripts}}{{> ga}}</body>
+<template name="hitchscript">
+<div id="topNav" class="navbar-fixed-top"
+     style="display:none;position: fixed;right: 0;left: 0;z-index: 1030;margin-bottom: 0;">
+    <div class="navbar-inner"><span><img id="logo" class="logo" src="/brand2.png"
+                                         data-bind="click: function(){toggleMenu();}" width="90"
+                                         height="44"/></span>
+
+        <div class="btn pull-right"
+             style="padding: 1px 10px 2px 10px !important;margin: 0px 0px 0px 0px;background-color: inherit !important;"
+             data-bind="click: function(){toggleMenu();}"><img id="rightMenu" src="/menulogo.png" width="19"
+                                                               height="40"/></div>
+    </div>
+</div>
+<div class="container-fluid frame" id="frame" style="display: none;">
+
+    <div id="menu" class="menu nav-collapse collapse well" style="display:none;">
+        <div class="collapse-inner">
+            <div class="navbar navbar-inverse menu-title">
+                <div class="navbar-inner"><span class="badge badge-info">Theme</span></div>
+            </div>
+            <ul class="nav nav-tabs nav-stacked">
+                <li><a href="" data-bind="click: function(){setTheme('curelean');}">Cerulean</a></li>
+                <li><a href="" data-bind="click: function(){setTheme('cosmo');}">Cosmo</a></li>
+                <li><a href="" data-bind="click: function(){setTheme('cyborg');}">Cyborg</a></li>
+                <li><a href="" data-bind="click: function(){setTheme('superhero');}">Superhero</a></li>
+            </ul>
+            <div class="navbar navbar-inverse menu-title">
+                <div class="navbar-inner"><span class="badge badge-info">Testing Framework</span></div>
+            </div>
+            <ul class="nav nav-tabs nav-stacked">
+                <li><a href="" data-bind="click: function(){unitTestFrameworkManager.set('itchcork');}">Itchcork</a>
+                </li>
+                <li><a href="" data-bind="click: function(){unitTestFrameworkManager.set('mocha');}">Mocha</a></li>
+            </ul>
+            <div class="navbar navbar-inverse menu-title">
+                <div class="navbar-inner"><span class="badge badge-info"><span><img style="float: left;"
+                                                                                    src="/glyphicons_401_github.png"
+                                                                                    width="24"
+                                                                                    height="24"/></span><span
+                        style="top: 5px;position: relative">Github Source</span></span></div>
+            </div>
+            <ul class="nav nav-tabs nav-stacked">
+                <li><input type="text" value="raw.github.com/adamjmoon/itchcork/master" style="width: 99%"/></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <div id="view" class="view container-fluid">
+        <div class="accordion" id="content" data-bind="'visible':suites().length>0" style="display: none;">
+            <div class="accordion-group" data-bind="'foreach': suites">
+                <div class="navbar navbar-inverse accordion-toggle">
+                    <div class="navbar-inner suiteDesc" data-toggle="collapse" data-target="#suiteContent"><span
+                            class="badge badge-info" data-bind="text: vm.suiteDesc"></span></div>
+                    <div id="suiteContent" class="accordion-body collapse in">
+                        <div class="accordion">
+                            <div class="accordion-group">
+                                <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
+                                                                  data-target="#collapseContextJS" href="#"><span
+                                        class="badge badge-info">CONTEXT SOURCE</span></a></div>
+                                <div id="collapseContextJS" class="accordion-body collapse in">
+                                    <div class="accordion-inner">
+                                        <div class="row-fluid">
+                                            <div class="span6 js well">
+                                                <div class="badge badge-success offset5">Javascript</div>
+                                                <br/>
+                                                    <pre class="well"><code class='help-inline'
+                                                                            data-bind="text: vm.jsContextStr"></code></pre>
+                                            </div>
+                                            <div class="span6 coffee well">
+                                                <div class="badge badge-warning offset5">Coffeescript</div>
+                                                <br/>
+                                                    <pre class="well"><code class='help-inline'
+                                                                            data-bind="text: vm.coffeeContextStr"></code></pre>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-group" data-bind="'visible': vm.testCases().length > 0">
+                                <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
+                                                                  data-target="#collapseContext" href="#"><span
+                                        class="badge badge-info">CONTEXT BREAKDOWN</span></a></div>
+                                <div id="collapseContext" class="accordion-body collapse">
+                                    <div class="accordion-inner">
+                                        <table class="table" id="testCaseList">
+                                            <thead>
+                                            <th>
+                                                <div class="badge badge-info">function</div>
+                                            </th>
+                                            <th>
+                                                <div class="badge badge-success">Javascript</div>
+                                            </th>
+                                            <th>
+                                                <div class="badge badge-warning">Coffeescript</div>
+                                            </th>
+                                            </thead>
+                                            <tbody data-bind="'foreach': vm.testCases">
+                                            <tr>
+                                                <td><label data-bind="text: name"></label></td>
+                                                <td>
+                                                        <pre class="well"><code class="help-inline"
+                                                                                data-bind="text: jsStr"></code></pre>
+                                                </td>
+                                                <td>
+                                                        <pre class="well"><code class="help-inline"
+                                                                                data-bind="text: coffeeStr"></code></pre>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-group">
+                                <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
+                                                                  data-target="#collapseResults" href="#"><span
+                                        class="badge badge-info">TEST RESULTS</span></a></div>
+                                <div id="collapseResults" class="accordion-body collapse in">
+                                    <div class="accordion-inner results" id="itchcorkResults"
+                                         data-bind="visible: vm.unitTestFrameworkManager.getFramework()==='itchcork'">
+                                        <table class="table table-condensed" id="results">
+                                            <thead>
+                                            <tr>
+                                                <th>expression</th>
+                                                <th>should.equal</th>
+                                                <th>actual</th>
+                                                <th>typeof</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody data-bind="'foreach': vm.tests">
+                                            <tr data-bind="css: shouldEqual===actual ? 'success' : 'error'">
+                                                <td><code class="well help-inline"
+                                                          data-bind="text: expression"></code></td>
+                                                <td><code class="well help-inline"
+                                                          data-bind="text: shouldEqual"></code></td>
+                                                <td><code class="well help-inline" data-bind="text: actual"></code>
+                                                </td>
+                                                <td><code class="well help-inline" data-bind="text: typeOf"></code>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="accordion-inner" id="mochaResults"
+                                         data-bind="visible: vm.unitTestFrameworkManager.getFramework()==='mocha'">
+                                        <div id="mocha" class="row-fluid"><a id="collapse" class="btn btn-alert"
+                                                                             href="#">Collapse All</a><a id="expand"
+                                                                                                         class="btn btn-alert hide"
+                                                                                                         href="#">Expand
+                                            All</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-group"
+                                 data-bind="visible: vm.unitTestFrameworkManager.getFramework()==='itchcork'">
+                                <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
+                                                                  data-target="#collapseBenchmarks" href="#"><span
+                                        class="badge badge-info">BENCHMARKS</span><span
+                                        data-bind="text: vm.benchmarkPlatform"
+                                        class="badge badge-inverse"></span><span
+                                        data-bind="text: !vm.benchmarksDone() ? 'RUNNING...': 'COMPLETED', css: vm.benchmarksDone() ? 'badge badge-success' : 'badge badge-warning'"></span></a>
+                                </div>
+                                <div id="collapseBenchmarks" class="accordion-body collapse in">
+                                    <div class="accordion-inner results">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th>expression</th>
+                                                <th>times faster</th>
+                                                <th>ops/sec</th>
+                                                <th>+/-</th>
+                                                <th># analysis cycles</th>
+                                                <th># sample cycles</th>
+                                                <th>iterations/sample cycle</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody data-bind="'foreach': vm.benchmarks">
+                                            <tr data-bind="css: fastest() ? 'success' : slowest() ? 'error' : ''">
+                                                <td><code class="well help-inline"
+                                                          data-bind="text: expression"></code></td>
+                                                <td><code class="well help-inline" style='display:none;'
+                                                          data-bind="text: timesFaster, visible:timesFaster"></code>
+                                                </td>
+                                                <td><code class="well help-inline" data-bind="text: hz"></code></td>
+                                                <td><code class="well help-inline"
+                                                          data-bind="text: relativateMarginError"></code></td>
+                                                <td><code class="well help-inline"
+                                                          data-bind="text: numAnalysisCycles"></code></td>
+                                                <td><code class="well help-inline"
+                                                          data-bind="text: numSampleCycles"></code></td>
+                                                <td><code class="well help-inline"
+                                                          data-bind="text: iterationPerSampleCycle"></code></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <button style="display:none;" class='btn btn-large run-again'
+                                            data-bind="click: run,visible: vm.benchmarksDone">RUN AGAIN
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</template>
+<template name="scripts"></template>
+<template name="nanojar">
+    <div id="nanojarWrap"></div>
+</template>
+<template name="ga"></template>
