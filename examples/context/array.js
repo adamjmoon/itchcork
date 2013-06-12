@@ -27,5 +27,5 @@ define(function() {
     return f;
    };
   };
-  return context;
+  return c;
 });
