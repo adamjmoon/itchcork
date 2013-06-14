@@ -57,7 +57,7 @@
             </div>
         </div>
         <div id="view" class="view container-fluid">
-            <div class="accordion" id="content">
+            <div class="accordion" id="content" data-bind="'visible':suites().length>0" style="display: none;">
                 <div class="accordion-group" data-bind="'foreach': suites">
                     <div class="navbar navbar-inverse accordion-toggle">
                         <div class="navbar-inner suiteDesc" data-toggle="collapse" data-target="#suiteContent"><span

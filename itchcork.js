@@ -416,13 +416,17 @@ define("SuiteView", ['knockout','UnitTestFrameworkManager'], function(ko, utfm) 
         self.setMenuHeight = function(){
             self.menu.style.height = document.body.scrollHeight + "px";
         };
-        ko.applyBindings(self);
+
 
         self.add = function(suite){
            self.suites.push(suite);
             suite.vm.benchmarksDone.subscribe(function(newValue) {
                 self.setMenuHeight();
             });
+        };
+
+        self.show = function(){
+           ko.applyBindings(self);
         };
 
         self.setTheme = function(theme){
@@ -585,11 +589,12 @@ require(['underscore', 'knockout', 'bootstrap'], function () {
             require(['SuiteView'], function (sv) {
                 window.suiteView = new sv();
                 require(['ItchCork'], function (itchcork) {
-                    if ( window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
+                    if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
                         require(['suite']);
+                        window.suiteView.show();
                     }
                     else {
-                        define('sinon',[],function () {
+                        define('sinon', [], function () {
                             return sinon;
                         });
                         require(['chai', 'sinon', 'sinon-chai', 'mocha'], function (chai, sinon, sinonChai) {
@@ -598,14 +603,17 @@ require(['underscore', 'knockout', 'bootstrap'], function () {
                             var should = chai.should();
                             mocha.setup('bdd');
                             mocha.reporter('html');
+
+
                             require(['suite'], function (suite) {
+                                _.each(mocha.suite.suites,
+                                    function (s) {
+                                        var suite = new itchcork.Suite(s.title, s.ctx);
+                                        window.suiteView.add(suite);
+                                    });
+                                window.suiteView.show();
                                 var runner = mocha.run();
                                 runner.on('end', function () {
-                                    _.each(mocha.suite.suites,
-                                       function (s) {
-                                           var suite = new itchcork.Suite(s.title, s.ctx);
-                                           window.suiteView.add(suite);
-                                       });
                                     var suites = $("ul#mocha-report li.suite ul");
                                     $("#collapse").click(function () {
                                         $(suites).each(function (index, element) {
