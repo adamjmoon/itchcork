@@ -279,7 +279,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'SuiteViewModel', 'BenchmarkVi
                     jsStr = context[prop].toString();
                     try {
                         coffeeStr = Js2coffee.build(jsStr);
-                        var tc = { name: base + '.' + prop, jsStr: jsStr, coffeeStr: coffeeStr};
+                        var tc = { name: 'c.' + prop, jsStr: jsStr, coffeeStr: coffeeStr};
                         self.vm.testCases.push(tc);
                     } catch (err) {
                         var tc = { name: base + '.' + prop, jsStr: jsStr, coffeeStr: ''};
@@ -287,7 +287,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'SuiteViewModel', 'BenchmarkVi
                     }
 
                 } else if (context[prop] instanceof Object) {
-                    var tc = { name: prop, jsStr: Object.toSource ? context[prop].toSource() : '', coffeeStr: ''};
+                    var tc = { name: 'c.' + prop, jsStr: Object.toSource ? context[prop].toSource() : 'is instanceof Object', coffeeStr: ''};
                     self.vm.testCases.push(tc);
                 }
                 if (context[prop] && context[prop].prototype) {
