@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28d12dd2-5f1f-4333-934a-2b450a08cdd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/context/PrimitiveTypes.js" afterPath="$PROJECT_DIR$/examples/context/PrimitiveTypes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/context/datetime.js" afterPath="$PROJECT_DIR$/examples/context/datetime.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/test/PrimitiveTypes.js" afterPath="$PROJECT_DIR$/examples/test/PrimitiveTypes.js" />
     </list>
     <ignored path="fiddleSticks.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -133,7 +132,7 @@
     <file path="$PROJECT_DIR$/../SpendOnLife/SpendOnLife/SpendOnLifeWeb/us/6019/3320ffb/t420/288/f/uc/cs_4p_n288.ascx" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370640167403" ignored="false" />
     <file path="/cs_4p_n288.ascx" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1370635071122" ignored="false" />
     <file path="/aaa.themeManager.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1371061926177" ignored="false" />
-    <file path="/PrimitiveTypes.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1371180877294" ignored="false" />
+    <file path="/PrimitiveTypes.js" changelist="28d12dd2-5f1f-4333-934a-2b450a08cdd4" time="1371181680640" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,37 +161,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hitchscript.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="6" selection-start="382" selection-end="382" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="aaa.themeManager.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/itchcork/aaa.themeManager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="hitchscript.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="90" column="93" selection-start="6107" selection-end="6107" vertical-scroll-proportion="-30.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="suite.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/itchcork/suite.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="34" selection-start="346" selection-end="367" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -225,10 +197,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datetime.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="datetime.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/context/datetime.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="39" selection-start="267" selection-end="267" vertical-scroll-proportion="0.16875">
+            <state line="9" column="39" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrimitiveTypes.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/examples/test/PrimitiveTypes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="9" selection-start="135" selection-end="135" vertical-scroll-proportion="0.05625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObjectCreate.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/test/ObjectCreate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="50" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="datetime.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/test/datetime.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -261,7 +260,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/themeManager.js" />
         <option value="$PROJECT_DIR$/scripts/z.main.js" />
         <option value="$PROJECT_DIR$/scripts/almond.js" />
@@ -277,6 +275,7 @@
         <option value="$PROJECT_DIR$/examples/context/ObjectCreate.js" />
         <option value="$PROJECT_DIR$/examples/context/PrimitiveTypes.js" />
         <option value="$PROJECT_DIR$/examples/context/datetime.js" />
+        <option value="$PROJECT_DIR$/examples/test/PrimitiveTypes.js" />
       </list>
     </option>
   </component>
@@ -354,6 +353,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -552,23 +555,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hitchscript/hitchscript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="86" selection-start="554" selection-end="554" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/.bin/istanbul">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/.bin/js2coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/requirejs/bin/r.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -651,7 +637,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/context/datetime.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="39" selection-start="267" selection-end="267" vertical-scroll-proportion="0.16875">
+        <state line="9" column="39" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/test/datetime.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/test/ObjectCreate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="50" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/test/PrimitiveTypes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="9" selection-start="135" selection-end="135" vertical-scroll-proportion="0.05625">
           <folding />
         </state>
       </provider>
