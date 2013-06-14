@@ -32,27 +32,7 @@ module.exports = (grunt) ->
         'src': ['itchcork.js']
         'dest': 'itchcork.min.js',
 
-#      'themeManager':
-#              'src': [lib + 'themeManager.js']
-#              'dest': 'themeManager.min.js'
-#    uglify:
-#          mangle:
-#            toplevel: true
-#            squeeze:
-#              dead_code: false
-#              codegen: quote_keys: true
-      # platform:
-      #   src: [v + 'platform.js']
-      #   dest: dest + 'platform.min.js'
-      # benchmark:
-      #   src: [v + 'benchmark.js']
-      #   dest: dest + 'benchmark.min.js'
-      # coffeescript:
-      #   src: [v + 'coffeescript.js']
-      #   dest: dest + 'coffeescript.min.js'
-      # js2coffee:
-      #   src: [dest + 'js2coffee.js']
-      #   dest: dest + 'js2coffee.min.js'
+
     
     # watch:
     #   gruntfile:

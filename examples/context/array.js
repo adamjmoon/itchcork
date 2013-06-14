@@ -1,6 +1,6 @@
 define(function() {
   'use strict';
-  var c = function context() {
+   function context() {
    var my_array = [0,1,2,3,4,5,6,7,8,9];
 
 
@@ -29,5 +29,5 @@ define(function() {
     return f;
    };
   };
-  return c;
+  return context;
 });
