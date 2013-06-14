@@ -585,8 +585,7 @@ require(['underscore', 'knockout', 'bootstrap'], function () {
             require(['SuiteView'], function (sv) {
                 window.suiteView = new sv();
                 require(['ItchCork'], function (itchcork) {
-                    var unitTestFrameworkManager = new itchcork.UnitTestFrameworkManager();
-                    if (unitTestFrameworkManager.init() === "itchcork") {
+                    if ( window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
                         require(['suite']);
                     }
                     else {
