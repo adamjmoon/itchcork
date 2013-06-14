@@ -132,7 +132,7 @@
                                             class="badge badge-info">TEST RESULTS</span></a></div>
                                     <div id="collapseResults" class="accordion-body collapse in">
                                         <div class="accordion-inner results" id="itchcorkResults"
-                                             data-bind="visible: unitTestFrameworkManager.getFramework()==='itchcork'">
+                                             data-bind="visible: window.suiteView.unitTestFrameworkManager.getFramework()==='itchcork'">
                                             <table class="table table-condensed" id="results">
                                                 <thead>
                                                 <tr>
@@ -157,7 +157,7 @@
                                             </table>
                                         </div>
                                         <div class="accordion-inner" id="mochaResults"
-                                             data-bind="visible: unitTestFrameworkManager.getFramework()==='mocha'">
+                                             data-bind="visible: window.suiteView.unitTestFrameworkManager.getFramework()=='mocha'">
                                             <div id="mocha" class="row-fluid"><a id="collapse" class="btn btn-alert"
                                                                                  href="#">Collapse All</a><a id="expand"
                                                                                                              class="btn btn-alert hide"
@@ -167,7 +167,7 @@
                                     </div>
                                 </div>
                                 <div class="accordion-group"
-                                     data-bind="visible: unitTestFrameworkManager.getFramework()==='itchcork'">
+                                     data-bind="visible: window.suiteView.unitTestFrameworkManager.getFramework()==='itchcork'">
                                     <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
                                                                       data-target="#collapseBenchmarks" href="#"><span
                                             class="badge badge-info">BENCHMARKS</span><span
