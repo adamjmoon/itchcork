@@ -1,4 +1,4 @@
-/*!itchcork.js version 1.0*/(function(){window.ThemeManager = (function () {
+/*!itchcork.js version 1.0*/window.ThemeManager = (function () {
     var themeManager = {};
     var theme = function(){
         this.bodyFontColor= "#999";
@@ -626,4 +626,4 @@ require(['underscore', 'knockout', 'bootstrap'], function () {
             });
         });
     });
-});}());
+});

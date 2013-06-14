@@ -24,9 +24,6 @@ module.exports = (grunt) ->
     jshint:
       files: [r + '*.js']
     concat:
-      options:
-        banner: '/*!itchcork.js version 1.0*/(function(){'
-        footer: '}());'
       ic:
         src: lib + '/*.js'
         dest: r + 'itchcork.js'
