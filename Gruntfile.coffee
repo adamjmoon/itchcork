@@ -6,7 +6,7 @@ module.exports = (grunt) ->
   dest = r + 'javascripts/'
   views = r + 'app/views/'
   tests = r + 'examples/test/itchcork/'
-  test = r + 'test/'
+  test = r + 'examples/test/'
   coverage = r + 'coverage/'
   cp = require('child_process')
   testServerPort = '4000'
@@ -30,7 +30,7 @@ module.exports = (grunt) ->
         dest: r + 'itchcork.js'
       allContext:
         src: tests + '*.js'
-        dest: tests + 'all.js'
+        dest: test + 'all.js'
     'min':
       'ic':
         'src': ['itchcork.js']
