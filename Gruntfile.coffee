@@ -1,10 +1,11 @@
 module.exports = (grunt) ->
   r = __dirname + "/"
-  lib = r + 'lib/itchcork'
+  lib = r + 'lib/itchcork/'
   #vendor root
   v = r + 'vendor/'
   dest = r + 'javascripts/'
   views = r + 'app/views/'
+  tests = r + 'examples/test/itchcork/'
   test = r + 'test/'
   coverage = r + 'coverage/'
   cp = require('child_process')
@@ -25,15 +26,15 @@ module.exports = (grunt) ->
       files: [r + '*.js']
     concat:
       ic:
-        src: lib + '/*.js'
+        src: lib + '*.js'
         dest: r + 'itchcork.js'
+      all:
+        src: tests + '*.js'
+        dest: tests + 'all.js'
     'min':
       'ic':
         'src': ['itchcork.js']
-        'dest': 'itchcork.min.js',
-
-
-    
+        'dest': 'itchcork.min.js'
     # watch:
     #   gruntfile:
     #     files: ['gruntfile.coffee', r + 'main.js']

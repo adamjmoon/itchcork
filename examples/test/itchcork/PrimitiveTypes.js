@@ -36,5 +36,5 @@ define(['context', 'ItchCork'], function (c, ic) {
         })
         .run();
 
-    return suite;
+    window.suiteView.add(suite);
 });

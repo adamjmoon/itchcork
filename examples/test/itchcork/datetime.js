@@ -5,6 +5,5 @@ define(['context', 'ItchCork'], function (c, ic) {
         .compare()
         .run();
 
-    return suite;
-
+    window.suiteView.add(suite);
 });
