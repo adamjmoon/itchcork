@@ -599,13 +599,14 @@ require(['underscore', 'knockout', 'bootstrap'], function () {
                             mocha.setup('bdd');
                             mocha.reporter('html');
                             require(['suite'], function (suite) {
-                                _.each(mocha.suites,
-                                    function (s) {
-                                        var suite = new itchcork.Suite(s.title, s.ctx);
-                                        window.suiteView.add(suite);
-                                    });
+
                                 var runner = mocha.run();
                                 runner.on('end', function () {
+                                    _.each(mocha.suites,
+                                       function (s) {
+                                           var suite = new itchcork.Suite(s.title, s.ctx);
+                                           window.suiteView.add(suite);
+                                       });
                                     var suites = $("ul#mocha-report li.suite ul");
                                     $("#collapse").click(function () {
                                         $(suites).each(function (index, element) {
