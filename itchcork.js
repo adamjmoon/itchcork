@@ -401,8 +401,7 @@ define("Suite", ['Test', 'benchmark', 'knockout','SuiteViewModel','BenchmarkView
 });
 
 define("SuiteView", ['knockout'], function(ko) {
-
-    var view =  function() {
+    function view() {
         var self = this;
         self.suites = new ko.observableArray([]);
         self.menu = document.getElementById('menu');
@@ -436,10 +435,6 @@ define("SuiteView", ['knockout'], function(ko) {
                 window.scrollTo(0,0);
             }
         };
-
-
-
-
     };
     return view;
 });
