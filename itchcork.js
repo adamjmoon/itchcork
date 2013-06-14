@@ -287,7 +287,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'SuiteViewModel', 'BenchmarkVi
                     }
 
                 } else if (context[prop] instanceof Object) {
-                    var tc = { name: prop, jsStr: Object.toSource ? context[prop].toSource() : ''};
+                    var tc = { name: prop, jsStr: Object.toSource ? context[prop].toSource() : '', coffeeStr: ''};
                     self.vm.testCases.push(tc);
                 }
                 if (context[prop] && context[prop].prototype) {
