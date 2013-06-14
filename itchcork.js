@@ -467,7 +467,9 @@ define("Test", [], function () {
 
         } else {
             this.expression = expressionStr.replace(/\n/gm, '')
+                .replace(/function +?\(c\) +?\{+?return(.*?)\;+?\}/g,'$1')
                 .replace(/function +?\(c\) +?\{ +?return(.*?)\; +?\}/g,'$1');
+
 
             this.actual = func(context);
         }
