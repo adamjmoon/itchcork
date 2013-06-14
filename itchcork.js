@@ -1,4 +1,4 @@
-/*!itchcork.js version 1.0*/window.ThemeManager = (function () {
+window.ThemeManager = (function () {
     var themeManager = {};
     var theme = function(){
         this.bodyFontColor= "#999";
