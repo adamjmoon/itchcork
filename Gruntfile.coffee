@@ -28,7 +28,7 @@ module.exports = (grunt) ->
       ic:
         src: lib + '*.js'
         dest: r + 'itchcork.js'
-      all:
+      allContext:
         src: tests + '*.js'
         dest: tests + 'all.js'
     'min':
