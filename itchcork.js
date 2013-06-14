@@ -599,10 +599,9 @@ require(['underscore', 'knockout', 'bootstrap'], function () {
                             mocha.setup('bdd');
                             mocha.reporter('html');
                             require(['suite'], function (suite) {
-
                                 var runner = mocha.run();
                                 runner.on('end', function () {
-                                    _.each(mocha.suites,
+                                    _.each(mocha.suite.suites,
                                        function (s) {
                                            var suite = new itchcork.Suite(s.title, s.ctx);
                                            window.suiteView.add(suite);
