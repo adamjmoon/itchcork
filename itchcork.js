@@ -279,7 +279,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'SuiteViewModel', 'BenchmarkVi
                     jsStr = context[prop].toString();
                     try {
                         coffeeStr = Js2coffee.build(jsStr);
-                        var tc = { name: base.replace(/context/g,'c') + prop, jsStr: jsStr, coffeeStr: coffeeStr};
+                        var tc = { name: base.replace(/context/g,'c') + '.' + prop, jsStr: jsStr, coffeeStr: coffeeStr};
                         self.vm.testCases.push(tc);
                     } catch (err) {
                         var tc = { name: base.replace(/context/g,'c') + '.' + prop, jsStr: jsStr, coffeeStr: ''};
