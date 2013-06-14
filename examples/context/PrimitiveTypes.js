@@ -1,6 +1,6 @@
 define(function() {
   'use strict';
-    function context() {
+   function context() {
      this.numberPrimitiveValue = 1;
      this.stringPrimitiveValue = "string";
      this.booleanPrimitiveValue = true;

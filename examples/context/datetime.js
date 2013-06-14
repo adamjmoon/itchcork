@@ -1,6 +1,6 @@
 define(function() {
      'use strict';
-     var c = function context() {
+     function context() {
          this.currentDateTime1 =
          function() {
              var time = new Date().getTime();
@@ -21,5 +21,5 @@ define(function() {
              return new Date().getTime().toString();
          };
      };
-    return c;
+    return context;
 });
