@@ -406,17 +406,17 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'SuiteViewModel', 'BenchmarkVi
     return suite;
 });
 
-define("SuiteView", ['knockout'], function(ko) {
+define("SuiteView", ['knockout','UnitTestFrameworkManager'], function(ko) {
     function view() {
         var self = this;
         self.suites = new ko.observableArray([]);
+        self.unitTestFrameworkManager = new utfm();
         self.menu = document.getElementById('menu');
         self.view = document.getElementById('view');
         self.setMenuHeight = function(){
             self.menu.style.height = document.body.scrollHeight + "px";
         };
         ko.applyBindings(self);
-
 
         self.add = function(suite){
            self.suites.push(suite);
@@ -445,7 +445,7 @@ define("SuiteView", ['knockout'], function(ko) {
     return view;
 });
 
-define("SuiteViewModel", ['knockout', 'UnitTestFrameworkManager'], function(ko, utfm) {
+define("SuiteViewModel", ['knockout'], function(ko) {
   var vm =  function() {
       this.suiteDesc = ko.observable('');
       this.jsContextStr = ko.observable('');
@@ -456,7 +456,7 @@ define("SuiteViewModel", ['knockout', 'UnitTestFrameworkManager'], function(ko, 
       this.benchmarks = ko.observableArray([]);
       this.benchmarksDone = ko.observable(false);
       this.benchmarkPlatform = ko.observable('');
-      this.unitTestFrameworkManager = new utfm();
+
   };
 
   return vm;
