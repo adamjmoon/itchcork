@@ -1,1 +1,0 @@
-node-live-reload --port 4001 --path ./coverage/lcov-report
