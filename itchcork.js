@@ -406,7 +406,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'SuiteViewModel', 'BenchmarkVi
     return suite;
 });
 
-define("SuiteView", ['knockout','UnitTestFrameworkManager'], function(ko) {
+define("SuiteView", ['knockout','UnitTestFrameworkManager'], function(ko, utfm) {
     function view() {
         var self = this;
         self.suites = new ko.observableArray([]);
