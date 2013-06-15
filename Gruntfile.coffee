@@ -3,12 +3,11 @@ module.exports = (grunt) ->
   lib = r + 'lib/itchcork/'
   #vendor root
   v = r + 'vendor/'
-  dest = r + 'javascripts/'
   views = r + 'app/views/'
   ex = r + 'examples/'
-  context = r + ex + 'context/'
-  tests = r + ex + 'test/itchcork/'
-  test = r + ex + 'test/'
+  context = ex + 'context/'
+  tests = ex + 'test/itchcork/'
+  test = ex + 'test/'
   coverage = r + 'coverage/'
   cp = require('child_process')
   testServerPort = '4000'
