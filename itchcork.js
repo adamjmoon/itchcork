@@ -590,8 +590,9 @@ require(['underscore', 'knockout', 'bootstrap'], function () {
                 window.suiteView = new sv();
                 require(['ItchCork'], function (itchcork) {
                     if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
-                        require(['suite']);
-                        window.suiteView.show();
+                        require(['suite'], function(){
+                            window.suiteView.show();
+                        });
                     }
                     else {
                         define('sinon', [], function () {
