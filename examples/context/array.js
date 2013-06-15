@@ -17,7 +17,7 @@ define(function() {
         s=s+1;
         return s;
       };
-      
+
    //privileged method
    this.fast = function() {
     var f=0;
@@ -28,6 +28,6 @@ define(function() {
     f=f+1;
     return f;
    };
-  };
+  }
   return context;
 });
