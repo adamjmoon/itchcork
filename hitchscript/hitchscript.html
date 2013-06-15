@@ -19,16 +19,16 @@
              height="44"/>
 
         <div class="btn pull-right"
-             style="padding: 0px 8px 0px 5px !important;margin: 0px 0px 0px 0px; !important;"
+             style="padding: 0px 5px 0px 5px !important;margin: 0px 0px 1px 0px; !important;"
              data-bind="click: function(){toggleMenu();}"><img id="rightMenu" src="/menulogo.png" width="21"
                                                                height="44"/></div>
 
     </div>
-    <div class="well" style="position: absolute; left: 45%; top: 0px;padding: 5px !important;"
+    <div class="well" style="position: absolute; right: 35px; top: 0px;padding: 5px !important;"
          data-bind="visible: suites().length>0">
-        <span class="badge badge-info count" data-bind="text: totalTests() + ' TESTS'"></span>
-        <span class="badge badge-success count" data-bind="text: totalPassed() + ' PASSED'"></span>
-        <span class="badge badge-important count" data-bind="text: totalFailed() + ' FAILED'"></span>
+        <span class="badge badge-info count" data-bind="text: totalTests()"></span>
+        <span class="badge badge-success count" data-bind="text: totalPassed()"></span>
+        <span class="badge badge-important count" data-bind="text: totalFailed()"></span>
     </div>
 </div>
 <div class="container-fluid frame" id="frame" style="display: none;">
