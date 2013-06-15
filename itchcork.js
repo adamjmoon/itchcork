@@ -427,7 +427,7 @@ define("SuiteView", ['knockout','UnitTestFrameworkManager'], function(ko, utfm) 
 
         self.add = function(suite){
            suite.num = self.suites().length + 1;
-           self.totalTests(self.totalTess() + suite.vm.tests().length);
+           self.totalTests(self.totalTests() + suite.vm.tests().length);
            self.totalPassed(self.totalPassed() + suite.passedCount);
            self.totalFailed(self.totalFailed() + suite.failedCount);
            self.suites.push(suite);
