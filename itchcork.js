@@ -268,7 +268,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'SuiteViewModel', 'BenchmarkVi
     function suite(desc, js) {
         "use strict";
         var self = this;
-        self.vm, self.num=0,self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
+        self.vm, self.num=0, self.passedCount=0, self.failedCount=0,self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
         self.themeManager = window.ThemeManager;
 
         self.setupContextBreakdown = function (context, base) {
@@ -354,6 +354,11 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'SuiteViewModel', 'BenchmarkVi
 
         self.addTestWithBenchmarks = function (shouldEqual, func, name) {
             var test = new Test(shouldEqual, func, self.jsContext, name);
+            if(test.passed){
+                self.passedCount++;
+            } else{
+                self.failedCount++;
+            }
             self.vm.tests.push(test);
 
             if (name) {
@@ -413,13 +418,18 @@ define("SuiteView", ['knockout','UnitTestFrameworkManager'], function(ko, utfm) 
         self.unitTestFrameworkManager = new utfm();
         self.menu = document.getElementById('menu');
         self.view = document.getElementById('view');
+        self.totalTest = 0;
+        self.totalPassed = 0;
+        self.totalFailed = 0;
         self.setMenuHeight = function(){
             self.menu.style.height = document.body.scrollHeight + "px";
         };
 
-
         self.add = function(suite){
            suite.num = self.suites().length + 1;
+           self.totalTest = self.totalTest + suite.vm.tests().length;
+           self.totalPassed = self.totalPassed + suite.passedCount;
+           self.totalFailed = self.totalFailed + suite.failedCount;
            self.suites.push(suite);
             suite.vm.benchmarksDone.subscribe(function(newValue) {
                 self.setMenuHeight();
@@ -471,7 +481,7 @@ define("Test", [], function () {
     var test = function (shouldEqual, func, context, testName) {
         'use strict';
         var expressionStr = func.toString().trim();
-
+        this.passed=false;
         if (testName) {
             this.expression = testName + '()';
             this.actual = func(context, testName);
@@ -486,6 +496,7 @@ define("Test", [], function () {
         }
         this.shouldEqual = shouldEqual;
         this.typeOf = typeof(this.actual);
+        this.passed = this.shouldEqual===this.actual;
     };
 
     return test;
