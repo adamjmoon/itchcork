@@ -16,10 +16,10 @@
         <div class="navbar-inner"><span><img id="logo" class="logo" src="/brand2.png"
                                              data-bind="click: function(){toggleMenu();}" width="90"
                                              height="44"/></span>
-            <div class="well" data-bind="visible: suites().length>0">
+            <div class="well span4" data-bind="visible: suites().length>0">
                 <span class="badge badge-inverse" data-bind="text: totalTest + ' TESTS'"></span>&nbsp;
                 <span class="badge badge-success" data-bind="visible: totalPassed > 0,text: totalPassed + ' PASSED'"></span>&nbsp;
-                <span class="badge badge-error" data-bind="visible: totalFailed > 0,text: totalFailed + ' FAILED'"></span>
+                <span class="badge badge-important" data-bind="visible: totalFailed > 0,text: totalFailed + ' FAILED'"></span>
             </div>
 
             <div class="btn pull-right"
@@ -69,7 +69,7 @@
                             <span class="badge badge-info" data-bind="text: vm.suiteDesc"></span>
                             <span class="badge badge-inverse" data-bind="text: vm.tests().length + ' TESTS'"></span>&nbsp;
                             <span class="badge badge-success" data-bind="visible: passedCount > 0,text: passedCount + ' PASSED'"></span>&nbsp;
-                            <span class="badge badge-error" data-bind="visible: failedCount > 0,text: failedCount + ' FAILED'"></span>
+                            <span class="badge badge-important" data-bind="visible: failedCount > 0,text: failedCount + ' FAILED'"></span>
                         </div>
                         <div data-bind="css: 'accordion-body collapse suite' + num" class="accordion-body collapse">
                             <div class="accordion">
