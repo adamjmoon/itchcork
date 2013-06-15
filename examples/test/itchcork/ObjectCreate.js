@@ -1,4 +1,4 @@
-define(['objectCreate', 'ItchCork'], function (c, ic) {
+require(['objectCreate', 'ItchCork'], function (c, ic) {
       var suite = new ic.Suite('Classical inheritance with Object.create vs CROCKFORD Object.Create', c);
       
       suite.add(true, function(c) {return c.rectangle instanceof c.Rectangle;})
