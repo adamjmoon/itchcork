@@ -20,6 +20,6 @@ define(function() {
          function() {
              return new Date().getTime().toString();
          };
-     };
+     }
     return context;
 });

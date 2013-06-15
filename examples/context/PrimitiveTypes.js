@@ -6,6 +6,6 @@ define(function() {
      this.booleanPrimitiveValue = true;
      this.nullPrimitiveValue = null;
      this.undefinedPrimiteValue;
-  };
+  }
   return context;
 });

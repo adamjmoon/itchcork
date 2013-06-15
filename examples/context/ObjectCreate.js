@@ -45,7 +45,7 @@ define(function() {
       this.rectangle = new Rectangle();
       this.rectangle2 = new Rectangle2();
       this.cube = new Cube(1,1,1);
-  };
+  }
   
   return context;
 });
