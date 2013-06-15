@@ -576,7 +576,7 @@ requirejs.config({
         'benchmark': root + 'vendor/benchmark',
         'knockout': 'ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1',
         'context': root + 'examples/context',
-        'suite': root + 'examples/test/' + testcase.length > 0 ? testcase : 'all-' + amplify.store('currentUnitTestFramework')
+        'suite': root + 'examples/test/' + testcase.length > 0 ? amplify.store('currentUnitTestFramework') + '/' + testcase : 'all-' + amplify.store('currentUnitTestFramework')
     }
 });
 require(['underscore', 'knockout', 'bootstrap'], function () {
