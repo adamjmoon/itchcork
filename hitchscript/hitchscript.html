@@ -70,16 +70,16 @@
             <div class="navbar navbar-inverse accordion-toggle">
                 <div class="navbar-inner suiteDesc" data-toggle="collapse"
                      data-bind="attr: {'data-target': '.suite' + num}">
-                    <span>
-                          <span data-bind="text: vm.suiteDesc" class="container-fluid"></span>
-
+                      <span class="">
                           <span class="badge badge-info count"
                                 data-bind="text: vm.tests().length"></span>
                           <span class="badge badge-success count"
                                 data-bind="visible: passedCount > 0,text: passedCount"></span>
                           <span class="badge badge-important count"
                                 data-bind="visible: failedCount > 0,text: failedCount"></span>
-                    </span>
+                    </span><br/>
+                          <span data-bind="text: vm.suiteDesc" class="container-fluid"></span>
+
 
                 </div>
                 <div data-bind="css: 'accordion-body collapse suite' + num" class="accordion-body collapse">
