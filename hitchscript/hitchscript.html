@@ -70,8 +70,8 @@
             <div class="navbar navbar-inverse accordion-toggle">
                 <div class="navbar-inner suiteDesc" data-toggle="collapse"
                      data-bind="attr: {'data-target': '.suite' + num}">
-                    <span class="badge badge-info">
-                          <span data-bind="text: vm.suiteDesc"></span>
+                    <span>
+                          <span data-bind="text: vm.suiteDesc" class="container-fluid"></span>
 
                           <span class="badge badge-info count"
                                 data-bind="text: vm.tests().length"></span>
