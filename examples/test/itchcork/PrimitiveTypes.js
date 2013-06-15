@@ -1,5 +1,4 @@
-define(['context/PrimitiveTypes', 'ItchCork'], function (c, ic) {
-
+define(['primitiveTypes', 'ItchCork'], function (c, ic) {
     var suite = new ic.Suite('Javascript Primitive Values and Types', c);
     suite.add("number", function (c) {
             return typeof c.numberPrimitiveValue;

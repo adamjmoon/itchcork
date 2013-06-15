@@ -1,4 +1,4 @@
-define(function() {
+define('objectCreate',function() {
   'use strict';
    function context() {
       //CROCKFORD OBJECT.CREATE

@@ -1,5 +1,4 @@
-define(['context/datetime', 'ItchCork'], function (c, ic) {
-
+define(['datetime', 'ItchCork'], function (c, ic) {
     var suite = new ic.Suite('DateTime tests', c);
     suite.shouldEqual(1)
         .compare()

@@ -1,4 +1,4 @@
-define(function() {
+define('primitiveTypes',function() {
   'use strict';
    function context() {
      this.numberPrimitiveValue = 1;

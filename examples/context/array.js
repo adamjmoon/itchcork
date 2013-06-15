@@ -1,4 +1,4 @@
-define(function() {
+define('array',function() {
   'use strict';
    function context() {
    var my_array = [0,1,2,3,4,5,6,7,8,9];
@@ -23,9 +23,9 @@ define(function() {
     var f=0;
     var length = my_array.length;
     for(var i = 0; i < length; i++){};
-    var length = myMethod();
+        var length = myMethod();
     for(var i = 0; i < length; i++){};
-    f=f+1;
+        f=f+1;
     return f;
    };
   }

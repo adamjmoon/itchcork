@@ -1,4 +1,4 @@
-define(function() {
+define('datetime',function() {
      'use strict';
      function context() {
          this.currentDateTime1 =

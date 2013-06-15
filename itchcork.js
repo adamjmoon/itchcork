@@ -557,8 +557,7 @@ if (window.location.pathname && window.location.pathname.length > 1)
     testcase = window.location.pathname.split('/')[1];
 else if (window.location.hash && window.location.hash.length > 1)
     testcase = window.location.hash.split('#')[1];
-else
-    testcase = 'datetime';
+
 
 var root = 'raw.github.com/adamjmoon/itchcork/master/';
 requirejs.config({
@@ -577,7 +576,7 @@ requirejs.config({
         'benchmark': root + 'vendor/benchmark',
         'knockout': 'ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1',
         'context': root + 'examples/context',
-        'suite': root + 'examples/test/' + testcase + '-' + amplify.store('currentUnitTestFramework')
+        'suite': root + 'examples/test/' + testcase.length > 0 ? testcase : 'all-' + amplify.store('currentUnitTestFramework')
     }
 });
 require(['underscore', 'knockout', 'bootstrap'], function () {

@@ -1,4 +1,4 @@
-define(['context/ObjectCreate', 'ItchCork'], function (c, ic) {
+define(['objectCreate', 'ItchCork'], function (c, ic) {
       var suite = new ic.Suite('Classical inheritance with Object.create vs CROCKFORD Object.Create', c);
       
       suite.add(true, function(c) {return c.rectangle instanceof c.Rectangle;})
@@ -38,8 +38,7 @@ define(['context/ObjectCreate', 'ItchCork'], function (c, ic) {
        window.suiteView.add(suite);
  });
 
-define(['context/PrimitiveTypes', 'ItchCork'], function (c, ic) {
-
+define(['primitiveTypes', 'ItchCork'], function (c, ic) {
     var suite = new ic.Suite('Javascript Primitive Values and Types', c);
     suite.add("number", function (c) {
             return typeof c.numberPrimitiveValue;
@@ -79,14 +78,13 @@ define(['context/PrimitiveTypes', 'ItchCork'], function (c, ic) {
     window.suiteView.add(suite);
 });
 
-define(['context/array','ItchCork'], function (c, ic) {
+define(['array','ItchCork'], function (c, ic) {
    var suite = new ic.Suite('Fastest method of convert array-like to actual arrays', c);
    suite.shouldEqual(1).compare().run();
    window.suiteView.add(suite);
 });
 
-define(['context/datetime', 'ItchCork'], function (c, ic) {
-
+define(['datetime', 'ItchCork'], function (c, ic) {
     var suite = new ic.Suite('DateTime tests', c);
     suite.shouldEqual(1)
         .compare()
