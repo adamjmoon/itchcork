@@ -552,13 +552,14 @@ define("ItchCork", ['Suite', 'SuiteView', 'Test', 'Spy', 'Verify', 'UnitTestFram
 
     return new ItchCork();
 });
-var testcase = '';
+var context = '';
 if (window.location.pathname && window.location.pathname.length > 1)
-    testcase = window.location.pathname.split('/')[1];
+    context = window.location.pathname.split('/')[1];
 else if (window.location.hash && window.location.hash.length > 1)
-    testcase = window.location.hash.split('#')[1];
+    context = window.location.hash.split('#')[1];
 
-var suite = testcase != '' ? amplify.store('currentUnitTestFramework') + '/' + testcase : 'all-' + amplify.store('currentUnitTestFramework');
+var suite = context != '' ? amplify.store('currentUnitTestFramework') + '/' + context : 'all-' + amplify.store('currentUnitTestFramework');
+
 var root = 'raw.github.com/adamjmoon/itchcork/master/';
 requirejs.config({
     baseUrl: 'https://',
@@ -575,7 +576,7 @@ requirejs.config({
         'platform': root + 'vendor/platform',
         'benchmark': root + 'vendor/benchmark',
         'knockout': 'ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1',
-        'context': root + 'examples/context',
+        'context': root + 'examples/' + context != '' ? 'context/' + context : 'all-context',
         'suite': root + 'examples/test/' + suite
     }
 });
