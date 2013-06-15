@@ -60,9 +60,9 @@
             <div class="accordion" id="content" data-bind="'visible':suites().length>0" style="display: none;">
                 <div class="accordion-group" data-bind="'foreach': suites">
                     <div class="navbar navbar-inverse accordion-toggle">
-                        <div class="navbar-inner suiteDesc" data-toggle="collapse" data-target="#suiteContent"><span
+                        <div class="navbar-inner suiteDesc" data-toggle="collapse" data-target="'.suite' + suite.num"><span
                                 class="badge badge-info" data-bind="text: vm.suiteDesc"></span></div>
-                        <div id="suiteContent" class="accordion-body collapse">
+                        <div id="suiteContent" data-bind="css: 'accordion-body collapse suite' + suite.num" class="accordion-body collapse">
                             <div class="accordion">
                                 <div class="accordion-group">
                                     <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"

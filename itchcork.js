@@ -268,7 +268,7 @@ define("Suite", ['Test', 'benchmark', 'knockout', 'SuiteViewModel', 'BenchmarkVi
     var suite = function (desc, js) {
         "use strict";
         var self = this;
-        self.vm, self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
+        self.vm, self.num,self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
         self.themeManager = window.ThemeManager;
 
         self.setupContextBreakdown = function (context, base) {
@@ -419,6 +419,7 @@ define("SuiteView", ['knockout','UnitTestFrameworkManager'], function(ko, utfm) 
 
 
         self.add = function(suite){
+           suite.num = self.suites.length + 1;
            self.suites.push(suite);
             suite.vm.benchmarksDone.subscribe(function(newValue) {
                 self.setMenuHeight();
@@ -538,16 +539,14 @@ define("Verify", [], function() {
 		};
 	};
 });
-define("ItchCork", ['Suite', 'SuiteView', 'Test', 'Spy', 'Verify', 'UnitTestFrameworkManager'], function (Suite, SuiteView, Test, Spy, Verify, UnitTestFrameworkManager) {
+define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify'], function (Suite, Test, Spy, Verify) {
     'use strict';
     var ItchCork = function() {
 
         ItchCork.prototype.Suite = Suite;
-        ItchCork.prototype.SuiteView = SuiteView;
         ItchCork.prototype.Test = Test;
         ItchCork.prototype.Spy = Spy;
         ItchCork.prototype.Verify = Verify;
-        ItchCork.prototype.UnitTestFrameworkManager = UnitTestFrameworkManager;
     };
 
     return new ItchCork();
