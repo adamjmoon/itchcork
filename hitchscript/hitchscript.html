@@ -67,7 +67,7 @@
 <div id="view" class="view container-fluid">
     <div class="accordion" id="content" data-bind="'visible':suites().length>0" style="display: none;">
         <div class="accordion-group" data-bind="'foreach': suites">
-            <div class="navbar navbar-inverse accordion-toggle">
+            <div class="navbar navbar-inverse accordion-toggle autoOverflow">
                 <div class="navbar-inner suiteDesc" data-toggle="collapse"
                      data-bind="attr: {'data-target': '.suite' + num}">
                       <span class="">
@@ -78,7 +78,7 @@
                           <span class="badge badge-important count"
                                 data-bind="visible: failedCount > 0,text: failedCount"></span>
                     </span><br/>
-                          <span data-bind="text: vm.suiteDesc" class="container-fluid"></span>
+                          <span data-bind="text: vm.suiteDesc" style="width: 100%"></span>
 
 
                 </div>
