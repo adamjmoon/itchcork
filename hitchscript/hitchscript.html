@@ -25,11 +25,12 @@
 
     </div>
     <div class="well" style="position: absolute; right: 35px; top: 0px;padding: 5px !important;"
-         data-bind="visible: suites().length>0">
+         data-bind="visible: suites().length>0 && totalTests() > 0">
         <span class="badge badge-info count" data-bind="text: totalTests()"></span>
         <span class="badge badge-success count" data-bind="text: totalPassed()"></span>
         <span class="badge badge-important count" data-bind="text: totalFailed()"></span>
     </div>
+    <div class="btn btn-small" data-bind="click: function(){$('div.collapseToggle').click(); }" style="position: absolute; right: 120px; top: 0px;">Collapse All</div>
 </div>
 <div class="container-fluid frame" id="frame" style="display: none;">
 <div id="menu" class="menu nav-collapse collapse well" style="display:none;">
@@ -66,9 +67,9 @@
 </div>
 <div id="view" class="view container-fluid">
     <div class="accordion" id="content" data-bind="'visible':suites().length>0" style="display: none;">
-        <div class="accordion-group" data-bind="'foreach': suites">
-            <div class="navbar navbar-inverse accordion-toggle autoOverflow">
-                <div class="navbar-inner suiteDesc" data-toggle="collapse"
+        <div class="accordion-group container-fluid" data-bind="'foreach': suites">
+            <div class="navbar navbar-inverse accordion-toggle">
+                <div class="navbar-inner suiteDesc autoOverFlow container-fluid collapseToggle" data-toggle="collapse"
                      data-bind="attr: {'data-target': '.suite' + num}">
                       <span>
                           <span class="badge badge-info count"
@@ -82,7 +83,7 @@
 
 
                 </div>
-                <div data-bind="css: 'accordion-body collapse suite' + num" class="accordion-body collapse">
+                <div data-bind="css: 'accordion-body collapse suite suite' + num" class="accordion-body collapse">
                     <div class="accordion">
                         <div class="accordion-group">
                             <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
@@ -118,7 +119,7 @@
                                                               href="#"><span
                                     class="badge badge-info">CONTEXT BREAKDOWN</span></a></div>
                             <div data-bind="css: 'accordion-body collapse collapseContextBreakdown' + num">
-                                <div class="accordion-inner">
+                                <div class="accordion-inner results">
                                     <table class="table" id="testCaseList">
                                         <thead>
                                         <th>
@@ -139,7 +140,7 @@
                                                                                 data-bind="text: jsStr"></code></pre>
                                             </td>
                                             <td>
-                                                        <pre class="well"><code class="help-inline"
+                                                        <pre class="well" date-bind="visible: coffeeStr.length > 0"><code class="help-inline"
                                                                                 data-bind="text: coffeeStr"></code></pre>
                                             </td>
                                         </tr>

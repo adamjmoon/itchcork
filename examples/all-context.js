@@ -6,7 +6,7 @@ define(function() {
   return context;
 });
 
-define('primitiveTypes',function() {
+define('primitivetypes',function() {
   'use strict';
    function context() {
      this.numberPrimitiveValue = 1;
@@ -78,7 +78,7 @@ define('datetime',function() {
     return context;
 });
 
-define('objectCreate',function() {
+define('objectcreate',function() {
   'use strict';
    function context() {
       //CROCKFORD OBJECT.CREATE
