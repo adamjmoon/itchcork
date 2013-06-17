@@ -1,4 +1,4 @@
-require(['objectCreate', 'ItchCork'], function (c, ic) {
+require(['objectcreate', 'ItchCork'], function (c, ic) {
       var suite = new ic.Suite('Classical inheritance with Object.create vs CROCKFORD Object.Create', c);
       
       suite.add(true, function(c) {return c.rectangle instanceof c.Rectangle;})
@@ -38,7 +38,7 @@ require(['objectCreate', 'ItchCork'], function (c, ic) {
        window.suiteView.add(suite);
  });
 
-require(['primitiveTypes', 'ItchCork'], function (c, ic) {
+require(['primitivetypes', 'ItchCork'], function (c, ic) {
     var suite = new ic.Suite('Javascript Primitive Values and Types', c);
     suite.add("number", function (c) {
             return typeof c.numberPrimitiveValue;
