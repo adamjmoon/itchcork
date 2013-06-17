@@ -421,6 +421,7 @@ define("SuiteView", ['knockout','UnitTestFrameworkManager'], function(ko, utfm) 
         var self = this;
         self.suites = new ko.observableArray([]);
         self.unitTestFrameworkManager = new utfm();
+        self.unitTestFrameworkManager.init();
         self.menu = document.getElementById('menu');
         self.view = document.getElementById('view');
         self.totalTests = new ko.observable(0);
@@ -567,42 +568,45 @@ define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify'], function (Suite, Test, Sp
 
     return new ItchCork();
 });
-var context = '';
-if (window.location.pathname && window.location.pathname.length > 1)
-    context = window.location.pathname.split('/')[1];
-else if (window.location.hash && window.location.hash.length > 1)
-    context = window.location.hash.split('#')[1];
 
-var suite = context != '' ? amplify.store('currentUnitTestFramework') + '/' + context : 'all-' + amplify.store('currentUnitTestFramework');
+require(['SuiteView'], function (sv) {
+    window.suiteView = new sv();
+    var context = '';
+    if (window.location.pathname && window.location.pathname.length > 1)
+        context = window.location.pathname.split('/')[1];
+    else if (window.location.hash && window.location.hash.length > 1)
+        context = window.location.hash.split('#')[1];
 
-var root = 'raw.github.com/adamjmoon/itchcork/master/';
-requirejs.config({
-    baseUrl: 'https://',
-    paths: {
-        'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
-        'underscore': 'cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min',
-        'coffeescript': root + 'vendor/coffee/coffeescript.min',
-        'js2coffee': root + 'vendor/coffee/js2coffee',
-        'lodash': root + 'vendor/aa.lodash.min',
-        'mocha': root + 'vendor/mocha',
-        'sinonM': root + 'vendor/sinon',
-        'chai': root + 'vendor/chai',
-        'sinon-chai': root + 'vendor/sinon-chai',
-        'platform': root + 'vendor/platform',
-        'benchmark': root + 'vendor/benchmark',
-        'knockout': 'ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1',
-        'context': root + 'examples/' + (context != '' ? 'context/' + context : 'all-context'),
-        'suite': root + 'examples/test/' + suite
-    }
-});
-require(['underscore', 'knockout', 'bootstrap'], function () {
-    $("#topNav").show();
-    $('div.frame').show();
-    require(['coffeescript', 'platform', 'benchmark', 'sinonM'], function (CoffeeScript) {
-        this.CoffeeScript = CoffeeScript;
-        require(['js2coffee'], function () {
-            require(['SuiteView'], function (sv) {
-                window.suiteView = new sv();
+
+    var suite = context != '' ? window.suiteView.unitTestFrameworkManager.getFramework() + '/' + context : 'all-' + window.suiteView.unitTestFrameworkManager.getFramework();
+
+    var root = 'raw.github.com/adamjmoon/itchcork/master/';
+    requirejs.config({
+        baseUrl: 'https://',
+        paths: {
+            'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
+            'underscore': 'cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min',
+            'coffeescript': root + 'vendor/coffee/coffeescript.min',
+            'js2coffee': root + 'vendor/coffee/js2coffee',
+            'lodash': root + 'vendor/aa.lodash.min',
+            'mocha': root + 'vendor/mocha',
+            'sinon': root + 'vendor/sinon',
+            'chai': root + 'vendor/chai',
+            'sinon-chai': root + 'vendor/sinon-chai',
+            'platform': root + 'vendor/platform',
+            'benchmark': root + 'vendor/benchmark',
+            'knockout': 'ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1',
+            'context': root + 'examples/' + (context != '' ? 'context/' + context : 'all-context'),
+            'suite': root + 'examples/test/' + suite
+        }
+    });
+    require(['underscore', 'knockout', 'bootstrap'], function () {
+        $("#topNav").show();
+        $('div.frame').show();
+        require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) {
+            this.CoffeeScript = CoffeeScript;
+            require(['js2coffee'], function () {
+
                 require(['ItchCork','context'], function (itchcork) {
                     if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
                         require(['suite'], function(){
@@ -651,7 +655,6 @@ require(['underscore', 'knockout', 'bootstrap'], function () {
                     }
                 });
             });
-
         });
     });
 });
