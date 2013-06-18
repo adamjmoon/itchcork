@@ -540,8 +540,11 @@ define("SuiteView", ['UnitTestFrameworkManager'], function(utfm) {
         self.totalTests = new ko.observable(0);
         self.totalPassed = new ko.observable(0);
         self.totalFailed = new ko.observable(0);
-        self.contextRoot = new ko.observable('raw.github.com/adamjmoon/itchcork/master/');
-        self.vendorRoot = new ko.observable('raw.github.com/adamjmoon/itchcork/master/vendor/');
+        self.githubAccount = new ko.observable('adamjmoon');
+        self.githubRepo =  new ko.observable('itchcork');
+        self.githubBranch =  new ko.observable('master');
+        self.contextRoot = new ko.observable('raw.github.com/' + self.githubAccount() + '/' + self.githubRepo() + '/' + self.githubBranch() + '/');
+        self.vendorRoot = new ko.observable(self.contextRoot() + 'vendor/');
         self.setMenuHeight = function(){
             self.menu.style.height = document.body.scrollHeight - 45 + "px";
         };
@@ -700,7 +703,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
             baseUrl: 'https://',
             paths: {
                 'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
-                '/vendor':  suiteView.vendorRoot(),
+                'vendor':  suiteView.vendorRoot(),
                 'coffeescript':  'vendor/coffee/coffeescript.min',
                 'js2coffee': '/vendor/coffee/js2coffee',
                 'lodash': '/vendor/aa.lodash.min',
