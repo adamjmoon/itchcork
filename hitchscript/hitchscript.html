@@ -24,7 +24,7 @@
                                                                height="44"/></div>
 
     </div>
-    <div class="well" style="position: absolute; right: 45px; top: 0px;padding: 5px !important;"
+    <div class="well" style="display:none; position: absolute; right: 45px; top: 0px;padding: 5px !important;"
          data-bind="visible: suites().length>0 && totalTests() > 0">
         <a href="#" style="display: none;" class="badge badge-inverse count" data-bind="visible: suites().length>1,click: function(){$('div.in').siblings('.collapseToggle').click(); }">Collapse All</a>
         <span class="badge badge-info count" data-bind="text: totalTests()"></span>
