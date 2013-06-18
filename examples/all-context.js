@@ -6,18 +6,6 @@ define(function() {
   return context;
 });
 
-define('primitivetypes',function() {
-  'use strict';
-   function context() {
-     this.numberPrimitiveValue = 1;
-     this.stringPrimitiveValue = "string";
-     this.booleanPrimitiveValue = true;
-     this.nullPrimitiveValue = null;
-     this.undefinedPrimiteValue;
-  }
-  return context;
-});
-
 define('array',function() {
   'use strict';
    function context() {
@@ -127,5 +115,17 @@ define('objectcreate',function() {
       this.cube = new Cube(1,1,1);
   }
   
+  return context;
+});
+
+define('primitivetypes',function() {
+  'use strict';
+   function context() {
+     this.numberPrimitiveValue = 1;
+     this.stringPrimitiveValue = "string";
+     this.booleanPrimitiveValue = true;
+     this.nullPrimitiveValue = null;
+     this.undefinedPrimiteValue;
+  }
   return context;
 });
