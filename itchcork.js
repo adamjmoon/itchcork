@@ -688,7 +688,7 @@ define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify'], function (Suite, Test, Sp
 });
 require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js'], function (ko) {
     window.ko = ko;
-
+    $("div.view").niceScroll();
     require(['SuiteView'], function (sv) {
         window.suiteView = new sv();
         var context = '';
