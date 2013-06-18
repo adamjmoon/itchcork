@@ -701,7 +701,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
             baseUrl: 'https://',
             paths: {
                 'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
-                'vendor':  suiteView.vendorRoot,
+                'vendor':  suiteView.vendorRoot(),
                 'coffeescript':  'vendor/coffee/coffeescript.min',
                 'js2coffee': 'vendor/coffee/js2coffee',
                 'lodash': 'vendor/aa.lodash.min',
@@ -711,8 +711,8 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 'sinon-chai': 'vendor/sinon-chai',
                 'platform': 'vendor/platform',
                 'benchmark': 'vendor/benchmark',
-                'context': suiteView.contextRoot + 'examples/' + (context != '' ? 'context/' + context : 'all-context'),
-                'suite': suiteView.contextRoot + 'examples/test/' + suite
+                'context': suiteView.contextRoot() + 'examples/' + (context != '' ? 'context/' + context : 'all-context'),
+                'suite': suiteView.contextRoot() + 'examples/test/' + suite
             }
         });
         require(['bootstrap', 'sinonM'], function () {
