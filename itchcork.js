@@ -381,7 +381,7 @@ define("Spy", [], function() {
 		return G;
   };
 });
-define("Suite", ['Test', 'benchmark', 'knockout', 'SuiteViewModel', 'BenchmarkViewModel'], function (Test, Benchmark, ko, sVM, bVM) {
+define("Suite", ['Test', 'benchmark','SuiteViewModel', 'BenchmarkViewModel'], function (Test, Benchmark, sVM, bVM) {
     function suite(desc, js) {
         "use strict";
         var self = this;
