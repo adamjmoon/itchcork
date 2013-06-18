@@ -540,6 +540,8 @@ define("SuiteView", ['UnitTestFrameworkManager'], function(utfm) {
         self.totalTests = new ko.observable(0);
         self.totalPassed = new ko.observable(0);
         self.totalFailed = new ko.observable(0);
+        self.contextRoot = new ko.observable('raw.github.com/adamjmoon/itchcork/master/');
+        self.vendorRoot = new ko.observable('raw.github.com/adamjmoon/itchcork/master/vendor/');
         self.setMenuHeight = function(){
             self.menu.style.height = document.body.scrollHeight - 45 + "px";
         };
@@ -692,25 +694,25 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
         else if (window.location.hash && window.location.hash.length > 1)
             context = window.location.hash.split('#')[1];
 
-
         var suite = context != '' ? window.suiteView.unitTestFrameworkManager.getFramework() + '/' + context : 'all-' + window.suiteView.unitTestFrameworkManager.getFramework();
 
-        var root = 'raw.github.com/adamjmoon/itchcork/master/';
+
         requirejs.config({
             baseUrl: 'https://',
             paths: {
                 'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
-                'coffeescript': root + 'vendor/coffee/coffeescript.min',
-                'js2coffee': root + 'vendor/coffee/js2coffee',
-                'lodash': root + 'vendor/aa.lodash.min',
-                'mocha': root + 'vendor/mocha',
-                'sinonM': root + 'vendor/sinon',
-                'chai': root + 'vendor/chai',
-                'sinon-chai': root + 'vendor/sinon-chai',
-                'platform': root + 'vendor/platform',
-                'benchmark': root + 'vendor/benchmark',
-                'context': root + 'examples/' + (context != '' ? 'context/' + context : 'all-context'),
-                'suite': root + 'examples/test/' + suite
+                'vendor':  suiteView.vendorRoot,
+                'coffeescript':  'vendor/coffee/coffeescript.min',
+                'js2coffee': 'vendor/coffee/js2coffee',
+                'lodash': 'vendor/aa.lodash.min',
+                'mocha': 'vendor/mocha',
+                'sinonM': 'vendor/sinon',
+                'chai': 'vendor/chai',
+                'sinon-chai': 'vendor/sinon-chai',
+                'platform': 'vendor/platform',
+                'benchmark': 'vendor/benchmark',
+                'context': suiteView.contextRoot + 'examples/' + (context != '' ? 'context/' + context : 'all-context'),
+                'suite': suiteView.contextRoot + 'examples/test/' + suite
             }
         });
         require(['bootstrap', 'sinonM'], function () {
