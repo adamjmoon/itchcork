@@ -681,7 +681,7 @@ define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify'], function (Suite, Test, Sp
     return new ItchCork();
 });
 
-require(['SuiteView'], function (sv) {
+require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1','SuiteView'], function (sv) {
     window.suiteView = new sv();
     var context = '';
     if (window.location.pathname && window.location.pathname.length > 1)
@@ -712,7 +712,7 @@ require(['SuiteView'], function (sv) {
             'suite': root + 'examples/test/' + suite
         }
     });
-    require(['underscore', 'knockout', 'bootstrap','sinonM'], function () {
+    require(['underscore','bootstrap','sinonM'], function () {
         $("#topNav").show();
         $('div.frame').show();
         require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) {
