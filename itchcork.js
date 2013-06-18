@@ -681,7 +681,7 @@ define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify'], function (Suite, Test, Sp
     return new ItchCork();
 });
 
-require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js','SuiteView'], function (sv) {
+require(['SuiteView','https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js'], function (sv) {
     window.suiteView = new sv();
     var context = '';
     if (window.location.pathname && window.location.pathname.length > 1)
