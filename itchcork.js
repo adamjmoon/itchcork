@@ -696,7 +696,6 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
 
         var suite = context != '' ? window.suiteView.unitTestFrameworkManager.getFramework() + '/' + context : 'all-' + window.suiteView.unitTestFrameworkManager.getFramework();
 
-
         requirejs.config({
             baseUrl: 'https://',
             paths: {
@@ -706,7 +705,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 'js2coffee': 'vendor/coffee/js2coffee',
                 'lodash': 'vendor/aa.lodash.min',
                 'mocha': 'vendor/mocha',
-                'sinonM': 'vendor/sinon',
+                'sinon': 'vendor/sinon',
                 'chai': 'vendor/chai',
                 'sinon-chai': 'vendor/sinon-chai',
                 'platform': 'vendor/platform',
@@ -715,7 +714,8 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 'suite': suiteView.contextRoot() + 'examples/test/' + suite
             }
         });
-        require(['bootstrap', 'sinonM'], function () {
+        require(['bootstrap', 'sinon'], function () {
+            window.sinon = sinon;
             $("#topNav").show();
             $('div.frame').show();
             require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) {
@@ -729,10 +729,8 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                             });
                         }
                         else {
-                            define('sinon', [], function () {
-                                return sinon;
-                            });
-                            require(['chai', 'sinon', 'sinon-chai', 'mocha'], function (chai, sinon, sinonChai) {
+
+                            require(['chai', 'sinon-chai', 'mocha'], function (chai, sinonChai) {
                                 chai.use(sinonChai);
                                 var assert = chai.assert;
                                 var should = chai.should();
