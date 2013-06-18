@@ -544,7 +544,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function(utfm) {
         self.githubRepo =  new ko.observable('itchcork');
         self.githubBranch =  new ko.observable('master');
         self.contextRoot = new ko.observable('raw.github.com/' + self.githubAccount() + '/' + self.githubRepo() + '/' + self.githubBranch() + '/');
-        self.vendorRoot = new ko.observable(self.contextRoot() + 'vendor');
+        self.vendorRoot = new ko.observable(self.contextRoot() + 'vendor/');
         self.setMenuHeight = function(){
             self.menu.style.height = document.body.scrollHeight - 45 + "px";
         };
@@ -703,16 +703,15 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
             baseUrl: 'https://',
             paths: {
                 'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
-                'vendor':  suiteView.vendorRoot(),
-                'coffeescript':  'vendor/coffee/coffeescript.min',
-                'js2coffee': 'vendor/coffee/js2coffee',
-                'lodash': 'vendor/aa.lodash.min',
-                'mocha': 'vendor/mocha',
-                'sinon': 'vendor/sinon',
-                'chai': 'vendor/chai',
-                'sinon-chai': 'vendor/sinon-chai',
-                'platform': 'vendor/platform',
-                'benchmark': 'vendor/benchmark',
+                'coffeescript':  suiteView.vendorRoot() + 'coffee/coffeescript.min',
+                'js2coffee': suiteView.vendorRoot() +'coffee/js2coffee',
+                'lodash': suiteView.vendorRoot() +'aa.lodash.min',
+                'mocha': suiteView.vendorRoot() +'mocha',
+                'sinon': suiteView.vendorRoot() +'sinon',
+                'chai': suiteView.vendorRoot() +'chai',
+                'sinon-chai': suiteView.vendorRoot() +'sinon-chai',
+                'platform': suiteView.vendorRoot() +'platform',
+                'benchmark': suiteView.vendorRoot() +'benchmark',
                 'context': suiteView.contextRoot() + 'examples/all-context',
                 'suite': suiteView.contextRoot() + 'examples/test/' + suite
             }
