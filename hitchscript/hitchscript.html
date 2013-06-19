@@ -28,7 +28,7 @@
          data-bind="visible: suites().length>0 && totalTests() > 0">
         <span class="badge badge-info count" data-bind="text: totalTests()"></span>
         <span class="badge badge-success count" data-bind="text: totalPassed()"></span>
-        <span class="badge badge-important count" data-bind="text: totalFailed()"></span><br/>
+        <span class="badge badge-important count" data-bind="text: totalFailed()"></span><br/><br/>
         <a href="#" style="display: none;" class="badge badge-inverse count" data-bind="visible: suites().length>1,click: function(){$('div.in').siblings('.collapseToggle').click().click(); }">Collapse All</a>
 
 
