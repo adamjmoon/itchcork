@@ -26,7 +26,7 @@
     </div>
     <div class="well" style="display:none; position: absolute; right: 45px; top: 0px;padding: 5px !important;"
          data-bind="visible: suites().length>0 && totalTests() > 0">
-        <a href="#" style="display: none;" class="badge badge-inverse count" data-bind="visible: suites().length>1,click: function(){$('div.in').siblings('.collapseToggle').click(); }">Collapse All</a>
+        <a href="#" style="display: none;" class="badge badge-inverse count" data-bind="visible: suites().length>1,click: function(){$('div.in').siblings('.collapseToggle').click().click(); }">Collapse All</a>
         <span class="badge badge-info count" data-bind="text: totalTests()"></span>
         <span class="badge badge-success count" data-bind="text: totalPassed()"></span>
         <span class="badge badge-important count" data-bind="text: totalFailed()"></span>
@@ -36,7 +36,7 @@
 <div class="container-fluid frame" id="frame" style="display: none;">
 <div id="menu" class="menu nav-collapse collapse well" style="display:none;">
     <div class="collapse-inner">
-        <div class="navbar navbar-inverse menu-title">
+        <div class="navbar menu-title">
             <div class="navbar-inner"><span class="badge badge-info">Theme</span></div>
         </div>
         <ul class="nav nav-tabs nav-stacked">
@@ -81,8 +81,6 @@
                                 data-bind="visible: failedCount > 0,text: failedCount"></span>
                      </span><br/>
                           <span data-bind="text: vm.suiteDesc" class="badge badge-info count"></span>
-
-
                 </div>
                 <div data-bind="css: 'accordion-body collapse in suite' + num ">
                     <div class="accordion">
