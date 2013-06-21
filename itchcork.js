@@ -189,7 +189,7 @@ window.ThemeManager = (function () {
             + ".suiteDesc{padding:2px!important; height: 55px; margin-bottom: 2px !important;}.run-again{margin-left:4px!important}.navbar .btn,.navbar .btn-group{margin-top:10px} div.js{overflow-x: auto;} div.coffee{overflow-x: auto;} div.results{ overflow-x: auto !important;} pre.well {border: none;overflow-x: auto;}.frame{overflow-y: auto !important;}"
             + ".count{border: 1px solid #fff; margin: 0px 0 0px 0 !important;}.autoOverFlow{overflow-x:auto;}"
             + ".headCount{border: 1px solid #fff; height:26px; width: 24px; line-height: 23px !important; margin: 0px 0 0px 0 !important; text-align:center;}.autoOverFlow{overflow-x:auto;}"
-            + "";
+            + ".nicescroll-rails{margin-top:45px !important;}";
     };
     themeManager.set = function (newTheme) {
         if (newTheme != amplify.store('currentTheme')) {
@@ -739,7 +739,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                     require(['ItchCork', 'context'], function (itchcork) {
                         if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
                             require(['suite'], function () {
-                                window.suiteView.show();
+                                window.suiteView.show(); 
                             });
                         }
                         else {
