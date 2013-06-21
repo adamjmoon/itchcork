@@ -593,7 +593,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
             $("html").niceScroll();
         }
         self.collapseAll = function () {
-            if ($('div.collapsed').length == suites().length) {
+            if ($('div.collapsed').length == self.suites().length) {
                 $('div.collapsed').siblings().children('.collapseToggle').click();
             } else {
                 $('div.in').siblings().children('.collapseToggle').click();
@@ -738,7 +738,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
         require(['bootstrap', 'sinon'], function () {
             window.sinon = sinon;
             $("#topNav").show();
-            $('div.frame').show(); 
+            $('div.frame').show();
             require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) {
                 this.CoffeeScript = CoffeeScript;
                 require(['js2coffee'], function () {
