@@ -561,11 +561,11 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
             suite.vm.benchmarksDone.subscribe(function (newValue) {
                 self.setMenuHeight();
             });
-            self.setupNiceScroll();
         };
 
         self.show = function () {
             ko.applyBindings(self);
+            self.setupNiceScroll();
         };
 
         self.setTheme = function (theme) {
@@ -585,9 +585,12 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         };
 
         self.setupNiceScroll = function () {
-            $("div#frame").niceScroll();
-            $('div#frame').getNiceScroll().resize();
+            $("html").niceScroll();
+
         };
+        self.resizeNiceScroll = function (){
+            $('html').getNiceScroll().resize();
+        }
     };
     return view;
 });
@@ -735,7 +738,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                     require(['ItchCork', 'context'], function (itchcork) {
                         if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
                             require(['suite'], function () {
-                                window.suiteView.show();
+                                window.suiteView.show(); 
                             });
                         }
                         else {
