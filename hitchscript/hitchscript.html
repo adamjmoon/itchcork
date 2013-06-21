@@ -19,7 +19,7 @@
              height="44"/>
 
         <div style="position: absolute;right: 0;top: 0;padding: 0px 10px 0px 10px !important;margin: 0px; !important; border-left: 1px solid #252A30 !important;cursor: pointer;"
-             data-bind="visible: suites().length>1,click: function(){console.log($('div.in'));$('div.in').siblings().children('.collapseToggle').click(); }"><img id="rightMenuAll" src="/menulogo.png" width="21"
+             data-bind="visible: suites().length>1,click: function(){console.log($('div.collapsed'));$('div.in').siblings().children('.collapseToggle').click(); }"><img id="rightMenuAll" src="/menulogo.png" width="21"
                                                                height="44"/></div>
         <div style="position: absolute;right: 0;top: 0;padding: 0px 10px 0px 10px !important;margin: 0px; !important; border-left: 1px solid #252A30 !important;cursor: pointer;"
                      data-bind="visible: suites().length==1,click: function(){toggleMenu();}"><img id="rightMenuone" src="/menulogo.png" width="21"
