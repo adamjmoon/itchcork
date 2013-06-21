@@ -28,14 +28,11 @@
          data-bind="visible: suites().length>0 && totalTests() > 0">
 
         <a href="#" style="display: none;" class="badge badge-inverse count"
-           data-bind="visible: suites().length>1,click: function(){$('a.collapse.in').siblings('.collapseToggle').collapse(); }">Collapse
+           data-bind="visible: suites().length>1,click: function(){$('div.in').siblings().children('.collapseToggle').click(); }">Collapse
             All</a>
         <span class="badge badge-info count" data-bind="text: totalTests()"></span>
         <span class="badge badge-success count" data-bind="text: totalPassed()"></span>
-        <span class="badge badge-important count" data-bind="text: totalFailed()"></span><br/><br/>
-        <a href="#" style="display: none;" class="badge badge-inverse count" data-bind="visible: suites().length>1,click: function(){$('div.in').siblings('.collapseToggle').click().click(); }">Collapse All</a>
-
-
+        <span class="badge badge-important count" data-bind="text: totalFailed()"></span>
     </div>
 
 </div>
@@ -79,7 +76,7 @@
                 <div class="accordion-heading">
                     <div class="navbar-inner suiteDesc autoOverFlow container-fluid collapseToggle"
                          data-parent="#suiteListAccordian" data-toggle="collapse"
-                         data-bind="attr: {'data-target': '.suite' + num}">
+                         data-bind="attr: {'data-target': '.suite' + num}, click: function(){ $('div.frame').niceScroll(); }">
                       <span>
                           <span class="badge badge-info count"
                                 data-bind="text: vm.tests().length"></span>
