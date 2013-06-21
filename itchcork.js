@@ -584,14 +584,20 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
                 window.scrollTo(0, 0);
             }
         };
-
         self.setupNiceScroll = function () {
             $("html").niceScroll();
 
         };
-        self.resizeNiceScroll = function (){
+        self.resizeNiceScroll = function () {
             $('html').getNiceScroll().resize();
             $("html").niceScroll();
+        }
+        self.collapseAll = function () {
+            if ($('div.collapsed').length == suites().length) {
+                $('div.collapsed').siblings().children('.collapseToggle').click();
+            } else {
+                $('div.in').siblings().children('.collapseToggle').click();
+            }
         }
     };
     return view;
@@ -733,7 +739,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
             window.sinon = sinon;
             $("#topNav").show();
             $('div.frame').show();
-            require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) {
+            require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) { 
                 this.CoffeeScript = CoffeeScript;
                 require(['js2coffee'], function () {
 
