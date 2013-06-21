@@ -594,7 +594,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         }
         self.collapseAll = function () {
             if ($('div.collapsed').length == self.suites().length) {
-                $('div.collapsed').click();
+                $('div.collapsedToggle').click();
             } else {
                 $('div.in').siblings().children('.collapseToggle').click();
             }
@@ -781,7 +781,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                                 element.hidden = false;
                                             });
                                             $("#expand").hide();
-                                            $("#collapse").show();
+                                            $("#collapse").show(); 
                                         });
                                     });
                                 });
