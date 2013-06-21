@@ -783,7 +783,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                                 element.hidden = false;
                                             });
                                             $("#expand").hide();
-                                            $("#collapse").show(); 
+                                            $("#collapse").show();
                                         });
                                     });
                                 });
