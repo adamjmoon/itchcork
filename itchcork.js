@@ -583,6 +583,10 @@ define("SuiteView", ['UnitTestFrameworkManager'], function(utfm) {
                 window.scrollTo(0,0);
             }
         };
+
+        self.setupNiceScroll = function(){
+
+        };
     };
     return view;
 });
@@ -731,8 +735,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                         if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
                             require(['suite'], function () {
                                 window.suiteView.show();
-                                $("div#frame").niceScroll();
-                                $('div#frame').getNiceScroll().resize();
+
                             });
                         }
                         else {
