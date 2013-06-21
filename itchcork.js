@@ -738,8 +738,8 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
         require(['bootstrap', 'sinon'], function () {
             window.sinon = sinon;
             $("#topNav").show();
-            $('div.frame').show();
-            require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) { 
+            $('div.frame').show(); 
+            require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) {
                 this.CoffeeScript = CoffeeScript;
                 require(['js2coffee'], function () {
 
