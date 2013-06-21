@@ -78,7 +78,7 @@ box-shadow: 0 0 4px rgba(0,0,0,0.8);"
                 <div class="accordion-heading">
                     <div class="navbar-inner suiteDesc autoOverFlow container-fluid collapseToggle"
                          data-parent="#suiteListAccordian" data-toggle="collapse"
-                         data-bind="attr: {'data-target': '.suite' + num}, click: function(){ $('#view').niceScroll('#frame',{cursorcolor:'#00F'}); }">
+                         data-bind="attr: {'data-target': '.suite' + num}, click: function(){ $('html').niceScroll({cursorcolor:'#00F'}); }">
                       <span>
                           <span class="badge badge-info count"
                                 data-bind="text: vm.tests().length"></span>
