@@ -589,9 +589,10 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
 
         };
         self.resizeNiceScroll = function (num) {
+            window.scrollTo(0, $("[data-target='.suite" + num + "']").position().top-40);
             $("html").niceScroll();
-            console.log($("[data-target='.suite" + num + "']").position().top);
-            window.scrollTo(0, $("[data-target='.suite" + num + "']").position().top-60);
+            //console.log($("[data-target='.suite" + num + "']").position().top);
+
         };
         self.collapseAll = function () {
             if ($('div.collapsed').length == self.suites().length) {
@@ -750,7 +751,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                 window.suiteView.show();
                             });
                         }
-                        else {
+                        else { 
 
                             require(['chai', 'sinon-chai', 'mocha'], function (chai, sinonChai) {
                                 chai.use(sinonChai);
