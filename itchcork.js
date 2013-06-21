@@ -589,10 +589,8 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
 
         };
         self.resizeNiceScroll = function (num) {
-            $('html').getNiceScroll().resize();
             $("html").niceScroll();
-            console.log(num);
-            window.scrollTo(0, $("[data-target='.suite" + num + "']").position().top);
+            window.scrollTo(0, $("[data-target='.suite" + num + "']").position().top-60);
         };
         self.collapseAll = function () {
             if ($('div.collapsed').length == self.suites().length) {
@@ -783,7 +781,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                                 element.hidden = false;
                                             });
                                             $("#expand").hide();
-                                            $("#collapse").show();
+                                            $("#collapse").show(); 
                                         });
                                     });
                                 });
