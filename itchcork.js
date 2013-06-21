@@ -591,16 +591,16 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         self.resizeNiceScroll = function (num) {
             $('html').getNiceScroll().resize();
             $("html").niceScroll();
-
+            console.log(num);
             window.scrollTo(0, $("[data-target='suite" + num + "']").position().top);
-        }
+        };
         self.collapseAll = function () {
             if ($('div.collapsed').length == self.suites().length) {
                 $('div.collapsed').click();
             } else {
                 $('div.in').siblings().children('.collapseToggle').click();
             }
-        }
+        };
     };
     return view;
 });
@@ -747,7 +747,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
 
                     require(['ItchCork', 'context'], function (itchcork) {
                         if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
-                            require(['suite'], function () {
+                            require(['suite'], function () { 
                                 window.suiteView.show();
                             });
                         }
