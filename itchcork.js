@@ -594,7 +594,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         }
         self.collapseAll = function () {
             if ($('div.collapsed').length == self.suites().length) {
-                $('div.collapsed').siblings().children('.collapseToggle').click();
+                $('div.collapsed').click();
             } else {
                 $('div.in').siblings().children('.collapseToggle').click();
             }
