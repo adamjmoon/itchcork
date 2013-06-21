@@ -561,6 +561,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
             suite.vm.benchmarksDone.subscribe(function (newValue) {
                 self.setMenuHeight();
             });
+            self.setupNiceScroll();
         };
 
         self.show = function () {
@@ -734,7 +735,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                     require(['ItchCork', 'context'], function (itchcork) {
                         if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
                             require(['suite'], function () {
-                                window.suiteView.show();
+                                window.suiteView.show(); 
                             });
                         }
                         else {
