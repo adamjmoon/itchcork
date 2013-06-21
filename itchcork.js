@@ -731,7 +731,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                         if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
                             require(['suite'], function () {
                                 window.suiteView.show();
-                                $("html").niceScroll();
+                                $("div#frame").niceScroll();
                             });
                         }
                         else {
