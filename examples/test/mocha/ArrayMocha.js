@@ -1,4 +1,4 @@
-define(['context'], function (c) {
+define(['arrayMocha'], function (c) {
     describe('Array Test', function () {
         describe('#indexOf()', function () {
             it('should return -1 when the value is not present', function () {
