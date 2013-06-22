@@ -7,6 +7,7 @@ module.exports = (grunt) ->
   ex = r + 'examples/'
   context = ex + 'context/'
   tests = ex + 'test/itchcork/'
+  mocha = ex + 'test/mocha/'
   test = ex + 'test/'
   coverage = r + 'coverage/'
   cp = require('child_process')
@@ -35,6 +36,9 @@ module.exports = (grunt) ->
       allItchcorkTests:
         src: tests + '*.js'
         dest: test + 'all-itchcork.js'
+      allMochaTests:
+        src: mocha + '*.js'
+        dest: test + 'all-mocha.js'
     'min':
       'ic':
         'src': ['itchcork.js']
