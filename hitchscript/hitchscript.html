@@ -78,7 +78,7 @@
         <div class="accordion-group container-fluid">
             <div class="navbar navbar-inverse" >
                 <div class="accordion-heading">
-                    <a href="#">
+
                     <div class="navbar-inner suiteDesc autoOverFlow container-fluid collapseToggle"
                          data-parent="#suiteListAccordian" data-toggle="collapse"
                          data-bind="attr: {'data-target': '.suite' + num}, click: suiteView.setupNiceScroll">
@@ -92,7 +92,7 @@
                      </span><br/>
                         <span data-bind="text: vm.suiteDesc" class="badge badge-info count"></span>
                     </div>
-                    </a>
+
                 </div>
 
                 <div data-bind="css: 'accordion-body collapse in suite' + num ">
@@ -196,11 +196,7 @@
                                 </div>
                                 <div class="accordion-inner results" id="mochaResults"
                                      data-bind="visible: window.suiteView.unitTestFrameworkManager.getFramework()==='mocha'">
-                                    <div id="mocha" class="row-fluid"><a id="collapse" class="btn btn-alert"
-                                                                         href="#">Collapse All</a><a id="expand"
-                                                                                                     class="btn btn-alert hide"
-                                                                                                     href="#">Expand
-                                        All</a></div>
+                                    <div id="mocha" class="row-fluid">
                                 </div>
                             </div>
                         </div>
