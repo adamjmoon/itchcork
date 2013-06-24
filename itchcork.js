@@ -600,11 +600,11 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         self.setupNiceScroll = function () {
 
             self.nice = $("html").niceScroll();
-            $(function () {
-                $("div#view").resize(function () {
-                    self.nice.resize();
-                });
+
+            $("div#view").resize(function () {
+                self.nice.resize();
             });
+
 
         };
         self.scrollToSelector = function (selector) {
@@ -789,7 +789,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                     window.suiteView.show();
                                     var runner = mocha.run();
                                     runner.on('end', function () {
-                                        var suites = $("ul#mocha-report li.suite ul"); 
+                                        var suites = $("ul#mocha-report li.suite ul");
                                         $("#collapse").click(function () {
                                             $(suites).each(function (index, element) {
                                                 element.hidden = true;
