@@ -597,8 +597,8 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
             }
         };
         self.setupNiceScroll = function () {
-            $("html").getNiceScroll().resize();
-            $("html").niceScroll();
+            $("div#view").niceScroll();
+            $("div#view").getNiceScroll().resize();
         };
         self.scrollToSelector =  function(selector){
             window.scrollTo(0,$(selector).position().top);
@@ -763,7 +763,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                         }
                         else {
 
-                            require(['chai', 'sinon-chai', 'mocha'], function (chai, sinonChai) {
+                            require(['chai', 'sinon-chai', 'mocha'], function (chai, sinonChai) { 
                                 chai.use(sinonChai);
                                 var assert = chai.assert;
                                 var should = chai.should();
