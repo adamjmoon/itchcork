@@ -432,7 +432,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
         self.map = function () {
             self.vm = new sVM();
             self.vm.suiteDesc(desc);
-            self.vm.jsContextStr(self.hightlight(js.toString() + "\n var c = new context();"));
+            self.vm.jsContextStr(self.highlight(js.toString() + "\n var c = new context();"));
             self.vm.coffeeContextStr(self.highlight(Js2coffee.build(self.vm.jsContextStr())));
             self.vm.benchmarkPlatform(Benchmark.platform.description);
             self.jsContext = new js();
@@ -766,7 +766,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                 var assert = chai.assert;
                                 var should = chai.should();
                                 mocha.setup('bdd');
-                                mocha.reporter('html'); 
+                                mocha.reporter('html');
 
 
                                 require(['suite'], function (suite) {
