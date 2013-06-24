@@ -399,7 +399,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
                 .replace(/\/\/(.*)/gm, '<span class="comment">//$1</span>')
                 .replace(/('.*?')/gm, '<span class="string">$1</span>')
                 .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
-                .replace(/\b(function|new|throw|return|var|if|else|prototype|Object|\-\>|\@|\:\:|this)\b/gm, '<span class="keyword">$1</span>')
+                .replace(/(function|new|throw|return|var|if|else|prototype|Object|->|@|::|this)/gim, '<span class="keyword">$1</span>')
         };
         self.setupContextBreakdown = function (context, base) {
             var jsStr = '', coffeeStr = '';
@@ -755,7 +755,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                     require(['ItchCork', 'context'], function (itchcork) {
                         if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
                             require(['suite'], function () {
-                                window.suiteView.show();
+                                window.suiteView.show(); 
                             });
                         }
                         else {
