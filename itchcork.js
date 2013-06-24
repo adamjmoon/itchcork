@@ -385,13 +385,24 @@ define("Spy", [], function() {
 		return G;
   };
 });
-define("Suite", ['Test', 'benchmark','SuiteViewModel', 'BenchmarkViewModel'], function (Test, Benchmark, sVM, bVM) {
+define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], function (Test, Benchmark, sVM, bVM) {
     function suite(desc, js) {
         "use strict";
         var self = this;
-        self.vm, self.num=0, self.passedCount=0, self.failedCount=0,self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
+        self.vm, self.num = 0, self.passedCount = 0, self.failedCount = 0, self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
         self.themeManager = window.ThemeManager;
 
+        self.highlight = function (js) {
+            return js
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/\/\/(.*)/gm, '<span class="comment">//$1</span>')
+                .replace(/('.*?')/gm, '<span class="string">$1</span>')
+                .replace(/(\d+\.\d+)/gm, '<span class="number">$1</span>')
+                .replace(/(\d+)/gm, '<span class="number">$1</span>')
+                .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
+                .replace(/\b(function|new|throw|return|var|if|else)\b/gm, '<span class="keyword">$1</span>')
+        };
         self.setupContextBreakdown = function (context, base) {
             var jsStr = '', coffeeStr = '';
 
@@ -400,10 +411,10 @@ define("Suite", ['Test', 'benchmark','SuiteViewModel', 'BenchmarkViewModel'], fu
                     jsStr = context[prop].toString();
                     try {
                         coffeeStr = Js2coffee.build(jsStr);
-                        var tc = { name: base.replace(/context/g,'c') + '.' + prop, jsStr: self.highlight(jsStr), coffeeStr: coffeeStr};
+                        var tc = { name: base.replace(/context/g, 'c') + '.' + prop, jsStr: self.highlight(jsStr), coffeeStr: coffeeStr};
                         self.vm.testCases.push(tc);
                     } catch (err) {
-                        var tc = { name: base.replace(/context/g,'c') + '.' + prop, jsStr: self.highlight(jsStr), coffeeStr: ''};
+                        var tc = { name: base.replace(/context/g, 'c') + '.' + prop, jsStr: self.highlight(jsStr), coffeeStr: ''};
                         self.vm.testCases.push(tc);
                     }
 
@@ -417,17 +428,6 @@ define("Suite", ['Test', 'benchmark','SuiteViewModel', 'BenchmarkViewModel'], fu
             }
         };
 
-        self.highlight = function(js) {
-          return js
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/\/\/(.*)/gm, '<span class="comment">//$1</span>')
-            .replace(/('.*?')/gm, '<span class="string">$1</span>')
-            .replace(/(\d+\.\d+)/gm, '<span class="number">$1</span>')
-            .replace(/(\d+)/gm, '<span class="number">$1</span>')
-            .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
-            .replace(/\b(function|new|throw|return|var|if|else)\b/gm, '<span class="keyword">$1</span>')
-        }
 
         self.map = function () {
             self.vm = new sVM();
@@ -487,9 +487,9 @@ define("Suite", ['Test', 'benchmark','SuiteViewModel', 'BenchmarkViewModel'], fu
 
         self.addTestWithBenchmarks = function (shouldEqual, func, name) {
             var test = new Test(shouldEqual, func, self.jsContext, name);
-            if(test.passed){
+            if (test.passed) {
                 self.passedCount++;
-            } else{
+            } else {
                 self.failedCount++;
             }
             self.vm.tests.push(test);
@@ -780,7 +780,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                     window.suiteView.show();
                                     var runner = mocha.run();
                                     runner.on('end', function () {
-                                        var suites = $("ul#mocha-report li.suite ul"); 
+                                        var suites = $("ul#mocha-report li.suite ul");
                                         $("#collapse").click(function () {
                                             $(suites).each(function (index, element) {
                                                 element.hidden = true;
