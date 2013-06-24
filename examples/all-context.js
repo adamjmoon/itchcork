@@ -19,7 +19,7 @@ define('objectcreate',function() {
           this.x = 1;
           this.y = 1;          
       };       
-      Shape.prototype.move = function(x, y) {
+      Shape.prototype.move = function move(x, y) {
           this.x += x;
           this.y += y;
           return "Shape moved.";
@@ -39,7 +39,7 @@ define('objectcreate',function() {
       Rectangle2.prototype = Object.create2(Shape.prototype);
       Cube.prototype = Object.create2(Shape.prototype);
                
-      Cube.prototype.move = function(z) {
+      Cube.prototype.move = function move(z) {
           this.x += z;
           this.y += z;
           this.z += z;
