@@ -234,7 +234,7 @@ li.failures em {
 }
 
 code .comment {
-    color: #ddd
+    color: #dd00c5
 }
 
 code .init {
@@ -246,11 +246,11 @@ code .string {
 }
 
 code .keyword {
-    color: #8A6343
+    color: #eb8d00
 }
 
 code .number {
-    color: #2F6FAD
+    color: #40abfb
 }
 
 li.suite h1 a {

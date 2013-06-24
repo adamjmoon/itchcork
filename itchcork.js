@@ -409,7 +409,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
                     jsStr = context[prop].toString();
                     try {
                         coffeeStr = Js2coffee.build(jsStr);
-                        var tc = { name: base.replace(/context/g, 'c') + '.' + prop, jsStr: self.highlight(jsStr), coffeeStr: coffeeStr};
+                        var tc = { name: base.replace(/context/g, 'c') + '.' + prop, jsStr: self.highlight(jsStr), coffeeStr: self.highlight(coffeeStr)};
                         self.vm.testCases.push(tc);
                     } catch (err) {
                         var tc = { name: base.replace(/context/g, 'c') + '.' + prop, jsStr: self.highlight(jsStr), coffeeStr: ''};
@@ -741,7 +741,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 'platform': suiteView.vendorRoot() +'platform',
                 'benchmark': suiteView.vendorRoot() +'benchmark',
                 'context': suiteView.contextRoot() + 'examples/all-context',
-                'suite': suiteView.contextRoot() + 'examples/test/' + suite
+                'suite': suiteView.contextRoot() + 'examples/test/' + suite 
             }
         });
         require(['bootstrap', 'sinon'], function () {
