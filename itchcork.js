@@ -604,8 +604,6 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
             $("div#view").resize(function () {
                 self.nice.resize();
             });
-
-
         };
         self.scrollToSelector = function (selector) {
             window.scrollTo(0, $(selector).position().top);
@@ -788,7 +786,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
 
                                     window.suiteView.show();
                                     var runner = mocha.run();
-                                    runner.on('end', function () {
+                                    runner.on('end', function () { 
                                         var suites = $("ul#mocha-report li.suite ul");
                                         $("#collapse").click(function () {
                                             $(suites).each(function (index, element) {
