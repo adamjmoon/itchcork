@@ -432,8 +432,9 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
         self.map = function () {
             self.vm = new sVM();
             self.vm.suiteDesc(desc);
-            self.vm.jsContextStr(self.highlight(js.toString() + "\n var c = new context();"));
+            self.vm.jsContextStr(js.toString() + "\n var c = new context();");
             self.vm.coffeeContextStr(self.highlight(Js2coffee.build(self.vm.jsContextStr())));
+            self.vm.jsContextStr(self.highlight(self.vm.jsContextStr()));
             self.vm.benchmarkPlatform(Benchmark.platform.description);
             self.jsContext = new js();
             self.setupContextBreakdown(self.jsContext, 'context');
@@ -753,7 +754,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 this.CoffeeScript = CoffeeScript;
                 require(['js2coffee'], function () {
 
-                    require(['ItchCork', 'context'], function (itchcork) {
+                    require(['ItchCork', 'context'], function (itchcork) { 
                         if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
                             require(['suite'], function () {
                                 window.suiteView.show();
