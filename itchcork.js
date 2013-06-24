@@ -600,9 +600,12 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         self.setupNiceScroll = function () {
 
             self.nice = $("html").niceScroll();
-            $(window).resize(function () {
-                self.nice.resize();
-            });
+            $(function () {
+                $(window).resize(function () {
+                    self.nice.resize();
+                });
+            })
+
         };
         self.scrollToSelector = function (selector) {
             window.scrollTo(0, $(selector).position().top);
@@ -759,7 +762,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 this.CoffeeScript = CoffeeScript;
                 require(['js2coffee'], function () {
 
-                    require(['ItchCork', 'context'], function (itchcork) {
+                    require(['ItchCork', 'context'], function (itchcork) { 
                         if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
                             require(['suite'], function () {
                                 window.suiteView.show();
