@@ -396,8 +396,8 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
             return js
                 .replace(/</g, '&lt;')
                 .replace(/>/g, '&gt;')
-                .replace(/\/\/(.*)/gm, '<span class="badge badge-info">//$1</span>')
-                .replace(/\#(.*)/gm, '<span class="badge badge-info ">//$1</span>')
+                .replace(/\/\/(.*)/gm, '<span class="badge badge-inverse">//$1</span>')
+                .replace(/\#(.*)/gm, '<span class="badge badge-invsere">#$1</span>')
                 .replace(/('.*?')/gm, '<span class="string">$1</span>')
                 .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
                 .replace(/(function|new|throw|return|var|if|else|prototype|Object|->|@|::|this)/gim, '<span class="keyword">$1</span>')
@@ -721,7 +721,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
     require(['SuiteView'], function (sv) {
         window.suiteView = new sv();
         var context = '';
-        if (window.location.pathname && window.location.pathname.length > 1)
+        if (window.location.pathname && window.location.pathname.length > 1) 
             context = window.location.pathname.split('/')[1];
         else if (window.location.hash && window.location.hash.length > 1)
             context = window.location.hash.split('#')[1];
