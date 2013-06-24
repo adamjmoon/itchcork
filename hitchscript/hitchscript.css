@@ -238,11 +238,11 @@ code .comment {
 }
 
 code .init {
-    color: #2F6FAD
+    color: #00ff08
 }
 
 code .string {
-    color: #5890AD
+    color: #aaaaad
 }
 
 code .keyword {
