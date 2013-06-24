@@ -601,6 +601,9 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
             $("html").getNiceScroll().resize();
 
         };
+        self.scrollToSelector =  function(selector){
+            window.scrollTo(0,$(selector).position().y);
+        };
 
         self.collapseAll = function () {
             if ($('div.collapsed').length == self.suites().length) {
@@ -742,7 +745,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 'platform': suiteView.vendorRoot() + 'platform',
                 'benchmark': suiteView.vendorRoot() + 'benchmark',
                 'context': suiteView.contextRoot() + 'examples/all-context',
-                'suite': suiteView.contextRoot() + 'examples/test/' + suite
+                'suite': suiteView.contextRoot() + 'examples/test/' + suite 
             }
         });
         require(['bootstrap', 'sinon'], function () {
