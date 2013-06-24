@@ -398,7 +398,6 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
                 .replace(/>/g, '&gt;')
                 .replace(/\/\/(.*)/gm, '<span class="comment">//$1</span>')
                 .replace(/('.*?')/gm, '<span class="string">$1</span>')
-                .replace(/(\d+\.\d+)/gm, '<span class="number">$1</span>')
                 .replace(/(\d+)/gm, '<span class="number">$1</span>')
                 .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
                 .replace(/\b(function|new|throw|return|var|if|else)\b/gm, '<span class="keyword">$1</span>')
@@ -750,7 +749,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
             window.sinon = sinon;
             $("#topNav").show();
             $('div.frame').show();
-            require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) { 
+            require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) {
                 this.CoffeeScript = CoffeeScript;
                 require(['js2coffee'], function () {
 
