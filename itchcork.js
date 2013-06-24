@@ -766,7 +766,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                 var assert = chai.assert;
                                 var should = chai.should();
                                 mocha.setup('bdd');
-                                mocha.reporter('html'); 
+                                mocha.reporter('html');
 
 
                                 require(['suite'], function (suite) {
