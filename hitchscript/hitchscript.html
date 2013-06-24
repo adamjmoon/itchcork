@@ -149,13 +149,13 @@
                                             <td><label data-bind="text: name"></label></td>
                                             <td>
                                                         <pre class="well"><code class="help-inline"
-                                                                                data-bind="text: jsStr"></code></pre>
+                                                                                data-bind="html: jsStr"></code></pre>
                                             </td>
                                             <td>
                                                         <pre class="well"
-                                                             date-bind="visible: coffeeStr.length > 0"><code
+                                                             date-bind="visible: coffeeStr().length > 0"><code
                                                                 class="help-inline"
-                                                                data-bind="text: coffeeStr"></code></pre>
+                                                                data-bind="html: coffeeStr"></code></pre>
                                             </td>
                                         </tr>
                                         </tbody>
