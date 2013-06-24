@@ -597,9 +597,8 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
             }
         };
         self.setupNiceScroll = function () {
-            $("html").niceScroll();
             $("html").getNiceScroll().resize();
-
+            $("html").niceScroll();
         };
         self.scrollToSelector =  function(selector){
             window.scrollTo(0,$(selector).position().top);
@@ -752,7 +751,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
             window.sinon = sinon;
             $("#topNav").show();
             $('div.frame').show();
-            require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) {
+            require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) { 
                 this.CoffeeScript = CoffeeScript;
                 require(['js2coffee'], function () {
 
