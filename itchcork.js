@@ -400,10 +400,10 @@ define("Suite", ['Test', 'benchmark','SuiteViewModel', 'BenchmarkViewModel'], fu
                     jsStr = context[prop].toString();
                     try {
                         coffeeStr = Js2coffee.build(jsStr);
-                        var tc = { name: base.replace(/context/g,'c') + '.' + prop, jsStr: jsStr, coffeeStr: coffeeStr};
+                        var tc = { name: base.replace(/context/g,'c') + '.' + prop, jsStr: self.highlight(jsStr), coffeeStr: coffeeStr};
                         self.vm.testCases.push(tc);
                     } catch (err) {
-                        var tc = { name: base.replace(/context/g,'c') + '.' + prop, jsStr: jsStr, coffeeStr: ''};
+                        var tc = { name: base.replace(/context/g,'c') + '.' + prop, jsStr: self.highlight(jsStr), coffeeStr: ''};
                         self.vm.testCases.push(tc);
                     }
 
@@ -417,11 +417,23 @@ define("Suite", ['Test', 'benchmark','SuiteViewModel', 'BenchmarkViewModel'], fu
             }
         };
 
+        self.highlight = function(js) {
+          return js
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/\/\/(.*)/gm, '<span class="comment">//$1</span>')
+            .replace(/('.*?')/gm, '<span class="string">$1</span>')
+            .replace(/(\d+\.\d+)/gm, '<span class="number">$1</span>')
+            .replace(/(\d+)/gm, '<span class="number">$1</span>')
+            .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
+            .replace(/\b(function|new|throw|return|var|if|else)\b/gm, '<span class="keyword">$1</span>')
+        }
+
         self.map = function () {
             self.vm = new sVM();
             self.vm.suiteDesc(desc);
-            self.vm.jsContextStr(js.toString() + "\n var c = new context();");
-            self.vm.coffeeContextStr(Js2coffee.build(self.vm.jsContextStr()));
+            self.vm.jsContextStr(self.hightlight(js.toString() + "\n var c = new context();"));
+            self.vm.coffeeContextStr(self.highlight(Js2coffee.build(self.vm.jsContextStr())));
             self.vm.benchmarkPlatform(Benchmark.platform.description);
             self.jsContext = new js();
             self.setupContextBreakdown(self.jsContext, 'context');
@@ -782,7 +794,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                             });
                                             $("#expand").hide();
 
-                                            $("#collapse").show();
+                                            $("#collapse").show(); 
                                         });
                                     });
                                 });
