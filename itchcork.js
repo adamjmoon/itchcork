@@ -190,7 +190,7 @@ window.ThemeManager = (function () {
             + ".count{border: 1px solid #fff; margin: 0px 0 0px 0 !important;}.autoOverFlow{overflow-x:auto;}"
             + ".headCount{border: 1px solid #fff; height:26px; width: 24px; line-height: 23px !important; margin: 0px 0 0px 0 !important; text-align:center;}.autoOverFlow{overflow-x:auto;}"
             + ".nicescroll-rails{margin-top:45px !important;}"
-            + ".logoBtn:hover, .logoBtn:focus {transition-property: top, left;transition-duration: 1s, 1s;transition-delay: 0s, 1s;}";
+            + ".logoBtn:hover, .logoBtn:focus {-webkit-transform: rotate(720deg);-webkit-transition: all .5s linear;"; 
 
     };
     themeManager.set = function (newTheme) {
@@ -783,7 +783,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                     _.each(mocha.suite.suites,
                                         function (s) {
                                             console.log(s);
-                                            var suite = new itchcork.Suite(s.title, s.ctx.constructor);
+                                            var suite = new itchcork.Suite(s.title, s.ctx.constructor); 
                                             window.suiteView.add(suite);
                                         });
 
