@@ -601,10 +601,10 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
 
             self.nice = $("html").niceScroll();
             $(function () {
-                $(window).resize(function () {
+                $("div#view").resize(function () {
                     self.nice.resize();
                 });
-            })
+            });
 
         };
         self.scrollToSelector = function (selector) {
@@ -762,7 +762,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 this.CoffeeScript = CoffeeScript;
                 require(['js2coffee'], function () {
 
-                    require(['ItchCork', 'context'], function (itchcork) { 
+                    require(['ItchCork', 'context'], function (itchcork) {
                         if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
                             require(['suite'], function () {
                                 window.suiteView.show();
@@ -789,7 +789,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                     window.suiteView.show();
                                     var runner = mocha.run();
                                     runner.on('end', function () {
-                                        var suites = $("ul#mocha-report li.suite ul");
+                                        var suites = $("ul#mocha-report li.suite ul"); 
                                         $("#collapse").click(function () {
                                             $(suites).each(function (index, element) {
                                                 element.hidden = true;
