@@ -599,12 +599,11 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
             }
         };
         self.setupNiceScroll = function () {
-            if(nice){
+            if(self.nice){
                 self.nice.resize();
             }
             else{
                 self.nice = $("html").niceScroll();
-
             }
         };
         self.scrollToSelector =  function(selector){
@@ -740,7 +739,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
         requirejs.config({
             baseUrl: 'https://',
             paths: {
-                'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
+                'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min', 
                 'coffeescript': suiteView.vendorRoot() + 'coffee/coffeescript.min',
                 'js2coffee': suiteView.vendorRoot() + 'coffee/js2coffee',
                 'lodash': suiteView.vendorRoot() + 'aa.lodash.min',
