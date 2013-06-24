@@ -190,7 +190,7 @@ window.ThemeManager = (function () {
             + ".count{border: 1px solid #fff; margin: 0px 0 0px 0 !important;}.autoOverFlow{overflow-x:auto;}"
             + ".headCount{border: 1px solid #fff; height:26px; width: 24px; line-height: 23px !important; margin: 0px 0 0px 0 !important; text-align:center;}.autoOverFlow{overflow-x:auto;}"
             + ".nicescroll-rails{margin-top:45px !important;}"
-            + ".logoBtn: {-webkit-transform: rotate(360deg);-webkit-transition: all 1s linear;";
+            + ".logoBtn:hover {-webkit-transform: rotate(360deg);-webkit-transition: all 1s linear;";
 
     };
     themeManager.set = function (newTheme) {
@@ -792,7 +792,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                     runner.on('end', function () {
                                         var suites = $("ul#mocha-report li.suite ul");
                                         $("#collapse").click(function () {
-                                            $(suites).each(function (index, element) {
+                                            $(suites).each(function (index, element) { 
                                                 element.hidden = true;
                                             });
                                             $("#collapse").hide();
