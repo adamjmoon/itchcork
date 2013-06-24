@@ -128,7 +128,7 @@
                         <div class="accordion-group" data-bind="'visible': vm.testCases().length > 0, attr: { id: 'ContextBreakdown' + num}">
                             <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
                                                               data-bind="attr: {'data-target' : '.collapseContextBreakdown' + num}, click: function(){suiteView.scrollToSelector('#ContextBreakdown' + num);}"
-                                                              href="#"><span
+                                                              href=""><span
                                     class="badge badge-info">CONTEXT BREAKDOWN</span></a></div>
                             <div data-bind="css: 'accordion-body collapse collapseContextBreakdown' + num">
                                 <div class="accordion-inner results">
@@ -163,10 +163,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-group">
+                        <div class="accordion-group" data-bind="attr: { id: 'TestResults' + num}">
                             <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
-                                                              data-bind="attr: {'data-target': '.collapseResults' + num}"
-                                                              href="#"><span
+                                                              data-bind="attr: {'data-target': '.collapseResults' + num}, click: function(){suiteView.scrollToSelector('#TestResults' + num);}"
+                                                              href=""><span
                                     class="badge badge-info">TEST RESULTS</span></a></div>
                             <div data-bind="css: 'accordion-body collapse in collapseResults' + num">
                                 <div class="accordion-inner results" id="itchcorkResults"
