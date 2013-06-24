@@ -396,7 +396,8 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
             return js
                 .replace(/</g, '&lt;')
                 .replace(/>/g, '&gt;')
-                .replace(/\/\/(.*)/gm, '<span class="comment">//$1</span>')
+                .replace(/\/\/(.*)/gm, '<span class="badge badge-info">//$1</span>')
+                .replace(/\#(.*)/gm, '<span class="badge badge-info ">//$1</span>')
                 .replace(/('.*?')/gm, '<span class="string">$1</span>')
                 .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
                 .replace(/(function|new|throw|return|var|if|else|prototype|Object|->|@|::|this)/gim, '<span class="keyword">$1</span>')
@@ -730,7 +731,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
         requirejs.config({
             baseUrl: 'https://',
             paths: {
-                'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min', 
+                'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
                 'coffeescript':  suiteView.vendorRoot() + 'coffee/coffeescript.min',
                 'js2coffee': suiteView.vendorRoot() +'coffee/js2coffee',
                 'lodash': suiteView.vendorRoot() +'aa.lodash.min',
