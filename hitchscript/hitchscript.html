@@ -74,7 +74,7 @@
     </div>
 </div>
 <div id="view" onresize="alert('1')" class="view container-fluid">
-    <div class="accordion" id="suiteListAccordian" data-bind="'foreach': suites">
+    <div class="accordion" id="suiteListAccordian" data-bind="'visible':suites().length>0,'foreach': suites" style="display: none;">
         <div class="accordion-group container-fluid">
             <div class="navbar navbar-inverse" >
                 <div class="accordion-heading">
