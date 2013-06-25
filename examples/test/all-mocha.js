@@ -1,4 +1,4 @@
-require('arrayMocha', function (c) {
+define(['arrayMocha'], function (c) {
     var context = new c();
     describe('arrayMocha', function () {
         describe('#indexOf()', function () {
