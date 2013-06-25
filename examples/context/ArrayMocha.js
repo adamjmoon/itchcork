@@ -5,6 +5,6 @@ define('arrayMocha',function() {
     this.fun = function fun(){
         self.arr = _.map(self.arr, function(num){ return num * 3; });_
     }
-  };
+  }
   return context;
 });
