@@ -640,9 +640,10 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
         var self = this;
         self.vm, self.num = 0, self.passedCount = 0, self.failedCount = 0, self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
         self.themeManager = window.ThemeManager;
+        self.framework = "itchcork";
 
         self.highlight = function (code) {
-            if(window.unitTestFrameworkManager.getFramework() == "itchcork"){
+            if(self.framework == "itchcork"){
                 return code
                                .replace(/</g, '&lt;')
                                .replace(/>/g, '&gt;')
@@ -983,7 +984,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
 
     require(['SuiteView'], function (sv) {
         window.suiteView = new sv();
-        var context = ''; 
+        var context = '';
         if (window.location.pathname && window.location.pathname.length > 1)
             context = window.location.pathname.split('/')[1];
         else if (window.location.hash && window.location.hash.length > 1)
