@@ -443,8 +443,8 @@ window.ThemeManager = (function () {
             + ".headCount{border: 1px solid #fff; height:26px; width: 24px; line-height: 23px !important; margin: 0px 0 0px 0 !important; text-align:center;}.autoOverFlow{overflow-x:auto;}"
             + ".nicescroll-rails{margin-top:45px !important;}"
             + ".logoBtn {-webkit-transform: rotate(180deg);-webkit-transition: all 1s linear;}"
-            + ".collapseAll {-webkit-transform: rotate(0deg);-webkit-transition: all .5s linear;margin-left:5px;}"
-            + ".expandAll {-webkit-transform: rotate(90deg);-webkit-transition: all .5s linear;margin-left:15px;}";
+            + ".collapseAll {-webkit-transform: rotate(0deg);-webkit-transition: all .5s linear;margin-left:15px !important;}"
+            + ".expandAll {-webkit-transform: rotate(90deg);-webkit-transition: all .5s linear;margin-left:5px !important;}";
 
     };
     themeManager.set = function (newTheme) {
@@ -1027,7 +1027,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                         }
                         else {
 
-                            require(['chai', 'sinon-chai', 'mocha'], function (chai, sinonChai) {
+                            require(['chai', 'sinon-chai', 'mocha'], function (chai, sinonChai) { 
                                 chai.use(sinonChai);
                                 var assert = chai.assert;
                                 var should = chai.should();
