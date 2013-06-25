@@ -869,10 +869,10 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         self.collapseAll = function () {
             if ($('div.collapsed').length == self.suites().length) {
                 $('div.collapsed').click();
-                $("#rightCorkCollapse").removeClass('collapseAll').addClass('expandAll').width(21).height(44);
+                $("#rightCorkCollapse").removeClass('collapseAll').width(21).height(44).addClass('expandAll');
             } else {
                 $('div.in').siblings().children('.collapseToggle').click();
-                $("#rightCorkCollapse").removeClass('expandAll').addClass('collapseAll').width(21).height(44);
+                $("#rightCorkCollapse").removeClass('expandAll').width(44).height(22).addClass('collapseAll');
             }
         };
     };
@@ -1039,7 +1039,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                     _.each(mocha.suite.suites,
                                         function (s) {
                                             console.log(s);
-                                            var suite = new itchcork.Suite(s.title, s.ctx.constructor);
+                                            var suite = new itchcork.Suite(s.title, s.ctx.constructor); 
                                             window.suiteView.add(suite);
                                         });
 
