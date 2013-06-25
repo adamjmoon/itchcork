@@ -869,10 +869,10 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         self.collapseAll = function () {
             if ($('div.collapsed').length == self.suites().length) {
                 $('div.collapsed').click();
-                $("#rightCorkCollapse").removeClass('collapseAll').addClass('expandAll').width(44).height(21);
+                $("#rightCorkCollapse").removeClass('collapseAll').addClass('expandAll').width(21).height(44);
             } else {
                 $('div.in').siblings().children('.collapseToggle').click();
-                $("#rightCorkCollapse").removeClass('expandAll').addClass('collapseAll').width(21).height(44);
+                $("#rightCorkCollapse").removeClass('expandAll').addClass('collapseAll').width(44).height(21);
             }
         };
     };
@@ -1027,7 +1027,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                         }
                         else {
 
-                            require(['chai', 'sinon-chai', 'mocha'], function (chai, sinonChai) { 
+                            require(['chai', 'sinon-chai', 'mocha'], function (chai, sinonChai) {
                                 chai.use(sinonChai);
                                 var assert = chai.assert;
                                 var should = chai.should();
