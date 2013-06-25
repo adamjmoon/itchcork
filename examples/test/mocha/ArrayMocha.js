@@ -1,6 +1,6 @@
-define(['arrayMocha'], function (c) {
+require('arrayMocha', function (c) {
     var context = new c();
-    describe('Array Test', function () {
+    describe('arrayMocha', function () {
         describe('#indexOf()', function () {
             it('should return -1 when the value is not present', function () {
                 context.arr.indexOf(5).should.equal(-1);
