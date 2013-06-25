@@ -872,7 +872,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
                 $("#rightCorkCollapse").removeClass('collapseAll').addClass('expandAll').width(21).height(44);
             } else {
                 $('div.in').siblings().children('.collapseToggle').click();
-                $("#rightCorkCollapse").removeClass('expandAll').addClass('collapseAll').width(44).height(21);
+                $("#rightCorkCollapse").removeClass('expandAll').addClass('collapseAll').width(21).height(44);
             }
         };
     };
@@ -1029,7 +1029,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
 
                             require(['chai', 'sinon-chai', 'mocha'], function (chai, sinonChai) {
                                 chai.use(sinonChai);
-                                var assert = chai.assert; 
+                                var assert = chai.assert;
                                 var should = chai.should();
                                 mocha.setup('bdd');
                                 mocha.reporter('html');
