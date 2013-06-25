@@ -2,6 +2,7 @@
 #mocha ul, #mocha li {
     margin: 0;
     padding: 0;
+    color: inherit !important;
 }
 
 #mocha ul {
@@ -10,6 +11,7 @@
 
 #mocha h1, #mocha h2 {
     margin: 0;
+    color: inherit !important;
 }
 
 #mocha h1 {
@@ -49,7 +51,7 @@
 
 #mocha .test {
     margin-left: 15px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid inherit;
     margin-bottom: 3px;
 }
 
@@ -108,7 +110,7 @@
 }
 
 #mocha .test.fail pre {
-    color: white;
+    color: inherit;
 }
 
 #mocha .test.fail::before {
@@ -254,13 +256,13 @@ code .number {
 }
 
 li.suite h1 a {
-    color: black;
+    color: inherit;
     font-size: 16px;
     min-height: 10px;
     padding: 7px;
     margin-bottom: 0px;
-    background-color: #000000;
-    border: 1px solid #fff;
+    background-color: inherit;
+    border: 1px solid #000000;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
