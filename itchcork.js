@@ -635,12 +635,13 @@ define("Spy", [], function() {
   };
 });
 define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], function (Test, Benchmark, sVM, bVM) {
-    function suite(desc, js) {
+    function suite(desc, js, framework) {
         "use strict";
         var self = this;
         self.vm, self.num = 0, self.passedCount = 0, self.failedCount = 0, self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
         self.themeManager = window.ThemeManager;
-        self.framework = "itchcork";
+        if(framework)
+            self.framework = "itchcork";
 
         self.highlight = function (code) {
             if(self.framework == "itchcork"){
@@ -1038,7 +1039,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                         function (s) {
                                             console.log(s);
                                             var suite = new itchcork.Suite(s.title, s.ctx.constructor);
-                                            suite.framework = "mocha";
+                                            suite.framework = ;
                                             window.suiteView.add(suite);
                                         });
 
