@@ -444,7 +444,7 @@ window.ThemeManager = (function () {
             + ".nicescroll-rails{margin-top:45px !important;}"
             + ".logoBtn {-webkit-transform: rotate(180deg);-webkit-transition: all 1s linear;}"
             + ".collapseAll {-webkit-transform: rotate(90deg);-webkit-transition: all 1s linear;}"
-            + ".expandAll {-webkit-transform: rotate(-90deg);-webkit-transition: all 1s linear;}";
+            + ".expandAll {-webkit-transform: rotate(-45deg);-webkit-transition: all 1s linear;}";
 
     };
     themeManager.set = function (newTheme) {
@@ -1020,7 +1020,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 require(['js2coffee'], function () {
 
                     require(['ItchCork', 'context'], function (itchcork) {
-                        if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
+                        if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") { 
                             require(['suite'], function () {
                                 window.suiteView.show();
                             });
