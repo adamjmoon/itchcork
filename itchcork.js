@@ -644,14 +644,13 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
         self.highlight = function (js) {
             return js
                 .replace(/(function|new|throw|return|var|if|else|prototype|Object|Array|Boolean|\@|\:\:|this)/g, '<span class="keyword">$1</span>')
-                .replace(/(\-\>)/g, '<span class="keyword">$1</span>')
+                               .replace(/(\-\>)/g, '<span class="keyword">$1</span>')
                 .replace(/</g, '&lt;')
                 .replace(/>/g, '&gt;')
                 .replace(/\/\/(.*)/gm, '<span class="badge badge-inverse">//$1</span>')
                 .replace(/\#(.*)/gm, '<span class="badge badge-inverse">#$1</span>')
                 .replace(/('.*?')/gm, '<span class="string">$1</span>')
-                .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
-
+                .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>');
         };
         self.setupContextBreakdown = function (context, base) {
             var jsStr = '', coffeeStr = '';
@@ -782,6 +781,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
             }
             return self;
         };
+
 
         self.run = function () {
             self.vm.benchmarksDone(false);
@@ -982,7 +982,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
         window.suiteView = new sv();
         var context = '';
         if (window.location.pathname && window.location.pathname.length > 1)
-            context = window.location.pathname.split('/')[1]; 
+            context = window.location.pathname.split('/')[1];
         else if (window.location.hash && window.location.hash.length > 1)
             context = window.location.hash.split('#')[1];
 
