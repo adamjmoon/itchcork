@@ -992,7 +992,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
         else if (window.location.hash && window.location.hash.length > 1)
             context = window.location.hash.split('#')[1];
 
-        var suite = context != '' ? window.suiteView.unitTestFrameworkManager.getFramework() + '/' + context : 'all-' + window.suiteView.unitTestFrameworkManager.getFramework(); 
+        var suite = context != '' ? window.suiteView.unitTestFrameworkManager.getFramework() + '/' + context : 'all-' + window.suiteView.unitTestFrameworkManager.getFramework();
 
         requirejs.config({
             baseUrl: 'https://',
