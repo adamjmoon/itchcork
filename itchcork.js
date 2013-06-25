@@ -1036,6 +1036,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
 
 
                                 require(['suite'], function (suite) {
+
                                     _.each(mocha.suite.suites,
                                         function (s) {
                                             console.log(s);
@@ -1048,7 +1049,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
 
                                         });
 
-                                    
+
                                     var runner = mocha.run();
                                     runner.on('end', function () {
                                         var suites = $("ul#mocha-report li.suite ul");
