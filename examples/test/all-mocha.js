@@ -1,4 +1,4 @@
-define(['arrayMocha'], function (c) {
+require(['arrayMocha'], function (c) {
     var context = new c();
     describe('arrayMocha', function () {
         describe('#indexOf()', function () {
@@ -10,7 +10,7 @@ define(['arrayMocha'], function (c) {
         });
     });
 });
-define(['primitiveTypes'], function (c) {
+require(['primitiveTypes'], function (c) {
     var context = new c();
     describe('primitiveTypes', function () {
         describe('stringPrimitiveValue', function () {

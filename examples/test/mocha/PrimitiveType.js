@@ -1,4 +1,4 @@
-define(['primitiveTypes'], function (c) {
+require(['primitiveTypes'], function (c) {
     var context = new c();
     describe('primitiveTypes', function () {
         describe('stringPrimitiveValue', function () {
