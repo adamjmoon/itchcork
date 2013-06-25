@@ -1039,7 +1039,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                     var runner = mocha.run();
                                     runner.on('end', function () {
                                         console.log(runner.stats);
-                                        _.each(runner.stats.suites,
+                                        _.each(mocha.stats.suites,
                                             function (s) {
                                                 console.log(s);
                                                 require([s.title], function (c) {
