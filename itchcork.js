@@ -1045,7 +1045,8 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                                 require([s.title], function (c) {
 
                                                     var suite = new itchcork.Suite(s.title, c, "mocha");
-                                                    //suite.passedCount = s.total
+                                                    //suite.totalCount = s.total;
+                                                    //suite.passedCount = s.total;
                                                     window.suiteView.add(suite);
                                                 });
                                             });
