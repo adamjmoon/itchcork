@@ -1049,8 +1049,6 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
 
                                         });
                                     window.suiteView.show();
-
-
                                     var runner = mocha.run();
                                     runner.on('end', function () {
                                         var suites = $("ul#mocha-report li.suite ul");
