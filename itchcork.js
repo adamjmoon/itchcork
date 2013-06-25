@@ -442,9 +442,9 @@ window.ThemeManager = (function () {
             + ".count{border: 1px solid #fff; margin: 0px 0 0px 0 !important;}.autoOverFlow{overflow-x:auto;}"
             + ".headCount{border: 1px solid #fff; height:26px; width: 24px; line-height: 23px !important; margin: 0px 0 0px 0 !important; text-align:center;}.autoOverFlow{overflow-x:auto;}"
             + ".nicescroll-rails{margin-top:45px !important;}"
-            + ".logoBtn {-webkit-transform: rotate(90deg);-webkit-transition: all 1s linear;}"
-            + ".collapseAll {-webkit-transform: rotate(-90deg);-webkit-transition: all 1s linear;}"
-            + ".expandAll {-webkit-transform: rotate(90deg);-webkit-transition: all 1s linear;}";
+            + ".logoBtn {-webkit-transform: rotate(180deg);-webkit-transition: all 1s linear;}"
+            + ".collapseAll {-webkit-transform: rotate(-45deg);-webkit-transition: all 1s linear;}"
+            + ".expandAll {-webkit-transform: rotate(45deg);-webkit-transition: all 1s linear;}";
 
     };
     themeManager.set = function (newTheme) {
@@ -1019,7 +1019,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 this.CoffeeScript = CoffeeScript;
                 require(['js2coffee'], function () {
 
-                    require(['ItchCork', 'context'], function (itchcork) {
+                    require(['ItchCork', 'context'], function (itchcork) { 
                         if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
                             require(['suite'], function () {
                                 window.suiteView.show();
@@ -1027,7 +1027,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                         }
                         else {
 
-                            require(['chai', 'sinon-chai', 'mocha'], function (chai, sinonChai) { 
+                            require(['chai', 'sinon-chai', 'mocha'], function (chai, sinonChai) {
                                 chai.use(sinonChai);
                                 var assert = chai.assert;
                                 var should = chai.should();
