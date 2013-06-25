@@ -788,7 +788,6 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
             return self;
         };
 
-
         self.run = function () {
             self.vm.benchmarksDone(false);
             self.vm.benchmarks.removeAll();
@@ -1015,7 +1014,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
             window.sinon = sinon;
             $("#topNav").show();
             $('div.frame').show();
-            require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) { 
+            require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) {
                 this.CoffeeScript = CoffeeScript;
                 require(['js2coffee'], function () {
 
