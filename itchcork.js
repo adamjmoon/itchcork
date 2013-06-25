@@ -656,7 +656,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
                 .replace(/\#(.*)/gm, '<span class="badge badge-inverse">#$1</span>')
                 .replace(/('.*?')/gm, '<span class="string">$1</span>')
                 .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
-                .replace(/(function|new|throw|return|var|if|else|prototype|Object|Array|Boolean|->|@|::|this)/gm, '<span class="keyword">$1</span>')
+                .replace(/(function|new|throw|return|var|if|else|prototype|Object|Array|Boolean|->|@|::|this)/g, '<span class="keyword">$1</span>')
         };
         self.setupContextBreakdown = function (context, base) {
             var jsStr = '', coffeeStr = '';
@@ -1015,7 +1015,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
             window.sinon = sinon;
             $("#topNav").show();
             $('div.frame').show();
-            require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) {
+            require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) { 
                 this.CoffeeScript = CoffeeScript;
                 require(['js2coffee'], function () {
 
