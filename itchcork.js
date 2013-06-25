@@ -647,8 +647,8 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
                 return code
                                .replace(/</g, '&lt;')
                                .replace(/>/g, '&gt;')
-                                .replace(/\/\/(.*)/gm, '<span class="badge badge-inverse">//$1</span>')
-                                .replace(/\#(.*)/gm, '<span class="badge badge-inverse">#$1</span>')
+                                .replace(/\/\/(.*)/gm, '<span class="badge badge-warning">//$1</span>')
+                                .replace(/\#(.*)/gm, '<span class="badge badge-warning">#$1</span>')
                                 .replace(/('.*?')/gm, '<span class="string">$1</span>')
                                 .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
                                 .replace(/(function|new|throw|return|var|if|else|prototype|Object|Array|Boolean|-&gt;|@|::|this)/g, '<span class="keyword">$1</span>');
@@ -1001,7 +1001,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 'lodash': suiteView.vendorRoot() + 'aa.lodash.min',
                 'mocha': suiteView.vendorRoot() + 'mocha',
                 'sinon': suiteView.vendorRoot() + 'sinon',
-                'chai': suiteView.vendorRoot() + 'chai', 
+                'chai': suiteView.vendorRoot() + 'chai',
                 'sinon-chai': suiteView.vendorRoot() + 'sinon-chai',
                 'platform': suiteView.vendorRoot() + 'platform',
                 'benchmark': suiteView.vendorRoot() + 'benchmark',
