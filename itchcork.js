@@ -867,12 +867,12 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         };
 
         self.collapseAll = function () {
-            if ($('div.collapsed').length == self.suites().length) {
+            if ($("#rightCorkCollapse").hasClass('expandAll')) {
                 $('div.collapsed').click();
-                $("#rightCorkCollapse").removeClass('collapseAll').addClass('expandAll');
+                $("#rightCorkCollapse").removeClass('expandAll').addClass('collapseAll');
             } else {
                 $('div.in').siblings().children('.collapseToggle').click();
-                $("#rightCorkCollapse").removeClass('expandAll').addClass('collapseAll');
+                $("#rightCorkCollapse").removeClass('collapseAll').addClass('expandAll');
             }
         };
     };
@@ -1015,7 +1015,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
             window.sinon = sinon;
             $("#topNav").show();
             $('div.frame').show();
-            require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) {
+            require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) { 
                 this.CoffeeScript = CoffeeScript;
                 require(['js2coffee'], function () {
 
