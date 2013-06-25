@@ -1039,7 +1039,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                     _.each(mocha.suite.suites,
                                         function (s) {
                                             console.log(s);
-                                            require(s.tit, function (c) {
+                                            require(s.title, function (c) {}
                                             var suite = new itchcork.Suite(s.title, s.ctx, "mocha");
                                             window.suiteView.add(suite);
                                         });
