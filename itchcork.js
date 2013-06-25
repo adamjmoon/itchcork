@@ -1020,7 +1020,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 require(['js2coffee'], function () {
 
                     require(['ItchCork', 'context'], function (itchcork) {
-                        if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") { 
+                        if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
                             require(['suite'], function () {
                                 window.suiteView.show();
                             });

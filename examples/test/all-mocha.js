@@ -10,7 +10,7 @@ require(['arrayMocha'], function (c) {
         });
     });
 });
-require(['primitiveTypes'], function (c) {
+require(['primitivetypes'], function (c) {
     var context = new c();
     describe('primitiveTypes', function () {
         describe('stringPrimitiveValue', function () {
