@@ -1049,7 +1049,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                                     window.suiteView.add(suite);
                                                 });
                                             });
-                                         //suite.totalTests = s.total;
+                                        //suite.totalTests = s.total;
                                         //suite.passedCount = s.total;
                                         //window.suiteView.totalTests = runner.stats.te
                                         window.suiteView.show();
