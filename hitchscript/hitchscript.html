@@ -24,7 +24,7 @@
                      data-bind="visible: suites().length==1,click: toggleMenu"><img src="/menulogo.png" width="21" height="44"/></div>
 
     </div>
-    <div class="well" style="display:none; position: absolute; right: 55px; top: 0px;padding: 3px !important;"
+    <div class="well" style="display:none; position: absolute; right: 57px; top: 0px;padding: 3px !important;"
          data-bind="visible: suites().length>0 && totalTests() > 0">
 
         <div class="badge count" style="cursor: pointer;"
@@ -34,7 +34,7 @@
         <span class="badge badge-success headCount" data-bind="text: totalPassed()"></span>
         <span class="badge badge-important headCount" data-bind="text: totalFailed()"></span>
     </div>
-     <span class="badge badge-warning count" style="display:block; position: absolute; right: 55px; top: 10px;" data-bind="visible: totalTests() == 0">Loading Test Suites ...</span>
+     <span class="badge badge-warning count" style="display:block; position: absolute; right: 57px; top: 10px;" data-bind="visible: totalTests() == 0">Loading Test Suites ...</span>
 
 
 
