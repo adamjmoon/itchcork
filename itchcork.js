@@ -640,9 +640,10 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
         var self = this;
         self.vm, self.num = 0, self.passedCount = 0, self.failedCount = 0, self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
         self.themeManager = window.ThemeManager;
-        if(framework)
-            self.framework = "itchcork";
-
+        self.framework = "itchcork";
+        if(framework){
+            self.framework = framework;
+        }
         self.highlight = function (code) {
             if(self.framework == "itchcork"){
                 return code
@@ -1038,7 +1039,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                     _.each(mocha.suite.suites,
                                         function (s) {
                                             console.log(s);
-                                            var suite = new itchcork.Suite(s.title, s.ctx, "mocha");
+                                            var suite = new itchcork.Suite(s.title, s.ctx, "mocha"); 
                                             window.suiteView.add(suite);
                                         });
 
