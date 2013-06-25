@@ -1035,7 +1035,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                 mocha.reporter('html');
 
 
-                                require(['suite'], function (suite) { 
+                                require(['suite'], function (suite) {
                                     _.each(mocha.suite.suites,
                                         function (s) {
                                             console.log(s);
