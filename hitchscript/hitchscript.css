@@ -195,17 +195,17 @@
     font-size: 38px;
     padding-bottom: 20px !important;
     font-style: normal !important;
-    color: white !important;
+    color: inherit;
 }
 
 #mocha-stats .progress {
-
+    display: none;
     padding-top: 0;
     height: 40px;
 }
 
 #mocha-stats em {
-    color: #fff;
+    color: inherit;
     font-style: normal !important;
     line-height: 30px;
 }
