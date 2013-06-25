@@ -645,12 +645,11 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
             return js
                 .replace(/</g, '&lt;')
                 .replace(/>/g, '&gt;')
-                .replace(/\"/g, '')
                 .replace(/\/\/(.*)/gm, '<span class="badge badge-inverse">//$1</span>')
                 .replace(/\#(.*)/gm, '<span class="badge badge-inverse">#$1</span>')
                 .replace(/('.*?')/gm, '<span class="string">$1</span>')
                 .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
-                .replace(/(function|new|throw|return|var|if|else|prototype|Object|Array|Boolean|-\>|@|::|this)/g, '<span class="keyword">$1</span>')
+                .replace(/(function|new|throw|return|var|if|else|prototype|Object|Array|Boolean|\-\>|\@|\:\:|this)/g, '<span class="keyword">$1</span>')
         };
         self.setupContextBreakdown = function (context, base) {
             var jsStr = '', coffeeStr = '';
@@ -985,7 +984,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
         else if (window.location.hash && window.location.hash.length > 1)
             context = window.location.hash.split('#')[1];
 
-        var suite = context != '' ? window.suiteView.unitTestFrameworkManager.getFramework() + '/' + context : 'all-' + window.suiteView.unitTestFrameworkManager.getFramework();
+        var suite = context != '' ? window.suiteView.unitTestFrameworkManager.getFramework() + '/' + context : 'all-' + window.suiteView.unitTestFrameworkManager.getFramework(); 
 
         requirejs.config({
             baseUrl: 'https://',
