@@ -58,6 +58,18 @@ define('objectcreate',function() {
   return context;
 });
 
+define('primitivetypes',function() {
+  'use strict';
+   function context() {
+     this.numberPrimitiveValue = 1;
+     this.stringPrimitiveValue = "string";
+     this.booleanPrimitiveValue = true;
+     this.nullPrimitiveValue = null;
+     this.undefinedPrimiteValue;
+  }
+  return context;
+});
+
 define('array',function() {
   'use strict';
    function context() {
@@ -116,16 +128,4 @@ define('datetime',function() {
          };
      }
     return context;
-});
-
-define('primitivetypes',function() {
-  'use strict';
-   function context() {
-     this.numberPrimitiveValue = 1;
-     this.stringPrimitiveValue = "string";
-     this.booleanPrimitiveValue = true;
-     this.nullPrimitiveValue = null;
-     this.undefinedPrimiteValue;
-  }
-  return context;
 });
