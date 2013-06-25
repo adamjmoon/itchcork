@@ -1041,6 +1041,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                             console.log(s);
                                             require([s.title], function (c) {
                                                 var suite = new itchcork.Suite(s.title, c, "mocha");
+                                                suite.
                                                 window.suiteView.add(suite);
                                             });
 
@@ -1049,7 +1050,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                     window.suiteView.show();
                                     var runner = mocha.run();
                                     runner.on('end', function () {
-                                        var suites = $("ul#mocha-report li.suite ul"); 
+                                        var suites = $("ul#mocha-report li.suite ul");
                                         $("#collapse").click(function () {
                                             $(suites).each(function (index, element) {
                                                 element.hidden = true;
