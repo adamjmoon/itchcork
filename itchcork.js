@@ -1045,11 +1045,12 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                                 require([s.title], function (c) {
 
                                                     var suite = new itchcork.Suite(s.title, c, "mocha");
-                                                    //suite.totalTests = s.total;
-                                                    //suite.passedCount = s.total;
+
                                                     window.suiteView.add(suite);
                                                 });
                                             });
+                                         //suite.totalTests = s.total;
+                                        //suite.passedCount = s.total;
                                         //window.suiteView.totalTests = runner.stats.te
                                         window.suiteView.show();
                                         //var suites = $("ul#mocha-report li.suite ul");
