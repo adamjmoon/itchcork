@@ -644,7 +644,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
         self.highlight = function (js) {
             return js
                 .replace(/(function|new|throw|return|var|if|else|prototype|Object|Array|Boolean|\@|\:\:|this)/g, '<span class="keyword">$1</span>')
-                               .replace(/(\-\>)/g, '<span class="keyword">$1</span>')
+                .replace(/(\-\>)/g, '<span class="keyword">$1</span>')
                 .replace(/</g, '&lt;')
                 .replace(/>/g, '&gt;')
                 .replace(/\/\/(.*)/gm, '<span class="badge badge-inverse">//$1</span>')
@@ -979,7 +979,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
     window.ko = ko;
 
     require(['SuiteView'], function (sv) {
-        window.suiteView = new sv();
+        window.suiteView = new sv(); 
         var context = '';
         if (window.location.pathname && window.location.pathname.length > 1)
             context = window.location.pathname.split('/')[1];
