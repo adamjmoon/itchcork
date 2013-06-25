@@ -641,16 +641,19 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
         self.vm, self.num = 0, self.passedCount = 0, self.failedCount = 0, self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
         self.themeManager = window.ThemeManager;
 
-        self.highlight = function (js) {
-            return js
-               .replace(/</g, '&lt;')
-               .replace(/>/g, '&gt;')
-                .replace(/\/\/(.*)/gm, '<span class="badge badge-inverse">//$1</span>')
-                .replace(/\#(.*)/gm, '<span class="badge badge-inverse">#$1</span>')
-                .replace(/('.*?')/gm, '<span class="string">$1</span>')
-                .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
-                .replace(/(function|new|throw|return|var|if|else|prototype|Object|Array|Boolean|-&gt;|@|::|this)/g, '<span class="keyword">$1</span>');
-
+        self.highlight = function (code) {
+            if(window.unitTestFrameworkManager.getFramework() == "itchcork"){
+                return code
+                               .replace(/</g, '&lt;')
+                               .replace(/>/g, '&gt;')
+                                .replace(/\/\/(.*)/gm, '<span class="badge badge-inverse">//$1</span>')
+                                .replace(/\#(.*)/gm, '<span class="badge badge-inverse">#$1</span>')
+                                .replace(/('.*?')/gm, '<span class="string">$1</span>')
+                                .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
+                                .replace(/(function|new|throw|return|var|if|else|prototype|Object|Array|Boolean|-&gt;|@|::|this)/g, '<span class="keyword">$1</span>');
+            } else {
+                return code;
+            }
         };
         self.setupContextBreakdown = function (context, base) {
             var jsStr = '', coffeeStr = '';
@@ -980,7 +983,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
 
     require(['SuiteView'], function (sv) {
         window.suiteView = new sv();
-        var context = '';
+        var context = ''; 
         if (window.location.pathname && window.location.pathname.length > 1)
             context = window.location.pathname.split('/')[1];
         else if (window.location.hash && window.location.hash.length > 1)
