@@ -1038,26 +1038,26 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                     mocha.setup('bdd');
                                     mocha.reporter('html');
                                     mocha.suite.beforeAll(function(){
+                                        require(['suite'], function () {
+                                            var runner = mocha.run();
+                                            runner.on('end', function () {
+                                                console.log(runner);
+                                                _.each(runner.suite.suites,
+                                                    function (s) {
+                                                        console.log(s);
+                                                        require([s.title], function (c) {
 
-                                    })
-                                    require(['suite'], function () {
-                                    var runner = mocha.run();
-                                    runner.on('end', function () {
-                                        console.log(runner);
-                                        _.each(runner.suite.suites,
-                                            function (s) {
-                                                console.log(s);
-                                                require([s.title], function (c) {
+                                                            var suite = new itchcork.Suite(s.title, c, "mocha");
 
-                                                    var suite = new itchcork.Suite(s.title, c, "mocha");
+                                                            window.suiteView.add(suite);
+                                                        });
+                                                    });
+                                                window.suiteView.totalTests(runner.total);
+                                                window.suiteView.totalPassed(runner.total - runner.failures);
+                                                window.suiteView.totalFailed(runner.failures);
+                                                window.suiteView.show();
+                                    });
 
-                                                    window.suiteView.add(suite);
-                                                });
-                                            });
-                                        window.suiteView.totalTests(runner.total);
-                                        window.suiteView.totalPassed(runner.total - runner.failures);
-                                        window.suiteView.totalFailed(runner.failures);
-                                        window.suiteView.show();
                                         //var suites = $("ul#mocha-report li.suite ul");
 //                                        $("#collapse").click(function () {
 //                                            $(suites).each(function (index, element) {
