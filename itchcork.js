@@ -1030,7 +1030,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
 
                             require(['chai', 'sinon-chai', 'mocha'], function (chai, sinonChai) {
                                 require(['suite'], function () {
-                                    mocha.addFile(suite + ".js");
+
                                     chai.use(sinonChai);
                                     var assert = chai.assert;
                                     var should = chai.should();
