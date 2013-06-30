@@ -69,34 +69,34 @@ define('knockoutVSangular',function() {
         var KOUpdates8 = ko.observable(0);
         var KOUpdates9 = ko.observable(0);
         var KOUpdates10 = ko.observable(0);
-        KOData.subscribe(function(){
+        self.KOData.subscribe(function(){
             KOUpdates1(KOUpdates1() + 1);
         });
-        KOData.subscribe(function(){
+        self.KOData.subscribe(function(){
             KOUpdates2(KOUpdates2() + 1);
         });
-        KOData.subscribe(function(){
+        self.KOData.subscribe(function(){
             KOUpdates3(KOUpdates3() + 1);
         });
-        KOData.subscribe(function(){
+        self.KOData.subscribe(function(){
             KOUpdates4(KOUpdates4() + 1);
         });
-        KOData.subscribe(function(){
+        self.KOData.subscribe(function(){
             KOUpdates5(KOUpdates5() + 1);
         });
-        KOData.subscribe(function(){
+        self.KOData.subscribe(function(){
             KOUpdates6(KOUpdates6() + 1);
         });
-        KOData.subscribe(function(){
+        self.KOData.subscribe(function(){
             KOUpdates7(KOUpdates7() + 1);
         });
-        KOData.subscribe(function(){
+        self.KOData.subscribe(function(){
             KOUpdates8(KOUpdates8() + 1);
         });
-        KOData.subscribe(function(){
+        self.KOData.subscribe(function(){
             KOUpdates9(KOUpdates9() + 1);
         });
-        KOData.subscribe(function(){
+        self.KOData.subscribe(function(){
             KOUpdates10(KOUpdates10() + 1);
         });
         var KOviewmodel = {data: KOData, updates1: KOUpdates1, updates2: KOUpdates2, updates3: KOUpdates3, updates4: KOUpdates4, updates5: KOUpdates5, updates6: KOUpdates6, updates7: KOUpdates7, updates8: KOUpdates8, updates9: KOUpdates9, updates10: KOUpdates10};
