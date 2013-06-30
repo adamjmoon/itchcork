@@ -177,7 +177,7 @@ define('knockoutVSangular',function() {
             };
             self.ANGpush = function() {
                 self.ang_scope.data += "OMGOMGOMG";
-                self.ang_scope.$apply();
+                //self.ang_scope.$apply();
             };
         });
 
