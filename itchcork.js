@@ -1039,7 +1039,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                     mocha.setup('bdd');
                                     mocha.reporter('html');
                                     mocha.suite.beforeAll(function(){
-                                        require(['suite'], function (su) {
+                                        require(['suitePath/'], function (su) {
                                             var runner = mocha.run();
                                             runner.on('end', function () {
                                                 console.log(runner);
