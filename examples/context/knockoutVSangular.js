@@ -50,10 +50,10 @@ define('knockoutVSangular',function() {
             self.ang_scope = $('#angList').scope();
 
             self.ANGclear = function() {
-                ang_scope.data = "OMGOMGOMG";
+                self.ang_scope.data = "OMGOMGOMG";
             };
             self.ANGpush = function() {
-                ang_scope.data += "OMGOMGOMG";
+                self.ang_scope.data += "OMGOMGOMG";
                 //ang_scope.$apply();
             };
         });
