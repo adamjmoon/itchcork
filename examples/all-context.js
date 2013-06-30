@@ -226,11 +226,11 @@ define('knockoutVSangular',function() {
 
         ko.applyBindings(KOviewmodel, document.getElementById('koapp'));
         self.KOclear = function (){
-            KOData("");
+            self.KOData("");
         };
         self.KOpush = function (){
-            var old = KOData()
-            KOData(old += "OMGOMGOMG");
+
+            self.KOData(self.KOData() + "OMGOMGOMG");
         };
     }
     return context;
