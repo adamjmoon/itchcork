@@ -170,7 +170,7 @@ define('knockoutVSangular',function() {
         }
 
         angular.element(document).ready(function() {
-            var ang_scope = $('#angList').scope();
+            self.ang_scope = $('#angList').scope();
 
             self.ANGclear = function() {
                 ang_scope.data = "OMGOMGOMG";
@@ -181,7 +181,7 @@ define('knockoutVSangular',function() {
             };
         });
 
-        var KOData = ko.observable("");
+        self.KOData = ko.observable("");
         var KOUpdates1 = ko.observable(0);
         var KOUpdates2 = ko.observable(0);
         var KOUpdates3 = ko.observable(0);
