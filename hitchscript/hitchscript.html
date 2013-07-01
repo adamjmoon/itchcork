@@ -261,7 +261,7 @@
 <div class="well" id="koapp">
     Knockout:
   <span>
-    KnockoutTestArea Subscriber Updates: <span data-bind=""></span>
+    KnockoutTestArea Subscriber Updates: <span data-bind="text: data"></span>
 <span data-bind="text: updates1"></span>
 <span data-bind="text: updates2"></span>
 <span data-bind="text: updates3"></span>
@@ -276,7 +276,7 @@
 </div>
 <div class="well" id="angularapp" ng-app>
     Angular:
-  <span ng-controller="Ctrl" id="angList">
+  <span ng-controller="window.Ctrl" id="angList">
     AngularTestArea Data: {{data}}
 <span> {{numberofChanges1}}</span>
 <span> {{numberofChanges2}}</span>
