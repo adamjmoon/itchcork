@@ -177,7 +177,7 @@ define('knockoutVSangular', function () {
         };
         self.ANGpush = function () {
             self.ang_scope.data += "o";
-           // self.ang_scope.$apply();
+            self.ang_scope.$apply();
         };
 
         self.KOData = ko.observable("");
