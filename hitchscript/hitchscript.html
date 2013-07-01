@@ -11,6 +11,8 @@
 </head>
 <body>{{> hitchscript}}{{> scripts}}{{> ga}}</body>
 <template name="hitchscript">
+<div class="container-fluid" style="height: 45px;"/>
+<div class="container-fluid frame" id="frame" style="height:100%;">
 <div id="topNav" class="navbar-fixed-top"
      style="display:none;position: fixed;right: 0;left: 0;z-index: 1030;margin-bottom: 0;">
     <div class="navbar-inner">
@@ -43,8 +45,7 @@
 
 
 </div>
-<div class="container-fluid" style="height: 45px;"/>
-<div class="container-fluid frame" id="frame" style="height:100%;">
+
 <div id="menu" class="menu nav-collapse collapse well" style="display:none;">
     <div class="collapse-inner">
         <div class="navbar navbar-inverse menu-title">
@@ -261,39 +262,34 @@
 
 </div>
 </div>
-<div class="well" id="koapp">
+<div class="results" id="koapp">
     Knockout:
-  <span>
+        <span data-bind="text: updates1"></span>
+        <span data-bind="text: updates2"></span>
+        <span data-bind="text: updates3"></span>
+        <span data-bind="text: updates4"></span>
+        <span data-bind="text: updates5"></span>
+        <span data-bind="text: updates6"></span>
+        <span data-bind="text: updates7"></span>
+        <span data-bind="text: updates8"></span>
+        <span data-bind="text: updates9"></span>
+        <span data-bind="text: updates10"></span>
+          </span>
+        </div>
+        <div class="well" id="angularapp" ng-app>
+            Angular:
+          <span ng-controller="Ctrl" id="angList">
 
-<span data-bind="text: updates1"></span>
-<span data-bind="text: updates2"></span>
-<span data-bind="text: updates3"></span>
-<span data-bind="text: updates4"></span>
-<span data-bind="text: updates5"></span>
-<span data-bind="text: updates6"></span>
-<span data-bind="text: updates7"></span>
-<span data-bind="text: updates8"></span>
-<span data-bind="text: updates9"></span>
-<span data-bind="text: updates10"></span>
-  </span>
-</div>
-<div class="well" id="angularapp" ng-app>
-    Angular:
-  <span ng-controller="Ctrl" id="angList">
-
-<span> {{numberofChanges1}}</span>
-<span> {{numberofChanges2}}</span>
-<span> {{numberofChanges3}}</span>
-<span> {{numberofChanges4}}</span>
-<span> {{numberofChanges5}}</span>
-<span> {{numberofChanges6}}</span>
-<span> {{numberofChanges7}}</span>
-<span> {{numberofChanges8}}</span>
-<span> {{numberofChanges9}}</span>
-<span> {{numberofChanges10}}</span>
-
-  </span>
-
+        <span> {{numberofChanges1}}</span>
+        <span> {{numberofChanges2}}</span>
+        <span> {{numberofChanges3}}</span>
+        <span> {{numberofChanges4}}</span>
+        <span> {{numberofChanges5}}</span>
+        <span> {{numberofChanges6}}</span>
+        <span> {{numberofChanges7}}</span>
+        <span> {{numberofChanges8}}</span>
+        <span> {{numberofChanges9}}</span>
+        <span> {{numberofChanges10}}</span>
 </div>
 <div class="results" id="mochaResults"
      data-bind="visible: window.suiteView.unitTestFrameworkManager.getFramework()=='mocha'">
