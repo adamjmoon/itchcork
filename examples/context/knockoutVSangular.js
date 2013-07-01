@@ -46,16 +46,17 @@ define('knockoutVSangular', function () {
             });
         }
 
+        angular.element(document).ready(function () {
+            self.ang_scope = $('#angList').scope();
 
-        self.ang_scope = $('#angList').scope();
-
-        self.ANGclear = function () {
-            self.ang_scope.data = "";
-        };
-        self.ANGpush = function () {
-            self.ang_scope.data += "o";
-           // self.ang_scope.$apply();
-        };
+            self.ANGclear = function () {
+                self.ang_scope.data = "";
+            };
+            self.ANGpush = function () {
+                self.ang_scope.data += "o";
+                // self.ang_scope.$apply();
+            };
+        });
 
         self.KOData = ko.observable("");
         var KOUpdates1 = ko.observable(0);
