@@ -641,19 +641,17 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
         self.vm, self.num = 0, self.passedCount = 0, self.failedCount = 0, self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
         self.themeManager = window.ThemeManager;
         self.framework = "itchcork";
-        if(framework){
+        if (framework) {
             self.framework = framework;
         }
         self.highlight = function (code) {
-            if(self.framework == "itchcork"){
+            if (self.framework == "itchcork") {
                 return code
-                               .replace(/</g, '&lt;')
-                               .replace(/>/g, '&gt;')
-                                .replace(/\/\/(.*)/gm, '<span class="badge badge-warning">//$1</span>')
-                                .replace(/\#(.*)/gm, '<span class="badge badge-warning">#$1</span>')
-                                .replace(/('.*?')/gm, '<span class="string">$1</span>')
-                                .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
-                                .replace(/(function|new|throw|return|var|if|else|prototype|Object|Array|Boolean|-&gt;|@|::|this)/g, '<span class="keyword">$1</span>');
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/('.*?')/gm, '<span class="string">$1</span>')
+                    .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
+                    .replace(/(function|new|throw|return|var|if|else|prototype|Object|Array|Boolean|-&gt;|@|::|this)/g, '<span class="keyword">$1</span>');
             } else {
                 return code;
             }
