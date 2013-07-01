@@ -832,7 +832,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         };
 
         self.show = function () {
-            ko.applyBindings(self, document.getElementById('suiteListAccordian'));
+            ko.applyBindings(self, document.getElementById('frame'));
             self.setupNiceScroll();
         };
 

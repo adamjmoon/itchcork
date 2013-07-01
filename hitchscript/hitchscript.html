@@ -258,10 +258,13 @@
         </div>
     </div>
 </div>
+
+</div>
+</div>
 <div class="well" id="koapp">
     Knockout:
   <span>
-    KnockoutTestArea Subscriber Updates: <span data-bind="text: data"></span>
+
 <span data-bind="text: updates1"></span>
 <span data-bind="text: updates2"></span>
 <span data-bind="text: updates3"></span>
@@ -277,7 +280,7 @@
 <div class="well" id="angularapp" ng-app>
     Angular:
   <span ng-controller="Ctrl" id="angList">
-    AngularTestArea Data: {{data}}
+
 <span> {{numberofChanges1}}</span>
 <span> {{numberofChanges2}}</span>
 <span> {{numberofChanges3}}</span>
@@ -296,8 +299,6 @@
      data-bind="visible: window.suiteView.unitTestFrameworkManager.getFramework()=='mocha'">
     <div id="mocha" class="row-fluid">
     </div>
-</div>
-</div>
 </div>
 </template>
 <template name="scripts"></template>
