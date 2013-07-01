@@ -125,7 +125,7 @@ define('knockoutVSangular', function () {
     'use strict';
     function context() {
         var self = this;
-        window.Ctrl = function ($scope) {
+        self.Ctrl = function ($scope) {
             $scope.data = "";
             $scope.numberofChanges1 = 0;
             $scope.numberofChanges2 = 0;
@@ -173,7 +173,7 @@ define('knockoutVSangular', function () {
         self.ang_scope = $('#angList').scope();
 
         self.ANGclear = function () {
-            self.ang_scope.data = "o";
+            self.ang_scope.data = "";
         };
         self.ANGpush = function () {
             self.ang_scope.data += "o";
@@ -229,7 +229,7 @@ define('knockoutVSangular', function () {
         };
         self.KOpush = function () {
 
-            self.KOData(self.KOData() + "OMGOMGOMG");
+            self.KOData(self.KOData() + "o");
         };
     }
 
