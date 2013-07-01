@@ -2,7 +2,7 @@ define('knockoutVSangular', function () {
     'use strict';
     function context() {
         var self = this;
-        var Ctrl = function ($scope) {
+        window.Ctrl = function ($scope) {
             $scope.data = "";
             $scope.numberofChanges1 = 0;
             $scope.numberofChanges2 = 0;
@@ -54,7 +54,7 @@ define('knockoutVSangular', function () {
         };
         self.ANGpush = function () {
             self.ang_scope.data += "OMGOMGOMG";
-            //self.ang_scope.$apply();
+            self.ang_scope.$apply();
         };
 
         self.KOData = ko.observable("");
