@@ -1006,7 +1006,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 'sinon-chai': suiteView.vendorRoot() + 'sinon-chai',
                 'platform': suiteView.vendorRoot() + 'platform',
                 'benchmark': suiteView.vendorRoot() + 'benchmark',
-                'context': suiteView.contextRoot() + 'examples/instrumentedall-context',
+                'context': suiteView.contextRoot() + 'examples/instrumented/all-context',
                 'suite': suiteFilePath + "/" + suite,
                 'suitePath': suiteFilePath
             }
