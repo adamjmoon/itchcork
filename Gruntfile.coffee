@@ -43,12 +43,10 @@ module.exports = (grunt) ->
       'ic':
         'src': ['itchcork.js']
         'dest': 'itchcork.min.js'
-    instrument : {
-      files : ex + 'all-context.js',
-      options : {
-        basePath : ex + 'instrumented/all-context.js',
-      }
-    }
+    instrument :
+      files : ex + 'all-context.js'
+      options :
+        basePath : ex + 'instrumented/all-context.js'
     # watch:
     #   gruntfile:
     #     files: ['gruntfile.coffee', r + 'main.js']
