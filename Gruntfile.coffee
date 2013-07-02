@@ -18,6 +18,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-jshint'
   grunt.loadNpmTasks 'grunt-yui-compressor'
+  grunt.loadNpmTasks 'grunt-istanbul'
 
   # Make task shortcuts
   grunt.registerTask 'default', ['concat','min','instrument']
