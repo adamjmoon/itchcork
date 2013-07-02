@@ -47,7 +47,7 @@ module.exports = (grunt) ->
     instrument :
       files : ex + 'all-context.js'
       options :
-        basePath : ex + 'instrumented/all-context.js'
+        basePath : 'instrumented/all-context.js'
     # watch:
     #   gruntfile:
     #     files: ['gruntfile.coffee', r + 'main.js']
