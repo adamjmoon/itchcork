@@ -6,7 +6,7 @@ define("inheritance", function(){
       this.offspring=[];
     };
     this.Mammal.prototype.haveABaby=function haveABaby(){ 
-    	var newBaby=new Mammal("Baby "+this.name);
+    	var newBaby=new this.constructor("Baby "+this.name);
     	this.offspring.push(newBaby);
     	return newBaby;
     }; 
@@ -24,7 +24,9 @@ define("inheritance", function(){
     this.Cat.prototype.toString=function toString(){ 
       return '[Cat "'+this.name+'"]';
     };
-  
+    
+    this.someAnimal = new Mammal('Mr. Biggles');
+    this.myPet = new Cat('Felix');
   }
   
   return context;
