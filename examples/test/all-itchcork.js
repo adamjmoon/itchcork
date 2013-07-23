@@ -128,3 +128,13 @@ require(['knockoutBenchmarks', 'ItchCork'], function (c, ic) {
 
     window.suiteView.add(suite);
 });
+require(['inheritance', 'ItchCork'], function (c, ic) {
+      var suite = new ic.Suite('Prototypal JS Inheritance', c);
+      
+      suite
+      .add('[Mammal "Mr. Biggles"]', function(c) {return c.someAnimal.toString();})
+      .add('[Cat "Felix"]', function(c) {return c.myPet.toString();})
+      .run();
+       
+       window.suiteView.add(suite);
+ });
