@@ -3,7 +3,7 @@ require(['knockoutBenchmarks', 'ItchCork'], function (c, ic) {
     suite
         .add(10, function (c) {
             c.KOclear();
-            for (var i = 0; i < 10; i++) {
+            for (var i = 0; i < 10; i++) { 
                 c.KOpush();
             }
             return c.KOData().length;
