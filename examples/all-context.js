@@ -178,7 +178,7 @@ define("inheritance", function(){
     	return '[Mammal "'+this.name+'"]';
     }; 
     
-    Cat.prototype = new this.Mammal();        // Here's where the inheritance occurs 
+    Cat.prototype = new Mammal();        // Here's where the inheritance occurs 
     Cat.prototype.constructor=Cat;       // Otherwise instances of Cat would have a constructor of Mammal 
   
     function Cat(name){ 
