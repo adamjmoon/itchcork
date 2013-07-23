@@ -134,7 +134,7 @@ require(['inheritance', 'ItchCork'], function (c, ic) {
       suite
       .add('[Mammal "Mr. Biggles"]', function(c) {return c.someAnimal.toString();})
       .add('[Cat "Felix"]', function(c) {return c.myPet.toString();})
-      .add('[Cat "Felix"]', function(c) {c.myPet.haveABaby(); return c.myPet.offspring[0];});
+      .add('[Cat "Baby Felix"]', function(c) {c.myPet.haveABaby(); return c.myPet.offspring[0];});
        
        window.suiteView.add(suite);
  });
