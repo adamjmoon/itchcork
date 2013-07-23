@@ -1,4 +1,4 @@
-define('knockout', function () {
+define('knockoutBenchmarks', function () {
     'use strict';
     function context() {
         var self = this;
