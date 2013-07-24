@@ -762,7 +762,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
         };
 
         self.processTest = function(test){
-            if (test.passed) {
+            if (test.run()) {
                 self.passedCount++;
             } else {
                 self.failedCount++;
@@ -773,7 +773,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
         self.addTestWithBenchmarks = function (shouldEqual, func, name, defer) {
             var test = new Test(shouldEqual, func, self.jsContext, name);
             if(!defer){
-                self.processTest(test)
+                self.processTest(test);
             }
 
             if(self.benchmarkingEnabled){
@@ -950,7 +950,11 @@ define("Test", [], function () {
         this.shouldEqual = shouldEqual;
 
         this.typeOf = typeof(this.actual);
-        this.passed = this.shouldEqual===this.actual;
+
+        this.run = function(){
+            self.passed = self.shouldEqual===self.actual;
+            return self.passed;
+        };
     };
 
     return test;
