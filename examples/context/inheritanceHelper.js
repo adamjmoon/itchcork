@@ -42,7 +42,6 @@ define('inheritanceHelper',function(){
       Cat.inheritsFrom( Mammal );
       Cat.prototype.haveABaby=function(){
           var theKitten = this.parent.haveABaby.call(this);
-          alert("mew!");
           return theKitten;
       }
       Cat.prototype.toString=function(){
