@@ -75,6 +75,7 @@
     float: left;
     margin-right: 5px;
     color: #00d6b2;
+
 }
 
 #mocha .test.pass .duration {
@@ -90,6 +91,7 @@
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     border-radius: 5px;
+    display: none;
 }
 
 #mocha .test.pass.fast .duration {

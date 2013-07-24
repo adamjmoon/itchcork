@@ -11,32 +11,38 @@
 </head>
 <body>{{> hitchscript}}{{> scripts}}{{> ga}}</body>
 <template name="hitchscript">
+<div class="container-fluid" style="height: 45px;"/>
+<div class="container-fluid frame" id="frame" style="height:100%;">
 <div id="topNav" class="navbar-fixed-top"
      style="display:none;position: fixed;right: 0;left: 0;z-index: 1030;margin-bottom: 0;">
     <div class="navbar-inner">
         <a href="" class="logoBtn"><img id="logo" class="logo" src="/brand2.png" style="cursor: pointer;"
-                     data-bind="click: function(){toggleMenu();}" width="90"
-                     height="44"/></a>
+                                        data-bind="click: function(){toggleMenu();}" width="90"
+                                        height="44"/></a>
 
         <div style="position: absolute;right: 0;top: 0; width: 52px; height:44px; margin: 0; !important; border-left: 1px solid #252A30 !important;cursor: pointer;"
-             data-bind="visible: suites().length>1,click: collapseAll"><img id="rightCorkCollapse" class="collapseAll" style="margin-left: 15px;" width="21" height="44"  src="/menulogo.png" /></div>
+             data-bind="visible: suites().length>1,click: collapseAll"><img id="rightCorkCollapse" class="collapseAll"
+                                                                            style="margin-left: 15px;" width="21"
+                                                                            height="44" src="/menulogo.png"/></div>
         <div style="position: absolute;right: 0;top: 0;padding: 0px 15px 0px 15px !important;margin: 0px; !important; border-left: 1px solid #252A30 !important;cursor: pointer;"
-                     data-bind="visible: suites().length==1,click: toggleMenu"><img src="/menulogo.png" width="21" height="44"/></div>
+             data-bind="visible: suites().length==1,click: toggleMenu"><img src="/menulogo.png" width="21" height="44"/>
+        </div>
 
     </div>
     <div class="well" style="display:none; position: absolute; right: 57px; top: 0px;padding: 3px !important;"
          data-bind="visible: suites().length>0 && totalTests() > 0">
+
         <div class="badge count" style="cursor: pointer;"
-             data-bind="click: function(){location.reload();}"><img id="refresh" src="/glyphicons_081_refresh.png" width="25"
+             data-bind="click: function(){location.reload();}"><img id="refresh" src="/glyphicons_081_refresh.png"
+                                                                    width="25"
                                                                     height="26"/></div>
         <span class="badge badge-info headCount" data-bind="text: totalTests()"></span>
         <span class="badge badge-success headCount" data-bind="text: totalPassed()"></span>
         <span class="badge badge-important headCount" data-bind="text: totalFailed()"></span>
     </div>
-     <span class="badge badge-warning count" style="display:block; position: absolute; right: 57px; top: 10px;" data-bind="visible: totalTests() == 0">Loading Test Suites ...</span>
+    <span class="badge badge-warning count" style="display:block; position: absolute; right: 57px; top: 10px;"
+          data-bind="visible: totalTests() == 0">Loading Test Suites ...</span>
 </div>
-<div class="container-fluid" style="height: 45px;"/>
-<div class="container-fluid frame" id="frame" style="height:100%;">
 <div id="menu" class="menu nav-collapse collapse well" style="display:none;">
     <div class="collapse-inner">
         <div class="navbar navbar-inverse menu-title">
@@ -65,14 +71,15 @@
         </div>
         <ul class="nav nav-tabs nav-stacked">
             <li><input type="text" value="raw.github.com/adamjmoon/itchcork/master" style="width: 99%"/></li>
-            <li></li>
+            <li>{{loginButtons}}</li>
         </ul>
     </div>
 </div>
 <div id="view" class="view container-fluid">
-    <div class="accordion" id="suiteListAccordian" data-bind="'visible':suites().length>0,'foreach': suites" style="display: none;">
+    <div class="accordion" id="suiteListAccordian" data-bind="'visible':suites().length>0,'foreach': suites"
+         style="display: none;">
         <div class="accordion-group container-fluid">
-            <div class="navbar navbar-inverse" >
+            <div class="navbar navbar-inverse">
                 <div class="accordion-heading">
 
                     <div class="navbar-inner suiteDesc autoOverFlow container-fluid collapseToggle"
@@ -121,7 +128,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordion-group" data-bind="'visible': vm.testCases().length > 0, attr: { id: 'ContextBreakdown' + num}">
+                        <div class="accordion-group"
+                             data-bind="'visible': vm.testCases().length > 0, attr: { id: 'ContextBreakdown' + num}">
                             <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
                                                               data-bind="attr: {'data-target' : '.collapseContextBreakdown' + num}, click: function(){suiteView.scrollToSelector('#ContextBreakdown' + num);}"
                                                               href=""><span
@@ -190,10 +198,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <div class="accordion-inner results" id="mochaResults"
-                                     data-bind="visible: window.suiteView.unitTestFrameworkManager.getFramework()=='mocha'">
-                                    <div id="mocha" class="row-fluid">
-                                </div>
+
                             </div>
                         </div>
                         <div class="accordion-group"
@@ -251,7 +256,42 @@
             </div>
         </div>
     </div>
+
 </div>
+</div>
+<div class="results" id="koapp">
+    Knockout:
+    <span data-bind="text: updates1"></span>
+    <span data-bind="text: updates2"></span>
+    <span data-bind="text: updates3"></span>
+    <span data-bind="text: updates4"></span>
+    <span data-bind="text: updates5"></span>
+    <span data-bind="text: updates6"></span>
+    <span data-bind="text: updates7"></span>
+    <span data-bind="text: updates8"></span>
+    <span data-bind="text: updates9"></span>
+    <span data-bind="text: updates10"></span>
+    </span>
+</div>
+<div class="well" id="angularapp" ng-app>
+    Angular:
+          <span ng-controller="Ctrl" id="angList">
+
+        <span> {{numberofChanges1}}</span>
+        <span> {{numberofChanges2}}</span>
+        <span> {{numberofChanges3}}</span>
+        <span> {{numberofChanges4}}</span>
+        <span> {{numberofChanges5}}</span>
+        <span> {{numberofChanges6}}</span>
+        <span> {{numberofChanges7}}</span>
+        <span> {{numberofChanges8}}</span>
+        <span> {{numberofChanges9}}</span>
+        <span> {{numberofChanges10}}</span>
+</div>
+<div class="results" id="mochaResults"
+     data-bind="visible: window.suiteView.unitTestFrameworkManager.getFramework()=='mocha'">
+    <div id="mocha" class="row-fluid">
+    </div>
 </div>
 </template>
 <template name="scripts"></template>

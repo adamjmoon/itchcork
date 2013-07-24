@@ -1,11 +1,11 @@
 define('arrayMocha',function() {
-  function context() {
+  var context = function context() {
     self = this;
     this.arr = [1, 2, 3];
     this.fun = function fun(){
         self.arr = _.map(self.arr, function(num){ return num * 3; });
     }
-  }
+  };
   return context;
 });
 
@@ -58,18 +58,6 @@ define('objectcreate',function() {
       this.cube = new Cube(1,1,1);
   }
   
-  return context;
-});
-
-define('primitivetypes',function() {
-  'use strict';
-   function context() {
-     this.numberPrimitiveValue = 1;
-     this.stringPrimitiveValue = "string";
-     this.booleanPrimitiveValue = true;
-     this.nullPrimitiveValue = null;
-     this.undefinedPrimiteValue;
-  }
   return context;
 });
 
@@ -131,4 +119,79 @@ define('datetime',function() {
          };
      }
     return context;
+});
+
+define('knockoutBenchmarks', function () {
+    'use strict';
+    function context() {
+        var self = this;
+        self.KOData = ko.observable("");
+        var KOUpdates1 = ko.observable(0);
+        var KOUpdates2 = ko.observable(0);
+        
+        self.KOData.subscribe(function () {
+            KOUpdates1(KOUpdates1() + 1);
+        });
+        self.KOData.subscribe(function () {
+            KOUpdates2(KOUpdates2() + 1);
+        });
+        
+        var KOviewmodel = {data: self.KOData, updates1: KOUpdates1, updates2: KOUpdates2};
+
+        self.KOclear = function () {
+            self.KOData("");
+        };
+        self.KOpush = function () {
+
+            self.KOData(self.KOData() + "o");
+        };
+    }
+
+    return context;
+});
+
+
+define('primitivetypes',function() {
+  'use strict';
+   function context() {
+     this.numberPrimitiveValue = 1;
+     this.stringPrimitiveValue = "string";
+     this.booleanPrimitiveValue = true;
+     this.nullPrimitiveValue = null;
+     this.undefinedPrimiteValue;
+  }
+  return context;
+});
+define("inheritance", function(){
+  function context(){
+  
+    function Mammal(name){ 
+      this.name=name;
+      this.offspring=[];
+    };
+    Mammal.prototype.haveABaby=function haveABaby(){ 
+      var newBaby=new this.constructor("Baby "+this.name);
+    	this.offspring.push(newBaby);
+    	return newBaby;
+    }; 
+    Mammal.prototype.toString=function toString(){ 
+    	return '[Mammal "'+this.name+'"]';
+    }; 
+    
+    Cat.prototype = new Mammal();        // Here's where the inheritance occurs 
+    Cat.prototype.constructor=Cat;       // Otherwise instances of Cat would have a constructor of Mammal 
+  
+    function Cat(name){ 
+      this.name=name;
+    } 
+    
+    Cat.prototype.toString=function toString(){ 
+      return '[Cat "'+this.name+'"]';
+    };
+    
+    this.someAnimal = new Mammal('Mr. Biggles');
+    this.myPet = new Cat('Felix');
+  }
+  
+  return context;
 });

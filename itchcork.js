@@ -641,19 +641,17 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
         self.vm, self.num = 0, self.passedCount = 0, self.failedCount = 0, self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
         self.themeManager = window.ThemeManager;
         self.framework = "itchcork";
-        if(framework){
+        if (framework) {
             self.framework = framework;
         }
         self.highlight = function (code) {
-            if(self.framework == "itchcork"){
+            if (self.framework == "itchcork") {
                 return code
-                               .replace(/</g, '&lt;')
-                               .replace(/>/g, '&gt;')
-                                .replace(/\/\/(.*)/gm, '<span class="badge badge-warning">//$1</span>')
-                                .replace(/\#(.*)/gm, '<span class="badge badge-warning">#$1</span>')
-                                .replace(/('.*?')/gm, '<span class="string">$1</span>')
-                                .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
-                                .replace(/(function|new|throw|return|var|if|else|prototype|Object|Array|Boolean|-&gt;|@|::|this)/g, '<span class="keyword">$1</span>');
+                    .replace(/</g, '&lt;')
+                    .replace(/>/g, '&gt;')
+                    .replace(/('.*?')/gm, '<span class="string">$1</span>')
+                    .replace(/\bnew *(\w+)/gm, '<span class="keyword">new</span> <span class="init">$1</span>')
+                    .replace(/(function|new|throw|return|var|if|else|prototype|Object|Array|Boolean|-&gt;|@|::|this)/g, '<span class="keyword">$1</span>');
             } else {
                 return code;
             }
@@ -853,7 +851,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         };
 
         self.show = function () {
-            ko.applyBindings(self);
+            ko.applyBindings(self, document.getElementById('frame'));
             self.setupNiceScroll();
         };
 
@@ -1000,7 +998,7 @@ define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify'], function (Suite, Test, Sp
 
     return new ItchCork();
 });
-require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js'], function (ko) {
+require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js','https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js'], function (ko) {
     window.ko = ko;
 
     require(['SuiteView'], function (sv) {
@@ -1012,7 +1010,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
             context = window.location.hash.split('#')[1];
 
         var suite = context != '' ? window.suiteView.unitTestFrameworkManager.getFramework() + '/' + context : 'all-' + window.suiteView.unitTestFrameworkManager.getFramework();
-        var suiteFilePath = suiteView.contextRoot() + 'examples/test/' + suite;
+        var suiteFilePath = suiteView.contextRoot() + 'examples/test';
 
         requirejs.config({
             baseUrl: 'https://',
@@ -1028,7 +1026,8 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 'platform': suiteView.vendorRoot() + 'platform',
                 'benchmark': suiteView.vendorRoot() + 'benchmark',
                 'context': suiteView.contextRoot() + 'examples/all-context',
-                'suite': suiteFilePath
+                'suite': suiteFilePath + "/" + suite,
+                'suitePath': suiteFilePath
             }
         });
         require(['bootstrap', 'sinon'], function () {
@@ -1048,34 +1047,31 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                         else {
 
                             require(['chai', 'sinon-chai', 'mocha'], function (chai, sinonChai) {
+                                chai.use(sinonChai);
+                                var assert = chai.assert;
+                                var should = chai.should();
+                                mocha.setup('bdd');
+                                mocha.reporter('html');
 
+                                require(['suitePath/mocha/PrimitiveType', 'suitePath/mocha/ArrayMocha'], function () {
+                                    var runner = mocha.run();
+                                    runner.on('end', function () {
 
+                                        _.each(runner.suite.suites,
+                                            function (s) {
+                                                console.log(s);
+                                                require([s.title], function (c) {
 
-                                    chai.use(sinonChai);
-                                    var assert = chai.assert;
-                                    var should = chai.should();
-                                    mocha.setup('bdd');
-                                    mocha.reporter('html');
-                                    mocha.suite.beforeAll(function(){
-                                        require(['suite'], function (su) {
-                                            var runner = mocha.run();
-                                            runner.on('end', function () {
-                                                console.log(runner);
-                                                _.each(runner.suite.suites,
-                                                    function (s) {
-                                                        console.log(s);
-                                                        require([s.title], function (c) {
+                                                    var suite = new itchcork.Suite(s.title, c, "mocha");
 
-                                                            var suite = new itchcork.Suite(s.title, c, "mocha");
+                                                    window.suiteView.add(suite);
+                                                });
+                                            });
+                                        window.suiteView.totalTests(runner.total);
+                                        window.suiteView.totalPassed(runner.total - runner.failures);
+                                        window.suiteView.totalFailed(runner.failures);
+                                        window.suiteView.show();
 
-                                                            window.suiteView.add(suite);
-                                                        });
-                                                    });
-                                                window.suiteView.totalTests(runner.total);
-                                                window.suiteView.totalPassed(runner.total - runner.failures);
-                                                window.suiteView.totalFailed(runner.failures);
-                                                window.suiteView.show();
-                                    });
 
                                         //var suites = $("ul#mocha-report li.suite ul");
 //                                        $("#collapse").click(function () {

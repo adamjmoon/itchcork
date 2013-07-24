@@ -18,9 +18,10 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-jshint'
   grunt.loadNpmTasks 'grunt-yui-compressor'
+  grunt.loadNpmTasks 'grunt-istanbul'
 
   # Make task shortcuts
-  grunt.registerTask 'default', ['concat','min']
+  grunt.registerTask 'default', ['concat','min','instrument']
 
   # Configure Grunt
   grunt.initConfig
@@ -43,6 +44,11 @@ module.exports = (grunt) ->
       'ic':
         'src': ['itchcork.js']
         'dest': 'itchcork.min.js'
+    instrument :
+      files : ex + 'all-context.js'
+      options :
+        basePath : ex + 'instrumented'
+        flatten: true
     # watch:
     #   gruntfile:
     #     files: ['gruntfile.coffee', r + 'main.js']
