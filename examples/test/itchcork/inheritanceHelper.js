@@ -3,7 +3,7 @@ require(['inheritanceHelper', 'ItchCork'], function (c, ic) {
       
       suite
       .it(function(c) {return c.felix.toString();}).shouldBe('[Cat "Felix"]')
-      .it(function(c) {return c.kitten.toString();}).shouldBe('[Cat "Felix"]')
+      .it(function(c) {return c.kitten.toString();}).shouldBe('[Cat "Baby Felix"]')
       .benchmark();
        
        window.suiteView.add(suite);
