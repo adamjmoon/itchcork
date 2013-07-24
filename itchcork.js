@@ -638,7 +638,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
     function suite(desc, js, framework) {
         "use strict";
         var self = this;
-        self.vm, self.num = 0, self.passedCount = 0, self.failedCount = 0, self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
+        self.vm, self.benchmarkingEnabled = true, self.num = 0, self.passedCount = 0, self.failedCount = 0, self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
         self.themeManager = window.ThemeManager;
         self.framework = "itchcork";
         if (framework) {
@@ -767,24 +767,26 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
             }
             self.vm.tests.push(test);
 
-            if (name) {
-                var fn = (function (context, name) {
-                    return function () {
-                        context[name]();
-                    };
-                })(self.jsContext, name);
-                self.benchmarkSuite.add({
-                    'name': test.expression,
-                    'fn': fn,
-                    'async': true,
-                    'queued': true,
-                    'minSamples': 100});
-            }
-            else {
-                self.benchmarkSuite.add(test.expression, function () {
-                        func(self.jsContext);
-                    },
-                    { 'async': true, 'queued': true, 'minSamples': 100});
+            if(self.benchmarkingEnabled){
+                if (name) {
+                    var fn = (function (context, name) {
+                        return function () {
+                            context[name]();
+                        };
+                    })(self.jsContext, name);
+                    self.benchmarkSuite.add({
+                        'name': test.expression,
+                        'fn': fn,
+                        'async': true,
+                        'queued': true,
+                        'minSamples': 100});
+                }
+                else {
+                    self.benchmarkSuite.add(test.expression, function () {
+                            func(self.jsContext);
+                        },
+                        { 'async': true, 'queued': true, 'minSamples': 100});
+                }
             }
 
             return test;
@@ -807,6 +809,12 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
 
 
         self.run = function () {
+            self.vm.benchmarksDone(false);
+            self.vm.benchmarks.removeAll();
+            self.benchmarkSuite.run();
+        };
+
+        self.benchmark = function () {
             self.vm.benchmarksDone(false);
             self.vm.benchmarks.removeAll();
             self.benchmarkSuite.run();

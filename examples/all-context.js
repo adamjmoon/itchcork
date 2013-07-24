@@ -61,6 +61,18 @@ define('objectcreate',function() {
   return context;
 });
 
+define('primitivetypes',function() {
+  'use strict';
+   function context() {
+     this.numberPrimitiveValue = 1;
+     this.stringPrimitiveValue = "string";
+     this.booleanPrimitiveValue = true;
+     this.nullPrimitiveValue = null;
+     this.undefinedPrimiteValue;
+  }
+  return context;
+});
+
 define('array',function() {
   'use strict';
    function context() {
@@ -121,6 +133,97 @@ define('datetime',function() {
     return context;
 });
 
+define("inheritance", function(){
+  function context(){
+  
+    function Mammal(name){ 
+      this.name=name;
+      this.offspring=[];
+    };
+    Mammal.prototype.haveABaby=function haveABaby(){ 
+      var newBaby=new this.constructor("Baby "+this.name);
+      this.offspring.push(newBaby);
+    	return newBaby;
+    }; 
+    Mammal.prototype.toString=function toString(){ 
+    	return '[Mammal "'+this.name+'"]';
+    }; 
+    
+    Cat.prototype = new Mammal();        // Here's where the inheritance occurs 
+    Cat.prototype.constructor=Cat;       // Otherwise instances of Cat would have a constructor of Mammal 
+  
+    function Cat(name){ 
+      this.name=name;
+    } 
+    
+    Cat.prototype.toString=function toString(){ 
+      return '[Cat "'+this.name+'"]';
+    };
+    
+    this.someAnimal = new Mammal('Mr. Biggles');
+    this.myPet = new Cat('Felix');
+  }
+  
+  return context;
+});
+
+define('inheritanceHelper',function(){
+  function context(){
+    Function.prototype.inheritsFrom = function( parentClassOrObject ){ 
+          if ( parentClassOrObject.constructor == Function )
+            {
+                //Normal Inheritance
+                this.prototype = new parentClassOrObject;
+                this.prototype.constructor = this;
+                this.prototype.parent = parentClassOrObject.prototype;
+            }
+            else
+            {
+                //Pure Virtual Inheritance
+                this.prototype = parentClassOrObject;
+                this.prototype.constructor = this;
+                this.prototype.parent = parentClassOrObject;
+            }
+            return this;
+        };
+
+      var LivingThing = {
+          beBorn : function(){
+              this.alive = true;
+          }
+      };
+
+      function Mammal(name){
+          this.name=name;
+          this.offspring=[];
+      }
+      Mammal.inheritsFrom( LivingThing );
+      Mammal.prototype.haveABaby=function(){
+          this.parent.beBorn.call(this);
+          var newBaby = new this.constructor( "Baby " + this.name );
+          this.offspring.push(newBaby);
+          return newBaby;
+      }
+
+      function Cat( name ){
+          this.name=name;
+      }
+      Cat.inheritsFrom( Mammal );
+      Cat.prototype.haveABaby=function(){
+          var theKitten = this.parent.haveABaby.call(this);
+          alert("mew!");
+          return theKitten;
+      }
+      Cat.prototype.toString=function(){
+          return '[Cat "'+this.name+'"]';
+      }
+    this.felix = new Cat( "Felix" );
+    this.kitten = felix.haveABaby();
+  }
+  
+ return context;
+});
+
 define('knockoutBenchmarks', function () {
     'use strict';
     function context() {
@@ -148,50 +251,4 @@ define('knockoutBenchmarks', function () {
     }
 
     return context;
-});
-
-
-define('primitivetypes',function() {
-  'use strict';
-   function context() {
-     this.numberPrimitiveValue = 1;
-     this.stringPrimitiveValue = "string";
-     this.booleanPrimitiveValue = true;
-     this.nullPrimitiveValue = null;
-     this.undefinedPrimiteValue;
-  }
-  return context;
-});
-define("inheritance", function(){
-  function context(){
-  
-    function Mammal(name){ 
-      this.name=name;
-      this.offspring=[];
-    };
-    Mammal.prototype.haveABaby=function haveABaby(){ 
-      var newBaby=new this.constructor("Baby "+this.name);
-    	this.offspring.push(newBaby);
-    	return newBaby;
-    }; 
-    Mammal.prototype.toString=function toString(){ 
-    	return '[Mammal "'+this.name+'"]';
-    }; 
-    
-    Cat.prototype = new Mammal();        // Here's where the inheritance occurs 
-    Cat.prototype.constructor=Cat;       // Otherwise instances of Cat would have a constructor of Mammal 
-  
-    function Cat(name){ 
-      this.name=name;
-    } 
-    
-    Cat.prototype.toString=function toString(){ 
-      return '[Cat "'+this.name+'"]';
-    };
-    
-    this.someAnimal = new Mammal('Mr. Biggles');
-    this.myPet = new Cat('Felix');
-  }
-  
-  return context;
 });

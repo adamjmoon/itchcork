@@ -21,7 +21,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-istanbul'
 
   # Make task shortcuts
-  grunt.registerTask 'default', ['concat','min','instrument']
+  grunt.registerTask 'default', ['concat','min']
 
   # Configure Grunt
   grunt.initConfig

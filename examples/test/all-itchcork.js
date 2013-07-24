@@ -93,6 +93,27 @@ require(['datetime', 'ItchCork'], function (c, ic) {
     window.suiteView.add(suite);
 });
 
+require(['inheritance', 'ItchCork'], function (c, ic) {
+      var suite = new ic.Suite('Prototypal JS Inheritance', c);
+      
+      suite
+      .add('[Mammal "Mr. Biggles"]', function(c) {return c.someAnimal.toString();})
+      .add('[Cat "Felix"]', function(c) {return c.myPet.toString();})
+      .add('[Cat "Baby Felix"]', function(c) {c.myPet.haveABaby(); return c.myPet.offspring[0].toString();});
+       
+       window.suiteView.add(suite);
+ });
+
+require(['inheritanceHelper', 'ItchCork'], function (c, ic) {
+      var suite = new ic.Suite('Prototypal JS Inheritance with Helper InheritFrom Method', c);
+      
+      suite
+      .test(function(c) {return c.felix.toString();}).shouldBe("felix")
+      .benchmark();
+       
+       window.suiteView.add(suite);
+ });
+
 require(['knockoutBenchmarks', 'ItchCork'], function (c, ic) {
     var suite = new ic.Suite('Knockout JS Benchmarks', c);
     suite
@@ -128,13 +149,3 @@ require(['knockoutBenchmarks', 'ItchCork'], function (c, ic) {
 
     window.suiteView.add(suite);
 });
-require(['inheritance', 'ItchCork'], function (c, ic) {
-      var suite = new ic.Suite('Prototypal JS Inheritance', c);
-      
-      suite
-      .add('[Mammal "Mr. Biggles"]', function(c) {return c.someAnimal.toString();})
-      .add('[Cat "Felix"]', function(c) {return c.myPet.toString();})
-      .add('[Cat "Baby Felix"]', function(c) {c.myPet.haveABaby(); return c.myPet.offspring[0].toString();});
-       
-       window.suiteView.add(suite);
- });
