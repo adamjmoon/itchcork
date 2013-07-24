@@ -17,6 +17,9 @@ define('inheritanceHelper',function(){
     	} 
     	return this;
     };
+    
+    this.felix = new Cat( "Felix" );
+    this.kitten = felix.haveABaby( );
   }
   
  return context;
