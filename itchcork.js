@@ -739,18 +739,27 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
             return self;
         }
 
-        self.test = function(func, shouldBe){
+        self.currentTest;
+
+        self.it = function(func, shouldBe){
 
             if (typeof func == 'function') {
-                return self.addTestWithBenchmarks(shouldBe, func, null);
+                self.currentTest = self.addTestWithBenchmarks(shouldBe, func, null);
             }
             else {
                 var c = self.jsContext;
                 var realFunc = new Function("c", "return c." + func)
-                return self.addTestWithBenchmarks(shouldBe, realFunc, null);
+                self.currentTest = self.addTestWithBenchmarks(shouldBe, realFunc, null);
             }
+
+            return self;
         };
 
+        self.shouldBe = function shouldBe(val){
+            self.currentTest.shouldEqual = val;
+
+            return self;
+        };
 
 
 
@@ -935,16 +944,7 @@ define("Test", [], function () {
             this.actual = func(context);
         }
         this.shouldEqual = shouldEqual;
-        this.shouldBe = function shouldBe(val){
-            self.shouldBe.shouldEqual = val;
 
-
-            console.log(arguments.callee.caller);
-            console.log(arguments.callee.caller.caller);
-
-            return self.shouldBe.caller;
-
-        };
         this.typeOf = typeof(this.actual);
         this.passed = this.shouldEqual===this.actual;
     };
