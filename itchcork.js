@@ -751,11 +751,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
             }
         };
 
-        self.shouldBe = function(val){
-            self.shouldBe.caller.shouldEqual = val;
 
-            return self;
-        };
 
 
         self.addTestWithBenchmarks = function (shouldEqual, func, name) {
@@ -924,7 +920,7 @@ define("Test", [], function () {
 
     var test = function (shouldEqual, func, context, testName) {
         'use strict';
-        var expressionStr = func.toString().trim();
+        var expressionStr = func.toString().trim(), self=this;
         this.passed=false;
         if (testName) {
             this.expression = testName + '()';
@@ -939,6 +935,16 @@ define("Test", [], function () {
             this.actual = func(context);
         }
         this.shouldEqual = shouldEqual;
+        this.shouldBe = function shouldBe(val){
+            self.shouldBe.shouldEqual = val;
+
+
+            console.log(arguments.callee.caller);
+            console.log(arguments.callee.caller.caller);
+
+            return self.shouldBe.caller;
+
+        };
         this.typeOf = typeof(this.actual);
         this.passed = this.shouldEqual===this.actual;
     };
