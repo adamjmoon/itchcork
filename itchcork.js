@@ -741,6 +741,25 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
             return self;
         }
 
+        self.test = function(func, shouldBe){
+
+            if (typeof func == 'function') {
+                return self.addTestWithBenchmarks(shouldBe, func, null);
+            }
+            else {
+                var c = self.jsContext;
+                var realFunc = new Function("c", "return c." + func)
+                return self.addTestWithBenchmarks(shouldBe, realFunc, null);
+            }
+        };
+
+        self.shouldBe = function(val){
+            self.shouldBe.caller.shouldEqual = val;
+
+            return self;
+        };
+
+
         self.addTestWithBenchmarks = function (shouldEqual, func, name) {
             var test = new Test(shouldEqual, func, self.jsContext, name);
             if (test.passed) {
@@ -770,7 +789,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
                     { 'async': true, 'queued': true, 'minSamples': 100});
             }
 
-            return self;
+            return test;
         };
 
         self.shouldEqual = function (shouldEqual) {
