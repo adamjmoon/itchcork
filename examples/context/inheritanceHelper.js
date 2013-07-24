@@ -49,7 +49,7 @@ define('inheritanceHelper',function(){
           return '[Cat "'+this.name+'"]';
       }
     this.felix = new Cat( "Felix" );
-    this.kitten = felix.haveABaby();
+    this.kitten = this.felix.haveABaby();
   }
   
  return context;
