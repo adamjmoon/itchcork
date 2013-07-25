@@ -61,18 +61,6 @@ define('objectcreate',function() {
   return context;
 });
 
-define('primitivetypes',function() {
-  'use strict';
-   function context() {
-     this.numberPrimitiveValue = 1;
-     this.stringPrimitiveValue = "string";
-     this.booleanPrimitiveValue = true;
-     this.nullPrimitiveValue = null;
-     this.undefinedPrimiteValue;
-  }
-  return context;
-});
-
 define('array',function() {
   'use strict';
    function context() {
@@ -216,6 +204,11 @@ define('inheritanceHelper',function(){
       Cat.prototype.toString=function(){
           return '[Cat "'+this.name+'"]';
       }
+
+    this.LivingThing = LivingThing;
+    this.mammalInstance = new Mammal("Bill");
+    this.Mammal = Mammal;
+    this.Cat = Cat;
     this.felix = new Cat( "Felix" );
     this.kitten = this.felix.haveABaby();
   }
@@ -228,17 +221,17 @@ define('knockoutBenchmarks', function () {
     function context() {
         var self = this;
         self.KOData = ko.observable("");
-        var KOUpdates1 = ko.observable(0);
-        var KOUpdates2 = ko.observable(0);
+        self.KOUpdates1 = ko.observable(0);
+        self.KOUpdates2 = ko.observable(0);
         
         self.KOData.subscribe(function () {
-            KOUpdates1(KOUpdates1() + 1);
+            self.KOUpdates1(self.KOUpdates1() + 1);
         });
         self.KOData.subscribe(function () {
-            KOUpdates2(KOUpdates2() + 1);
+            self.KOUpdates2(self.KOUpdates2() + 1);
         });
         
-        var KOviewmodel = {data: self.KOData, updates1: KOUpdates1, updates2: KOUpdates2};
+        var KOviewmodel = {data: self.KOData, updates1: self.KOUpdates1, updates2: self.KOUpdates2};
 
         self.KOclear = function () {
             self.KOData("");
@@ -250,4 +243,16 @@ define('knockoutBenchmarks', function () {
     }
 
     return context;
+});
+
+define('primitivetypes',function() {
+  'use strict';
+   function context() {
+     this.numberPrimitiveValue = 1;
+     this.stringPrimitiveValue = "string";
+     this.booleanPrimitiveValue = true;
+     this.nullPrimitiveValue = null;
+     this.undefinedPrimiteValue;
+  }
+  return context;
 });

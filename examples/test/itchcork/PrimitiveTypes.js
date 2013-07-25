@@ -33,7 +33,7 @@ require(['primitivetypes', 'ItchCork'], function (c, ic) {
         .add("undefined", function (c) {
             return typeof c.notDefined;
         })
-        .run();
+        .benchmark();
 
     window.suiteView.add(suite);
 });

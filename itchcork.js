@@ -20,8 +20,6 @@ window.ThemeManager = (function () {
         this.errorColor = "#c00";
         this.completedColor = "#5c8a00";
         this.tableBorderColor = "#222";
-        this.codeFontWeight = "";
-        this.codeFontFamily = "";
     };
     themeManager['cyborg'] = new theme();
     themeManager['custom'] = new theme();
@@ -89,8 +87,8 @@ window.ThemeManager = (function () {
     var apply = function () {
         var t;
         var themeStyleTag = document.getElementById('theme');
-        if (amplify.store('currentTheme') === 'custom') {
-            t = amplify.store('customeTheme');
+        if (amplify.store('currentTheme') === 'customTheme') {
+            t = amplify.store('customTheme');
         }
         else {
             t = themeManager[amplify.store('currentTheme')];
@@ -437,7 +435,7 @@ window.ThemeManager = (function () {
             + ".nicescroll-rails{margin-top:45px !important;}"
             + "a.logoBtn:active {height: 100%;-webkit-transform: rotate(180deg);-webkit-transition: all .5s linear;}"
             + ".collapseAll {-webkit-transform: rotate(0deg);-webkit-transition: all .5s linear;}"
-            + ".expandAll {-webkit-transform: rotate(90deg);-webkit-transition: all .5s linear;}";
+            + ".expandAll {-webkit-transform: rotate(90deg);-webkit-transition: all .5s linear;} input {width: 99% !important;border: 0px !important} ";
 
     };
     themeManager.set = function (newTheme) {
@@ -446,6 +444,12 @@ window.ThemeManager = (function () {
             apply();
         }
     };
+
+    themeManager.updateCustom = function (prop,value){
+        themeManager['custom'][prop] = "#" + value;
+        amplify.store('customTheme', themeManager['custom']);
+        apply();
+    }
 
     if (!amplify.store('currentTheme')) {
         themeManager.set('cyborg');
@@ -638,7 +642,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
     function suite(desc, js, framework) {
         "use strict";
         var self = this;
-        self.vm, self.benchmarkingEnabled = true, self.num = 0, self.passedCount = 0, self.failedCount = 0, self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
+        self.vm, self.benchmarkingEnabled = true, self.num = 0, self.passedCount = ko.observable(0), self.failedCount = ko.observable(0), self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
         self.themeManager = window.ThemeManager;
         self.framework = "itchcork";
         if (framework) {
@@ -763,15 +767,15 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
 
         self.processTest = function(test){
             if (test.run()) {
-                self.passedCount++;
+                self.passedCount(self.passedCount() + 1);
             } else {
-                self.failedCount++;
+                self.failedCount(self.failedCount() + 1);
             }
             self.vm.tests.push(test);
         }
 
         self.addTestWithBenchmarks = function (shouldEqual, func, name, defer) {
-            var test = new Test(shouldEqual, func, self.jsContext, name);
+            var test = new Test(shouldEqual, func, new js(), name);
             if(!defer){
                 self.processTest(test);
             }
@@ -782,7 +786,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
                         return function () {
                             context[name]();
                         };
-                    })(self.jsContext, name);
+                    })(test.context, name);
                     self.benchmarkSuite.add({
                         'name': test.expression,
                         'fn': fn,
@@ -792,7 +796,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
                 }
                 else {
                     self.benchmarkSuite.add(test.expression, function () {
-                            func(self.jsContext);
+                            func(test.context);
                         },
                         { 'async': true, 'queued': true, 'minSamples': 100});
                 }
@@ -806,13 +810,14 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
             return self;
         };
 
-        self.compare = function () {
+        self.compareBenchmarks = function () {
             var func = function (c, tc) {
                 return c[tc]();
             };
             for (var testcase in self.jsContext) {
                 self.addTestWithBenchmarks(self.shouldEqualValue, func, testcase);
             }
+
             return self;
         };
 
@@ -836,7 +841,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
 
 define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
     function view() {
-
+        window.ThemeManager['currentTheme'] = ko.observable(amplify.store('currentTheme'));
         var self = this;
         self.suites = new ko.observableArray([]);
         self.nice;
@@ -850,7 +855,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         self.githubAccount = new ko.observable('adamjmoon');
         self.githubRepo = new ko.observable('itchcork');
         self.githubBranch = new ko.observable('master');
-        self.contextRoot = new ko.observable('raw.github.com/' + self.githubAccount() + '/' + self.githubRepo() + '/' + self.githubBranch() + '/');
+        self.contextRoot = new ko.observable('raw.github.com/' +  self.githubAccount() + '/' + self.githubRepo() + '/' + self.githubBranch() + '/');
         self.vendorRoot = new ko.observable(self.contextRoot() + 'vendor/');
         self.setMenuHeight = function () {
             self.menu.style.height = document.body.scrollHeight - 45 + "px";
@@ -870,11 +875,17 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         self.show = function () {
             ko.applyBindings(self, document.getElementById('frame'));
             self.setupNiceScroll();
+//            require([self.vendorRoot() + 'jscolor'], function(){
+//                //jscolor.init();
+//            });
+
         };
 
         self.setTheme = function (theme) {
             window.ThemeManager.set(theme);
-            $('#logo').click();
+            window.ThemeManager['currentTheme'](theme);
+            if(theme!=='customTheme')
+                $('#logo').click();
         };
 
         self.toggleMenu = function () {
@@ -931,13 +942,14 @@ define("SuiteViewModel", [], function() {
 });
 define("Test", [], function () {
 
-    var test = function (shouldEqual, func, context, testName) {
+    var test = function (shouldEqual, func, ctx, testName) {
         'use strict';
         var expressionStr = func.toString().trim(), self=this;
+        this.context = ctx;
         this.passed=false;
         if (testName) {
             this.expression = testName + '()';
-            this.actual = func(context, testName);
+            this.actual = func(this.context, testName);
 
         } else {
             this.expression = expressionStr.replace(/\n/gm, '')
@@ -945,7 +957,7 @@ define("Test", [], function () {
                 .replace(/function +?\(c\) +?\{ +?return(.*?)\; +?\}/g,'$1');
 
 
-            this.actual = func(context);
+            this.actual = func(this.context);
         }
         this.shouldEqual = shouldEqual;
 
@@ -1053,6 +1065,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
             }
         });
         require(['bootstrap', 'sinon'], function () {
+
             window.sinon = sinon;
             $("#topNav").show();
             $('div.frame').show();
@@ -1093,6 +1106,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                         window.suiteView.totalPassed(runner.total - runner.failures);
                                         window.suiteView.totalFailed(runner.failures);
                                         window.suiteView.show();
+
 
 
                                         //var suites = $("ul#mocha-report li.suite ul");
