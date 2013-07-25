@@ -938,7 +938,7 @@ define("Test", [], function () {
     var test = function (shouldEqual, func, ctx, testName) {
         'use strict';
         var expressionStr = func.toString().trim(), self=this;
-        this.context = ctx
+        this.context = ctx;
         this.passed=false;
         if (testName) {
             this.expression = testName + '()';
