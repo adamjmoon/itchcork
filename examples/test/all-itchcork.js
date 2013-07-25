@@ -35,7 +35,7 @@ require(['objectcreate', 'ItchCork'], function (c, ic) {
            .it(function(c) {return c.shape.y;}).shouldBe(1)
            .benchmark();
        
-       window.suiteView.it(suite);
+       window.suiteView.add(suite);
  });
 
 require(['primitivetypes', 'ItchCork'], function (c, ic) {
