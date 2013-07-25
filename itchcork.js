@@ -1035,7 +1035,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 'coffeescript': suiteView.vendorRoot() + 'coffee/coffeescript.min',
                 'js2coffee': suiteView.vendorRoot() + 'coffee/js2coffee',
                 'lodash': suiteView.vendorRoot() + 'aa.lodash.min',
-                'jscolor': suiteView.vendorRoot() + 'jscl',
+                'jscolor': suiteView.vendorRoot() + 'jscolor',
                 'mocha': suiteView.vendorRoot() + 'mocha',
                 'sinon': suiteView.vendorRoot() + 'sinon',
                 'chai': suiteView.vendorRoot() + 'chai',
