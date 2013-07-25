@@ -780,13 +780,13 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
                 self.processTest(test);
             }
 
-            if(self.benchmarkingEnabled){
+
                 if (name) {
                     var fn = (function (context, name) {
                         return function () {
                             context[name]();
                         };
-                    })(self.jsContext, name);
+                    })(test.context, name);
                     self.benchmarkSuite.add({
                         'name': test.expression,
                         'fn': fn,
@@ -796,11 +796,11 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
                 }
                 else {
                     self.benchmarkSuite.add(test.expression, function () {
-                            func(self.jsContext);
+                            func(test.context);
                         },
                         { 'async': true, 'queued': true, 'minSamples': 100});
                 }
-            }
+
 
             return test;
         };
@@ -929,13 +929,14 @@ define("SuiteViewModel", [], function() {
 });
 define("Test", [], function () {
 
-    var test = function (shouldEqual, func, context, testName) {
+    var test = function (shouldEqual, func, ctx, testName) {
         'use strict';
         var expressionStr = func.toString().trim(), self=this;
+        this.context = ctx
         this.passed=false;
         if (testName) {
             this.expression = testName + '()';
-            this.actual = func(context, testName);
+            this.actual = func(this.context, testName);
 
         } else {
             this.expression = expressionStr.replace(/\n/gm, '')
