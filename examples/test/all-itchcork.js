@@ -32,7 +32,7 @@ require(['objectcreate', 'ItchCork'], function (c, ic) {
            .it(function(c) {return c.rectangle2.x;}).shouldBe(2)
            .it(function(c) {return c.rectangle2.y;}).shouldBe(2)
            .it(function(c) {return c.shape.x;}).shouldBe(1)
-           .it('c.shape.y').shouldBe(1)
+           .it(function(c) {return c.shape.y;}).shouldBe(1)
            .benchmark();
        
        window.suiteView.it(suite);
