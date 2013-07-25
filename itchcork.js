@@ -20,7 +20,10 @@ window.ThemeManager = (function () {
         this.errorColor = "c00";
         this.completedColor = "5c8a00";
         this.tableBorderColor = "222";
+
+
     };
+    themeManager['currentTheme'] = ko.observable('cyborg');
     themeManager['cyborg'] = new theme();
     themeManager['custom'] = new theme();
     amplify.store('customTheme', themeManager['custom']);
@@ -441,6 +444,7 @@ window.ThemeManager = (function () {
     themeManager.set = function (newTheme) {
         if (newTheme != amplify.store('currentTheme')) {
             amplify.store('currentTheme', newTheme);
+            themeManager['currentTheme'](newTheme);
             apply();
         }
     };
