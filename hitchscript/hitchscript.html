@@ -36,17 +36,17 @@
              data-bind="click: function(){location.reload();}"><img id="refresh" src="/glyphicons_081_refresh.png"
                                                                     width="25"
                                                                     height="26"/></div>
-        <span class="badge badge-info headCount" data-bind="text: totalTests()">
-        <span class="badge badge-success headCount" data-bind="text: totalPassed()">
-        <span class="badge badge-important headCount" data-bind="text: totalFailed()">
+        <span class="badge badge-info headCount" data-bind="text: totalTests()" />
+        <span class="badge badge-success headCount" data-bind="text: totalPassed()" />
+        <span class="badge badge-important headCount" data-bind="text: totalFailed()" />
     </div>
     <span class="badge badge-warning count" style="display:block; position: absolute; right: 57px; top: 10px;"
-          data-bind="visible: totalTests() == 0">Loading Test Suites ...
+          data-bind="visible: totalTests() == 0">Loading Test Suites ...</span>
 </div>
 <div id="menu" class="menu nav-collapse collapse well" style="display:none;">
     <div class="collapse-inner">
         <div class="navbar navbar-inverse menu-title">
-            <div class="navbar-inner"><span class="badge badge-info">Theme</div>
+            <div class="navbar-inner"><span class="badge badge-info">Theme</span></div>
         </div>
         <ul class="nav nav-tabs nav-stacked">
             <li><a href="" data-bind="click: function(){setTheme('curelean');}">Cerulean</a></li>
@@ -77,7 +77,7 @@
             </ul>
         </ul>
         <div class="navbar navbar-inverse menu-title">
-            <div class="navbar-inner"><span class="badge badge-info">Testing Framework</div>
+            <div class="navbar-inner"><span class="badge badge-info">Testing Framework</span></div>
         </div>
         <ul class="nav nav-tabs nav-stacked">
             <li><a href="" data-bind="click: function(){unitTestFrameworkManager.set('itchcork');}">Itchcork</a>
@@ -89,7 +89,7 @@
                                                                                 src="/glyphicons_401_github.png"
                                                                                 width="24"
                                                                                 height="24"/><span
-                    style="top: 5px;position: relative">Github Source</div>
+                    style="top: 5px;position: relative">Github Source</span>
         </div>
         <ul class="nav nav-tabs nav-stacked">
             <li><input type="text" value="raw.github.com/adamjmoon/itchcork/master" style="width: 99%"/></li>
@@ -111,9 +111,9 @@
                           <span class="badge badge-info count"
                                 data-bind="text: vm.tests().length">
                           <span class="badge badge-success count"
-                                data-bind="visible: passedCount() > 0,text: passedCount()">
+                                data-bind="visible: passedCount > 0,text: passedCount">
                           <span class="badge badge-important count"
-                                data-bind="visible: failedCount() > 0,text: failedCount()">
+                                data-bind="visible: failedCount > 0,text: failedCount">
                      <br/>
                         <span data-bind="text: vm.suiteDesc" class="badge badge-info count">
                     </div>
@@ -126,7 +126,7 @@
                             <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
                                                               data-bind="attr: {'data-target': '.collapseContextSource' + num}"
                                                               href="#"><span
-                                    class="badge badge-info">CONTEXT SOURCE</a></div>
+                                    class="badge badge-info">CONTEXT SOURCE</span></a></div>
                             <div data-bind="css: 'accordion-body collapse in collapseContextSource' + num">
                                 <div class="accordion-inner">
                                     <div class="row-fluid">
@@ -155,7 +155,7 @@
                             <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
                                                               data-bind="attr: {'data-target' : '.collapseContextBreakdown' + num}, click: function(){suiteView.scrollToSelector('#ContextBreakdown' + num);}"
                                                               href=""><span
-                                    class="badge badge-info">CONTEXT BREAKDOWN</a></div>
+                                    class="badge badge-info">CONTEXT BREAKDOWN</span></a></div>
                             <div data-bind="css: 'accordion-body collapse collapseContextBreakdown' + num">
                                 <div class="accordion-inner results">
                                     <table class="table" id="testCaseList">
@@ -193,7 +193,7 @@
                             <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
                                                               data-bind="attr: {'data-target': '.collapseResults' + num}, click: function(){suiteView.scrollToSelector('#TestResults' + num);}"
                                                               href=""><span
-                                    class="badge badge-info">TEST RESULTS</a></div>
+                                    class="badge badge-info">TEST RESULTS</span></a></div>
                             <div data-bind="css: 'accordion-body collapse in collapseResults' + num">
                                 <div class="accordion-inner results" id="itchcorkResults"
                                      data-bind="visible: window.suiteView.unitTestFrameworkManager.getFramework()==='itchcork'">
