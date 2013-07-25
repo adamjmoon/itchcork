@@ -868,9 +868,9 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         self.show = function () {
             ko.applyBindings(self, document.getElementById('frame'));
             self.setupNiceScroll();
-            require([self.vendorRoot() + 'jscolor'], function(){
-                //jscolor.init();
-            });
+//            require([self.vendorRoot() + 'jscolor'], function(){
+//                //jscolor.init();
+//            });
 
         };
 
