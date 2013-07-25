@@ -54,25 +54,25 @@
             <li><a href="" data-bind="click: function(){setTheme('cyborg');}">Cyborg</a></li>
             <li><a href="" data-bind="click: function(){setTheme('superhero');}">Superhero</a></li>
             <li><a href="" data-bind="click: function(){setTheme('custom');}">Custom</a></li>
-            <ul class="nav nav-tabs nav-stacked" style="display: none;" data-bind="visible: amplify.store('currentTheme')==='custom'">
-                <li><input class="color" data-bind="value: amplify.store('currentTheme').bodyFontColor" /></li>
-                <li><input class="color" data-bind="value: amplify.store('currentTheme').bodyBackgroundColor" /></li>
-                <li><input class="color" data-bind="value: amplify.store('currentTheme').bodyGradientFromColor" /></li>
-                <li><input class="color" data-bind="value: amplify.store('currentTheme').bodyGradientToColor" /></li>
-                <li><input class="color" data-bind="value: amplify.store('currentTheme').infoColor" /></li>
-                <li><input class="color" data-bind="value: amplify.store('currentTheme').codeColor" /></li>
-                <li><input class="color" data-bind="value: amplify.store('currentTheme').hoverColor" /></li>
-                <li><input class="color" data-bind="value: amplify.store('currentTheme').wellBackgroundColor" /></li>
-                <li><input class="color" data-bind="value: amplify.store('currentTheme').navBackgroundColor" /></li>
-                <li><input class="color" data-bind="value: amplify.store('currentTheme').navBarInnerBackgroundColor" /></li>
-                <li><input class="color" data-bind="value: amplify.store('currentTheme').inverseColor" /></li>
-                <li><input class="color" data-bind="value: amplify.store('currentTheme').successColor" /></li>
-                <li><input class="color" data-bind="value: amplify.store('currentTheme').errorColor" /></li>
-                <li><input class="color" data-bind="value: amplify.store('currentTheme').completedColor" /></li>
-                <li><input class="color" data-bind="value: amplify.store('currentTheme').tableBorderColor" /></li>
-                <li><input data-bind="value: amplify.store('currentTheme').radius" /></li>
-                <li><input data-bind="value: amplify.store('currentTheme').badgeRadius" /></li>
-                <li><input data-bind="value: amplify.store('currentTheme').radius" /></li>
+            <ul class="nav nav-tabs nav-stacked" style="display: none;" data-bind="visible: amplify.store('currentTheme')==='customTheme'">
+                <li><input class="color" data-bind="value: amplify.store('customTheme').bodyFontColor" /></li>
+                <li><input class="color" data-bind="value: amplify.store('customTheme').bodyBackgroundColor" /></li>
+                <li><input class="color" data-bind="value: amplify.store('customTheme').bodyGradientFromColor" /></li>
+                <li><input class="color" data-bind="value: amplify.store('customTheme').bodyGradientToColor" /></li>
+                <li><input class="color" data-bind="value: amplify.store('customTheme').infoColor" /></li>
+                <li><input class="color" data-bind="value: amplify.store('customTheme').codeColor" /></li>
+                <li><input class="color" data-bind="value: amplify.store('customTheme').hoverColor" /></li>
+                <li><input class="color" data-bind="value: amplify.store('customTheme').wellBackgroundColor" /></li>
+                <li><input class="color" data-bind="value: amplify.store('customTheme').navBackgroundColor" /></li>
+                <li><input class="color" data-bind="value: amplify.store('customTheme').navBarInnerBackgroundColor" /></li>
+                <li><input class="color" data-bind="value: amplify.store('customTheme').inverseColor" /></li>
+                <li><input class="color" data-bind="value: amplify.store('customTheme').successColor" /></li>
+                <li><input class="color" data-bind="value: amplify.store('customTheme').errorColor" /></li>
+                <li><input class="color" data-bind="value: amplify.store('customTheme').completedColor" /></li>
+                <li><input class="color" data-bind="value: amplify.store('customTheme').tableBorderColor" /></li>
+                <li><input data-bind="value: amplify.store('customTheme').radius" /></li>
+                <li><input data-bind="value: amplify.store('customTheme').badgeRadius" /></li>
+                <li><input data-bind="value: amplify.store('customTheme').radius" /></li>
             </ul>
         </ul>
         <div class="navbar navbar-inverse menu-title">
