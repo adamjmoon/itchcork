@@ -90,7 +90,7 @@ window.ThemeManager = (function () {
         var t;
         var themeStyleTag = document.getElementById('theme');
         if (amplify.store('currentTheme') === 'custom') {
-            t = amplify.store('customeTheme');
+            t = amplify.store('customTheme');
         }
         else {
             t = themeManager[amplify.store('currentTheme')];
