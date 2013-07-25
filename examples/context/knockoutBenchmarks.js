@@ -7,10 +7,10 @@ define('knockoutBenchmarks', function () {
         self.KOUpdates2 = ko.observable(0);
         
         self.KOData.subscribe(function () {
-            self.KOUpdates1(KOUpdates1() + 1);
+            self.KOUpdates1(self.KOUpdates1() + 1);
         });
         self.KOData.subscribe(function () {
-            self.KOUpdates2(KOUpdates2() + 1);
+            self.KOUpdates2(self.KOUpdates2() + 1);
         });
         
         var KOviewmodel = {data: self.KOData, updates1: self.KOUpdates1, updates2: self.KOUpdates2};
