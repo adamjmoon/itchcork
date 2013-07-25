@@ -838,7 +838,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
 
 define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
     function view() {
-
+        window.ThemeManager['currentTheme'] = ko.observable(amplify.store('currentTheme'));
         var self = this;
         self.suites = new ko.observableArray([]);
         self.nice;
@@ -876,7 +876,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
 
         self.setTheme = function (theme) {
             window.ThemeManager.set(theme);
-            window.ThemeManager['currentTheme'] = ko.observable(theme);
+            window.ThemeManager['currentTheme'](theme);
             $('#logo').click();
         };
 
