@@ -36,17 +36,17 @@
              data-bind="click: function(){location.reload();}"><img id="refresh" src="/glyphicons_081_refresh.png"
                                                                     width="25"
                                                                     height="26"/></div>
-        <span class="badge badge-info headCount" data-bind="text: totalTests()"></span>
-        <span class="badge badge-success headCount" data-bind="text: totalPassed()"></span>
-        <span class="badge badge-important headCount" data-bind="text: totalFailed()"></span>
+        <span class="badge badge-info headCount" data-bind="text: totalTests()">
+        <span class="badge badge-success headCount" data-bind="text: totalPassed()">
+        <span class="badge badge-important headCount" data-bind="text: totalFailed()">
     </div>
     <span class="badge badge-warning count" style="display:block; position: absolute; right: 57px; top: 10px;"
-          data-bind="visible: totalTests() == 0">Loading Test Suites ...</span>
+          data-bind="visible: totalTests() == 0">Loading Test Suites ...
 </div>
 <div id="menu" class="menu nav-collapse collapse well" style="display:none;">
     <div class="collapse-inner">
         <div class="navbar navbar-inverse menu-title">
-            <div class="navbar-inner"><span class="badge badge-info">Theme</span></div>
+            <div class="navbar-inner"><span class="badge badge-info">Theme</div>
         </div>
         <ul class="nav nav-tabs nav-stacked">
             <li><a href="" data-bind="click: function(){setTheme('curelean');}">Cerulean</a></li>
@@ -55,14 +55,14 @@
             <li><a href="" data-bind="click: function(){setTheme('superhero');}">Superhero</a></li>
             <li><a href="" data-bind="click: function(){setTheme('customTheme');}">Custom</a></li>
             <ul class="nav nav-tabs nav-stacked" style="display: none;" data-bind="visible: ThemeManager['currentTheme']() ==='customTheme'">
-                <li class="navbar-inner"><span class="badge badge-info">bodyFontColor</span></li>
-                   <input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyFontColor" /></li>
-                <li><span class="badge badge-info">bodyBackgroundColor</span><input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyBackgroundColor.replace('#','')"/></li>
-                <li><span class="badge badge-info">bodyGradientFromColor</span><input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyGradientFromColor.replace('#','')" /></li>
-                <li><span class="badge badge-info">bodyGradientToColor</span><input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyGradientToColor" /></li>
-                <li><span class="badge badge-info">infoColor</span><input class="color pull-left" data-bind="value: amplify.store('customTheme').infoColor" /></li>
-                <li><span class="badge badge-info">codeColor</span><input class="color pull-left" data-bind="value: amplify.store('customTheme').codeColor" /></li>
-                <li><span class="badge badge-info">hoverColor</span><input class="color pull-left" data-bind="value: amplify.store('customTheme').hoverColor" /></li>
+                <li class="navbar-inner">bodyFontColor</li>
+                   <input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyFontColor, style: {'background-color': '#' + amplify.store('customTheme').bodyFontColor}" /></li>
+                <li>bodyBackgroundColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyBackgroundColor.replace('#',''), style: {'background-color': '#' + amplify.store('customTheme').bodyBackgroundColor}"/></li>
+                <li>bodyGradientFromColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyGradientFromColor.replace('#','')" /></li>
+                <li>bodyGradientToColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyGradientToColor" /></li>
+                <li>infoColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').infoColor" /></li>
+                <li>codeColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').codeColor" /></li>
+                <li>hoverColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').hoverColor" /></li>
                 <li>wellBackgroundColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').wellBackgroundColor" /></li>
                 <li>navBackgroundColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').navBackgroundColor" /></li>
                 <li>navBarInnerBackgroundColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').navBarInnerBackgroundColor" /></li>
@@ -77,7 +77,7 @@
             </ul>
         </ul>
         <div class="navbar navbar-inverse menu-title">
-            <div class="navbar-inner"><span class="badge badge-info">Testing Framework</span></div>
+            <div class="navbar-inner"><span class="badge badge-info">Testing Framework</div>
         </div>
         <ul class="nav nav-tabs nav-stacked">
             <li><a href="" data-bind="click: function(){unitTestFrameworkManager.set('itchcork');}">Itchcork</a>
@@ -88,8 +88,8 @@
             <div class="navbar-inner"><span class="badge badge-info"><span><img style="float: left;"
                                                                                 src="/glyphicons_401_github.png"
                                                                                 width="24"
-                                                                                height="24"/></span><span
-                    style="top: 5px;position: relative">Github Source</span></span></div>
+                                                                                height="24"/><span
+                    style="top: 5px;position: relative">Github Source</div>
         </div>
         <ul class="nav nav-tabs nav-stacked">
             <li><input type="text" value="raw.github.com/adamjmoon/itchcork/master" style="width: 99%"/></li>
@@ -109,13 +109,13 @@
                          data-bind="attr: {'data-target': '.suite' + num}">
                       <span>
                           <span class="badge badge-info count"
-                                data-bind="text: vm.tests().length"></span>
+                                data-bind="text: vm.tests().length">
                           <span class="badge badge-success count"
-                                data-bind="visible: passedCount > 0,text: passedCount"></span>
+                                data-bind="visible: passedCount > 0,text: passedCount">
                           <span class="badge badge-important count"
-                                data-bind="visible: failedCount > 0,text: failedCount"></span>
-                     </span><br/>
-                        <span data-bind="text: vm.suiteDesc" class="badge badge-info count"></span>
+                                data-bind="visible: failedCount > 0,text: failedCount">
+                     <br/>
+                        <span data-bind="text: vm.suiteDesc" class="badge badge-info count">
                     </div>
 
                 </div>
@@ -126,7 +126,7 @@
                             <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
                                                               data-bind="attr: {'data-target': '.collapseContextSource' + num}"
                                                               href="#"><span
-                                    class="badge badge-info">CONTEXT SOURCE</span></a></div>
+                                    class="badge badge-info">CONTEXT SOURCE</a></div>
                             <div data-bind="css: 'accordion-body collapse in collapseContextSource' + num">
                                 <div class="accordion-inner">
                                     <div class="row-fluid">
@@ -155,7 +155,7 @@
                             <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
                                                               data-bind="attr: {'data-target' : '.collapseContextBreakdown' + num}, click: function(){suiteView.scrollToSelector('#ContextBreakdown' + num);}"
                                                               href=""><span
-                                    class="badge badge-info">CONTEXT BREAKDOWN</span></a></div>
+                                    class="badge badge-info">CONTEXT BREAKDOWN</a></div>
                             <div data-bind="css: 'accordion-body collapse collapseContextBreakdown' + num">
                                 <div class="accordion-inner results">
                                     <table class="table" id="testCaseList">
@@ -193,7 +193,7 @@
                             <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
                                                               data-bind="attr: {'data-target': '.collapseResults' + num}, click: function(){suiteView.scrollToSelector('#TestResults' + num);}"
                                                               href=""><span
-                                    class="badge badge-info">TEST RESULTS</span></a></div>
+                                    class="badge badge-info">TEST RESULTS</a></div>
                             <div data-bind="css: 'accordion-body collapse in collapseResults' + num">
                                 <div class="accordion-inner results" id="itchcorkResults"
                                      data-bind="visible: window.suiteView.unitTestFrameworkManager.getFramework()==='itchcork'">
@@ -228,11 +228,11 @@
                             <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
                                                               data-bind="attr: {'data-target': '.collapseBenchmarks' + num}"
                                                               data-target=".collapseBenchmarks" href="#"><span
-                                    class="badge badge-info">BENCHMARKS</span>&nbsp;
+                                    class="badge badge-info">BENCHMARKS&nbsp;
                                     <span
                                             data-bind="text: vm.benchmarkPlatform"
-                                            class="badge badge-inverse"></span>&nbsp;<span
-                                        data-bind="text: !vm.benchmarksDone() ? 'RUNNING...': 'COMPLETED', css: vm.benchmarksDone() ? 'badge badge-success' : 'badge badge-warning'"></span></a>
+                                            class="badge badge-inverse">&nbsp;<span
+                                        data-bind="text: !vm.benchmarksDone() ? 'RUNNING...': 'COMPLETED', css: vm.benchmarksDone() ? 'badge badge-success' : 'badge badge-warning'"></a>
                             </div>
                             <div data-bind="css: 'accordion-body collapse in collapseBenchmarks' + num">
                                 <div class="accordion-inner results">
