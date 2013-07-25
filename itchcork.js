@@ -786,7 +786,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
                         return function () {
                             context[name]();
                         };
-                    })(test.context, name);
+                    })(self.jsContext, name);
                     self.benchmarkSuite.add({
                         'name': test.expression,
                         'fn': fn,
@@ -796,7 +796,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
                 }
                 else {
                     self.benchmarkSuite.add(test.expression, function () {
-                            func(test.context);
+                            func(self.jsContext);
                         },
                         { 'async': true, 'queued': true, 'minSamples': 100});
                 }
