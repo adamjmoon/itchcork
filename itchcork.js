@@ -435,7 +435,7 @@ window.ThemeManager = (function () {
             + ".nicescroll-rails{margin-top:45px !important;}"
             + "a.logoBtn:active {height: 100%;-webkit-transform: rotate(180deg);-webkit-transition: all .5s linear;}"
             + ".collapseAll {-webkit-transform: rotate(0deg);-webkit-transition: all .5s linear;}"
-            + ".expandAll {-webkit-transform: rotate(90deg);-webkit-transition: all .5s linear;}";
+            + ".expandAll {-webkit-transform: rotate(90deg);-webkit-transition: all .5s linear;} input {width: 99% !important;} ";
 
     };
     themeManager.set = function (newTheme) {
@@ -845,10 +845,13 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         self.totalTests = new ko.observable(0);
         self.totalPassed = new ko.observable(0);
         self.totalFailed = new ko.observable(0);
-        self.githubAccount = new ko.observable('adamjmoon');
+        self.githubAccount = new ko.observable(Meteor.user.github.username);
+        if(!self.githubAccount()){
+            self.githubAccount(Meteor.user.github.username);
+        }
         self.githubRepo = new ko.observable('itchcork');
         self.githubBranch = new ko.observable('master');
-        self.contextRoot = new ko.observable('raw.github.com/' + self.githubAccount() + '/' + self.githubRepo() + '/' + self.githubBranch() + '/');
+        self.contextRoot = new ko.observable('raw.github.com/' +  self.githubAccount() + '/' + self.githubRepo() + '/' + self.githubBranch() + '/');
         self.vendorRoot = new ko.observable(self.contextRoot() + 'vendor/');
         self.setMenuHeight = function () {
             self.menu.style.height = document.body.scrollHeight - 45 + "px";
