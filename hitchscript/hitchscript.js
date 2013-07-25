@@ -9,7 +9,7 @@ if (Meteor.isClient) {
         main.src = 'https://raw.github.com/adamjmoon/itchcork/master/itchcork.min.js';
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(main, s);
-        jscolor.init();
+
     };
 
     Template.nanojar.rendered = function() {
