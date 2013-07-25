@@ -56,23 +56,23 @@
             <li><a href="" data-bind="click: function(){setTheme('customTheme');}">Custom</a></li>
             <ul class="nav nav-tabs nav-stacked" style="display: none;" data-bind="visible: ThemeManager['currentTheme']() ==='customTheme'">
                 <li class="navbar-inner"><span class="badge badge-info">bodyFontColor</span></li>
-                   <input class="color pull-left row-fluid" data-bind="value: amplify.store('customTheme').bodyFontColor" /></li>
-                <li><span class="badge badge-info">bodyBackgroundColor</span><input class="color pull-left row-fluid" data-bind="value: amplify.store('customTheme').bodyBackgroundColor.replace('#','')"/></li>
-                <li><span class="badge badge-info">bodyGradientFromColor</span><input class="color pull-left row-fluid" data-bind="value: amplify.store('customTheme').bodyGradientFromColor.replace('#','')" /></li>
-                <li><span class="badge badge-info">bodyGradientToColor</span><input class="color pull-left row-fluid" data-bind="value: amplify.store('customTheme').bodyGradientToColor" /></li>
-                <li><span class="badge badge-info">infoColor</span><input class="color pull-left row-fluid" data-bind="value: amplify.store('customTheme').infoColor" /></li>
-                <li><span class="badge badge-info">codeColor</span><input class="color pull-left row-fluid" data-bind="value: amplify.store('customTheme').codeColor" /></li>
-                <li><span class="badge badge-info">hoverColor</span><input class="color pull-left row-fluid" data-bind="value: amplify.store('customTheme').hoverColor" /></li>
-                <li>wellBackgroundColor<input class="color pull-left row-fluid" data-bind="value: amplify.store('customTheme').wellBackgroundColor" /></li>
-                <li>navBackgroundColor<input class="color pull-left row-fluid" data-bind="value: amplify.store('customTheme').navBackgroundColor" /></li>
-                <li>navBarInnerBackgroundColor<input class="color pull-left row-fluid" data-bind="value: amplify.store('customTheme').navBarInnerBackgroundColor" /></li>
+                   <input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyFontColor" /></li>
+                <li><span class="badge badge-info">bodyBackgroundColor</span><input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyBackgroundColor.replace('#','')"/></li>
+                <li><span class="badge badge-info">bodyGradientFromColor</span><input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyGradientFromColor.replace('#','')" /></li>
+                <li><span class="badge badge-info">bodyGradientToColor</span><input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyGradientToColor" /></li>
+                <li><span class="badge badge-info">infoColor</span><input class="color pull-left" data-bind="value: amplify.store('customTheme').infoColor" /></li>
+                <li><span class="badge badge-info">codeColor</span><input class="color pull-left" data-bind="value: amplify.store('customTheme').codeColor" /></li>
+                <li><span class="badge badge-info">hoverColor</span><input class="color pull-left" data-bind="value: amplify.store('customTheme').hoverColor" /></li>
+                <li>wellBackgroundColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').wellBackgroundColor" /></li>
+                <li>navBackgroundColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').navBackgroundColor" /></li>
+                <li>navBarInnerBackgroundColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').navBarInnerBackgroundColor" /></li>
                 <li>inverseColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').inverseColor" /></li>
                 <li>successColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').successColor" /></li>
                 <li>errorColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').errorColor" /></li>
                 <li>completedColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').completedColor" /></li>
                 <li>tableBorderColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').tableBorderColor" /></li>
-                <li>radius<input class="pull-left row-fluid" data-bind="value: amplify.store('customTheme').radius" /></li>
-                <li>badgeRadius<input class="pull-left row-fluid" data-bind="value: amplify.store('customTheme').badgeRadius" /></li>
+                <li>radius<input class="pull-left" data-bind="value: amplify.store('customTheme').radius" /></li>
+                <li>badgeRadius<input class="pull-left" data-bind="value: amplify.store('customTheme').badgeRadius" /></li>
                 <li><a href="" class="btn btn-small" data-bind="click: function(){setTheme('customTheme');}">Update Theme</a></li>
             </ul>
         </ul>
