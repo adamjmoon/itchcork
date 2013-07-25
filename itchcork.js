@@ -1054,7 +1054,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 'suitePath': suiteFilePath
             }
         });
-        require(['jscolor','bootstrap', 'sinon'], function () {
+        require(['bootstrap', 'sinon'], function () {
 
             window.sinon = sinon;
             $("#topNav").show();
@@ -1096,7 +1096,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                         window.suiteView.totalPassed(runner.total - runner.failures);
                                         window.suiteView.totalFailed(runner.failures);
                                         window.suiteView.show();
-                                        jscolor.init();
+
 
 
                                         //var suites = $("ul#mocha-report li.suite ul");
