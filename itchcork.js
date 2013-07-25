@@ -832,7 +832,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
     return suite;
 });
 
-define("SuiteView", ['UnitTestFrameworkManager','jscolor'], function (utfm) {
+define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
     function view() {
         window.ThemeManager['currentTheme'] = ko.observable(amplify.store('currentTheme'));
         var self = this;
