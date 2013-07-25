@@ -54,7 +54,7 @@
             <li><a href="" data-bind="click: function(){setTheme('cyborg');}">Cyborg</a></li>
             <li><a href="" data-bind="click: function(){setTheme('superhero');}">Superhero</a></li>
             <li><a href="" data-bind="click: function(){setTheme('customTheme');}">Custom</a></li>
-            <ul class="nav nav-tabs nav-stacked" style="display: none;" data-bind="visible: window.ThemeManager['currentTheme']() ==='customTheme'">
+            <ul class="nav nav-tabs nav-stacked" style="display: none;" data-bind="visible: ThemeManager['currentTheme']() ==='customTheme'">
                 <li><span class="badge badge-info">bodyFontColor</span><input class="color" data-bind="value: amplify.store('customTheme').bodyFontColor.split('#')[0]" /></li>
                 <li>bodyBackgroundColor<input class="color" data-bind="value: amplify.store('customTheme').bodyBackgroundColor" /></li>
                 <li>bodyGradientFromColor<input class="color" data-bind="value: amplify.store('customTheme').bodyGradientFromColor" /></li>
