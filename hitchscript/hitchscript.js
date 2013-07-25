@@ -1,12 +1,5 @@
 if (Meteor.isClient) {
 
-    function addClass(element, className) {
-        if ((element = $(element)) && !hasClass(element, className)) {
-            element.className += (element.className ? ' ' : '') + className;
-        }
-        return element;
-    }
-
     Template.scripts.rendered = function() {
 
         var root = 'https://raw.github.com/adamjmoon/itchcork/master/';
@@ -16,6 +9,7 @@ if (Meteor.isClient) {
         main.src = 'https://raw.github.com/adamjmoon/itchcork/master/itchcork.min.js';
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(main, s);
+        jscolor.init();
     };
 
     Template.nanojar.rendered = function() {

@@ -992,4 +992,4 @@ var jscolor = {
 };
 
 
-jscolor.install();
+
