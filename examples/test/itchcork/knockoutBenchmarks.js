@@ -1,35 +1,39 @@
 require(['knockoutBenchmarks', 'ItchCork'], function (c, ic) {
     var suite = new ic.Suite('Knockout JS Benchmarks', c);
     suite
-        .add(10, function (c) {
+        .it(function (c) {
             c.KOclear();
             for (var i = 0; i < 10; i++) { 
                 c.KOpush();
             }
             return c.KOData().length;
         })
-        .add(100, function (c) {
+        .shouldBe(10)
+        .it(function (c) {
             c.KOclear();
             for (var i = 0; i < 100; i++) {
                 c.KOpush();
             }
             return c.KOData().length;
         })
-        .add(500, function (c) {
+        .shouldBe(100)
+        .it(function (c) {
             c.KOclear();
             for (var i = 0; i < 500; i++) {
                 c.KOpush();
             }
-            return c.KOData().length;
+            return c.KOUpdates1();
         })
-        .add(1000, function (c) {
+        .shouldBe(500)
+        .it(function (c) {
             c.KOclear();
             for (var i = 0; i < 1000; i++) {
                 c.KOpush();
             }
-            return c.KOData().length;
+            return c.KOUpdates2();
         })
-        .run();
+        .shouldBe(1000)
+        .benchmark();
 
     window.suiteView.add(suite);
 });

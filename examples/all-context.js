@@ -61,18 +61,6 @@ define('objectcreate',function() {
   return context;
 });
 
-define('primitivetypes',function() {
-  'use strict';
-   function context() {
-     this.numberPrimitiveValue = 1;
-     this.stringPrimitiveValue = "string";
-     this.booleanPrimitiveValue = true;
-     this.nullPrimitiveValue = null;
-     this.undefinedPrimiteValue;
-  }
-  return context;
-});
-
 define('array',function() {
   'use strict';
    function context() {
@@ -228,8 +216,8 @@ define('knockoutBenchmarks', function () {
     function context() {
         var self = this;
         self.KOData = ko.observable("");
-        var KOUpdates1 = ko.observable(0);
-        var KOUpdates2 = ko.observable(0);
+        self.KOUpdates1 = ko.observable(0);
+        self.KOUpdates2 = ko.observable(0);
         
         self.KOData.subscribe(function () {
             KOUpdates1(KOUpdates1() + 1);
@@ -250,4 +238,16 @@ define('knockoutBenchmarks', function () {
     }
 
     return context;
+});
+
+define('primitivetypes',function() {
+  'use strict';
+   function context() {
+     this.numberPrimitiveValue = 1;
+     this.stringPrimitiveValue = "string";
+     this.booleanPrimitiveValue = true;
+     this.nullPrimitiveValue = null;
+     this.undefinedPrimiteValue;
+  }
+  return context;
 });

@@ -1,41 +1,41 @@
 require(['objectcreate', 'ItchCork'], function (c, ic) {
       var suite = new ic.Suite('Classical inheritance with Object.create vs CROCKFORD Object.Create', c);
       
-      suite.add(true, function(c) {return c.rectangle instanceof c.Rectangle;})
-       .add(true, function(c) {return c.rectangle instanceof c.Shape;})
-       .add(true, function(c) {return c.rectangle2 instanceof c.Rectangle2;})
-       .add(false, function(c) {return c.rectangle2 instanceof c.Rectangle;})
-       .add(true, function(c) {return c.rectangle2 instanceof c.Shape;})
-       .add(true, function(c) {return c.cube instanceof c.Cube;})
-       .add(true, function(c) {return c.cube instanceof c.Shape;})
-       .add('function', function(c) {return typeof c.Rectangle;})
-       .add('function', function(c) {return typeof c.Rectangle2;})
-       .add(1, function(c) {return c.rectangle.x;})
-       .add(1, function(c) {return c.rectangle.y;})
-       .add(1, function(c) {return c.rectangle2.x;})
-       .add(1, function(c) {return c.rectangle2.y;})
-       .add(1, function(c) {return c.shape.x;})
-       .add(1, function(c) {return c.shape.y;})
-       .add('object', function(c) {return typeof c.rectangle;})
-       .add('Shape moved.', function(c) {return c.rectangle.move(1, 1);})
-       .add('Shape moved.', function(c) {return c.rectangle2.move(1, 1);})
-       .add('Cube grew in 3 dimensions.', function(c) {return c.cube.move(1,1);})
-       .add(2, function(c) {return c.cube.x;})
-       .add(2, function(c) {return c.cube.y;})
-       .add(2, function(c) {return c.cube.z;})
-       .add('Cube grew in 3 dimensions.', function(c) {return c.cube.move(1);})
-       .add(3, function(c) {return c.cube.x;})
-       .add(3, function(c) {return c.cube.y;})
-       .add(3, function(c) {return c.cube.z;})
-       .add(2, function(c) {return c.rectangle.x;})
-       .add(2, function(c) {return c.rectangle.y;})
-       .add(2, function(c) {return c.rectangle2.x;})
-       .add(2, function(c) {return c.rectangle2.y;})       
-       .add(1, function(c) {return c.shape.x;})
-       .add(1, function(c) {return c.shape.y;})
-       .run();
+      suite.it(function(c) {return c.rectangle instanceof c.Rectangle;}).shouldBe(true)
+           .it(function(c) {return c.rectangle instanceof c.Shape;}).shouldBe(true)
+           .it(function(c) {return c.rectangle2 instanceof c.Rectangle2;}).shouldBe(true)
+           .it(function(c) {return c.rectangle2 instanceof c.Rectangle;}).shouldBe(false)
+           .it(function(c) {return c.rectangle2 instanceof c.Shape;}).shouldBe(true)
+           .it(function(c) {return c.cube instanceof c.Cube;}).shouldBe(true)
+           .it(function(c) {return c.cube instanceof c.Shape;}).shouldBe(true)
+           .it(function(c) {return typeof c.Rectangle;}).shouldBe('function')
+           .it(function(c) {return typeof c.Rectangle2;}).shouldBe('function')
+           .it(function(c) {return c.rectangle.x;}).shouldBe(1)
+           .it(function(c) {return c.rectangle.y;}).shouldBe(1)
+           .it(function(c) {return c.rectangle2.x;}).shouldBe(1)
+           .it(function(c) {return c.rectangle2.y;}).shouldBe(1)
+           .it(function(c) {return c.shape.x;}).shouldBe(1)
+           .it(function(c) {return c.shape.y;}).shouldBe(1)
+           .it(function(c) {return typeof c.rectangle;}).shouldBe('object')
+           .it(function(c) {return c.rectangle.move(1);}).shouldBe('Shape moved.')
+           .it(function(c) {return c.rectangle2.move(1);}).shouldBe('Shape moved.')
+           .it(function(c) {return c.cube.move(1,1);}).shouldBe('Cube grew in 3 dimensions.')
+           .it(function(c) {return c.cube.x;}).shouldBe(2)
+           .it(function(c) {return c.cube.y;}).shouldBe(2)
+           .it(function(c) {return c.cube.z;}).shouldBe(2)
+           .it(function(c) {return c.cube.move(1);}).shouldBe('Cube grew in 3 dimensions.')
+           .it(function(c) {return c.cube.x;}).shouldBe(3)
+           .it(function(c) {return c.cube.y;}).shouldBe(3)
+           .it(function(c) {return c.cube.z;}).shouldBe(3)
+           .it(function(c) {return c.rectangle.x;}).shouldBe(2)
+           .it(function(c) {return c.rectangle.y;}).shouldBe(2)
+           .it(function(c) {return c.rectangle2.x;}).shouldBe(2)
+           .it(function(c) {return c.rectangle2.y;}).shouldBe(2)
+           .it(function(c) {return c.shape.x;}).shouldBe(1)
+           .it('c.shape.y').shouldBe(1)
+           .benchmark();
        
-       window.suiteView.add(suite);
+       window.suiteView.it(suite);
  });
 
 require(['primitivetypes', 'ItchCork'], function (c, ic) {
@@ -80,15 +80,15 @@ require(['primitivetypes', 'ItchCork'], function (c, ic) {
 
 require(['array','ItchCork'], function (c, ic) {
    var suite = new ic.Suite('Fastest method of convert array-like to actual arrays', c);
-   suite.shouldEqual(1).compare().run();
+   suite.shouldEqual(1)
+        .compareBenchmarks();
    window.suiteView.add(suite);
 });
 
 require(['datetime', 'ItchCork'], function (c, ic) {
     var suite = new ic.Suite('DateTime tests', c);
     suite.shouldEqual(1)
-        .compare()
-        .run();
+         .compareBenchmarks();
 
     window.suiteView.add(suite);
 });
@@ -97,9 +97,10 @@ require(['inheritance', 'ItchCork'], function (c, ic) {
       var suite = new ic.Suite('Prototypal JS Inheritance', c);
       
       suite
-      .add('[Mammal "Mr. Biggles"]', function(c) {return c.someAnimal.toString();})
-      .add('[Cat "Felix"]', function(c) {return c.myPet.toString();})
-      .add('[Cat "Baby Felix"]', function(c) {c.myPet.haveABaby(); return c.myPet.offspring[0].toString();});
+      .it(function(c) {return c.someAnimal.toString();}).shouldBe('[Mammal "Mr. Biggles"]')
+      .it(function(c) {return c.myPet.toString();}).shouldBe('[Cat "Felix"]')
+      .it(function(c) {c.myPet.haveABaby(); return c.myPet.offspring[0].toString();}).shouldBe('[Cat "Baby Felix"]')
+      .benchmark();
        
        window.suiteView.add(suite);
  });
@@ -109,7 +110,7 @@ require(['inheritanceHelper', 'ItchCork'], function (c, ic) {
       
       suite
       .it(function(c) {return c.felix.toString();}).shouldBe('[Cat "Felix"]')
-      .it(function(c) {return c.kitten.toString();}).shouldBe('[Cat "Felix"]')
+      .it(function(c) {return c.kitten.toString();}).shouldBe('[Cat "Baby Felix"]')
       .benchmark();
        
        window.suiteView.add(suite);
@@ -118,35 +119,39 @@ require(['inheritanceHelper', 'ItchCork'], function (c, ic) {
 require(['knockoutBenchmarks', 'ItchCork'], function (c, ic) {
     var suite = new ic.Suite('Knockout JS Benchmarks', c);
     suite
-        .add(10, function (c) {
+        .it(function (c) {
             c.KOclear();
             for (var i = 0; i < 10; i++) { 
                 c.KOpush();
             }
             return c.KOData().length;
         })
-        .add(100, function (c) {
+        .shouldBe(10)
+        .it(function (c) {
             c.KOclear();
             for (var i = 0; i < 100; i++) {
                 c.KOpush();
             }
             return c.KOData().length;
         })
-        .add(500, function (c) {
+        .shouldBe(100)
+        .it(function (c) {
             c.KOclear();
             for (var i = 0; i < 500; i++) {
                 c.KOpush();
             }
-            return c.KOData().length;
+            return c.KOUpdates1();
         })
-        .add(1000, function (c) {
+        .shouldBe(500)
+        .it(function (c) {
             c.KOclear();
             for (var i = 0; i < 1000; i++) {
                 c.KOpush();
             }
-            return c.KOData().length;
+            return c.KOUpdates2();
         })
-        .run();
+        .shouldBe(1000)
+        .benchmark();
 
     window.suiteView.add(suite);
 });
