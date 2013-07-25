@@ -1047,7 +1047,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 'suitePath': suiteFilePath
             }
         });
-        require(['bootstrap', 'sinon'], function () {
+        require(['','bootstrap', 'sinon'], function () {
             window.sinon = sinon;
             $("#topNav").show();
             $('div.frame').show();
