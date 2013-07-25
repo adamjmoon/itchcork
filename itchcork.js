@@ -20,8 +20,6 @@ window.ThemeManager = (function () {
         this.errorColor = "#c00";
         this.completedColor = "#5c8a00";
         this.tableBorderColor = "#222";
-        this.codeFontWeight = "";
-        this.codeFontFamily = "";
     };
     themeManager['cyborg'] = new theme();
     themeManager['custom'] = new theme();
@@ -446,6 +444,12 @@ window.ThemeManager = (function () {
             apply();
         }
     };
+
+    themeManager.updateCustom = function (prop,value){
+        themeManager['custom'][prop] = "#" + value;
+        amplify.store('customTheme', themeManager['custom']);
+        apply();
+    }
 
     if (!amplify.store('currentTheme')) {
         themeManager.set('cyborg');

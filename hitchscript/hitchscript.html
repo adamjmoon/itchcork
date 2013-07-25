@@ -55,7 +55,7 @@
             <li><a href="" data-bind="click: function(){setTheme('superhero');}">Superhero</a></li>
             <li><a href="" data-bind="click: function(){setTheme('customTheme');}">Custom</a></li>
             <ul class="nav nav-tabs nav-stacked" style="display: none;" data-bind="visible: amplify.store('currentTheme')==='customTheme'">
-                <li>bodyFontColor<input class="color" data-bind="value: amplify.store('customTheme').bodyFontColor" /></li>
+                <li><span class="badge badge-info">bodyFontColor</span><input class="color" data-bind="value: amplify.store('customTheme').bodyFontColor" /></li>
                 <li>bodyBackgroundColor<input class="color" data-bind="value: amplify.store('customTheme').bodyBackgroundColor" /></li>
                 <li>bodyGradientFromColor<input class="color" data-bind="value: amplify.store('customTheme').bodyGradientFromColor" /></li>
                 <li>bodyGradientToColor<input class="color" data-bind="value: amplify.store('customTheme').bodyGradientToColor" /></li>
