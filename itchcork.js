@@ -873,7 +873,8 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         self.setTheme = function (theme) {
             window.ThemeManager.set(theme);
             window.ThemeManager['currentTheme'](theme);
-            $('#logo').click();
+            if(theme!=='customTheme')
+                $('#logo').click();
         };
 
         self.toggleMenu = function () {
