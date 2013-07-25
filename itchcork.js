@@ -23,7 +23,7 @@ window.ThemeManager = (function () {
 
 
     };
-    themeManager['currentTheme'] = ko.observable('cyborg');
+
     themeManager['cyborg'] = new theme();
     themeManager['custom'] = new theme();
     amplify.store('customTheme', themeManager['custom']);
@@ -876,6 +876,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
 
         self.setTheme = function (theme) {
             window.ThemeManager.set(theme);
+            window.ThemeManager['currentTheme'] = ko.observable(theme);
             $('#logo').click();
         };
 
