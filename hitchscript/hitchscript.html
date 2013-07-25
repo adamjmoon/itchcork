@@ -57,7 +57,7 @@
             <ul class="nav nav-tabs nav-stacked" style="display: none;" data-bind="visible: ThemeManager['currentTheme']() ==='customTheme'">
                 <li class="navbar-inner">bodyFontColor</li>
                    <input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyFontColor, style: {'background-color': '#' + amplify.store('customTheme').bodyFontColor}" /></li>
-                <li>bodyBackgroundColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyBackgroundColor.replace('#',''), style: {'background-color': '#' + amplify.store('customTheme').bodyBackgroundColor}"/></li>
+                <li>bodyBackgroundColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyBackgroundColor, style: {'background-color': '#' + amplify.store('customTheme').bodyBackgroundColor + ' !important;'}"/></li>
                 <li>bodyGradientFromColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyGradientFromColor.replace('#','')" /></li>
                 <li>bodyGradientToColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyGradientToColor" /></li>
                 <li>infoColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').infoColor" /></li>
