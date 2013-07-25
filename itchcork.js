@@ -775,7 +775,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
         }
 
         self.addTestWithBenchmarks = function (shouldEqual, func, name, defer) {
-            var test = new Test(shouldEqual, func, self.jsContext, name);
+            var test = new Test(shouldEqual, func, new js(), name);
             if(!defer){
                 self.processTest(test);
             }
