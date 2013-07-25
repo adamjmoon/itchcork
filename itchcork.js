@@ -957,7 +957,7 @@ define("Test", [], function () {
                 .replace(/function +?\(c\) +?\{ +?return(.*?)\; +?\}/g,'$1');
 
 
-            this.actual = func(context);
+            this.actual = func(this.context);
         }
         this.shouldEqual = shouldEqual;
 
