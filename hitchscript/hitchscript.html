@@ -55,21 +55,21 @@
             <li><a href="" data-bind="click: function(){setTheme('superhero');}">Superhero</a></li>
             <li><a href="" data-bind="click: function(){setTheme('customTheme');}">Custom</a></li>
             <ul class="nav nav-tabs nav-stacked" style="display: none;" data-bind="visible: amplify.store('currentTheme')==='customTheme'">
-                <li><span class="badge badge-info">bodyFontColor</span><input class="color" data-bind="value: amplify.store('customTheme').bodyFontColor.split('#')[1]" /></li>
-                <li>bodyBackgroundColor<input class="color" data-bind="value: amplify.store('customTheme').bodyBackgroundColor.split('#')[1]" /></li>
-                <li>bodyGradientFromColor<input class="color" data-bind="value: amplify.store('customTheme').bodyGradientFromColor.split('#')[1]" /></li>
-                <li>bodyGradientToColor<input class="color" data-bind="value: amplify.store('customTheme').bodyGradientToColor.split('#')[1]" /></li>
-                <li>infoColor<input class="color" data-bind="value: amplify.store('customTheme').infoColor.split('#')[1]" /></li>
-                <li>codeColor<input class="color" data-bind="value: amplify.store('customTheme').codeColor.split('#')[1]" /></li>
-                <li>hoverColor<input class="color" data-bind="value: amplify.store('customTheme').hoverColor.split('#')[1]" /></li>
-                <li>wellBackgroundColor<input class="color" data-bind="value: amplify.store('customTheme').wellBackgroundColor.split('#')[1]" /></li>
-                <li>navBackgroundColor<input class="color" data-bind="value: amplify.store('customTheme').navBackgroundColor.split('#')[1]" /></li>
-                <li>navBarInnerBackgroundColor<input class="color" data-bind="value: amplify.store('customTheme').navBarInnerBackgroundColor.split('#')[1]" /></li>
-                <li>inverseColor<input class="color" data-bind="value: amplify.store('customTheme').inverseColor.split('#')[1]" /></li>
-                <li>successColor<input class="color" data-bind="value: amplify.store('customTheme').successColor.split('#')[1]" /></li>
-                <li>errorColor<input class="color" data-bind="value: amplify.store('customTheme').errorColor.split('#')[1]" /></li>
-                <li>completedColor<input class="color" data-bind="value: amplify.store('customTheme').completedColor.split('#')[1]" /></li>
-                <li>tableBorderColor<input class="color" data-bind="value: amplify.store('customTheme').tableBorderColor.split('#')[1]" /></li>
+                <li><span class="badge badge-info">bodyFontColor</span><input class="color" data-bind="value: amplify.store('customTheme').bodyFontColor.split('#')[0]" /></li>
+                <li>bodyBackgroundColor<input class="color" data-bind="value: amplify.store('customTheme').bodyBackgroundColor" /></li>
+                <li>bodyGradientFromColor<input class="color" data-bind="value: amplify.store('customTheme').bodyGradientFromColor" /></li>
+                <li>bodyGradientToColor<input class="color" data-bind="value: amplify.store('customTheme').bodyGradientToColor" /></li>
+                <li>infoColor<input class="color" data-bind="value: amplify.store('customTheme').infoColor" /></li>
+                <li>codeColor<input class="color" data-bind="value: amplify.store('customTheme').codeColor" /></li>
+                <li>hoverColor<input class="color" data-bind="value: amplify.store('customTheme').hoverColor" /></li>
+                <li>wellBackgroundColor<input class="color" data-bind="value: amplify.store('customTheme').wellBackgroundColor" /></li>
+                <li>navBackgroundColor<input class="color" data-bind="value: amplify.store('customTheme').navBackgroundColor" /></li>
+                <li>navBarInnerBackgroundColor<input class="color" data-bind="value: amplify.store('customTheme').navBarInnerBackgroundColor" /></li>
+                <li>inverseColor<input class="color" data-bind="value: amplify.store('customTheme').inverseColor" /></li>
+                <li>successColor<input class="color" data-bind="value: amplify.store('customTheme').successColor" /></li>
+                <li>errorColor<input class="color" data-bind="value: amplify.store('customTheme').errorColor" /></li>
+                <li>completedColor<input class="color" data-bind="value: amplify.store('customTheme').completedColor" /></li>
+                <li>tableBorderColor<input class="color" data-bind="value: amplify.store('customTheme').tableBorderColor" /></li>
                 <li>radius<input data-bind="value: amplify.store('customTheme').radius" /></li>
                 <li>badgeRadius<input data-bind="value: amplify.store('customTheme').badgeRadius" /></li>
                 <li><a href="" class="btn btn-small" data-bind="click: function(){setTheme('customTheme');}">Update Theme</a></li>
