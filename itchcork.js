@@ -933,7 +933,7 @@ define("SuiteViewModel", ['benchmark','BenchmarkUtil'], function(Benchmark,Bench
       this.tests = ko.observableArray([]);
       this.testCases = ko.observableArray([]);
       this.shouldShow = ko.observable(true);
-      this.benchmarks;
+      self.benchmarks = ko.observableArray([]);
       this.benchmarksDone = ko.observable(false);
       this.benchmarkPlatform = ko.observable('');
       this.benchmarkSuite = new Benchmark.Suite();
