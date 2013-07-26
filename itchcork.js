@@ -607,6 +607,55 @@ this.length=0;this.name="nicescrollarray";this.each=function(e){for(var j=0,k=0;
 d){e[d]=function(){var e=arguments;return this.each(function(){this[d].apply(this,e)})}},I=0;I<M.length;I++)Q(u,M[I]);e.fn.getNiceScroll=function(j){return"undefined"==typeof j?new F(this):e.data(this[j],"__nicescroll")||!1};e.extend(e.expr[":"],{nicescroll:function(j){return e.data(j,"__nicescroll")?!0:!1}});e.fn.niceScroll=function(j,d){"undefined"==typeof d&&("object"==typeof j&&!("jquery"in j))&&(d=j,j=!1);var k=new F;"undefined"==typeof d&&(d={});j&&(d.doc=e(j),d.win=e(this));var s=!("doc"in
 d);!s&&!("win"in d)&&(d.win=e(this));this.each(function(){var j=e(this).data("__nicescroll")||!1;j||(d.doc=s?e(this):d.doc,j=new P(d,e(this)),e(this).data("__nicescroll",j));k.push(j)});return 1==k.length?k[0]:k};window.NiceScroll={getjQuery:function(){return e}};e.nicescroll||(e.nicescroll=new F,e.nicescroll.options=K)})(jQuery);
 
+efine("BenchmarkUtil", ['benchmarkViewModel'], function(bVM) {
+    "use strict";
+    function benchmarkUtil(){
+    var benchmarks = ko.observableArray([]);
+
+    self.runBenchmarks = function (benchmarkSuite, callback) {
+        benchmarkSuite.on('cycle', function (event) {
+            var b = event.target;
+
+            var bm = new bVM();
+            bm.name(b.name);
+            bm.expression(b.name.replace(/context\.(.*?)\(\)\;/gi, '$1'));
+            bm.hz(b.hz.toFixed(0));
+            bm.relativateMarginError(b.stats.rme.toFixed(2) + '%');
+            bm.iterationPerSampleCycle(b.count);
+            bm.numAnalysisCycles(b.cycles);
+            bm.numSampleCycles(b.stats.sample.length);
+
+            benchmarks.push(bm);
+        })
+            .on('complete', function () {
+
+                benchmarks.sort(function (left, right) {
+                    var leftHz = parseInt(left.hz());
+                    var rightHz = parseInt(right.hz());
+                    return leftHz == rightHz ? 0 : (leftHz > rightHz ? -1 : 1)
+                });
+                benchmarks()[0].fastest(true);
+                var length = benchmarks().length;
+                benchmarks()[length - 1].slowest(true);
+                var slowestHz = benchmarks()[length - 1].hz();
+                for (var i = 0; i < length; i++) {
+                    benchmarks()[i].timesFaster((benchmarks()[i].hz() / slowestHz).toFixed(3));
+                }
+                callback(benchmarks);
+            });
+
+
+
+        benchmarkSuite.run();
+
+        return self;
+    };
+
+    }
+
+    return benchmarkUtil;
+
+});
 define("BenchmarkViewModel", [], function() {
   var vm =  function() {
       this.name= ko.observable('');
@@ -692,44 +741,13 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
             self.vm.jsContextStr(js.toString() + "\n var c = new context();");
             self.vm.coffeeContextStr(self.highlight(Js2coffee.build(self.vm.jsContextStr())));
             self.vm.jsContextStr(self.highlight(self.vm.jsContextStr()));
-            self.vm.benchmarkPlatform(Benchmark.platform.description);
-            self.vm.benchmarkSuite = new Benchmark.Suite;
+
             self.jsContext = new js();
             self.setupContextBreakdown(self.jsContext, 'context');
         };
 
         self.map();
 
-        self.benchmarkSuite.on('cycle', function (event) {
-            var b = event.target;
-
-            var bm = new bVM();
-            bm.name(b.name);
-            bm.expression(b.name.replace(/context\.(.*?)\(\)\;/gi, '$1'));
-            bm.hz(b.hz.toFixed(0));
-            bm.relativateMarginError(b.stats.rme.toFixed(2) + '%');
-            bm.iterationPerSampleCycle(b.count);
-            bm.numAnalysisCycles(b.cycles);
-            bm.numSampleCycles(b.stats.sample.length);
-
-            self.vm.benchmarks.push(bm);
-        })
-            .on('complete', function () {
-
-                self.vm.benchmarks.sort(function (left, right) {
-                    var leftHz = parseInt(left.hz());
-                    var rightHz = parseInt(right.hz());
-                    return leftHz == rightHz ? 0 : (leftHz > rightHz ? -1 : 1)
-                });
-                self.vm.benchmarks()[0].fastest(true);
-                var length = self.vm.benchmarks().length;
-                self.vm.benchmarks()[length - 1].slowest(true);
-                var slowestHz = self.vm.benchmarks()[length - 1].hz();
-                for (var i = 0; i < length; i++) {
-                    self.vm.benchmarks()[i].timesFaster((self.vm.benchmarks()[i].hz() / slowestHz).toFixed(3));
-                }
-                self.vm.benchmarksDone(true);
-            });
 
         self.add = function (shouldEqual, func) {
             if (typeof func == 'function') {
@@ -775,7 +793,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
                             context[name]();
                         };
                     })(test.context, name);
-                    self.benchmarkSuite.add({
+                    self.vm.benchmarkSuite.add({
                         'name': test.expression,
                         'fn': fn,
                         'async': true,
@@ -783,7 +801,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
                         'minSamples': 100});
                 }
                 else {
-                    self.benchmarkSuite.add(test.expression, function () {
+                    self.vm.benchmarkSuite.add(test.expression, function () {
                             func(test.context);
                         },
                         { 'async': true, 'queued': true, 'minSamples': 100});
@@ -809,12 +827,16 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
             return self;
         };
 
+        self.benchmarkIt =  function(){
+            self.vm.processBenchmarks();
+        };
 
 
 
     };
     return suite;
 });
+
 
 define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
     function view() {
@@ -901,7 +923,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
     return view;
 });
 
-define("SuiteViewModel", [], function() {
+define("SuiteViewModel", ['benchmark','BenchmarkUtil'], function(Benchmark,BenchmarkUtil) {
   var vm =  function() {
       var self = this;
       this.num;
@@ -911,18 +933,25 @@ define("SuiteViewModel", [], function() {
       this.tests = ko.observableArray([]);
       this.testCases = ko.observableArray([]);
       this.shouldShow = ko.observable(true);
-      this.benchmarks = ko.observableArray([]);
+      this.benchmarks;
       this.benchmarksDone = ko.observable(false);
       this.benchmarkPlatform = ko.observable('');
-      this.benchmarkSuite;
+      this.benchmarkSuite = new Benchmark.Suite();
+      this.benchmarkPlatform(Benchmark.platform.description);
 
-      this.benchmark = function () {
-          self.benchmarksDone(false);
-          self.benchmarks.removeAll();
-          self.benchmarkSuite.run();
+      this.processBenchmarks = function() {
+          var benchmarkUtil = new BenchmarkUtil();
+          //self.benchmarks.removeAll();
 
-          return self;
-      };
+          benchmarkUtil.runBenchmarks(self.benchmarkSuite,
+              function(bms){
+                  this.benchmarks = bms;
+                  this.benchmarksDone(true);
+              }
+          );
+      }
+
+
 
   };
 
