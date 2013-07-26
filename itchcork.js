@@ -612,7 +612,7 @@ define("BenchmarkUtil", ['BenchmarkViewModel'], function(bVM) {
     function benchmarkUtil(){
     var benchmarks = ko.observableArray([]);
 
-    self.runBenchmarks = function (benchmarkSuite, callback) {
+    this.runBenchmarks = function (benchmarkSuite, callback) {
         benchmarkSuite.on('cycle', function (event) {
             var b = event.target;
 
