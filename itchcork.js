@@ -758,7 +758,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
             } else {
                 self.failedCount++;
             }
-            self.vm.tests().push(test);
+            self.vm.tests.push(test);
         }
 
         self.addTestWithBenchmarks = function (shouldEqual, func, name, defer) {
@@ -852,7 +852,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
             self.totalTests(self.totalTests() + suite.vm.tests().length);
             self.totalPassed(self.totalPassed() + suite.passedCount);
             self.totalFailed(self.totalFailed() + suite.failedCount);
-            self.suites.push(suite);
+            self.suites.push(suite.vm);
             suite.vm.benchmarksDone.subscribe(function (newValue) {
                 self.setMenuHeight();
             });
