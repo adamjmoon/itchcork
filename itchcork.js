@@ -823,7 +823,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel'], function (Test, Benchma
             for (var testcase in self.jsContext) {
                 self.addTestWithBenchmarks(self.shouldEqualValue, func, testcase, false);
             }
-
+            self.benchmark();
             return self;
         };
 
