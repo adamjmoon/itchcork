@@ -758,7 +758,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
             } else {
                 self.failedCount++;
             }
-            self.vm.tests.push(test);
+            self.vm.tests().push(test);
         }
 
         self.addTestWithBenchmarks = function (shouldEqual, func, name, defer) {
@@ -802,7 +802,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
                 return c[tc]();
             };
             for (var testcase in self.jsContext) {
-                self.addTestWithBenchmarks(self.shouldEqualValue, func, testcase);
+                self.addTestWithBenchmarks(self.shouldEqualValue, func, testcase, false);
             }
 
             return self;
