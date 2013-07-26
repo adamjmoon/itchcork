@@ -642,7 +642,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
     function suite(desc, js, framework) {
         "use strict";
         var self = this;
-        self.vm, self.benchmarkingEnabled = true, self.passedCount = 0, self.failedCount = 0, self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
+        self.vm, self.benchmarkingEnabled = true, self.passedCount = 0, self.failedCount = 0, self.jsContext;
         self.themeManager = window.ThemeManager;
         self.framework = "itchcork";
         if (framework) {
@@ -693,6 +693,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
             self.vm.coffeeContextStr(self.highlight(Js2coffee.build(self.vm.jsContextStr())));
             self.vm.jsContextStr(self.highlight(self.vm.jsContextStr()));
             self.vm.benchmarkPlatform(Benchmark.platform.description);
+            self.vm.benchmarkSuite = new Benchmark.Suite;
             self.jsContext = new js();
             self.setupContextBreakdown(self.jsContext, 'context');
         };
@@ -808,17 +809,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
             return self;
         };
 
-        self.run = function () {
-            self.vm.benchmarksDone(false);
-            self.vm.benchmarks.removeAll();
-            self.benchmarkSuite.run();
-        };
 
-        self.benchmark = function () {
-            self.vm.benchmarksDone(false);
-            self.vm.benchmarks.removeAll();
-            self.benchmarkSuite.run();
-        };
 
 
     };
@@ -912,6 +903,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
 
 define("SuiteViewModel", [], function() {
   var vm =  function() {
+      var self = this;
       this.num;
       this.suiteDesc = ko.observable('');
       this.jsContextStr = ko.observable('');
@@ -922,6 +914,15 @@ define("SuiteViewModel", [], function() {
       this.benchmarks = ko.observableArray([]);
       this.benchmarksDone = ko.observable(false);
       this.benchmarkPlatform = ko.observable('');
+      this.benchmarkSuite;
+
+      this.benchmark = function () {
+          self.benchmarksDone(false);
+          self.benchmarks.removeAll();
+          self.benchmarkSuite.run();
+
+          return self;
+      };
 
   };
 
