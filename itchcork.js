@@ -945,8 +945,8 @@ define("SuiteViewModel", ['benchmark','BenchmarkUtil'], function(Benchmark,Bench
 
           benchmarkUtil.runBenchmarks(self.benchmarkSuite,
               function(bms){
-                  this.benchmarks = bms;
-                  this.benchmarksDone(true);
+                  self.benchmarks = bms;
+                  self.benchmarksDone(true);
               }
           );
       }
