@@ -642,7 +642,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
     function suite(desc, js, framework) {
         "use strict";
         var self = this;
-        self.vm, self.benchmarkingEnabled = true, self.num = 0, self.passedCount = 0, self.failedCount = 0, self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
+        self.vm, self.benchmarkingEnabled = true, self.passedCount = 0, self.failedCount = 0, self.jsContext, self.benchmarkSuite = new Benchmark.Suite;
         self.themeManager = window.ThemeManager;
         self.framework = "itchcork";
         if (framework) {
@@ -848,7 +848,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         };
 
         self.add = function (suite) {
-            suite.num = self.suites().length + 1;
+            suite.vm.num = self.suites().length + 1;
             self.totalTests(self.totalTests() + suite.vm.tests().length);
             self.totalPassed(self.totalPassed() + suite.passedCount);
             self.totalFailed(self.totalFailed() + suite.failedCount);
@@ -912,6 +912,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
 
 define("SuiteViewModel", [], function() {
   var vm =  function() {
+      this.num;
       this.suiteDesc = ko.observable('');
       this.jsContextStr = ko.observable('');
       this.coffeeContextStr = ko.observable('');
