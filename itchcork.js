@@ -732,12 +732,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
 
         self.add = function (shouldEqual, func) {
             if (typeof func == 'function') {
-                self.addTestWithBenchmarks(shouldEqual, func, null);
-            }
-            else {
-                var c = self.jsContext;
-                var realFunc = new Function("c", "return c." + func)
-                self.addTestWithBenchmarks(shouldEqual, realFunc, null);
+                self.addTestWithBenchmarks(shouldEqual, func, null, false);
             }
 
             return self;
@@ -746,15 +741,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel', 'BenchmarkViewModel'], f
         self.currentTest;
 
         self.it = function(func, shouldBe){
-
-            if (typeof func == 'function') {
-                self.currentTest = self.addTestWithBenchmarks(shouldBe, func, null, true);
-            }
-            else {
-                var c = self.jsContext;
-                var realFunc = new Function("c", "return c." + func)
-                self.currentTest = self.addTestWithBenchmarks(shouldBe, realFunc, null, true);
-            }
+            self.currentTest = self.addTestWithBenchmarks(shouldBe, func, null, true);
 
             return self;
         };
