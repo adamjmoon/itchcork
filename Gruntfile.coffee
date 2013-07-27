@@ -21,7 +21,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-istanbul'
 
   # Make task shortcuts
-  grunt.registerTask 'default', ['concat','min']
+  grunt.registerTask 'default', ['concat']
 
   # Configure Grunt
   grunt.initConfig
@@ -30,7 +30,7 @@ module.exports = (grunt) ->
     concat:
       ic:
         src: lib + '*.js'
-        dest: r + 'itchcork.js'
+        dest: r + 'itchcork.min.js'
       allContext:
         src: context + '*.js'
         dest: ex + 'all-context.js'
