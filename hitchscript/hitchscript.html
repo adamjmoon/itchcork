@@ -16,7 +16,8 @@
 <div id="topNav" class="navbar-fixed-top"
      style="display:none;position: fixed;right: 0;left: 0;z-index: 1030;margin-bottom: 0;">
     <div class="navbar-inner">
-        <a href="" class="logoBtn"><img id="logo" class="logo" src="/hitchscript_logo.png" style="cursor: pointer;margin-left:5px;"
+        <a href="" class="logoBtn"><img id="logo" class="logo" src="/hitchscript_logo.png"
+                                        style="cursor: pointer;margin-left:5px;"
                                         data-bind="click: function(){toggleMenu();}" width="90"
                                         height="44"/></a>
 
@@ -36,9 +37,9 @@
              data-bind="click: function(){location.reload();}"><img id="refresh" src="/glyphicons_081_refresh.png"
                                                                     width="25"
                                                                     height="26"/></div>
-        <span class="badge badge-info headCount" data-bind="text: totalTests()" />
-        <span class="badge badge-success headCount" data-bind="text: totalPassed()" />
-        <span class="badge badge-important headCount" data-bind="text: totalFailed()" />
+        <span class="badge badge-info headCount" data-bind="text: totalTests()"/>
+        <span class="badge badge-success headCount" data-bind="text: totalPassed()"/>
+        <span class="badge badge-important headCount" data-bind="text: totalFailed()"/>
     </div>
     <span class="badge badge-warning count" style="display:block; position: absolute; right: 57px; top: 10px;"
           data-bind="visible: totalTests() == 0">Loading Test Suites ...</span>
@@ -54,25 +55,45 @@
             <li><a href="" data-bind="click: function(){setTheme('cyborg');}">Cyborg</a></li>
             <li><a href="" data-bind="click: function(){setTheme('superhero');}">Superhero</a></li>
             <li><a href="" data-bind="click: function(){setTheme('customTheme');}">Custom</a></li>
-            <ul class="nav nav-tabs nav-stacked" style="display: none;" data-bind="visible: ThemeManager['currentTheme']() ==='customTheme'">
+            <ul class="nav nav-tabs nav-stacked" style="display: none;"
+                data-bind="visible: ThemeManager['currentTheme']() ==='customTheme'">
                 <li>bodyFontColor</li>
-                   <input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyFontColor, style: {'background-color': '#' + amplify.store('customTheme').bodyFontColor}" /></li>
-                <li>bodyBackgroundColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyBackgroundColor, style: {'background-color': '#' + amplify.store('customTheme').bodyBackgroundColor + ' !important;'}"/></li>
-                <li>bodyGradientFromColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyGradientFromColor.replace('#','')" /></li>
-                <li>bodyGradientToColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').bodyGradientToColor" /></li>
-                <li>infoColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').infoColor" /></li>
-                <li>codeColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').codeColor" /></li>
-                <li>hoverColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').hoverColor" /></li>
-                <li>wellBackgroundColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').wellBackgroundColor" /></li>
-                <li>navBackgroundColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').navBackgroundColor" /></li>
-                <li>navBarInnerBackgroundColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').navBarInnerBackgroundColor" /></li>
-                <li>inverseColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').inverseColor" /></li>
-                <li>successColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').successColor" /></li>
-                <li>errorColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').errorColor" /></li>
-                <li>completedColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').completedColor" /></li>
-                <li>tableBorderColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').tableBorderColor" /></li>
-                <li>radius<input class="pull-left" data-bind="value: amplify.store('customTheme').radius" /></li>
-                <li>badgeRadius<input class="pull-left" data-bind="value: amplify.store('customTheme').badgeRadius" /></li>
+                <input class="color pull-left"
+                       data-bind="value: amplify.store('customTheme').bodyFontColor, style: {'background-color': '#' + amplify.store('customTheme').bodyFontColor}"/></li>
+                <li>bodyBackgroundColor<input class="color pull-left"
+                                              data-bind="value: amplify.store('customTheme').bodyBackgroundColor, style: {'background-color': '#' + amplify.store('customTheme').bodyBackgroundColor + ' !important;'}"/>
+                </li>
+                <li>bodyGradientFromColor<input class="color pull-left"
+                                                data-bind="value: amplify.store('customTheme').bodyGradientFromColor.replace('#','')"/>
+                </li>
+                <li>bodyGradientToColor<input class="color pull-left"
+                                              data-bind="value: amplify.store('customTheme').bodyGradientToColor"/></li>
+                <li>infoColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').infoColor"/>
+                </li>
+                <li>codeColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').codeColor"/>
+                </li>
+                <li>hoverColor<input class="color pull-left"
+                                     data-bind="value: amplify.store('customTheme').hoverColor"/></li>
+                <li>wellBackgroundColor<input class="color pull-left"
+                                              data-bind="value: amplify.store('customTheme').wellBackgroundColor"/></li>
+                <li>navBackgroundColor<input class="color pull-left"
+                                             data-bind="value: amplify.store('customTheme').navBackgroundColor"/></li>
+                <li>navBarInnerBackgroundColor<input class="color pull-left"
+                                                     data-bind="value: amplify.store('customTheme').navBarInnerBackgroundColor"/>
+                </li>
+                <li>inverseColor<input class="color pull-left"
+                                       data-bind="value: amplify.store('customTheme').inverseColor"/></li>
+                <li>successColor<input class="color pull-left"
+                                       data-bind="value: amplify.store('customTheme').successColor"/></li>
+                <li>errorColor<input class="color pull-left"
+                                     data-bind="value: amplify.store('customTheme').errorColor"/></li>
+                <li>completedColor<input class="color pull-left"
+                                         data-bind="value: amplify.store('customTheme').completedColor"/></li>
+                <li>tableBorderColor<input class="color pull-left"
+                                           data-bind="value: amplify.store('customTheme').tableBorderColor"/></li>
+                <li>radius<input class="pull-left" data-bind="value: amplify.store('customTheme').radius"/></li>
+                <li>badgeRadius<input class="pull-left" data-bind="value: amplify.store('customTheme').badgeRadius"/>
+                </li>
             </ul>
         </ul>
         <div class="navbar navbar-inverse menu-title">
@@ -85,14 +106,16 @@
         </ul>
         <div class="navbar navbar-inverse menu-title">
             <div class="navbar-inner"><span class="badge badge-info"><img style="float: left;"
-                                                                                src="/glyphicons_401_github.png"
-                                                                                width="24"
-                                                                                height="24"/><span style="top: 5px;position: relative">Github Source</span></span>
+                                                                          src="/glyphicons_401_github.png"
+                                                                          width="24"
+                                                                          height="24"/><span
+                    style="top: 5px;position: relative">Github Source</span></span>
+            </div>
+            <ul class="nav nav-tabs nav-stacked">
+                <li><input type="text" value="raw.github.com/adamjmoon/itchcork/master" style="width: 99%"/></li>
+                <li>{{loginButtons}}</li>
+            </ul>
         </div>
-        <ul class="nav nav-tabs nav-stacked">
-            <li><input type="text" value="raw.github.com/adamjmoon/itchcork/master" style="width: 99%"/></li>
-            <li>{{loginButtons}}</li>
-        </ul>
     </div>
 </div>
 <div id="view" class="view container-fluid">
@@ -106,13 +129,13 @@
                          data-bind="attr: {'data-target': '.suite' + num}">
 
                           <span class="badge badge-info count"
-                                data-bind="text: tests().length" />
+                                data-bind="text: tests().length"/>
                           <span class="badge badge-success count"
-                                data-bind="visible: passedCount() > 0,text: passedCount()" />
+                                data-bind="visible: passedCount() > 0,text: passedCount()"/>
                           <span class="badge badge-important count"
-                                data-bind="visible: failedCount() > 0,text: failedCount()" />
-                     <br/>
-                        <span data-bind="text: suiteDesc" class="badge badge-info count" />
+                                data-bind="visible: failedCount() > 0,text: failedCount()"/>
+                        <br/>
+                        <span data-bind="text: suiteDesc" class="badge badge-info count"/>
                     </div>
 
                 </div>
@@ -226,10 +249,9 @@
                                                               data-bind="attr: {'data-target': '.collapseBenchmarks' + num}"
                                                               data-target=".collapseBenchmarks" href="#"><span
                                     class="badge badge-info">BENCHMARKS&nbsp;
-                                    <span
-                                            data-bind="text: benchmarkPlatform"
-                                            class="badge badge-inverse">&nbsp;<span
-                                        data-bind="text: !benchmarksDone() ? 'RUNNING...': 'COMPLETED', css: benchmarksDone() ? 'badge badge-success' : 'badge badge-warning'"></a>
+                                    <span data-bind="text: benchmarkPlatform"
+                                          class="badge badge-inverse"/>&nbsp;<span
+                                        data-bind="text: !benchmarksDone() ? 'RUNNING...': 'COMPLETED', css: benchmarksDone() ? 'badge badge-success' : 'badge badge-warning'"/></a>
                             </div>
                             <div data-bind="css: 'accordion-body collapse in collapseBenchmarks' + num">
                                 <div class="accordion-inner results">
@@ -276,13 +298,14 @@
         </div>
     </div>
 
-
 </div>
+
 
 <div class="results" id="mochaResults"
      data-bind="visible: window.suiteView.unitTestFrameworkManager.getFramework()=='mocha'">
     <div id="mocha" class="row-fluid">
     </div>
+</div>
 </div>
 </template>
 <template name="scripts"></template>
