@@ -27,6 +27,4 @@ require(['inheritanceHelper', 'ItchCork'], function (c, ic) {
             return c.mammalInstance.name;
         }).shouldBe("Bill")
         .benchmark();
-
-    window.suiteView.add(suite);
 });

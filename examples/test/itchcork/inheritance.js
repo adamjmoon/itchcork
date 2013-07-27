@@ -6,6 +6,4 @@ require(['inheritance', 'ItchCork'], function (c, ic) {
       .it(function(c) {return c.myPet.toString();}).shouldBe('[Cat "Felix"]')
       .it(function(c) {c.myPet.haveABaby(); return c.myPet.offspring[0].toString();}).shouldBe('[Cat "Baby Felix"]')
       .benchmark();
-       
-       window.suiteView.add(suite);
  });

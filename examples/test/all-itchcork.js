@@ -34,8 +34,6 @@ require(['objectcreate', 'ItchCork'], function (c, ic) {
            .it(function(c) {return c.shape.x;}).shouldBe(1)
            .it(function(c) {return c.shape.y;}).shouldBe(1)
            .benchmark();
-       
-       window.suiteView.add(suite);
  });
 
 require(['primitivetypes', 'ItchCork'], function (c, ic) {
@@ -74,8 +72,6 @@ require(['primitivetypes', 'ItchCork'], function (c, ic) {
             return typeof c.notDefined;
         })
         .benchmark();
-
-    window.suiteView.add(suite);
 });
 
 require(['array','ItchCork'], function (c, ic) {
@@ -89,8 +85,6 @@ require(['datetime', 'ItchCork'], function (c, ic) {
     var suite = new ic.Suite('DateTime tests', c);
     suite.shouldEqual(1)
          .compareBenchmarks();
-
-    window.suiteView.add(suite);
 });
 
 require(['inheritance', 'ItchCork'], function (c, ic) {
@@ -101,8 +95,6 @@ require(['inheritance', 'ItchCork'], function (c, ic) {
       .it(function(c) {return c.myPet.toString();}).shouldBe('[Cat "Felix"]')
       .it(function(c) {c.myPet.haveABaby(); return c.myPet.offspring[0].toString();}).shouldBe('[Cat "Baby Felix"]')
       .benchmark();
-       
-       window.suiteView.add(suite);
  });
 
 require(['inheritanceHelper', 'ItchCork'], function (c, ic) {
@@ -134,8 +126,6 @@ require(['inheritanceHelper', 'ItchCork'], function (c, ic) {
             return c.mammalInstance.name;
         }).shouldBe("Bill")
         .benchmark();
-
-    window.suiteView.add(suite);
 });
 
 require(['knockoutBenchmarks', 'ItchCork'], function (c, ic) {
@@ -174,6 +164,4 @@ require(['knockoutBenchmarks', 'ItchCork'], function (c, ic) {
         })
         .shouldBe(1000)
         .benchmark();
-
-    window.suiteView.add(suite);
 });

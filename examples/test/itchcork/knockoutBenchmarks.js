@@ -34,6 +34,4 @@ require(['knockoutBenchmarks', 'ItchCork'], function (c, ic) {
         })
         .shouldBe(1000)
         .benchmark();
-
-    window.suiteView.add(suite);
 });

@@ -34,6 +34,4 @@ require(['primitivetypes', 'ItchCork'], function (c, ic) {
             return typeof c.notDefined;
         })
         .benchmark();
-
-    window.suiteView.add(suite);
 });
