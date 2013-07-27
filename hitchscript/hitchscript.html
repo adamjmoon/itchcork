@@ -104,15 +104,15 @@
                     <div class="navbar-inner suiteDesc autoOverFlow container-fluid collapseToggle"
                          data-parent="#suiteListAccordian" data-toggle="collapse"
                          data-bind="attr: {'data-target': '.suite' + num}">
-                      <span>
+
                           <span class="badge badge-info count"
-                                data-bind="text: tests().length">
+                                data-bind="text: tests().length" />
                           <span class="badge badge-success count"
-                                data-bind="visible: passedCount > 0,text: passedCount">
+                                data-bind="visible: passedCount() > 0,text: passedCount()" />
                           <span class="badge badge-important count"
-                                data-bind="visible: failedCount > 0,text: failedCount">
+                                data-bind="visible: failedCount() > 0,text: failedCount()" />
                      <br/>
-                        <span data-bind="text: suiteDesc" class="badge badge-info count">
+                        <span data-bind="text: suiteDesc" class="badge badge-info count" />
                     </div>
 
                 </div>

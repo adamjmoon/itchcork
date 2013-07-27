@@ -690,7 +690,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel'], function (Test, Benchma
     function suite(desc, js, framework) {
         "use strict";
         var self = this;
-        self.vm, self.benchmarkingEnabled = true, self.passedCount = 0, self.failedCount = 0, self.jsContext;
+        self.vm, self.benchmarkingEnabled = true, self.jsContext;
         self.themeManager = window.ThemeManager;
         self.framework = "itchcork";
         if (framework) {
@@ -772,9 +772,9 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel'], function (Test, Benchma
 
         self.processTest = function(test){
             if (test.run()) {
-                self.passedCount++;
+                self.vm.passedCount++;
             } else {
-                self.failedCount++;
+                self.vm.failedCount++;
             }
             self.vm.tests.push(test);
         }
@@ -933,6 +933,7 @@ define("SuiteViewModel", ['benchmark','BenchmarkUtil'], function(Benchmark,Bench
   var vm =  function() {
       var self = this;
       this.num=0;
+      self.passedCount = 0, self.failedCount = 0;
       this.suiteDesc = ko.observable('');
       this.jsContextStr = ko.observable('');
       this.coffeeContextStr = ko.observable('');
