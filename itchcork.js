@@ -772,9 +772,9 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel'], function (Test, Benchma
 
         self.processTest = function(test){
             if (test.run()) {
-                self.vm.passedCount++;
+                self.vm.passedCount(self.vm.passedCount() + 1);
             } else {
-                self.vm.failedCount++;
+                self.vm.failedCount(self.vm.failedCount() + 1);
             }
             self.vm.tests.push(test);
         }
@@ -932,8 +932,8 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
 define("SuiteViewModel", ['benchmark','BenchmarkUtil'], function(Benchmark,BenchmarkUtil) {
   var vm =  function() {
       var self = this;
-      this.num=0;
-      self.passedCount = 0, self.failedCount = 0;
+      this.num=ko.observable(0);
+      self.passedCount = ko.observable(0), self.failedCount = ko.observable(0);
       this.suiteDesc = ko.observable('');
       this.jsContextStr = ko.observable('');
       this.coffeeContextStr = ko.observable('');
