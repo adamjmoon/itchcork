@@ -14,15 +14,11 @@ require(['inheritanceHelper', 'ItchCork'], function (c, ic) {
         .it(function (c) {
             return c.kitten instanceof c.Mammal;
         }).shouldBe(true)
-        .it(function (c) {
-            return c.kitten instanceof c.LivingThing;
-        }).shouldBe(true)
+
         .it(function (c) {
             return c.mammalInstance instanceof c.Mammal;
         }).shouldBe(true)
-        .it(function (c) {
-            return c.mammalInstance instanceof c.LivingThing;
-        }).shouldBe(true)
+
         .it(function (c) {
             return c.mammalInstance.name;
         }).shouldBe("Bill")
