@@ -1124,7 +1124,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                         window.suiteView.totalTests(runner.total);
                                         window.suiteView.totalPassed(runner.total - runner.failures);
                                         window.suiteView.totalFailed(runner.failures);
-                                        window.suiteView.show();
+                                        //window.suiteView.show();
 
 
 
