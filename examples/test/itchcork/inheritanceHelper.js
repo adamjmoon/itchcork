@@ -22,5 +22,5 @@ require(['inheritanceHelper', 'ItchCork'], function (c, ic) {
         .it(function (c) {
             return c.mammalInstance.name;
         }).shouldBe("Bill")
-        .benchmark();
+
 });
