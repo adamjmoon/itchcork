@@ -607,49 +607,48 @@ this.length=0;this.name="nicescrollarray";this.each=function(e){for(var j=0,k=0;
 d){e[d]=function(){var e=arguments;return this.each(function(){this[d].apply(this,e)})}},I=0;I<M.length;I++)Q(u,M[I]);e.fn.getNiceScroll=function(j){return"undefined"==typeof j?new F(this):e.data(this[j],"__nicescroll")||!1};e.extend(e.expr[":"],{nicescroll:function(j){return e.data(j,"__nicescroll")?!0:!1}});e.fn.niceScroll=function(j,d){"undefined"==typeof d&&("object"==typeof j&&!("jquery"in j))&&(d=j,j=!1);var k=new F;"undefined"==typeof d&&(d={});j&&(d.doc=e(j),d.win=e(this));var s=!("doc"in
 d);!s&&!("win"in d)&&(d.win=e(this));this.each(function(){var j=e(this).data("__nicescroll")||!1;j||(d.doc=s?e(this):d.doc,j=new P(d,e(this)),e(this).data("__nicescroll",j));k.push(j)});return 1==k.length?k[0]:k};window.NiceScroll={getjQuery:function(){return e}};e.nicescroll||(e.nicescroll=new F,e.nicescroll.options=K)})(jQuery);
 
-define("BenchmarkUtil", ['BenchmarkViewModel'], function(bVM) {
+define("BenchmarkUtil", ['BenchmarkViewModel'], function (bVM) {
     "use strict";
-    function benchmarkUtil(){
-    var benchmarks = ko.observableArray([]);
+    function benchmarkUtil() {
+        var benchmarks = ko.observableArray([]);
 
-    this.runBenchmarks = function (benchmarkSuite, callback) {
-        benchmarkSuite.on('cycle', function (event) {
-            var b = event.target;
+        this.runBenchmarks = function (benchmarkSuite, callback) {
+            benchmarkSuite.on('cycle', function (event) {
+                var b = event.target;
 
-            var bm = new bVM();
-            bm.name(b.name);
-            bm.expression(b.name.replace(/context\.(.*?)\(\)\;/gi, '$1'));
-            bm.hz(b.hz.toFixed(0));
-            bm.relativateMarginError(b.stats.rme.toFixed(2) + '%');
-            bm.iterationPerSampleCycle(b.count);
-            bm.numAnalysisCycles(b.cycles);
-            bm.numSampleCycles(b.stats.sample.length);
+                var bm = new bVM();
+                bm.name(b.name);
+                bm.expression(b.name.replace(/context\.(.*?)\(\)\;/gi, '$1'));
+                bm.hz(b.hz.toFixed(0));
+                bm.relativateMarginError(b.stats.rme.toFixed(2) + '%');
+                bm.iterationPerSampleCycle(b.count);
+                bm.numAnalysisCycles(b.cycles);
+                bm.numSampleCycles(b.stats.sample.length);
 
-            benchmarks.push(bm);
-        })
-            .on('complete', function () {
+                benchmarks.push(bm);
+            })
+                .on('complete', function () {
 
-                benchmarks.sort(function (left, right) {
-                    var leftHz = parseInt(left.hz());
-                    var rightHz = parseInt(right.hz());
-                    return leftHz == rightHz ? 0 : (leftHz > rightHz ? -1 : 1)
+                    benchmarks.sort(function (left, right) {
+                        var leftHz = parseInt(left.hz());
+                        var rightHz = parseInt(right.hz());
+                        return leftHz == rightHz ? 0 : (leftHz > rightHz ? -1 : 1)
+                    });
+                    benchmarks()[0].fastest(true);
+                    var length = benchmarks().length;
+                    benchmarks()[length - 1].slowest(true);
+                    var slowestHz = benchmarks()[length - 1].hz();
+                    for (var i = 0; i < length; i++) {
+                        benchmarks()[i].timesFaster((benchmarks()[i].hz() / slowestHz).toFixed(3));
+                    }
+                    callback(benchmarks);
                 });
-                benchmarks()[0].fastest(true);
-                var length = benchmarks().length;
-                benchmarks()[length - 1].slowest(true);
-                var slowestHz = benchmarks()[length - 1].hz();
-                for (var i = 0; i < length; i++) {
-                    benchmarks()[i].timesFaster((benchmarks()[i].hz() / slowestHz).toFixed(3));
-                }
-                callback(benchmarks);
-            });
 
 
+            benchmarkSuite.run();
 
-        benchmarkSuite.run();
-
-        return self;
-    };
+            return self;
+        };
 
     }
 
@@ -824,6 +823,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel'], function (Test, Benchma
                 self.addTestWithBenchmarks(self.shouldEqualValue, func, testcase, false);
             }
             self.benchmark();
+            window.suiteView.add(self);
             return self;
         };
 
@@ -869,6 +869,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
             suite.vm.benchmarksDone.subscribe(function (newValue) {
                 self.setMenuHeight();
             });
+
         };
 
         self.show = function () {
