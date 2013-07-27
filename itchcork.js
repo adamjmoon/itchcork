@@ -866,10 +866,10 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         };
 
         self.add = function (suite) {
-            suite.vm.num = self.suites().length + 1;
+            suite.vm.num(self.suites().length + 1);
             self.totalTests(self.totalTests() + suite.vm.tests().length);
-            self.totalPassed(self.totalPassed() + suite.passedCount);
-            self.totalFailed(self.totalFailed() + suite.failedCount);
+            self.totalPassed(self.totalPassed() + suite.vm.passedCount());
+            self.totalFailed(self.totalFailed() + suite.vm.failedCount());
             self.suites.push(suite.vm);
             self.show();
             suite.vm.benchmarksDone.subscribe(function (newValue) {
