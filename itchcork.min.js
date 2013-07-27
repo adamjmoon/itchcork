@@ -22,6 +22,7 @@ window.ThemeManager = (function () {
         this.completedColor = "#5c8a00";
         this.tableBorderColor = "#222";
     };
+
     themeManager['cyborg'] = new theme();
     themeManager['custom'] = new theme();
     themeManager['cosmo'] = new theme();
