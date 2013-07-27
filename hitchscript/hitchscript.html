@@ -59,40 +59,40 @@
                 data-bind="visible: ThemeManager['currentTheme']() ==='customTheme'">
                 <li>bodyFontColor</li>
                 <input class="color pull-left"
-                       data-bind="value: amplify.store('customTheme').bodyFontColor, style: {'background-color': '#' + amplify.store('customTheme').bodyFontColor}"/></li>
+                       data-bind="value: ThemeManager.bodyFontColor, style: {'background-color': '#' + ThemeManager.bodyFontColor}, blur{ }"/></li>
                 <li>bodyBackgroundColor<input class="color pull-left"
-                                              data-bind="value: amplify.store('customTheme').bodyBackgroundColor, style: {'background-color': '#' + amplify.store('customTheme').bodyBackgroundColor + ' !important;'}"/>
+                                              data-bind="value: ThemeManager.bodyBackgroundColor, style: {'background-color': '#' + ThemeManager.bodyBackgroundColor + ' !important;'}"/>
                 </li>
                 <li>bodyGradientFromColor<input class="color pull-left"
-                                                data-bind="value: amplify.store('customTheme').bodyGradientFromColor.replace('#','')"/>
+                                                data-bind="value: ThemeManager.bodyGradientFromColor.replace('#','')"/>
                 </li>
                 <li>bodyGradientToColor<input class="color pull-left"
-                                              data-bind="value: amplify.store('customTheme').bodyGradientToColor"/></li>
-                <li>infoColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').infoColor"/>
+                                              data-bind="value: ThemeManager.bodyGradientToColor"/></li>
+                <li>infoColor<input class="color pull-left" data-bind="value: ThemeManager.infoColor"/>
                 </li>
-                <li>codeColor<input class="color pull-left" data-bind="value: amplify.store('customTheme').codeColor"/>
+                <li>codeColor<input class="color pull-left" data-bind="value: ThemeManager.codeColor"/>
                 </li>
                 <li>hoverColor<input class="color pull-left"
-                                     data-bind="value: amplify.store('customTheme').hoverColor"/></li>
+                                     data-bind="value: ThemeManager.hoverColor"/></li>
                 <li>wellBackgroundColor<input class="color pull-left"
-                                              data-bind="value: amplify.store('customTheme').wellBackgroundColor"/></li>
+                                              data-bind="value: ThemeManager.wellBackgroundColor"/></li>
                 <li>navBackgroundColor<input class="color pull-left"
-                                             data-bind="value: amplify.store('customTheme').navBackgroundColor"/></li>
+                                             data-bind="value: ThemeManager.navBackgroundColor"/></li>
                 <li>navBarInnerBackgroundColor<input class="color pull-left"
-                                                     data-bind="value: amplify.store('customTheme').navBarInnerBackgroundColor"/>
+                                                     data-bind="value: ThemeManager.navBarInnerBackgroundColor"/>
                 </li>
                 <li>inverseColor<input class="color pull-left"
-                                       data-bind="value: amplify.store('customTheme').inverseColor"/></li>
+                                       data-bind="value: ThemeManager.inverseColor"/></li>
                 <li>successColor<input class="color pull-left"
-                                       data-bind="value: amplify.store('customTheme').successColor"/></li>
+                                       data-bind="value: ThemeManager.successColor"/></li>
                 <li>errorColor<input class="color pull-left"
-                                     data-bind="value: amplify.store('customTheme').errorColor"/></li>
+                                     data-bind="value: ThemeManager.errorColor"/></li>
                 <li>completedColor<input class="color pull-left"
-                                         data-bind="value: amplify.store('customTheme').completedColor"/></li>
+                                         data-bind="value: ThemeManager.completedColor"/></li>
                 <li>tableBorderColor<input class="color pull-left"
-                                           data-bind="value: amplify.store('customTheme').tableBorderColor"/></li>
-                <li>radius<input class="pull-left" data-bind="value: amplify.store('customTheme').radius"/></li>
-                <li>badgeRadius<input class="pull-left" data-bind="value: amplify.store('customTheme').badgeRadius"/>
+                                           data-bind="value: ThemeManager.tableBorderColor"/></li>
+                <li>radius<input class="pull-left" data-bind="value: ThemeManager.radius"/></li>
+                <li>badgeRadius<input class="pull-left" data-bind="value: ThemeManager.badgeRadius"/>
                 </li>
             </ul>
         </ul>
