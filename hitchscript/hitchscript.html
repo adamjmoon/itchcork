@@ -59,40 +59,40 @@
                 data-bind="visible: amplify.store('currentTheme') ==='customTheme'">
                 <li>bodyFontColor</li>
                 <input class="color pull-left"
-                       data-bind="value: bodyFontColor, style: {'background-color': '#' + ThemeManager.bodyFontColor}"/></li>
+                       data-bind="value: cto.bodyFontColor, style: {'background-color': '#' + ThemeManager.bodyFontColor}"/></li>
                 <li>bodyBackgroundColor<input class="color pull-left"
-                                              data-bind="value: bodyBackgroundColor, style: {'background-color': '#' + ThemeManager.bodyBackgroundColor + ' !important;'}"/>
+                                              data-bind="value: cto.bodyBackgroundColor, style: {'background-color': '#' + ThemeManager.bodyBackgroundColor + ' !important;'}"/>
                 </li>
                 <li>bodyGradientFromColor<input class="color pull-left"
-                                                data-bind="value: bodyGradientFromColor"/>
+                                                data-bind="value: cto.bodyGradientFromColor"/>
                 </li>
                 <li>bodyGradientToColor<input class="color pull-left"
-                                              data-bind="value: bodyGradientToColor"/></li>
-                <li>infoColor<input class="color pull-left" data-bind="value: infoColor"/>
+                                              data-bind="value: cto.bodyGradientToColor"/></li>
+                <li>infoColor<input class="color pull-left" data-bind="value: cto.infoColor"/>
                 </li>
-                <li>codeColor<input class="color pull-left" data-bind="value: codeColor"/>
+                <li>codeColor<input class="color pull-left" data-bind="value: cto.codeColor"/>
                 </li>
                 <li>hoverColor<input class="color pull-left"
-                                     data-bind="value: hoverColor"/></li>
+                                     data-bind="value: cto.hoverColor"/></li>
                 <li>wellBackgroundColor<input class="color pull-left"
-                                              data-bind="value: wellBackgroundColor"/></li>
+                                              data-bind="value: cto.wellBackgroundColor"/></li>
                 <li>navBackgroundColor<input class="color pull-left"
-                                             data-bind="value: navBackgroundColor"/></li>
+                                             data-bind="value: cto.navBackgroundColor"/></li>
                 <li>navBarInnerBackgroundColor<input class="color pull-left"
-                                                     data-bind="value: navBarInnerBackgroundColor"/>
+                                                     data-bind="value: cto.navBarInnerBackgroundColor"/>
                 </li>
                 <li>inverseColor<input class="color pull-left"
-                                       data-bind="value: inverseColor"/></li>
+                                       data-bind="value: cto.inverseColor"/></li>
                 <li>successColor<input class="color pull-left"
-                                       data-bind="value: successColor"/></li>
+                                       data-bind="value: cto.successColor"/></li>
                 <li>errorColor<input class="color pull-left"
-                                     data-bind="value: errorColor"/></li>
+                                     data-bind="value: cto.errorColor"/></li>
                 <li>completedColor<input class="color pull-left"
-                                         data-bind="value: completedColor"/></li>
+                                         data-bind="value: cto.completedColor"/></li>
                 <li>tableBorderColor<input class="color pull-left"
-                                           data-bind="value: tableBorderColor"/></li>
-                <li>radius<input class="pull-left" data-bind="value: radius"/></li>
-                <li>badgeRadius<input class="pull-left" data-bind="value: badgeRadius"/>
+                                           data-bind="value: cto.tableBorderColor"/></li>
+                <li>radius<input class="pull-left" data-bind="value: cto.radius"/></li>
+                <li>badgeRadius<input class="pull-left" data-bind="value: cto.badgeRadius"/>
                 </li>
             </ul>
         </ul>
