@@ -118,8 +118,8 @@
         </div>
     </div>
 </div>
-<div id="view" class="view container-fluid">
-    <div class="accordion" id="suiteListAccordian" data-bind="'foreach': suites">
+<div id="view" class="view container-fluid" style="display: none;" data-bind="visible: suites().length>0">
+    <div class="accordion" id="suiteListAccordian"  data-bind="'foreach': suites">
         <div class="accordion-group container-fluid">
             <div class="navbar navbar-inverse">
                 <div class="accordion-heading">
@@ -248,7 +248,7 @@
                             <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
                                                               data-bind="attr: {'data-target': '.collapseBenchmarks' + num}"
                                                               data-target=".collapseBenchmarks" href="#"><span
-                                    class="badge badge-info">BENCHMARKS&nbsp;
+                                    class="badge badge-info">BENCHMARKS&nbsp;</span>
                                     <span data-bind="text: benchmarkPlatform"
                                           class="badge badge-inverse"/>&nbsp;<span
                                         data-bind="text: !benchmarksDone() ? 'RUNNING...': 'COMPLETED', css: benchmarksDone() ? 'badge badge-success' : 'badge badge-warning'"/></a>
