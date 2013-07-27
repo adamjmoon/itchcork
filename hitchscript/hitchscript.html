@@ -59,12 +59,12 @@
                 data-bind="visible: amplify.store('currentTheme') ==='customTheme'">
                 <li>bodyFontColor</li>
                 <input class="color pull-left"
-                       data-bind="value: bodyFontColor, style: {'background-color': '#' + ThemeManager.bodyFontColor}, blur{ }"/></li>
+                       data-bind="value: bodyFontColor, style: {'background-color': '#' + ThemeManager.bodyFontColor}"/></li>
                 <li>bodyBackgroundColor<input class="color pull-left"
-                                              data-bind="value: bodyBackgroundColor, style: {'background-color': '#' + ThemeManager.bodyBackgroundColor + ' !important;'}"/>
+                                              data-bind="value: bodyBackgroundColor(), style: {'background-color': '#' + ThemeManager.bodyBackgroundColor + ' !important;'}"/>
                 </li>
                 <li>bodyGradientFromColor<input class="color pull-left"
-                                                data-bind="value: bodyGradientFromColor.replace('#','')"/>
+                                                data-bind="value: bodyGradientFromColor()"/>
                 </li>
                 <li>bodyGradientToColor<input class="color pull-left"
                                               data-bind="value: bodyGradientToColor"/></li>
