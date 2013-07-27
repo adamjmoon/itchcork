@@ -22,7 +22,7 @@ require(['objectcreate', 'ItchCork'], function (c, ic) {
            .it(function(c) {return c.cube.move(1,1);}).shouldBe('Cube grew in 3 dimensions.')
            .it(function(c) {c.cube.move(1,1); return c.cube.x;}).shouldBe(2)
            .it(function(c) {c.cube.move(1,1); return c.cube.y;}).shouldBe(2)
-           .it(function(c) {c.cube.move(1,1);return c.cube.z;}).shouldBe(2)
+           .it(function(c) {c.cube.move(1,1); return c.cube.z;}).shouldBe(2)
            .it(function(c) {return c.cube.move(1);}).shouldBe('Cube grew in 3 dimensions.')
            .it(function(c) {return c.cube.x;}).shouldBe(3)
            .it(function(c) {return c.cube.y;}).shouldBe(3)
@@ -104,27 +104,27 @@ require(['inheritanceHelper', 'ItchCork'], function (c, ic) {
         .it(function (c) {
             return c.felix.toString();
         }).shouldBe('[Cat "Felix"]')
-        .it(function (c) {
-            return c.kitten.toString();
-        }).shouldBe('[Cat "Baby Felix"]')
-        .it(function (c) {
-            return c.kitten instanceof c.Cat;
-        }).shouldBe(true)
-        .it(function (c) {
-            return c.kitten instanceof c.Mammal;
-        }).shouldBe(true)
-        .it(function (c) {
-            return c.kitten instanceof c.LivingThing;
-        }).shouldBe(true)
-        .it(function (c) {
-            return c.mammalInstance instanceof c.Mammal;
-        }).shouldBe(true)
-        .it(function (c) {
-            return c.mammalInstance instanceof c.LivingThing;
-        }).shouldBe(true)
-        .it(function (c) {
-            return c.mammalInstance.name;
-        }).shouldBe("Bill")
+//        .it(function (c) {
+//            return c.kitten.toString();
+//        }).shouldBe('[Cat "Baby Felix"]')
+//        .it(function (c) {
+//            return c.kitten instanceof c.Cat;
+//        }).shouldBe(true)
+//        .it(function (c) {
+//            return c.kitten instanceof c.Mammal;
+//        }).shouldBe(true)
+//        .it(function (c) {
+//            return c.kitten instanceof c.LivingThing;
+//        }).shouldBe(true)
+//        .it(function (c) {
+//            return c.mammalInstance instanceof c.Mammal;
+//        }).shouldBe(true)
+//        .it(function (c) {
+//            return c.mammalInstance instanceof c.LivingThing;
+//        }).shouldBe(true)
+//        .it(function (c) {
+//            return c.mammalInstance.name;
+//        }).shouldBe("Bill")
         .benchmark();
 });
 
