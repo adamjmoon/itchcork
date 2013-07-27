@@ -932,7 +932,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
 define("SuiteViewModel", ['benchmark','BenchmarkUtil'], function(Benchmark,BenchmarkUtil) {
   var vm =  function() {
       var self = this;
-      this.num;
+      this.num=0;
       this.suiteDesc = ko.observable('');
       this.jsContextStr = ko.observable('');
       this.coffeeContextStr = ko.observable('');
