@@ -104,27 +104,27 @@ require(['inheritanceHelper', 'ItchCork'], function (c, ic) {
         .it(function (c) {
             return c.felix.toString();
         }).shouldBe('[Cat "Felix"]')
-//        .it(function (c) {
-//            return c.kitten.toString();
-//        }).shouldBe('[Cat "Baby Felix"]')
-//        .it(function (c) {
-//            return c.kitten instanceof c.Cat;
-//        }).shouldBe(true)
-//        .it(function (c) {
-//            return c.kitten instanceof c.Mammal;
-//        }).shouldBe(true)
-//        .it(function (c) {
-//            return c.kitten instanceof c.LivingThing;
-//        }).shouldBe(true)
-//        .it(function (c) {
-//            return c.mammalInstance instanceof c.Mammal;
-//        }).shouldBe(true)
-//        .it(function (c) {
-//            return c.mammalInstance instanceof c.LivingThing;
-//        }).shouldBe(true)
-//        .it(function (c) {
-//            return c.mammalInstance.name;
-//        }).shouldBe("Bill")
+        .it(function (c) {
+            return c.kitten.toString();
+        }).shouldBe('[Cat "Baby Felix"]')
+        .it(function (c) {
+            return c.kitten instanceof c.Cat;
+        }).shouldBe(true)
+        .it(function (c) {
+            return c.kitten instanceof c.Mammal;
+        }).shouldBe(true)
+        .it(function (c) {
+            return c.kitten instanceof c.LivingThing;
+        }).shouldBe(true)
+        .it(function (c) {
+            return c.mammalInstance instanceof c.Mammal;
+        }).shouldBe(true)
+        .it(function (c) {
+            return c.mammalInstance instanceof c.LivingThing;
+        }).shouldBe(true)
+        .it(function (c) {
+            return c.mammalInstance.name;
+        }).shouldBe("Bill")
         .benchmark();
 });
 

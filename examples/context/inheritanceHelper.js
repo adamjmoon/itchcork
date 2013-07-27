@@ -18,16 +18,19 @@ define('inheritanceHelper',function(){
             return this;
         };
 
+      var LivingThing = {
+          beBorn : function(){
+              this.alive = true;
+          }
+      };
 
       function Mammal(name){
           this.name=name;
           this.offspring=[];
-          this.beBorn = function(){
-              this.alive = true;
-          };
       }
+      Mammal.inheritsFrom( LivingThing );
       Mammal.prototype.haveABaby=function(){
-          this.beBorn.call(this);
+          this.parent.beBorn.call(this);
           var newBaby = new this.constructor( "Baby " + this.name );
           this.offspring.push(newBaby);
           return newBaby;
@@ -45,6 +48,7 @@ define('inheritanceHelper',function(){
           return '[Cat "'+this.name+'"]';
       }
 
+    this.LivingThing = LivingThing;
     this.mammalInstance = new Mammal("Bill");
     this.Mammal = Mammal;
     this.Cat = Cat;
