@@ -832,7 +832,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel'], function (Test, Benchma
         };
 
         self.addToView = function(){
-            window.suiteView.add(self.vm);
+            window.suiteView.add(self);
         }
 
 
