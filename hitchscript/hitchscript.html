@@ -59,40 +59,40 @@
                 data-bind="visible: ThemeManager['currentTheme']() ==='customTheme'">
                 <li>bodyFontColor</li>
                 <input class="color pull-left"
-                       data-bind="value: ThemeManager.bodyFontColor, style: {'background-color': '#' + ThemeManager.bodyFontColor}, blur{ }"/></li>
+                       data-bind="value: bodyFontColor, style: {'background-color': '#' + ThemeManager.bodyFontColor}, blur{ }"/></li>
                 <li>bodyBackgroundColor<input class="color pull-left"
-                                              data-bind="value: ThemeManager.bodyBackgroundColor, style: {'background-color': '#' + ThemeManager.bodyBackgroundColor + ' !important;'}"/>
+                                              data-bind="value: bodyBackgroundColor, style: {'background-color': '#' + ThemeManager.bodyBackgroundColor + ' !important;'}"/>
                 </li>
                 <li>bodyGradientFromColor<input class="color pull-left"
-                                                data-bind="value: ThemeManager.bodyGradientFromColor.replace('#','')"/>
+                                                data-bind="value: bodyGradientFromColor.replace('#','')"/>
                 </li>
                 <li>bodyGradientToColor<input class="color pull-left"
-                                              data-bind="value: ThemeManager.bodyGradientToColor"/></li>
-                <li>infoColor<input class="color pull-left" data-bind="value: ThemeManager.infoColor"/>
+                                              data-bind="value: bodyGradientToColor"/></li>
+                <li>infoColor<input class="color pull-left" data-bind="value: infoColor"/>
                 </li>
-                <li>codeColor<input class="color pull-left" data-bind="value: ThemeManager.codeColor"/>
+                <li>codeColor<input class="color pull-left" data-bind="value: codeColor"/>
                 </li>
                 <li>hoverColor<input class="color pull-left"
-                                     data-bind="value: ThemeManager.hoverColor"/></li>
+                                     data-bind="value: hoverColor"/></li>
                 <li>wellBackgroundColor<input class="color pull-left"
-                                              data-bind="value: ThemeManager.wellBackgroundColor"/></li>
+                                              data-bind="value: wellBackgroundColor"/></li>
                 <li>navBackgroundColor<input class="color pull-left"
-                                             data-bind="value: ThemeManager.navBackgroundColor"/></li>
+                                             data-bind="value: navBackgroundColor"/></li>
                 <li>navBarInnerBackgroundColor<input class="color pull-left"
-                                                     data-bind="value: ThemeManager.navBarInnerBackgroundColor"/>
+                                                     data-bind="value: navBarInnerBackgroundColor"/>
                 </li>
                 <li>inverseColor<input class="color pull-left"
-                                       data-bind="value: ThemeManager.inverseColor"/></li>
+                                       data-bind="value: inverseColor"/></li>
                 <li>successColor<input class="color pull-left"
-                                       data-bind="value: ThemeManager.successColor"/></li>
+                                       data-bind="value: successColor"/></li>
                 <li>errorColor<input class="color pull-left"
-                                     data-bind="value: ThemeManager.errorColor"/></li>
+                                     data-bind="value: errorColor"/></li>
                 <li>completedColor<input class="color pull-left"
-                                         data-bind="value: ThemeManager.completedColor"/></li>
+                                         data-bind="value: completedColor"/></li>
                 <li>tableBorderColor<input class="color pull-left"
-                                           data-bind="value: ThemeManager.tableBorderColor"/></li>
-                <li>radius<input class="pull-left" data-bind="value: ThemeManager.radius"/></li>
-                <li>badgeRadius<input class="pull-left" data-bind="value: ThemeManager.badgeRadius"/>
+                                           data-bind="value: tableBorderColor"/></li>
+                <li>radius<input class="pull-left" data-bind="value: radius"/></li>
+                <li>badgeRadius<input class="pull-left" data-bind="value: badgeRadius"/>
                 </li>
             </ul>
         </ul>
