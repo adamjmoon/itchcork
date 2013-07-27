@@ -244,7 +244,7 @@
                             </div>
                         </div>
                         <div class="accordion-group"
-                             data-bind="visible: window.suiteView.unitTestFrameworkManager.getFramework()==='itchcork'">
+                             data-bind="visible: window.suiteView.unitTestFrameworkManager.getFramework()==='itchcork' && benchmarkingEnabled()">
                             <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
                                                               data-bind="attr: {'data-target': '.collapseBenchmarks' + num}"
                                                               data-target=".collapseBenchmarks" href="#"><span
