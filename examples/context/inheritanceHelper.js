@@ -45,7 +45,6 @@ define('inheritanceHelper',function(){
           return '[Cat "'+this.name+'"]';
       }
 
-    this.LivingThing = LivingThing;
     this.mammalInstance = new Mammal("Bill");
     this.Mammal = Mammal;
     this.Cat = Cat;
