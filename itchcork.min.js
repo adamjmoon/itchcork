@@ -438,7 +438,7 @@ window.ThemeManager = (function () {
             + ".nicescroll-rails{margin-top:45px !important;}"
             + "a.logoBtn:active {height: 100%;-webkit-transform: rotate(180deg);-webkit-transition: all .5s linear;}"
             + ".collapseAll {-webkit-transform: rotate(0deg);-webkit-transition: all .5s linear;}"
-            + ".expandAll {-webkit-transform: rotate(90deg);-webkit-transition: all .5s linear;} input {width: 99% !important;border: 0px !important} div.accordion-heading span{ margin-left: 5px;} ";
+            + ".expandAll {-webkit-transform: rotate(90deg);-webkit-transition: all .5s linear;} input {width: 99% !important;border: 0px !important; height: 50px; } div.accordion-heading span{ margin-left: 5px;} ";
 
     };
     themeManager.set = function (newTheme) {
