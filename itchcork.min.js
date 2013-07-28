@@ -444,6 +444,8 @@ window.ThemeManager = (function () {
             + ".collapseAll {-webkit-transform: rotate(0deg);-webkit-transition: all .5s linear;}"
             + ".expandAll {-webkit-transform: rotate(90deg);-webkit-transition: all .5s linear;} input {margin-right: 1px; width: 100%;border: 0px !important; border-top: dotted 1px !important; border-bottom: dotted 1px !important;height: 30px; } div.accordion-heading span{ margin-left: 5px;} ";
 
+
+
     };
     themeManager.set = function (newTheme) {
         if (newTheme != amplify.store('currentTheme')) {
