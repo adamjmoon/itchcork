@@ -440,7 +440,7 @@ window.ThemeManager = (function () {
             + ".nicescroll-rails{margin-top:45px !important;}"
             + "a.logoBtn:active {height: 100%;-webkit-transform: rotate(180deg);-webkit-transition: all .5s linear;}"
             + ".collapseAll {-webkit-transform: rotate(0deg);-webkit-transition: all .5s linear;}"
-            + ".expandAll {-webkit-transform: rotate(90deg);-webkit-transition: all .5s linear;} input {margin-right: 1px; width: 100%; border: 1px 0px 1px 0px solid #fff !important; height: 30px; } div.accordion-heading span{ margin-left: 5px;} ";
+            + ".expandAll {-webkit-transform: rotate(90deg);-webkit-transition: all .5s linear;} input {margin-right: 1px; width: 100%; border: dotted 1.5em !important; height: 30px; } div.accordion-heading span{ margin-left: 5px;} ";
 
     };
     themeManager.set = function (newTheme) {
