@@ -438,7 +438,6 @@ window.ThemeManager = (function () {
             + ".nicescroll-rails{margin-top:45px !important;}"
             + "a.logoBtn:active {height: 100%;-webkit-transform: rotate(180deg);-webkit-transition: all .5s linear;}"
             + ".collapseAll {-webkit-transform: rotate(0deg);-webkit-transition: all .5s linear;}"
-            + ".expandAll {-webkit-transform: rotate(90deg);-webkit-transition: all .5s linear;} input {width: 100%; border: 0px !important; height: 30px; } div.accordion-heading span{ margin-left: 5px;} ";
 
     };
     themeManager.set = function (newTheme) {
@@ -450,7 +449,7 @@ window.ThemeManager = (function () {
 
     themeManager.updateCustom = function (prop,value){
         var currentCustomTheme = amplify.store('customTheme');
-        if(prop.indexOf('color') > 0)
+        if(prop.indexOf('Color') > 0)
             currentCustomTheme[prop] = '#' + value;
         else
             currentCustomTheme[prop] = value;
