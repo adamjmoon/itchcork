@@ -57,7 +57,9 @@
             <li><a href="" data-bind="click: function(){setTheme('customTheme');}">Custom</a></li>
             <ul class="nav nav-tabs nav-stacked" style="display: none;"
                 data-bind="visible: currentTheme() ==='customTheme'">
-                <li>bodyFontColor</li>
+                <div class="navbar navbar-inverse menu-title">
+                    <div class="navbar-inner"><span class="badge badge-info">Body Font Color</span></div>
+                </div>
                 <input class="color pull-left"
                        data-bind="value: cto.bodyFontColor, style: {'background-color': '#' + ThemeManager.bodyFontColor}"/></li>
                 <li>bodyBackgroundColor<input class="color pull-left"
