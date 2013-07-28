@@ -8,4 +8,988 @@
  * @updated 2013-04-08
  * @link    http://jscolor.com
  */
-;var jscolor={dir:"",bindClass:"color",binding:true,preloading:true,install:function(){jscolor.addEvent(window,"load",jscolor.init)},init:function(){if(jscolor.binding){jscolor.bind()}if(jscolor.preloading){jscolor.preload()}},getDir:function(){if(!jscolor.dir){var a=jscolor.detectDir();jscolor.dir=a!==false?a:"jscolor/"}return jscolor.dir},detectDir:function(){var c=location.href;var d=document.getElementsByTagName("base");for(var a=0;a<d.length;a+=1){if(d[a].href){c=d[a].href}}var d=document.getElementsByTagName("script");for(var a=0;a<d.length;a+=1){if(d[a].src&&/(^|\/)jscolor\.js([?#].*)?$/i.test(d[a].src)){var f=new jscolor.URI(d[a].src);var b=f.toAbsolute(c);b.path=b.path.replace(/[^\/]+$/,"");b.query=null;b.fragment=null;return b.toString()}}return false},bind:function(){var d=new RegExp("(^|\\s)("+jscolor.bindClass+")\\s*(\\{[^}]*\\})?","i");var f=document.getElementsByTagName("input");for(var c=0;c<f.length;c+=1){var b;if(!f[c].color&&f[c].className&&(b=f[c].className.match(d))){var g={};if(b[3]){try{g=(new Function("return ("+b[3]+")"))()}catch(a){}}f[c].color=new jscolor.color(f[c],g)}}},preload:function(){for(var a in jscolor.imgRequire){if(jscolor.imgRequire.hasOwnProperty(a)){jscolor.loadImage(a)}}},images:{pad:[181,101],sld:[16,101],cross:[15,15],arrow:[7,11]},imgRequire:{},imgLoaded:{},requireImage:function(a){jscolor.imgRequire[a]=true},loadImage:function(a){if(!jscolor.imgLoaded[a]){jscolor.imgLoaded[a]=new Image();jscolor.imgLoaded[a].src=jscolor.getDir()+a}},fetchElement:function(a){return typeof a==="string"?document.getElementById(a):a},addEvent:function(a,c,b){if(a.addEventListener){a.addEventListener(c,b,false)}else{if(a.attachEvent){a.attachEvent("on"+c,b)}}},fireEvent:function(a,c){if(!a){return}if(document.createEvent){var b=document.createEvent("HTMLEvents");b.initEvent(c,true,true);a.dispatchEvent(b)}else{if(document.createEventObject){var b=document.createEventObject();a.fireEvent("on"+c,b)}else{if(a["on"+c]){a["on"+c]()}}}},getElementPos:function(c){var d=c,b=c;var a=0,f=0;if(d.offsetParent){do{a+=d.offsetLeft;f+=d.offsetTop}while(d=d.offsetParent)}while((b=b.parentNode)&&b.nodeName.toUpperCase()!=="BODY"){a-=b.scrollLeft;f-=b.scrollTop}return[a,f]},getElementSize:function(a){return[a.offsetWidth,a.offsetHeight]},getRelMousePos:function(b){var a=0,c=0;if(!b){b=window.event}if(typeof b.offsetX==="number"){a=b.offsetX;c=b.offsetY}else{if(typeof b.layerX==="number"){a=b.layerX;c=b.layerY}}return{x:a,y:c}},getViewPos:function(){if(typeof window.pageYOffset==="number"){return[window.pageXOffset,window.pageYOffset]}else{if(document.body&&(document.body.scrollLeft||document.body.scrollTop)){return[document.body.scrollLeft,document.body.scrollTop]}else{if(document.documentElement&&(document.documentElement.scrollLeft||document.documentElement.scrollTop)){return[document.documentElement.scrollLeft,document.documentElement.scrollTop]}else{return[0,0]}}}},getViewSize:function(){if(typeof window.innerWidth==="number"){return[window.innerWidth,window.innerHeight]}else{if(document.body&&(document.body.clientWidth||document.body.clientHeight)){return[document.body.clientWidth,document.body.clientHeight]}else{if(document.documentElement&&(document.documentElement.clientWidth||document.documentElement.clientHeight)){return[document.documentElement.clientWidth,document.documentElement.clientHeight]}else{return[0,0]}}}},URI:function(a){this.scheme=null;this.authority=null;this.path="";this.query=null;this.fragment=null;this.parse=function(d){var c=d.match(/^(([A-Za-z][0-9A-Za-z+.-]*)(:))?((\/\/)([^\/?#]*))?([^?#]*)((\?)([^#]*))?((#)(.*))?/);this.scheme=c[3]?c[2]:null;this.authority=c[5]?c[6]:null;this.path=c[7];this.query=c[9]?c[10]:null;this.fragment=c[12]?c[13]:null;return this};this.toString=function(){var c="";if(this.scheme!==null){c=c+this.scheme+":"}if(this.authority!==null){c=c+"//"+this.authority}if(this.path!==null){c=c+this.path}if(this.query!==null){c=c+"?"+this.query}if(this.fragment!==null){c=c+"#"+this.fragment}return c};this.toAbsolute=function(e){var e=new jscolor.URI(e);var d=this;var c=new jscolor.URI;if(e.scheme===null){return false}if(d.scheme!==null&&d.scheme.toLowerCase()===e.scheme.toLowerCase()){d.scheme=null}if(d.scheme!==null){c.scheme=d.scheme;c.authority=d.authority;c.path=b(d.path);c.query=d.query}else{if(d.authority!==null){c.authority=d.authority;c.path=b(d.path);c.query=d.query}else{if(d.path===""){c.path=e.path;if(d.query!==null){c.query=d.query}else{c.query=e.query}}else{if(d.path.substr(0,1)==="/"){c.path=b(d.path)}else{if(e.authority!==null&&e.path===""){c.path="/"+d.path}else{c.path=e.path.replace(/[^\/]+$/,"")+d.path}c.path=b(c.path)}c.query=d.query}c.authority=e.authority}c.scheme=e.scheme}c.fragment=d.fragment;return c};function b(e){var c="";while(e){if(e.substr(0,3)==="../"||e.substr(0,2)==="./"){e=e.replace(/^\.+/,"").substr(1)}else{if(e.substr(0,3)==="/./"||e==="/."){e="/"+e.substr(3)}else{if(e.substr(0,4)==="/../"||e==="/.."){e="/"+e.substr(4);c=c.replace(/\/?[^\/]*$/,"")}else{if(e==="."||e===".."){e=""}else{var d=e.match(/^\/?[^\/]*/)[0];e=e.substr(d.length);c=c+d}}}}}return c}if(a){this.parse(a)}},color:function(B,d){this.required=true;this.adjust=true;this.hash=false;this.caps=true;this.slider=true;this.valueElement=B;this.styleElement=B;this.onImmediateChange=null;this.hsv=[0,0,1];this.rgb=[1,1,1];this.minH=0;this.maxH=6;this.minS=0;this.maxS=1;this.minV=0;this.maxV=1;this.pickerOnfocus=true;this.pickerMode="HSV";this.pickerPosition="bottom";this.pickerSmartPosition=true;this.pickerButtonHeight=20;this.pickerClosable=false;this.pickerCloseText="Close";this.pickerButtonColor="ButtonText";this.pickerFace=10;this.pickerFaceColor="ThreeDFace";this.pickerBorder=1;this.pickerBorderColor="ThreeDHighlight ThreeDShadow ThreeDShadow ThreeDHighlight";this.pickerInset=1;this.pickerInsetColor="ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow";this.pickerZIndex=10000;for(var s in d){if(d.hasOwnProperty(s)){this[s]=d[s]}}this.hidePicker=function(){if(u()){g()}};this.showPicker=function(){if(!u()){var K=jscolor.getElementPos(B);var H=jscolor.getElementSize(B);var E=jscolor.getViewPos();var M=jscolor.getViewSize();var p=t(this);var L,J,I;switch(this.pickerPosition.toLowerCase()){case"left":L=1;J=0;I=-1;break;case"right":L=1;J=0;I=1;break;case"top":L=0;J=1;I=-1;break;default:L=0;J=1;I=1;break}var G=(H[J]+p[J])/2;if(!this.pickerSmartPosition){var F=[K[L],K[J]+H[J]-G+G*I]}else{var F=[-E[L]+K[L]+p[L]>M[L]?(-E[L]+K[L]+H[L]/2>M[L]/2&&K[L]+H[L]-p[L]>=0?K[L]+H[L]-p[L]:K[L]):K[L],-E[J]+K[J]+H[J]+p[J]-G+G*I>M[J]?(-E[J]+K[J]+H[J]/2>M[J]/2&&K[J]+H[J]-G-G*I>=0?K[J]+H[J]-G-G*I:K[J]+H[J]-G+G*I):(K[J]+H[J]-G+G*I>=0?K[J]+H[J]-G+G*I:K[J]+H[J]-G-G*I)]}k(F[L],F[J])}};this.importColor=function(){if(!a){this.exportColor()}else{if(!this.adjust){if(!this.fromString(a.value,x)){D.style.backgroundImage=D.jscStyle.backgroundImage;D.style.backgroundColor=D.jscStyle.backgroundColor;D.style.color=D.jscStyle.color;this.exportColor(x|C)}}else{if(!this.required&&/^\s*$/.test(a.value)){a.value="";D.style.backgroundImage=D.jscStyle.backgroundImage;D.style.backgroundColor=D.jscStyle.backgroundColor;D.style.color=D.jscStyle.color;this.exportColor(x|C)}else{if(this.fromString(a.value)){}else{this.exportColor()}}}}};this.exportColor=function(p){if(!(p&x)&&a){var E=this.toString();if(this.caps){E=E.toUpperCase()}if(this.hash){E="#"+E}a.value=E}if(!(p&C)&&D){D.style.backgroundImage="none";D.style.backgroundColor="#"+this.toString();D.style.color=0.213*this.rgb[0]+0.715*this.rgb[1]+0.072*this.rgb[2]<0.5?"#FFF":"#000"}if(!(p&v)&&u()){r()}if(!(p&e)&&u()){A()}};this.fromHSV=function(G,F,E,p){if(G!==null){G=Math.max(0,this.minH,Math.min(6,this.maxH,G))}if(F!==null){F=Math.max(0,this.minS,Math.min(1,this.maxS,F))}if(E!==null){E=Math.max(0,this.minV,Math.min(1,this.maxV,E))}this.rgb=h(G===null?this.hsv[0]:(this.hsv[0]=G),F===null?this.hsv[1]:(this.hsv[1]=F),E===null?this.hsv[2]:(this.hsv[2]=E));this.exportColor(p)};this.fromRGB=function(I,H,p,E){if(I!==null){I=Math.max(0,Math.min(1,I))}if(H!==null){H=Math.max(0,Math.min(1,H))}if(p!==null){p=Math.max(0,Math.min(1,p))}var G=y(I===null?this.rgb[0]:I,H===null?this.rgb[1]:H,p===null?this.rgb[2]:p);if(G[0]!==null){this.hsv[0]=Math.max(0,this.minH,Math.min(6,this.maxH,G[0]))}if(G[2]!==0){this.hsv[1]=G[1]===null?null:Math.max(0,this.minS,Math.min(1,this.maxS,G[1]))}this.hsv[2]=G[2]===null?null:Math.max(0,this.minV,Math.min(1,this.maxV,G[2]));var F=h(this.hsv[0],this.hsv[1],this.hsv[2]);this.rgb[0]=F[0];this.rgb[1]=F[1];this.rgb[2]=F[2];this.exportColor(E)};this.fromString=function(F,E){var p=F.match(/^\W*([0-9A-F]{3}([0-9A-F]{3})?)\W*$/i);if(!p){return false}else{if(p[1].length===6){this.fromRGB(parseInt(p[1].substr(0,2),16)/255,parseInt(p[1].substr(2,2),16)/255,parseInt(p[1].substr(4,2),16)/255,E)}else{this.fromRGB(parseInt(p[1].charAt(0)+p[1].charAt(0),16)/255,parseInt(p[1].charAt(1)+p[1].charAt(1),16)/255,parseInt(p[1].charAt(2)+p[1].charAt(2),16)/255,E)}return true}};this.toString=function(){return((256|Math.round(255*this.rgb[0])).toString(16).substr(1)+(256|Math.round(255*this.rgb[1])).toString(16).substr(1)+(256|Math.round(255*this.rgb[2])).toString(16).substr(1))};function y(I,H,E){var J=Math.min(Math.min(I,H),E);var F=Math.max(Math.max(I,H),E);var p=F-J;if(p===0){return[null,0,F]}var G=I===J?3+(E-H)/p:(H===J?5+(I-E)/p:1+(H-I)/p);return[G===6?0:G,p/F,F]}function h(H,G,E){if(H===null){return[E,E,E]}var F=Math.floor(H);var I=F%2?H-F:1-(H-F);var p=E*(1-G);var J=E*(1-G*I);switch(F){case 6:case 0:return[E,J,p];case 1:return[J,E,p];case 2:return[p,E,J];case 3:return[p,J,E];case 4:return[J,p,E];case 5:return[E,p,J]}}function g(){delete jscolor.picker.owner;document.getElementsByTagName("body")[0].removeChild(jscolor.picker.boxB)}function k(L,K){if(!jscolor.picker){jscolor.picker={box:document.createElement("div"),boxB:document.createElement("div"),pad:document.createElement("div"),padB:document.createElement("div"),padM:document.createElement("div"),sld:document.createElement("div"),sldB:document.createElement("div"),sldM:document.createElement("div"),btn:document.createElement("div"),btnS:document.createElement("span"),btnT:document.createTextNode(l.pickerCloseText)};for(var I=0,J=4;I<jscolor.images.sld[1];I+=J){var H=document.createElement("div");H.style.height=J+"px";H.style.fontSize="1px";H.style.lineHeight="0";jscolor.picker.sld.appendChild(H)}jscolor.picker.sldB.appendChild(jscolor.picker.sld);jscolor.picker.box.appendChild(jscolor.picker.sldB);jscolor.picker.box.appendChild(jscolor.picker.sldM);jscolor.picker.padB.appendChild(jscolor.picker.pad);jscolor.picker.box.appendChild(jscolor.picker.padB);jscolor.picker.box.appendChild(jscolor.picker.padM);jscolor.picker.btnS.appendChild(jscolor.picker.btnT);jscolor.picker.btn.appendChild(jscolor.picker.btnS);jscolor.picker.box.appendChild(jscolor.picker.btn);jscolor.picker.boxB.appendChild(jscolor.picker.box)}var E=jscolor.picker;E.box.onmouseup=E.box.onmouseout=function(){B.focus()};E.box.onmousedown=function(){n=true};E.box.onmousemove=function(p){if(c||o){c&&w(p);o&&i(p);if(document.selection){document.selection.empty()}else{if(window.getSelection){window.getSelection().removeAllRanges()}}f()}};if("ontouchstart" in window){E.box.addEventListener("touchmove",function(O){var p={offsetX:O.touches[0].pageX-j.X,offsetY:O.touches[0].pageY-j.Y};if(c||o){c&&w(p);o&&i(p);f()}O.stopPropagation();O.preventDefault()},false)}E.padM.onmouseup=E.padM.onmouseout=function(){if(c){c=false;jscolor.fireEvent(a,"change")}};E.padM.onmousedown=function(p){switch(b){case 0:if(l.hsv[2]===0){l.fromHSV(null,null,1)}break;case 1:if(l.hsv[1]===0){l.fromHSV(null,1,null)}break}o=false;c=true;w(p);f()};if("ontouchstart" in window){E.padM.addEventListener("touchstart",function(p){j={X:p.target.offsetParent.offsetLeft,Y:p.target.offsetParent.offsetTop};this.onmousedown({offsetX:p.touches[0].pageX-j.X,offsetY:p.touches[0].pageY-j.Y})})}E.sldM.onmouseup=E.sldM.onmouseout=function(){if(o){o=false;jscolor.fireEvent(a,"change")}};E.sldM.onmousedown=function(p){c=false;o=true;i(p);f()};if("ontouchstart" in window){E.sldM.addEventListener("touchstart",function(p){j={X:p.target.offsetParent.offsetLeft,Y:p.target.offsetParent.offsetTop};this.onmousedown({offsetX:p.touches[0].pageX-j.X,offsetY:p.touches[0].pageY-j.Y})})}var N=t(l);E.box.style.width=N[0]+"px";E.box.style.height=N[1]+"px";E.boxB.style.position="absolute";E.boxB.style.clear="both";E.boxB.style.left=L+"px";E.boxB.style.top=K+"px";E.boxB.style.zIndex=l.pickerZIndex;E.boxB.style.border=l.pickerBorder+"px solid";E.boxB.style.borderColor=l.pickerBorderColor;E.boxB.style.background=l.pickerFaceColor;E.pad.style.width=jscolor.images.pad[0]+"px";E.pad.style.height=jscolor.images.pad[1]+"px";E.padB.style.position="absolute";E.padB.style.left=l.pickerFace+"px";E.padB.style.top=l.pickerFace+"px";E.padB.style.border=l.pickerInset+"px solid";E.padB.style.borderColor=l.pickerInsetColor;E.padM.style.position="absolute";E.padM.style.left="0";E.padM.style.top="0";E.padM.style.width=l.pickerFace+2*l.pickerInset+jscolor.images.pad[0]+jscolor.images.arrow[0]+"px";E.padM.style.height=E.box.style.height;E.padM.style.cursor="crosshair";E.sld.style.overflow="hidden";E.sld.style.width=jscolor.images.sld[0]+"px";E.sld.style.height=jscolor.images.sld[1]+"px";E.sldB.style.display=l.slider?"block":"none";E.sldB.style.position="absolute";E.sldB.style.right=l.pickerFace+"px";E.sldB.style.top=l.pickerFace+"px";E.sldB.style.border=l.pickerInset+"px solid";E.sldB.style.borderColor=l.pickerInsetColor;E.sldM.style.display=l.slider?"block":"none";E.sldM.style.position="absolute";E.sldM.style.right="0";E.sldM.style.top="0";E.sldM.style.width=jscolor.images.sld[0]+jscolor.images.arrow[0]+l.pickerFace+2*l.pickerInset+"px";E.sldM.style.height=E.box.style.height;try{E.sldM.style.cursor="pointer"}catch(G){E.sldM.style.cursor="hand"}function M(){var p=l.pickerInsetColor.split(/\s+/);var O=p.length<2?p[0]:p[1]+" "+p[0]+" "+p[0]+" "+p[1];E.btn.style.borderColor=O}E.btn.style.display=l.pickerClosable?"block":"none";E.btn.style.position="absolute";E.btn.style.left=l.pickerFace+"px";E.btn.style.bottom=l.pickerFace+"px";E.btn.style.padding="0 15px";E.btn.style.height="18px";E.btn.style.border=l.pickerInset+"px solid";M();E.btn.style.color=l.pickerButtonColor;E.btn.style.font="12px sans-serif";E.btn.style.textAlign="center";try{E.btn.style.cursor="pointer"}catch(G){E.btn.style.cursor="hand"}E.btn.onmousedown=function(){l.hidePicker()};E.btnS.style.lineHeight=E.btn.style.height;switch(b){case 0:var F="hs.png";break;case 1:var F="hv.png";break}E.padM.style.backgroundImage="url('"+jscolor.getDir()+"cross.gif')";E.padM.style.backgroundRepeat="no-repeat";E.sldM.style.backgroundImage="url('"+jscolor.getDir()+"arrow.gif')";E.sldM.style.backgroundRepeat="no-repeat";E.pad.style.backgroundImage="url('"+jscolor.getDir()+F+"')";E.pad.style.backgroundRepeat="no-repeat";E.pad.style.backgroundPosition="0 0";r();A();jscolor.picker.owner=l;document.getElementsByTagName("body")[0].appendChild(E.boxB)}function t(E){var p=[2*E.pickerInset+2*E.pickerFace+jscolor.images.pad[0]+(E.slider?2*E.pickerInset+2*jscolor.images.arrow[0]+jscolor.images.sld[0]:0),E.pickerClosable?4*E.pickerInset+3*E.pickerFace+jscolor.images.pad[1]+E.pickerButtonHeight:2*E.pickerInset+2*E.pickerFace+jscolor.images.pad[1]];return p}function r(){switch(b){case 0:var G=1;break;case 1:var G=2;break}var K=Math.round((l.hsv[0]/6)*(jscolor.images.pad[0]-1));var J=Math.round((1-l.hsv[G])*(jscolor.images.pad[1]-1));jscolor.picker.padM.style.backgroundPosition=(l.pickerFace+l.pickerInset+K-Math.floor(jscolor.images.cross[0]/2))+"px "+(l.pickerFace+l.pickerInset+J-Math.floor(jscolor.images.cross[1]/2))+"px";var p=jscolor.picker.sld.childNodes;switch(b){case 0:var I=h(l.hsv[0],l.hsv[1],1);for(var E=0;E<p.length;E+=1){p[E].style.backgroundColor="rgb("+(I[0]*(1-E/p.length)*100)+"%,"+(I[1]*(1-E/p.length)*100)+"%,"+(I[2]*(1-E/p.length)*100)+"%)"}break;case 1:var I,L,H=[l.hsv[2],0,0];var E=Math.floor(l.hsv[0]);var F=E%2?l.hsv[0]-E:1-(l.hsv[0]-E);switch(E){case 6:case 0:I=[0,1,2];break;case 1:I=[1,0,2];break;case 2:I=[2,0,1];break;case 3:I=[2,1,0];break;case 4:I=[1,2,0];break;case 5:I=[0,2,1];break}for(var E=0;E<p.length;E+=1){L=1-1/(p.length-1)*E;H[1]=H[0]*(1-L*F);H[2]=H[0]*(1-L);p[E].style.backgroundColor="rgb("+(H[I[0]]*100)+"%,"+(H[I[1]]*100)+"%,"+(H[I[2]]*100)+"%)"}break}}function A(){switch(b){case 0:var p=2;break;case 1:var p=1;break}var E=Math.round((1-l.hsv[p])*(jscolor.images.sld[1]-1));jscolor.picker.sldM.style.backgroundPosition="0 "+(l.pickerFace+l.pickerInset+E-Math.floor(jscolor.images.arrow[1]/2))+"px"}function u(){return jscolor.picker&&jscolor.picker.owner===l}function q(){if(a===B){l.importColor()}if(l.pickerOnfocus){l.hidePicker()}}function m(){if(a!==B){l.importColor()}}function w(F){var E=jscolor.getRelMousePos(F);var p=E.x-l.pickerFace-l.pickerInset;var G=E.y-l.pickerFace-l.pickerInset;switch(b){case 0:l.fromHSV(p*(6/(jscolor.images.pad[0]-1)),1-G/(jscolor.images.pad[1]-1),null,e);break;case 1:l.fromHSV(p*(6/(jscolor.images.pad[0]-1)),null,1-G/(jscolor.images.pad[1]-1),e);break}}function i(E){var p=jscolor.getRelMousePos(E);var F=p.y-l.pickerFace-l.pickerInset;switch(b){case 0:l.fromHSV(null,null,1-F/(jscolor.images.sld[1]-1),v);break;case 1:l.fromHSV(null,1-F/(jscolor.images.sld[1]-1),null,v);break}}function f(){if(l.onImmediateChange){var p;if(typeof l.onImmediateChange==="string"){p=new Function(l.onImmediateChange)}else{p=l.onImmediateChange}p.call(l)}}var l=this;var b=this.pickerMode.toLowerCase()==="hvs"?1:0;var n=false;var a=jscolor.fetchElement(this.valueElement),D=jscolor.fetchElement(this.styleElement);var c=false,o=false,j={};var x=1<<0,C=1<<1,v=1<<2,e=1<<3;jscolor.addEvent(B,"focus",function(){if(l.pickerOnfocus){l.showPicker()}});jscolor.addEvent(B,"blur",function(){if(!n){window.setTimeout(function(){n||q();n=false},0)}else{n=false}});if(a){var z=function(){l.fromString(a.value,x);f()};jscolor.addEvent(a,"keyup",z);jscolor.addEvent(a,"input",z);jscolor.addEvent(a,"blur",m);a.setAttribute("autocomplete","off")}if(D){D.jscStyle={backgroundImage:D.style.backgroundImage,backgroundColor:D.style.backgroundColor,color:D.style.color}}switch(b){case 0:jscolor.requireImage("hs.png");break;case 1:jscolor.requireImage("hv.png");break}jscolor.requireImage("cross.gif");jscolor.requireImage("arrow.gif");this.importColor()}};
+
+
+var jscolor = {
+
+
+	dir : '', // location of jscolor directory (leave empty to autodetect)
+	bindClass : 'color', // class name
+	binding : true, // automatic binding via <input class="...">
+	preloading : true, // use image preloading?
+
+
+	install : function() {
+		jscolor.addEvent(window, 'load', jscolor.init);
+	},
+
+
+	init : function() {
+		if(jscolor.binding) {
+			jscolor.bind();
+		}
+		if(jscolor.preloading) {
+			jscolor.preload();
+		}
+	},
+
+
+	getDir : function() {
+		if(!jscolor.dir) {
+			var detected = jscolor.detectDir();
+			jscolor.dir = detected!==false ? detected : 'jscolor/';
+		}
+		return jscolor.dir;
+	},
+
+
+	detectDir : function() {
+		var base = location.href;
+
+		var e = document.getElementsByTagName('base');
+		for(var i=0; i<e.length; i+=1) {
+			if(e[i].href) { base = e[i].href; }
+		}
+
+		var e = document.getElementsByTagName('script');
+		for(var i=0; i<e.length; i+=1) {
+			if(e[i].src && /(^|\/)jscolor\.js([?#].*)?$/i.test(e[i].src)) {
+				var src = new jscolor.URI(e[i].src);
+				var srcAbs = src.toAbsolute(base);
+				srcAbs.path = srcAbs.path.replace(/[^\/]+$/, ''); // remove filename
+				srcAbs.query = null;
+				srcAbs.fragment = null;
+				return srcAbs.toString();
+			}
+		}
+		return false;
+	},
+
+
+	bind : function() {
+		var matchClass = new RegExp('(^|\\s)('+jscolor.bindClass+')\\s*(\\{[^}]*\\})?', 'i');
+		var e = document.getElementsByTagName('input');
+		for(var i=0; i<e.length; i+=1) {
+			var m;
+			if(!e[i].color && e[i].className && (m = e[i].className.match(matchClass))) {
+				var prop = {};
+				if(m[3]) {
+					try {
+						prop = (new Function ('return (' + m[3] + ')'))();
+					} catch(eInvalidProp) {}
+				}
+				e[i].color = new jscolor.color(e[i], prop);
+			}
+		}
+	},
+
+
+	preload : function() {
+		for(var fn in jscolor.imgRequire) {
+			if(jscolor.imgRequire.hasOwnProperty(fn)) {
+				jscolor.loadImage(fn);
+			}
+		}
+	},
+
+
+	images : {
+		pad : [ 181, 101 ],
+		sld : [ 16, 101 ],
+		cross : [ 15, 15 ],
+		arrow : [ 7, 11 ]
+	},
+
+
+	imgRequire : {},
+	imgLoaded : {},
+
+
+	requireImage : function(filename) {
+		jscolor.imgRequire[filename] = true;
+	},
+
+
+	loadImage : function(filename) {
+		if(!jscolor.imgLoaded[filename]) {
+			jscolor.imgLoaded[filename] = new Image();
+			jscolor.imgLoaded[filename].src = jscolor.getDir()+filename;
+		}
+	},
+
+
+	fetchElement : function(mixed) {
+		return typeof mixed === 'string' ? document.getElementById(mixed) : mixed;
+	},
+
+
+	addEvent : function(el, evnt, func) {
+		if(el.addEventListener) {
+			el.addEventListener(evnt, func, false);
+		} else if(el.attachEvent) {
+			el.attachEvent('on'+evnt, func);
+		}
+	},
+
+
+	fireEvent : function(el, evnt) {
+		if(!el) {
+			return;
+		}
+		if(document.createEvent) {
+			var ev = document.createEvent('HTMLEvents');
+			ev.initEvent(evnt, true, true);
+			el.dispatchEvent(ev);
+		} else if(document.createEventObject) {
+			var ev = document.createEventObject();
+			el.fireEvent('on'+evnt, ev);
+		} else if(el['on'+evnt]) { // alternatively use the traditional event model (IE5)
+			el['on'+evnt]();
+		}
+	},
+
+
+	getElementPos : function(e) {
+		var e1=e, e2=e;
+		var x=0, y=0;
+		if(e1.offsetParent) {
+			do {
+				x += e1.offsetLeft;
+				y += e1.offsetTop;
+			} while(e1 = e1.offsetParent);
+		}
+		while((e2 = e2.parentNode) && e2.nodeName.toUpperCase() !== 'BODY') {
+			x -= e2.scrollLeft;
+			y -= e2.scrollTop;
+		}
+		return [x, y];
+	},
+
+
+	getElementSize : function(e) {
+		return [e.offsetWidth, e.offsetHeight];
+	},
+
+
+	getRelMousePos : function(e) {
+		var x = 0, y = 0;
+		if (!e) { e = window.event; }
+		if (typeof e.offsetX === 'number') {
+			x = e.offsetX;
+			y = e.offsetY;
+		} else if (typeof e.layerX === 'number') {
+			x = e.layerX;
+			y = e.layerY;
+		}
+		return { x: x, y: y };
+	},
+
+
+	getViewPos : function() {
+		if(typeof window.pageYOffset === 'number') {
+			return [window.pageXOffset, window.pageYOffset];
+		} else if(document.body && (document.body.scrollLeft || document.body.scrollTop)) {
+			return [document.body.scrollLeft, document.body.scrollTop];
+		} else if(document.documentElement && (document.documentElement.scrollLeft || document.documentElement.scrollTop)) {
+			return [document.documentElement.scrollLeft, document.documentElement.scrollTop];
+		} else {
+			return [0, 0];
+		}
+	},
+
+
+	getViewSize : function() {
+		if(typeof window.innerWidth === 'number') {
+			return [window.innerWidth, window.innerHeight];
+		} else if(document.body && (document.body.clientWidth || document.body.clientHeight)) {
+			return [document.body.clientWidth, document.body.clientHeight];
+		} else if(document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+			return [document.documentElement.clientWidth, document.documentElement.clientHeight];
+		} else {
+			return [0, 0];
+		}
+	},
+
+
+	URI : function(uri) { // See RFC3986
+
+		this.scheme = null;
+		this.authority = null;
+		this.path = '';
+		this.query = null;
+		this.fragment = null;
+
+		this.parse = function(uri) {
+			var m = uri.match(/^(([A-Za-z][0-9A-Za-z+.-]*)(:))?((\/\/)([^\/?#]*))?([^?#]*)((\?)([^#]*))?((#)(.*))?/);
+			this.scheme = m[3] ? m[2] : null;
+			this.authority = m[5] ? m[6] : null;
+			this.path = m[7];
+			this.query = m[9] ? m[10] : null;
+			this.fragment = m[12] ? m[13] : null;
+			return this;
+		};
+
+		this.toString = function() {
+			var result = '';
+			if(this.scheme !== null) { result = result + this.scheme + ':'; }
+			if(this.authority !== null) { result = result + '//' + this.authority; }
+			if(this.path !== null) { result = result + this.path; }
+			if(this.query !== null) { result = result + '?' + this.query; }
+			if(this.fragment !== null) { result = result + '#' + this.fragment; }
+			return result;
+		};
+
+		this.toAbsolute = function(base) {
+			var base = new jscolor.URI(base);
+			var r = this;
+			var t = new jscolor.URI;
+
+			if(base.scheme === null) { return false; }
+
+			if(r.scheme !== null && r.scheme.toLowerCase() === base.scheme.toLowerCase()) {
+				r.scheme = null;
+			}
+
+			if(r.scheme !== null) {
+				t.scheme = r.scheme;
+				t.authority = r.authority;
+				t.path = removeDotSegments(r.path);
+				t.query = r.query;
+			} else {
+				if(r.authority !== null) {
+					t.authority = r.authority;
+					t.path = removeDotSegments(r.path);
+					t.query = r.query;
+				} else {
+					if(r.path === '') {
+						t.path = base.path;
+						if(r.query !== null) {
+							t.query = r.query;
+						} else {
+							t.query = base.query;
+						}
+					} else {
+						if(r.path.substr(0,1) === '/') {
+							t.path = removeDotSegments(r.path);
+						} else {
+							if(base.authority !== null && base.path === '') {
+								t.path = '/'+r.path;
+							} else {
+								t.path = base.path.replace(/[^\/]+$/,'')+r.path;
+							}
+							t.path = removeDotSegments(t.path);
+						}
+						t.query = r.query;
+					}
+					t.authority = base.authority;
+				}
+				t.scheme = base.scheme;
+			}
+			t.fragment = r.fragment;
+
+			return t;
+		};
+
+		function removeDotSegments(path) {
+			var out = '';
+			while(path) {
+				if(path.substr(0,3)==='../' || path.substr(0,2)==='./') {
+					path = path.replace(/^\.+/,'').substr(1);
+				} else if(path.substr(0,3)==='/./' || path==='/.') {
+					path = '/'+path.substr(3);
+				} else if(path.substr(0,4)==='/../' || path==='/..') {
+					path = '/'+path.substr(4);
+					out = out.replace(/\/?[^\/]*$/, '');
+				} else if(path==='.' || path==='..') {
+					path = '';
+				} else {
+					var rm = path.match(/^\/?[^\/]*/)[0];
+					path = path.substr(rm.length);
+					out = out + rm;
+				}
+			}
+			return out;
+		}
+
+		if(uri) {
+			this.parse(uri);
+		}
+
+	},
+
+
+	//
+	// Usage example:
+	// var myColor = new jscolor.color(myInputElement)
+	//
+
+	color : function(target, prop) {
+
+
+		this.required = true; // refuse empty values?
+		this.adjust = true; // adjust value to uniform notation?
+		this.hash = false; // prefix color with # symbol?
+		this.caps = true; // uppercase?
+		this.slider = true; // show the value/saturation slider?
+		this.valueElement = target; // value holder
+		this.styleElement = target; // where to reflect current color
+		this.onImmediateChange = null; // onchange callback (can be either string or function)
+		this.hsv = [0, 0, 1]; // read-only  0-6, 0-1, 0-1
+		this.rgb = [1, 1, 1]; // read-only  0-1, 0-1, 0-1
+		this.minH = 0; // read-only  0-6
+		this.maxH = 6; // read-only  0-6
+		this.minS = 0; // read-only  0-1
+		this.maxS = 1; // read-only  0-1
+		this.minV = 0; // read-only  0-1
+		this.maxV = 1; // read-only  0-1
+
+		this.pickerOnfocus = true; // display picker on focus?
+		this.pickerMode = 'HSV'; // HSV | HVS
+		this.pickerPosition = 'bottom'; // left | right | top | bottom
+		this.pickerSmartPosition = true; // automatically adjust picker position when necessary
+		this.pickerButtonHeight = 20; // px
+		this.pickerClosable = false;
+		this.pickerCloseText = 'Close';
+		this.pickerButtonColor = 'ButtonText'; // px
+		this.pickerFace = 10; // px
+		this.pickerFaceColor = 'ThreeDFace'; // CSS color
+		this.pickerBorder = 1; // px
+		this.pickerBorderColor = 'ThreeDHighlight ThreeDShadow ThreeDShadow ThreeDHighlight'; // CSS color
+		this.pickerInset = 1; // px
+		this.pickerInsetColor = 'ThreeDShadow ThreeDHighlight ThreeDHighlight ThreeDShadow'; // CSS color
+		this.pickerZIndex = 10000;
+
+
+		for(var p in prop) {
+			if(prop.hasOwnProperty(p)) {
+				this[p] = prop[p];
+			}
+		}
+
+
+		this.hidePicker = function() {
+			if(isPickerOwner()) {
+				removePicker();
+			}
+		};
+
+
+		this.showPicker = function() {
+			if(!isPickerOwner()) {
+				var tp = jscolor.getElementPos(target); // target pos
+				var ts = jscolor.getElementSize(target); // target size
+				var vp = jscolor.getViewPos(); // view pos
+				var vs = jscolor.getViewSize(); // view size
+				var ps = getPickerDims(this); // picker size
+				var a, b, c;
+				switch(this.pickerPosition.toLowerCase()) {
+					case 'left': a=1; b=0; c=-1; break;
+					case 'right':a=1; b=0; c=1; break;
+					case 'top':  a=0; b=1; c=-1; break;
+					default:     a=0; b=1; c=1; break;
+				}
+				var l = (ts[b]+ps[b])/2;
+
+				// picker pos
+				if (!this.pickerSmartPosition) {
+					var pp = [
+						tp[a],
+						tp[b]+ts[b]-l+l*c
+					];
+				} else {
+					var pp = [
+						-vp[a]+tp[a]+ps[a] > vs[a] ?
+							(-vp[a]+tp[a]+ts[a]/2 > vs[a]/2 && tp[a]+ts[a]-ps[a] >= 0 ? tp[a]+ts[a]-ps[a] : tp[a]) :
+							tp[a],
+						-vp[b]+tp[b]+ts[b]+ps[b]-l+l*c > vs[b] ?
+							(-vp[b]+tp[b]+ts[b]/2 > vs[b]/2 && tp[b]+ts[b]-l-l*c >= 0 ? tp[b]+ts[b]-l-l*c : tp[b]+ts[b]-l+l*c) :
+							(tp[b]+ts[b]-l+l*c >= 0 ? tp[b]+ts[b]-l+l*c : tp[b]+ts[b]-l-l*c)
+					];
+				}
+				drawPicker(pp[a], pp[b]);
+			}
+		};
+
+
+		this.importColor = function() {
+			if(!valueElement) {
+				this.exportColor();
+			} else {
+				if(!this.adjust) {
+					if(!this.fromString(valueElement.value, leaveValue)) {
+						styleElement.style.backgroundImage = styleElement.jscStyle.backgroundImage;
+						styleElement.style.backgroundColor = styleElement.jscStyle.backgroundColor;
+						styleElement.style.color = styleElement.jscStyle.color;
+						this.exportColor(leaveValue | leaveStyle);
+					}
+				} else if(!this.required && /^\s*$/.test(valueElement.value)) {
+					valueElement.value = '';
+					styleElement.style.backgroundImage = styleElement.jscStyle.backgroundImage;
+					styleElement.style.backgroundColor = styleElement.jscStyle.backgroundColor;
+					styleElement.style.color = styleElement.jscStyle.color;
+					this.exportColor(leaveValue | leaveStyle);
+
+				} else if(this.fromString(valueElement.value)) {
+					// OK
+				} else {
+					this.exportColor();
+				}
+			}
+		};
+
+
+		this.exportColor = function(flags) {
+			if(!(flags & leaveValue) && valueElement) {
+				var value = this.toString();
+				if(this.caps) { value = value.toUpperCase(); }
+				if(this.hash) { value = '#'+value; }
+				valueElement.value = value;
+			}
+			if(!(flags & leaveStyle) && styleElement) {
+				styleElement.style.backgroundImage = "none";
+				styleElement.style.backgroundColor =
+					'#'+this.toString();
+				styleElement.style.color =
+					0.213 * this.rgb[0] +
+					0.715 * this.rgb[1] +
+					0.072 * this.rgb[2]
+					< 0.5 ? '#FFF' : '#000';
+			}
+			if(!(flags & leavePad) && isPickerOwner()) {
+				redrawPad();
+			}
+			if(!(flags & leaveSld) && isPickerOwner()) {
+				redrawSld();
+			}
+		};
+
+
+		this.fromHSV = function(h, s, v, flags) { // null = don't change
+			if(h !== null) { h = Math.max(0.0, this.minH, Math.min(6.0, this.maxH, h)); }
+			if(s !== null) { s = Math.max(0.0, this.minS, Math.min(1.0, this.maxS, s)); }
+			if(v !== null) { v = Math.max(0.0, this.minV, Math.min(1.0, this.maxV, v)); }
+
+			this.rgb = HSV_RGB(
+				h===null ? this.hsv[0] : (this.hsv[0]=h),
+				s===null ? this.hsv[1] : (this.hsv[1]=s),
+				v===null ? this.hsv[2] : (this.hsv[2]=v)
+			);
+
+			this.exportColor(flags);
+		};
+
+
+		this.fromRGB = function(r, g, b, flags) { // null = don't change
+			if(r !== null) { r = Math.max(0.0, Math.min(1.0, r)); }
+			if(g !== null) { g = Math.max(0.0, Math.min(1.0, g)); }
+			if(b !== null) { b = Math.max(0.0, Math.min(1.0, b)); }
+
+			var hsv = RGB_HSV(
+				r===null ? this.rgb[0] : r,
+				g===null ? this.rgb[1] : g,
+				b===null ? this.rgb[2] : b
+			);
+			if(hsv[0] !== null) {
+				this.hsv[0] = Math.max(0.0, this.minH, Math.min(6.0, this.maxH, hsv[0]));
+			}
+			if(hsv[2] !== 0) {
+				this.hsv[1] = hsv[1]===null ? null : Math.max(0.0, this.minS, Math.min(1.0, this.maxS, hsv[1]));
+			}
+			this.hsv[2] = hsv[2]===null ? null : Math.max(0.0, this.minV, Math.min(1.0, this.maxV, hsv[2]));
+
+			// update RGB according to final HSV, as some values might be trimmed
+			var rgb = HSV_RGB(this.hsv[0], this.hsv[1], this.hsv[2]);
+			this.rgb[0] = rgb[0];
+			this.rgb[1] = rgb[1];
+			this.rgb[2] = rgb[2];
+
+			this.exportColor(flags);
+		};
+
+
+		this.fromString = function(hex, flags) {
+			var m = hex.match(/^\W*([0-9A-F]{3}([0-9A-F]{3})?)\W*$/i);
+			if(!m) {
+				return false;
+			} else {
+				if(m[1].length === 6) { // 6-char notation
+					this.fromRGB(
+						parseInt(m[1].substr(0,2),16) / 255,
+						parseInt(m[1].substr(2,2),16) / 255,
+						parseInt(m[1].substr(4,2),16) / 255,
+						flags
+					);
+				} else { // 3-char notation
+					this.fromRGB(
+						parseInt(m[1].charAt(0)+m[1].charAt(0),16) / 255,
+						parseInt(m[1].charAt(1)+m[1].charAt(1),16) / 255,
+						parseInt(m[1].charAt(2)+m[1].charAt(2),16) / 255,
+						flags
+					);
+				}
+				return true;
+			}
+		};
+
+
+		this.toString = function() {
+			return (
+				(0x100 | Math.round(255*this.rgb[0])).toString(16).substr(1) +
+				(0x100 | Math.round(255*this.rgb[1])).toString(16).substr(1) +
+				(0x100 | Math.round(255*this.rgb[2])).toString(16).substr(1)
+			);
+		};
+
+
+		function RGB_HSV(r, g, b) {
+			var n = Math.min(Math.min(r,g),b);
+			var v = Math.max(Math.max(r,g),b);
+			var m = v - n;
+			if(m === 0) { return [ null, 0, v ]; }
+			var h = r===n ? 3+(b-g)/m : (g===n ? 5+(r-b)/m : 1+(g-r)/m);
+			return [ h===6?0:h, m/v, v ];
+		}
+
+
+		function HSV_RGB(h, s, v) {
+			if(h === null) { return [ v, v, v ]; }
+			var i = Math.floor(h);
+			var f = i%2 ? h-i : 1-(h-i);
+			var m = v * (1 - s);
+			var n = v * (1 - s*f);
+			switch(i) {
+				case 6:
+				case 0: return [v,n,m];
+				case 1: return [n,v,m];
+				case 2: return [m,v,n];
+				case 3: return [m,n,v];
+				case 4: return [n,m,v];
+				case 5: return [v,m,n];
+			}
+		}
+
+
+		function removePicker() {
+			delete jscolor.picker.owner;
+			document.getElementsByTagName('body')[0].removeChild(jscolor.picker.boxB);
+		}
+
+
+		function drawPicker(x, y) {
+			if(!jscolor.picker) {
+				jscolor.picker = {
+					box : document.createElement('div'),
+					boxB : document.createElement('div'),
+					pad : document.createElement('div'),
+					padB : document.createElement('div'),
+					padM : document.createElement('div'),
+					sld : document.createElement('div'),
+					sldB : document.createElement('div'),
+					sldM : document.createElement('div'),
+					btn : document.createElement('div'),
+					btnS : document.createElement('span'),
+					btnT : document.createTextNode(THIS.pickerCloseText)
+				};
+				for(var i=0,segSize=4; i<jscolor.images.sld[1]; i+=segSize) {
+					var seg = document.createElement('div');
+					seg.style.height = segSize+'px';
+					seg.style.fontSize = '1px';
+					seg.style.lineHeight = '0';
+					jscolor.picker.sld.appendChild(seg);
+				}
+				jscolor.picker.sldB.appendChild(jscolor.picker.sld);
+				jscolor.picker.box.appendChild(jscolor.picker.sldB);
+				jscolor.picker.box.appendChild(jscolor.picker.sldM);
+				jscolor.picker.padB.appendChild(jscolor.picker.pad);
+				jscolor.picker.box.appendChild(jscolor.picker.padB);
+				jscolor.picker.box.appendChild(jscolor.picker.padM);
+				jscolor.picker.btnS.appendChild(jscolor.picker.btnT);
+				jscolor.picker.btn.appendChild(jscolor.picker.btnS);
+				jscolor.picker.box.appendChild(jscolor.picker.btn);
+				jscolor.picker.boxB.appendChild(jscolor.picker.box);
+			}
+
+			var p = jscolor.picker;
+
+			// controls interaction
+			p.box.onmouseup =
+			p.box.onmouseout = function() { target.focus(); };
+			p.box.onmousedown = function() { abortBlur=true; };
+			p.box.onmousemove = function(e) {
+				if (holdPad || holdSld) {
+					holdPad && setPad(e);
+					holdSld && setSld(e);
+					if (document.selection) {
+						document.selection.empty();
+					} else if (window.getSelection) {
+						window.getSelection().removeAllRanges();
+					}
+					dispatchImmediateChange();
+				}
+			};
+			if('ontouchstart' in window) { // if touch device
+				p.box.addEventListener('touchmove', function(e) {
+					var event={
+						'offsetX': e.touches[0].pageX-touchOffset.X,
+						'offsetY': e.touches[0].pageY-touchOffset.Y
+					};
+					if (holdPad || holdSld) {
+						holdPad && setPad(event);
+						holdSld && setSld(event);
+						dispatchImmediateChange();
+					}
+					e.stopPropagation(); // prevent move "view" on broswer
+					e.preventDefault(); // prevent Default - Android Fix (else android generated only 1-2 touchmove events)
+				}, false);
+			}
+			p.padM.onmouseup =
+			p.padM.onmouseout = function() { if(holdPad) { holdPad=false; jscolor.fireEvent(valueElement,'change'); } };
+			p.padM.onmousedown = function(e) {
+				// if the slider is at the bottom, move it up
+				switch(modeID) {
+					case 0: if (THIS.hsv[2] === 0) { THIS.fromHSV(null, null, 1.0); }; break;
+					case 1: if (THIS.hsv[1] === 0) { THIS.fromHSV(null, 1.0, null); }; break;
+				}
+				holdSld=false;
+				holdPad=true;
+				setPad(e);
+				dispatchImmediateChange();
+			};
+			if('ontouchstart' in window) {
+				p.padM.addEventListener('touchstart', function(e) {
+					touchOffset={
+						'X': e.target.offsetParent.offsetLeft,
+						'Y': e.target.offsetParent.offsetTop
+					};
+					this.onmousedown({
+						'offsetX':e.touches[0].pageX-touchOffset.X,
+						'offsetY':e.touches[0].pageY-touchOffset.Y
+					});
+				});
+			}
+			p.sldM.onmouseup =
+			p.sldM.onmouseout = function() { if(holdSld) { holdSld=false; jscolor.fireEvent(valueElement,'change'); } };
+			p.sldM.onmousedown = function(e) {
+				holdPad=false;
+				holdSld=true;
+				setSld(e);
+				dispatchImmediateChange();
+			};
+			if('ontouchstart' in window) {
+				p.sldM.addEventListener('touchstart', function(e) {
+					touchOffset={
+						'X': e.target.offsetParent.offsetLeft,
+						'Y': e.target.offsetParent.offsetTop
+					};
+					this.onmousedown({
+						'offsetX':e.touches[0].pageX-touchOffset.X,
+						'offsetY':e.touches[0].pageY-touchOffset.Y
+					});
+				});
+			}
+
+			// picker
+			var dims = getPickerDims(THIS);
+			p.box.style.width = dims[0] + 'px';
+			p.box.style.height = dims[1] + 'px';
+
+			// picker border
+			p.boxB.style.position = 'absolute';
+			p.boxB.style.clear = 'both';
+			p.boxB.style.left = x+'px';
+			p.boxB.style.top = y+'px';
+			p.boxB.style.zIndex = THIS.pickerZIndex;
+			p.boxB.style.border = THIS.pickerBorder+'px solid';
+			p.boxB.style.borderColor = THIS.pickerBorderColor;
+			p.boxB.style.background = THIS.pickerFaceColor;
+
+			// pad image
+			p.pad.style.width = jscolor.images.pad[0]+'px';
+			p.pad.style.height = jscolor.images.pad[1]+'px';
+
+			// pad border
+			p.padB.style.position = 'absolute';
+			p.padB.style.left = THIS.pickerFace+'px';
+			p.padB.style.top = THIS.pickerFace+'px';
+			p.padB.style.border = THIS.pickerInset+'px solid';
+			p.padB.style.borderColor = THIS.pickerInsetColor;
+
+			// pad mouse area
+			p.padM.style.position = 'absolute';
+			p.padM.style.left = '0';
+			p.padM.style.top = '0';
+			p.padM.style.width = THIS.pickerFace + 2*THIS.pickerInset + jscolor.images.pad[0] + jscolor.images.arrow[0] + 'px';
+			p.padM.style.height = p.box.style.height;
+			p.padM.style.cursor = 'crosshair';
+
+			// slider image
+			p.sld.style.overflow = 'hidden';
+			p.sld.style.width = jscolor.images.sld[0]+'px';
+			p.sld.style.height = jscolor.images.sld[1]+'px';
+
+			// slider border
+			p.sldB.style.display = THIS.slider ? 'block' : 'none';
+			p.sldB.style.position = 'absolute';
+			p.sldB.style.right = THIS.pickerFace+'px';
+			p.sldB.style.top = THIS.pickerFace+'px';
+			p.sldB.style.border = THIS.pickerInset+'px solid';
+			p.sldB.style.borderColor = THIS.pickerInsetColor;
+
+			// slider mouse area
+			p.sldM.style.display = THIS.slider ? 'block' : 'none';
+			p.sldM.style.position = 'absolute';
+			p.sldM.style.right = '0';
+			p.sldM.style.top = '0';
+			p.sldM.style.width = jscolor.images.sld[0] + jscolor.images.arrow[0] + THIS.pickerFace + 2*THIS.pickerInset + 'px';
+			p.sldM.style.height = p.box.style.height;
+			try {
+				p.sldM.style.cursor = 'pointer';
+			} catch(eOldIE) {
+				p.sldM.style.cursor = 'hand';
+			}
+
+			// "close" button
+			function setBtnBorder() {
+				var insetColors = THIS.pickerInsetColor.split(/\s+/);
+				var pickerOutsetColor = insetColors.length < 2 ? insetColors[0] : insetColors[1] + ' ' + insetColors[0] + ' ' + insetColors[0] + ' ' + insetColors[1];
+				p.btn.style.borderColor = pickerOutsetColor;
+			}
+			p.btn.style.display = THIS.pickerClosable ? 'block' : 'none';
+			p.btn.style.position = 'absolute';
+			p.btn.style.left = THIS.pickerFace + 'px';
+			p.btn.style.bottom = THIS.pickerFace + 'px';
+			p.btn.style.padding = '0 15px';
+			p.btn.style.height = '18px';
+			p.btn.style.border = THIS.pickerInset + 'px solid';
+			setBtnBorder();
+			p.btn.style.color = THIS.pickerButtonColor;
+			p.btn.style.font = '12px sans-serif';
+			p.btn.style.textAlign = 'center';
+			try {
+				p.btn.style.cursor = 'pointer';
+			} catch(eOldIE) {
+				p.btn.style.cursor = 'hand';
+			}
+			p.btn.onmousedown = function () {
+				THIS.hidePicker();
+			};
+			p.btnS.style.lineHeight = p.btn.style.height;
+
+			// load images in optimal order
+			switch(modeID) {
+				case 0: var padImg = 'hs.png'; break;
+				case 1: var padImg = 'hv.png'; break;
+			}
+			p.padM.style.backgroundImage = "url('"+jscolor.getDir()+"cross.gif')";
+			p.padM.style.backgroundRepeat = "no-repeat";
+			p.sldM.style.backgroundImage = "url('"+jscolor.getDir()+"arrow.gif')";
+			p.sldM.style.backgroundRepeat = "no-repeat";
+			p.pad.style.backgroundImage = "url('"+jscolor.getDir()+padImg+"')";
+			p.pad.style.backgroundRepeat = "no-repeat";
+			p.pad.style.backgroundPosition = "0 0";
+
+			// place pointers
+			redrawPad();
+			redrawSld();
+
+			jscolor.picker.owner = THIS;
+			document.getElementsByTagName('body')[0].appendChild(p.boxB);
+		}
+
+
+		function getPickerDims(o) {
+			var dims = [
+				2*o.pickerInset + 2*o.pickerFace + jscolor.images.pad[0] +
+					(o.slider ? 2*o.pickerInset + 2*jscolor.images.arrow[0] + jscolor.images.sld[0] : 0),
+				o.pickerClosable ?
+					4*o.pickerInset + 3*o.pickerFace + jscolor.images.pad[1] + o.pickerButtonHeight :
+					2*o.pickerInset + 2*o.pickerFace + jscolor.images.pad[1]
+			];
+			return dims;
+		}
+
+
+		function redrawPad() {
+			// redraw the pad pointer
+			switch(modeID) {
+				case 0: var yComponent = 1; break;
+				case 1: var yComponent = 2; break;
+			}
+			var x = Math.round((THIS.hsv[0]/6) * (jscolor.images.pad[0]-1));
+			var y = Math.round((1-THIS.hsv[yComponent]) * (jscolor.images.pad[1]-1));
+			jscolor.picker.padM.style.backgroundPosition =
+				(THIS.pickerFace+THIS.pickerInset+x - Math.floor(jscolor.images.cross[0]/2)) + 'px ' +
+				(THIS.pickerFace+THIS.pickerInset+y - Math.floor(jscolor.images.cross[1]/2)) + 'px';
+
+			// redraw the slider image
+			var seg = jscolor.picker.sld.childNodes;
+
+			switch(modeID) {
+				case 0:
+					var rgb = HSV_RGB(THIS.hsv[0], THIS.hsv[1], 1);
+					for(var i=0; i<seg.length; i+=1) {
+						seg[i].style.backgroundColor = 'rgb('+
+							(rgb[0]*(1-i/seg.length)*100)+'%,'+
+							(rgb[1]*(1-i/seg.length)*100)+'%,'+
+							(rgb[2]*(1-i/seg.length)*100)+'%)';
+					}
+					break;
+				case 1:
+					var rgb, s, c = [ THIS.hsv[2], 0, 0 ];
+					var i = Math.floor(THIS.hsv[0]);
+					var f = i%2 ? THIS.hsv[0]-i : 1-(THIS.hsv[0]-i);
+					switch(i) {
+						case 6:
+						case 0: rgb=[0,1,2]; break;
+						case 1: rgb=[1,0,2]; break;
+						case 2: rgb=[2,0,1]; break;
+						case 3: rgb=[2,1,0]; break;
+						case 4: rgb=[1,2,0]; break;
+						case 5: rgb=[0,2,1]; break;
+					}
+					for(var i=0; i<seg.length; i+=1) {
+						s = 1 - 1/(seg.length-1)*i;
+						c[1] = c[0] * (1 - s*f);
+						c[2] = c[0] * (1 - s);
+						seg[i].style.backgroundColor = 'rgb('+
+							(c[rgb[0]]*100)+'%,'+
+							(c[rgb[1]]*100)+'%,'+
+							(c[rgb[2]]*100)+'%)';
+					}
+					break;
+			}
+		}
+
+
+		function redrawSld() {
+			// redraw the slider pointer
+			switch(modeID) {
+				case 0: var yComponent = 2; break;
+				case 1: var yComponent = 1; break;
+			}
+			var y = Math.round((1-THIS.hsv[yComponent]) * (jscolor.images.sld[1]-1));
+			jscolor.picker.sldM.style.backgroundPosition =
+				'0 ' + (THIS.pickerFace+THIS.pickerInset+y - Math.floor(jscolor.images.arrow[1]/2)) + 'px';
+		}
+
+
+		function isPickerOwner() {
+			return jscolor.picker && jscolor.picker.owner === THIS;
+		}
+
+
+		function blurTarget() {
+			if(valueElement === target) {
+				THIS.importColor();
+			}
+			if(THIS.pickerOnfocus) {
+				THIS.hidePicker();
+			}
+		}
+
+
+		function blurValue() {
+			if(valueElement !== target) {
+				THIS.importColor();
+			}
+		}
+
+
+		function setPad(e) {
+			var mpos = jscolor.getRelMousePos(e);
+			var x = mpos.x - THIS.pickerFace - THIS.pickerInset;
+			var y = mpos.y - THIS.pickerFace - THIS.pickerInset;
+			switch(modeID) {
+				case 0: THIS.fromHSV(x*(6/(jscolor.images.pad[0]-1)), 1 - y/(jscolor.images.pad[1]-1), null, leaveSld); break;
+				case 1: THIS.fromHSV(x*(6/(jscolor.images.pad[0]-1)), null, 1 - y/(jscolor.images.pad[1]-1), leaveSld); break;
+			}
+		}
+
+
+		function setSld(e) {
+			var mpos = jscolor.getRelMousePos(e);
+			var y = mpos.y - THIS.pickerFace - THIS.pickerInset;
+			switch(modeID) {
+				case 0: THIS.fromHSV(null, null, 1 - y/(jscolor.images.sld[1]-1), leavePad); break;
+				case 1: THIS.fromHSV(null, 1 - y/(jscolor.images.sld[1]-1), null, leavePad); break;
+			}
+		}
+
+
+		function dispatchImmediateChange() {
+			if (THIS.onImmediateChange) {
+				var callback;
+				if (typeof THIS.onImmediateChange === 'string') {
+					callback = new Function (THIS.onImmediateChange);
+				} else {
+					callback = THIS.onImmediateChange;
+				}
+				callback.call(THIS);
+			}
+		}
+
+
+		var THIS = this;
+		var modeID = this.pickerMode.toLowerCase()==='hvs' ? 1 : 0;
+		var abortBlur = false;
+		var
+			valueElement = jscolor.fetchElement(this.valueElement),
+			styleElement = jscolor.fetchElement(this.styleElement);
+		var
+			holdPad = false,
+			holdSld = false,
+			touchOffset = {};
+		var
+			leaveValue = 1<<0,
+			leaveStyle = 1<<1,
+			leavePad = 1<<2,
+			leaveSld = 1<<3;
+
+		// target
+		jscolor.addEvent(target, 'focus', function() {
+			if(THIS.pickerOnfocus) { THIS.showPicker(); }
+		});
+		jscolor.addEvent(target, 'blur', function() {
+			if(!abortBlur) {
+				window.setTimeout(function(){ abortBlur || blurTarget(); abortBlur=false; }, 0);
+			} else {
+				abortBlur = false;
+			}
+		});
+
+		// valueElement
+		if(valueElement) {
+			var updateField = function() {
+				THIS.fromString(valueElement.value, leaveValue);
+				dispatchImmediateChange();
+			};
+			jscolor.addEvent(valueElement, 'keyup', updateField);
+			jscolor.addEvent(valueElement, 'input', updateField);
+			jscolor.addEvent(valueElement, 'blur', blurValue);
+			valueElement.setAttribute('autocomplete', 'off');
+		}
+
+		// styleElement
+		if(styleElement) {
+			styleElement.jscStyle = {
+				backgroundImage : styleElement.style.backgroundImage,
+				backgroundColor : styleElement.style.backgroundColor,
+				color : styleElement.style.color
+			};
+		}
+
+		// require images
+		switch(modeID) {
+			case 0: jscolor.requireImage('hs.png'); break;
+			case 1: jscolor.requireImage('hv.png'); break;
+		}
+		jscolor.requireImage('cross.gif');
+		jscolor.requireImage('arrow.gif');
+
+		this.importColor();
+	}
+
+};
+
+
+
