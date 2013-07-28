@@ -450,7 +450,7 @@ window.ThemeManager = (function () {
 
     themeManager.updateCustom = function (prop,value){
         var currentCustomTheme = amplify.store('customTheme');
-        currentCustomTheme[prop] = "#" + value;
+        currentCustomTheme[prop] = value;
         amplify.store('customTheme', currentCustomTheme);
         apply();
     }
