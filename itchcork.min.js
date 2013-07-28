@@ -21,7 +21,7 @@ window.ThemeManager = (function () {
         this.errorColor = "#c00";
         this.completedColor = "#5c8a00";
         this.tableBorderColor = "#222";
-        this.codeFontFamily = "Menlo,Monaco,Consolas,'Courier New',monospace !important";
+        this.codeFontFamily = "Menlo,Monaco,Consolas,monospace !important";
     };
 
     themeManager['cyborg'] = new theme();
