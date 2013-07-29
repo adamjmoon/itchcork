@@ -822,7 +822,6 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel'], function (Test, Benchma
     return suite;
 });
 
-
 define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
     function view() {
 
