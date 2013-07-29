@@ -6,14 +6,15 @@ define("inheritance", function () {
             this.offspring = [];
         }
 
-        Mammal.prototype.haveABaby = function () {
-            var newBaby = new Mammal("Baby " + this.name);
-            this.offspring.push(newBaby);
-            return newBaby;
-        }
+        Mammal.prototype.haveABaby=function(){
+        	var newBaby=new this.constructor("Baby "+this.name);
+        	this.offspring.push(newBaby);
+        	return newBaby;
+        };
+
         Mammal.prototype.toString = function () {
             return '[Mammal "' + this.name + '"]';
-        }
+        };
 
 
         Cat.prototype = new Mammal();        // Here's where the inheritance occurs
