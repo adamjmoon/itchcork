@@ -1,4 +1,4 @@
-if (Meteor.isClient) {
+    if (Meteor.isClient) {
 
     Template.scripts.rendered = function() {
 
