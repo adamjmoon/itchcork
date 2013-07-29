@@ -30,7 +30,7 @@ module.exports = (grunt) ->
     concat:
       ic:
         src: lib + '*.js'
-        dest: r + 'itchcork.min.js'
+        dest: r + 'itchcork.js'
       allContext:
         src: context + '*.js'
         dest: ex + 'all-context.js'
