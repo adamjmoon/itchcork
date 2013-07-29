@@ -61,6 +61,18 @@ define('objectcreate',function() {
   return context;
 });
 
+define('primitivetypes',function() {
+  'use strict';
+   function context() {
+     this.numberPrimitiveValue = 1;
+     this.stringPrimitiveValue = "string";
+     this.booleanPrimitiveValue = true;
+     this.nullPrimitiveValue = null;
+     this.undefinedPrimiteValue;
+  }
+  return context;
+});
+
 define('array',function() {
   'use strict';
    function context() {
@@ -124,7 +136,7 @@ define('datetime',function() {
 define("inheritance", function(){
   function context(){
   
-    function Mammal(name){ 
+    this.Mammal = function Mammal(name){ 
       this.name=name;
       this.offspring=[];
     };
@@ -140,7 +152,7 @@ define("inheritance", function(){
     Cat.prototype = new Mammal();        // Here's where the inheritance occurs 
     Cat.prototype.constructor=Cat;       // Otherwise instances of Cat would have a constructor of Mammal 
   
-    function Cat(name){ 
+    this.Cat = function Cat(name){ 
       this.name=name;
     } 
     
@@ -148,8 +160,8 @@ define("inheritance", function(){
       return '[Cat "'+this.name+'"]';
     };
     
-    this.someAnimal = new Mammal('Mr. Biggles');
-    this.myPet = new Cat('Felix');
+    this.someAnimal = new this.Mammal('Mr. Biggles');
+    this.myPet = new this.Cat('Felix');
   }
   
   return context;
@@ -243,16 +255,4 @@ define('knockoutBenchmarks', function () {
     }
 
     return context;
-});
-
-define('primitivetypes',function() {
-  'use strict';
-   function context() {
-     this.numberPrimitiveValue = 1;
-     this.stringPrimitiveValue = "string";
-     this.booleanPrimitiveValue = true;
-     this.nullPrimitiveValue = null;
-     this.undefinedPrimiteValue;
-  }
-  return context;
 });
