@@ -14,17 +14,18 @@ define("inheritance", function(){
     	return '[Mammal "'+this.name+'"]';
     }; 
     
-    this.Cat.prototype = new this.Mammal();        // Here's where the inheritance occurs
-    this.Cat.prototype.constructor=this.Cat;       // Otherwise instances of Cat would have a constructor of Mammal
+    Cat.prototype = new this.Mammal();        // Here's where the inheritance occurs
+    Cat.prototype.constructor=this.Cat;       // Otherwise instances of Cat would have a constructor of Mammal
   
-    this.Cat = function Cat(name){ 
+    function Cat(name){
       this.name=name;
     } 
     
-    this.Cat.prototype.toString=function toString(){
+    Cat.prototype.toString=function toString(){
       return '[Cat "'+this.name+'"]';
     };
-    
+
+    this.Cat = Cat;
     this.someAnimal = new this.Mammal('Mr. Biggles');
     this.myPet = new this.Cat('Felix');
   }
