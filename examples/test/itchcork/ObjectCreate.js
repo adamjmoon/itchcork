@@ -23,7 +23,7 @@ require(['objectcreate', 'ItchCork'], function (c, ic) {
            .it(function(c) {c.cube.move(1,1); return c.cube.x;}).shouldBe(2)
            .it(function(c) {c.cube.move(1,1); return c.cube.y;}).shouldBe(2)
            .it(function(c) {c.cube.move(1,1); return c.cube.z;}).shouldBe(2)
-           .it(function(c) {return c.cube.move(1);}).shouldBe('Cube grew in 3 dimensions.'
+           .it(function(c) {return c.cube.move(1);}).shouldBe('Cube grew in 3 dimensions.')
            .it(function(c) {return c.shape.x;}).shouldBe(1)
            .it(function(c) {return c.shape.y;}).shouldBe(1)
 
