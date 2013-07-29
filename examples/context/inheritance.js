@@ -25,6 +25,8 @@ define("inheritance", function(){
       return '[Cat "'+this.name+'"]';
     };
     
+    this.Mammal = Mammal;
+    this.Cat = Cat;
     this.someAnimal = new Mammal('Mr. Biggles');
     this.myPet = new Cat('Felix');
   }
