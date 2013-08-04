@@ -9,196 +9,213 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <style id="theme"></style>
 </head>
-<body>{{> hitchscript}}{{> scripts}}{{> ga}}</body>
-<template name="hitchscript">
+<body>
+{{> header}}
 <div class="container-fluid" style="height: 45px;"/>
 <div class="container-fluid frame" id="frame" style="height:100%;">
-<div id="topNav" class="navbar-fixed-top"
-     style="display:none;position: fixed;right: 0;left: 0;z-index: 1030;margin-bottom: 0;">
-    <div class="navbar-inner">
-        <a href="" class="logoBtn"><img id="logo" class="logo" src="/hitchscript_logo.png"
-                                        style="cursor: pointer;margin-left:5px;"
-                                        data-bind="click: function(){toggleMenu();}" width="90"
-                                        height="44"/></a>
-
-        <div style="position: absolute;right: 0;top: 0; width: 52px; height:44px; margin: 0; !important; border-left: 1px solid #252A30 !important;cursor: pointer;"
-             data-bind="visible: suites().length>1,click: collapseAll"><img id="rightCorkCollapse" class="collapseAll"
-                                                                            style="margin-left: 15px;" width="21"
-                                                                            height="44" src="/menulogo.png"/></div>
-        <div style="position: absolute;right: 0;top: 0;padding: 0px 15px 0px 15px !important;margin: 0px; !important; border-left: 1px solid #252A30 !important;cursor: pointer;"
-             data-bind="visible: suites().length==1,click: toggleMenu"><img src="/menulogo.png" width="21" height="44"/>
-        </div>
-
-    </div>
-    <div class="well" style="display:none; position: absolute; right: 57px; top: 0px;padding: 3px !important;"
-         data-bind="visible: suites().length>0 && totalTests() > 0">
-
-        <div class="badge count" style="cursor: pointer;"
-             data-bind="click: function(){location.reload();}"><img id="refresh" src="/glyphicons_081_refresh.png"
-                                                                    width="25"
-                                                                    height="26"/></div>
-        <span class="badge badge-success headCount" data-bind="text: totalPassed()"/>
-        <span class="badge badge-important headCount" data-bind="text: totalFailed()"/>
-    </div>
-    <span class="badge badge-warning count" style="display:block; position: absolute; right: 57px; top: 10px;"
-          data-bind="visible: totalTests() == 0">Loading Test Suites ...</span>
+{{> menu}}
+{{> hitchscript}}
+{{> BootstrapThemeManager}}
 </div>
-<div id="menu" class="menu nav-collapse collapse well" style="display:none;">
-    <div class="collapse-inner">
-        <div class="navbar navbar-inverse menu-title">
-            <div class="navbar-inner"><span class="badge badge-info">Theme</span></div>
+</div>
+{{> scripts}}
+{{> ga}}
+
+</body>
+<template name="header">
+    <div id="topNav" class="navbar-fixed-top"
+         style="display:none;position: fixed;right: 0;left: 0;z-index: 1030;margin-bottom: 0;">
+        <div class="navbar-inner">
+            <a href="" class="logoBtn"><img id="logo" class="logo" src="/hitchscript_logo.png"
+                                            style="cursor: pointer;margin-left:5px;"
+                                            data-bind="click: function(){toggleMenu();}" width="90"
+                                            height="44"/></a>
+
+            <div style="position: absolute;right: 0;top: 0; width: 52px; height:44px; margin: 0; !important; border-left: 1px solid #252A30 !important;cursor: pointer;"
+                 data-bind="visible: suites().length>1,click: collapseAll"><img id="rightCorkCollapse"
+                                                                                class="collapseAll"
+                                                                                style="margin-left: 15px;" width="21"
+                                                                                height="44" src="/menulogo.png"/></div>
+            <div style="position: absolute;right: 0;top: 0;padding: 0px 15px 0px 15px !important;margin: 0px; !important; border-left: 1px solid #252A30 !important;cursor: pointer;"
+                 data-bind="visible: suites().length==1,click: toggleMenu"><img src="/menulogo.png" width="21"
+                                                                                height="44"/>
+            </div>
+
         </div>
-        <ul class="nav nav-tabs nav-stacked">
-            <li><a href="" data-bind="click: function(){setTheme('curelean');}">Cerulean</a></li>
-            <li><a href="" data-bind="click: function(){setTheme('cosmo');}">Cosmo</a></li>
-            <li><a href="" data-bind="click: function(){setTheme('cyborg');}">Cyborg</a></li>
-            <li><a href="" data-bind="click: function(){setTheme('superhero');}">Superhero</a></li>
-            <li><a href="" data-bind="click: function(){setTheme('customTheme');}">Custom</a></li>
-            <ul class="nav nav-tabs nav-stacked" style="display: none;"
-                data-bind="visible: currentTheme() ==='customTheme'">
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Body Font Color</span></div>
-                    </div>
-                    <input class="color pull-left"
-                           data-bind="value: cto.bodyFontColor, style: {'background-color': '#' + ThemeManager.bodyFontColor}"/>
-                </li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Body Background Color</span></div>
-                    </div>
-                    <input class="color pull-left"
-                           data-bind="value: cto.bodyBackgroundColor, style: {'background-color': '#' + ThemeManager.bodyBackgroundColor + ' !important;'}"/>
-                </li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Body Gradient From Color</span></div>
-                    </div>
-                    <input class="color pull-left"
-                           data-bind="value: cto.bodyGradientFromColor"/>
-                </li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Body Gradient To Color</span></div>
-                    </div>
-                    <input class="color pull-left"
-                           data-bind="value: cto.bodyGradientToColor"/></li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Info Color</span></div>
-                    </div>
-                    <input class="color pull-left" data-bind="value: cto.infoColor"/>
-                </li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Code Color</span></div>
-                    </div>
-                    <input class="color pull-left" data-bind="value: cto.codeColor"/>
-                </li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Code Font Family</span></div>
-                    </div>
-                    <input class="pull-left" data-bind="value: cto.codeFontFamily"/>
-                </li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Font Size</span></div>
-                    </div>
-                    <input class="pull-left" data-bind="value: cto.fontSize"/>
-                </li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Hover Color</span></div>
-                    </div>
-                    <input class="color pull-left"
-                           data-bind="value: cto.hoverColor"/></li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Well Background Color</span></div>
-                    </div>
-                    <input class="color pull-left"
-                           data-bind="value: cto.wellBackgroundColor"/></li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Top Nav Background Color</span></div>
-                    </div>
-                    <input class="color pull-left"
-                           data-bind="value: cto.navBackgroundColor"/></li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Suite Heading Background Color</span>
-                        </div>
-                    </div>
-                    <input class="color pull-left"
-                           data-bind="value: cto.navBarInnerBackgroundColor"/>
-                </li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Inverse Color</span></div>
-                    </div>
-                    <input class="color pull-left"
-                           data-bind="value: cto.inverseColor"/></li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Success Color</span></div>
-                    </div>
-                    <input class="color pull-left"
-                           data-bind="value: cto.successColor"/></li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Error Color</span></div>
-                    </div>
-                    <input class="color pull-left"
-                           data-bind="value: cto.errorColor"/></li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Completed Color</span></div>
-                    </div>
-                    <input class="color pull-left"
-                           data-bind="value: cto.completedColor"/></li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Table Border Color</span></div>
-                    </div>
-                    <input class="color pull-left"
-                           data-bind="value: cto.tableBorderColor"/></li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Radius</span></div>
-                    </div>
-                    <input class="pull-left" data-bind="value: cto.radius"/></li>
-                <li>
-                    <div class="navbar navbar-inverse menu-title">
-                        <div class="navbar-inner"><span class="badge badge-info">Badge Radius</span></div>
-                    </div>
-                    <input class="pull-left" data-bind="value: cto.badgeRadius"/>
-                </li>
-            </ul>
-        </ul>
-        <div class="navbar navbar-inverse menu-title">
-            <div class="navbar-inner"><span class="badge badge-info">Testing Framework</span></div>
+        <div class="well" style="display:none; position: absolute; right: 57px; top: 0px;padding: 3px !important;"
+             data-bind="visible: suites().length>0 && totalTests() > 0">
+
+            <div class="badge count" style="cursor: pointer;"
+                 data-bind="click: function(){location.reload();}"><img id="refresh" src="/glyphicons_081_refresh.png"
+                                                                        width="25"
+                                                                        height="26"/></div>
+            <span class="badge badge-success headCount" data-bind="text: totalPassed()"/>
+            <span class="badge badge-important headCount" data-bind="text: totalFailed()"/>
         </div>
-        <ul class="nav nav-tabs nav-stacked">
-            <li><a href="" data-bind="click: function(){unitTestFrameworkManager.set('itchcork');}">Itchcork</a>
-            </li>
-            <li><a href="" data-bind="click: function(){unitTestFrameworkManager.set('mocha');}">Mocha</a></li>
-        </ul>
-        <div class="navbar navbar-inverse menu-title">
-            <div class="navbar-inner"><span class="badge badge-info"><img style="float: left;"
-                                                                          src="/glyphicons_401_github.png"
-                                                                          width="24"
-                                                                          height="24"/><span
-                    style="top: 5px;position: relative">Github Source</span></span>
+    <span class="badge badge-warning count" style="display:block; position: absolute; right: 57px; top: 10px;"
+          data-bind="visible: totalTests() == 0">Loading...</span>
+    </div>
+</template>
+<template name="menu">
+    <div id="menu" class="menu nav-collapse collapse well" style="display:none;">
+        <div class="collapse-inner">
+            <div class="navbar navbar-inverse menu-title">
+                <div class="navbar-inner"><span class="badge badge-info">Theme</span></div>
             </div>
             <ul class="nav nav-tabs nav-stacked">
-                <li><input type="text" value="raw.github.com/adamjmoon/itchcork/master" style="width: 99%"/></li>
-                <li>{{loginButtons}}</li>
+                <li><a href="" data-bind="click: function(){setTheme('curelean');}">Cerulean</a></li>
+                <li><a href="" data-bind="click: function(){setTheme('cosmo');}">Cosmo</a></li>
+                <li><a href="" data-bind="click: function(){setTheme('cyborg');}">Cyborg</a></li>
+                <li><a href="" data-bind="click: function(){setTheme('superhero');}">Superhero</a></li>
+                <li><a href="" data-bind="click: function(){setTheme('customTheme');}">Custom</a></li>
+                <ul class="nav nav-tabs nav-stacked" style="display: none;"
+                    data-bind="visible: currentTheme() ==='customTheme'">
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Body Font Color</span></div>
+                        </div>
+                        <input class="color pull-left"
+                               data-bind="value: cto.bodyFontColor"/>
+                    </li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Body Background Color</span></div>
+                        </div>
+                        <input class="color pull-left"
+                               data-bind="value: cto.bodyBackgroundColor"/>
+                    </li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Body Gradient From Color</span></div>
+                        </div>
+                        <input class="color pull-left"
+                               data-bind="value: cto.bodyGradientFromColor"/>
+                    </li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Body Gradient To Color</span></div>
+                        </div>
+                        <input class="color pull-left"
+                               data-bind="value: cto.bodyGradientToColor"/></li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Info Color</span></div>
+                        </div>
+                        <input class="color pull-left" data-bind="value: cto.infoColor"/>
+                    </li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Code Color</span></div>
+                        </div>
+                        <input class="color pull-left" data-bind="value: cto.codeColor"/>
+                    </li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Code Font Family</span></div>
+                        </div>
+                        <input class="pull-left" data-bind="value: cto.codeFontFamily"/>
+                    </li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Font Size</span></div>
+                        </div>
+                        <input class="pull-left" data-bind="value: cto.fontSize"/>
+                    </li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Hover Color</span></div>
+                        </div>
+                        <input class="color pull-left"
+                               data-bind="value: cto.hoverColor"/></li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Well Background Color</span></div>
+                        </div>
+                        <input class="color pull-left"
+                               data-bind="value: cto.wellBackgroundColor"/></li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Top Nav Background Color</span></div>
+                        </div>
+                        <input class="color pull-left"
+                               data-bind="value: cto.navBackgroundColor"/></li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Suite Heading Background Color</span>
+                            </div>
+                        </div>
+                        <input class="color pull-left"
+                               data-bind="value: cto.navBarInnerBackgroundColor"/>
+                    </li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Inverse Color</span></div>
+                        </div>
+                        <input class="color pull-left"
+                               data-bind="value: cto.inverseColor"/></li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Success Color</span></div>
+                        </div>
+                        <input class="color pull-left"
+                               data-bind="value: cto.successColor"/></li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Error Color</span></div>
+                        </div>
+                        <input class="color pull-left"
+                               data-bind="value: cto.errorColor"/></li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Completed Color</span></div>
+                        </div>
+                        <input class="color pull-left"
+                               data-bind="value: cto.completedColor"/></li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Table Border Color</span></div>
+                        </div>
+                        <input class="color pull-left"
+                               data-bind="value: cto.tableBorderColor"/></li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Radius</span></div>
+                        </div>
+                        <input class="pull-left" data-bind="value: cto.radius"/></li>
+                    <li>
+                        <div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-info">Badge Radius</span></div>
+                        </div>
+                        <input class="pull-left" data-bind="value: cto.badgeRadius"/>
+                    </li>
+                </ul>
             </ul>
+            <div class="navbar navbar-inverse menu-title">
+                <div class="navbar-inner"><span class="badge badge-info">Testing Framework</span></div>
+            </div>
+            <ul class="nav nav-tabs nav-stacked">
+                <li><a href="" data-bind="click: function(){unitTestFrameworkManager.set('itchcork');}">Itchcork</a>
+                </li>
+                <li><a href="" data-bind="click: function(){unitTestFrameworkManager.set('mocha');}">Mocha</a></li>
+            </ul>
+            <div class="navbar navbar-inverse menu-title">
+                <div class="navbar-inner"><span class="badge badge-info"><img style="float: left;"
+                                                                              src="/glyphicons_401_github.png"
+                                                                              width="24"
+                                                                              height="24"/><span
+                        style="top: 5px;position: relative">Github Source</span></span>
+                </div>
+                <ul class="nav nav-tabs nav-stacked">
+                    <li><input type="text" value="raw.github.com/adamjmoon/itchcork/master" style="width: 99%"/></li>
+                    <li>{{loginButtons}}</li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
-<div id="view" class="view container-fluid" style="display: none;" data-bind="visible: suites().length>0">
+</template>
+<template name="hitchscript">
+
+<div id="hitchscriptView" class="view container-fluid" style="display: none;" data-bind="visible: suites().length>0">
     <div class="accordion" id="suiteListAccordian" data-bind="'foreach': suites">
         <div class="accordion-group container-fluid">
             <div class="navbar navbar-inverse">
@@ -388,8 +405,36 @@
 </div>
 </div>
 </template>
+<template name="BootstrapThemeManager">
+    <div class="container frame" id="bootstrapThemeManager" style="height:100%;display:none;">
+        <div id="bootThemeManagerView" class="view container-fluid" style="display: none;"
+             data-bind="visible: suites().length>0">
+            <div class="row">
+                <div class="col-10 pull-1 outerContainer">8</div>
+                <div class="col-6 col-lg-4 outerContainer">4</div>
+            </div>
+
+            <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+            <div class="row">
+                <div class="col-6 col-lg-4 outerContainer">4</div>
+                <div class="col-6 col-lg-4 outerContainer">4</div>
+                <div class="col-6 col-lg-4 outerContainer">4</div>
+            </div>
+
+            <!-- Columns are always 50% wide, on mobile and desktop -->
+            <div class="row">
+                <div class="col-6 col-lg-5 outerContainer">6</div>
+                <div class="col-6 col-lg-6 outerContainer">6</div>
+            </div>
+        </div>
+    </div>
+</template>
 <template name="scripts"></template>
+
 <template name="nanojar">
     <div id="nanojarWrap"></div>
 </template>
+
 <template name="ga"></template>
+
+

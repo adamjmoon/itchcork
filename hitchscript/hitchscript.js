@@ -1,18 +1,29 @@
-    if (Meteor.isClient) {
+if (Meteor.isClient) {
 
-    Template.scripts.rendered = function() {
+    Template.scripts.rendered = function () {
 
-        var root = 'https://raw.github.com/adamjmoon/itchcork/master/';
+        if (window.location.pathname.indexOf('bootstrap') === -1) {
+            var root = 'https://raw.github.com/adamjmoon/itchcork/master/';
 
-        var main = document.createElement('script');
-        main.type = 'text/javascript';
-        main.src = 'https://raw.github.com/adamjmoon/itchcork/master/itchcork.min.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(main, s);
+            var main = document.createElement('script');
+            main.type = 'text/javascript';
+            main.src = 'https://raw.github.com/adamjmoon/itchcork/master/itchcork.min.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(main, s);
+        }
 
     };
 
-    Template.nanojar.rendered = function() {
+    Template.BootstrapThemeManager.rendered = function () {
+
+        if (window.location.pathname.indexOf('bootstrap') > -1) {
+            var bootstrapFrame = document.getElementById('bootstrapThemeManager');
+            bootstrapFrame.style.display = 'block';
+        }
+
+    };
+
+    Template.nanojar.rendered = function () {
         var n = document.getElementById('nanojarWrap');
         n.innerHTML = '<applet code=nano archive=' + '/nano.jar' + '>';
     };
