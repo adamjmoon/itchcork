@@ -72,7 +72,9 @@
                 <ul class="nav nav-tabs nav-stacked" style="display: none;"
                     data-bind="visible: currentTheme() ==='customTheme'">
                     <li>
-                        <a href="" data-bind="click: function(){resetCustomTheme();}">Reset Custom</a>
+                        <a href="" data-bind="click: function(){window.ThemeManager.resetCustomTheme();}"><div class="navbar navbar-inverse menu-title">
+                            <div class="navbar-inner"><span class="badge badge-inverse">Reset Custom Theme</span></div>
+                        </div></a>
                     </li>
                     <li>
                         <div class="navbar navbar-inverse menu-title">
