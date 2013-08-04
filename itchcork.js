@@ -2,19 +2,19 @@ window.ThemeManager = (function () {
     var themeManager = {};
 
     var theme = function () {
-        this.bodyFontColor = "#999";
-        this.radius = "4px";
+        this.bodyFontColor = "#000";
+        this.radius = "5px";
         this.badgeRadius = "9px";
-        this.bodyBackgroundColor = "#121417";
-        this.bodyGradientFromColor = "#060606";
-        this.bodyGradientToColor = "#252a30";
+        this.bodyBackgroundColor = "#fff";
+        this.bodyGradientFromColor = "#fff";
+        this.bodyGradientToColor = "#fff";
         this.infoColor = "#33b5e5";
         this.badgeSuccess = "#669900";
         this.badgeWarning = "#f80";
         this.codeColor = "#fff";
         this.hoverColor = "#33b5e5";
-        this.wellBackgroundColor = "#131517";
-        this.navBackgroundColor = "#020202";
+        this.wellBackgroundColor = "#333";
+        this.navBackgroundColor = "#000";
         this.navBarInnerBackgroundColor = "#252a30";
         this.inverseColor = "#9933CC";
         this.successColor = "#5c8a00";
@@ -26,6 +26,27 @@ window.ThemeManager = (function () {
     };
 
     themeManager['cyborg'] = new theme();
+    themeManager['cyborg'].bodyFontColor = "#999";
+    themeManager['cyborg'].radius = "4px";
+    themeManager['cyborg'].badgeRadius = "9px";
+    themeManager['cyborg'].bodyBackgroundColor = "#121417";
+    themeManager['cyborg'].bodyGradientFromColor = "#060606";
+    themeManager['cyborg'].bodyGradientToColor = "#252a30";
+    themeManager['cyborg'].infoColor = "#33b5e5";
+    themeManager['cyborg'].badgeSuccess = "#669900";
+    themeManager['cyborg'].badgeWarning = "#f80";
+    themeManager['cyborg'].codeColor = "#fff";
+    themeManager['cyborg'].hoverColor = "#33b5e5";
+    themeManager['cyborg'].wellBackgroundColor = "#131517";
+    themeManager['cyborg'].navBackgroundColor = "#020202";
+    themeManager['cyborg'].navBarInnerBackgroundColor = "#252a30";
+    themeManager['cyborg'].inverseColor = "#9933CC";
+    themeManager['cyborg'].successColor = "#5c8a00";
+    themeManager['cyborg'].errorColor = "#c00";
+    themeManager['cyborg'].completedColor = "#5c8a00";
+    themeManager['cyborg'].tableBorderColor = "#222";
+    themeManager['cyborg'].codeFontFamily = "Menlo,Monaco,Consolas,monospace";
+    themeManager['cyborg'].fontSize= "12px";
     themeManager['custom'] = new theme();
     if(!amplify.store('customTheme'))
         amplify.store('customTheme', themeManager['custom']);
@@ -456,6 +477,12 @@ window.ThemeManager = (function () {
             apply();
         }
     };
+
+    themeManager.resetCustomTheme = function (prop,value){
+
+        amplify.store('customTheme', new theme());
+        apply();
+    }
 
     themeManager.updateCustom = function (prop,value){
         var currentCustomTheme = amplify.store('customTheme');
