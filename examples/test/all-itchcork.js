@@ -24,13 +24,6 @@ require(['objectcreate', 'ItchCork'], function (c, ic) {
            .it(function(c) {c.cube.move(1,1); return c.cube.y;}).shouldBe(2)
            .it(function(c) {c.cube.move(1,1); return c.cube.z;}).shouldBe(2)
            .it(function(c) {return c.cube.move(1);}).shouldBe('Cube grew in 3 dimensions.')
-           .it(function(c) {return c.cube.x;}).shouldBe(3)
-           .it(function(c) {return c.cube.y;}).shouldBe(3)
-           .it(function(c) {return c.cube.z;}).shouldBe(3)
-           .it(function(c) {return c.rectangle.x;}).shouldBe(2)
-           .it(function(c) {return c.rectangle.y;}).shouldBe(2)
-           .it(function(c) {return c.rectangle2.x;}).shouldBe(2)
-           .it(function(c) {return c.rectangle2.y;}).shouldBe(2)
            .it(function(c) {return c.shape.x;}).shouldBe(1)
            .it(function(c) {return c.shape.y;}).shouldBe(1)
 
@@ -92,7 +85,10 @@ require(['inheritance', 'ItchCork'], function (c, ic) {
       
       suite
       .it(function(c) {return c.someAnimal.toString();}).shouldBe('[Mammal "Mr. Biggles"]')
+      .it(function(c) {return c.someAnimal instanceof c.Mammal;}).shouldBe(true)
       .it(function(c) {return c.myPet.toString();}).shouldBe('[Cat "Felix"]')
+      .it(function(c) {return c.myPet instanceof c.Mammal;}).shouldBe(true)
+      .it(function(c) {return c.myPet instanceof c.Cat;}).shouldBe(true)
       .it(function(c) {c.myPet.haveABaby(); return c.myPet.offspring[0].toString();}).shouldBe('[Cat "Baby Felix"]')
 
  });
