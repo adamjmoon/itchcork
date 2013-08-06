@@ -17,6 +17,12 @@ if (Meteor.isClient) {
     Template.BootstrapThemeManager.rendered = function () {
 
         if (window.location.pathname.indexOf('bootstrap') > -1) {
+            var root = 'https://raw.github.com/adamjmoon/itchcork/master/';
+            var main = document.createElement('script');
+            main.type = 'text/javascript';
+            main.src = 'https://raw.github.com/adamjmoon/itchcork/master/lib/aaa.themeManager.bootstrap.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(main, s);
             var bootstrapFrame = document.getElementById('bootstrapThemeManager');
             bootstrapFrame.style.display = 'block';
         }
