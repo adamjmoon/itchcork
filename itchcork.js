@@ -1171,6 +1171,12 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                         else {
 
                             require(['chai', 'sinon-chai', 'mocha'], function (chai, sinonChai) {
+
+                                _.each(window.mochaSuites, function(suite){
+                                    "use strict";
+                                    suite();
+                                });
+
                                 chai.use(sinonChai);
                                 var assert = chai.assert;
                                 var should = chai.should();
@@ -1217,7 +1223,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
 //                                            $("#collapse").show();
 //                                        });
                                     });
-                                
+
                             });
                         }
                     });
