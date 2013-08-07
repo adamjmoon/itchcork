@@ -831,8 +831,8 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel'], function (Test, Benchma
                 return c[tc]();
             };
             for (var testcase in self.jsContext) {
-                console.log(typeof testcase);
-                if(typeof testcase === 'function'){
+                console.log(typeof self.jsContext[testcase]);
+                if(typeof self.jsContext[testcase] === 'function'){
                     self.addTestWithBenchmarks(self.shouldEqualValue, func, testcase, false);
                 }
             }
