@@ -1114,7 +1114,7 @@ define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify'], function (Suite, Test, Sp
 
     return new ItchCork();
 });
-require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js','https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js'], function (ko) {
+require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js'], function (ko) {
     window.ko = ko;
 
     require(['SuiteView'], function (sv) {
@@ -1151,7 +1151,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
             window.sinon = sinon;
             $("#topNav").show();
             $('div.frame').show();
-                require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) {
+            require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) {
                 this.CoffeeScript = CoffeeScript;
                 require(['js2coffee'], function () {
 
@@ -1179,11 +1179,12 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                                 console.log(s);
 
                                                 require([s.title], function (c) {
-                                                   var suite = new itchcork.Suite(s.title, c, "mocha");
-                                                    _.each(s.suites, function(subMochaSuite){
+                                                    var suite = new itchcork.Suite(s.title, c, "mocha");
+                                                    _.each(s.suites, function (subMochaSuite) {
 
-                                                        _.each(subMochaSuite.tests, function(test){
+                                                        _.each(subMochaSuite.tests, function (test) {
                                                             suite.it(test).shouldBe(true);
+                                                        });
                                                     });
                                                 });
                                             });
