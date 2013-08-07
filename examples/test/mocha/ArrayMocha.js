@@ -14,10 +14,10 @@ require(['arrayMocha'], function (c) {
             it('should return 3 for index 0', function () {
                 return context.arr[0].should.equal(3);
             });
-            it('should return 3 for index 1', function () {
+            it('should return 6 for index 1', function () {
                 return context.arr[1].should.equal(6);
             });
-            it('should return 3 for index 2', function () {
+            it('should return 9 for index 2', function () {
                 return context.arr[2].should.equal(9);
             });
 
