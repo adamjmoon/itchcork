@@ -319,7 +319,7 @@
                                     class="badge badge-info">TEST RESULTS</span></a></div>
                             <div data-bind="css: 'accordion-body collapse in collapseResults' + num">
                                 <div class="accordion-inner results" id="itchcorkResults"
-                                     data-bind="visible: true">
+                                     data-bind="visible: window.suiteView.unitTestFrameworkManager.getFramework()==='itchcork'">
                                     <table class="table table-condensed" id="results">
                                         <thead>
                                         <tr>
@@ -347,7 +347,7 @@
                             </div>
                         </div>
                         <div class="accordion-group"
-                             data-bind="visible: window.suiteView.unitTestFrameworkManager.getFramework()==='itchcork' && benchmarkingEnabled()">
+                             data-bind="visible: benchmarkingEnabled()">
                             <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
                                                               data-bind="attr: {'data-target': '.collapseBenchmarks' + num}"
                                                               data-target=".collapseBenchmarks" href="#"><span
