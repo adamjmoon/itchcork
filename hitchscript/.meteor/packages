@@ -3,6 +3,7 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
+itchcork
 autopublish
 insecure
 preserve-inputs
@@ -14,4 +15,4 @@ underscore
 force-ssl
 accounts-github
 accounts-ui
-itchcork
+

@@ -111,13 +111,12 @@ window.ThemeManager = (function () {
     themeManager['superhero'].tableBorderColor = "transparent";
 
     var themeStyleTag = document.createElement('style');
-       themeStyleTag.setAttribute("id","theme");
-       var s = document.getElementsByTagName('link')[0];
-       s.parentNode.insertBefore(themeStyleTag, s);
+    themeStyleTag.setAttribute("id","theme");
+    var s = document.getElementsByTagName('link')[0];
+    s.parentNode.insertBefore(themeStyleTag, s);
 
     var apply = function () {
         var t;
-
 
         if (amplify.store('currentTheme') === 'customTheme') {
             t = amplify.store('customTheme');
@@ -1122,8 +1121,7 @@ define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify'], function (Suite, Test, Sp
 
     return new ItchCork();
 });
-require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js'], function (ko) {
-    window.ko = ko;
+require(['https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js'], function () {
 
     require(['SuiteView'], function (sv) {
         window.suiteView = new sv();
