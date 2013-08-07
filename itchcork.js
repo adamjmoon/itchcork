@@ -1180,6 +1180,8 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
 
                                                 require([s.title], function (c) {
 
+                                                    _.each(runner.suite.suites,
+
                                                     var suite = new itchcork.Suite(s.title, c, "mocha");
 
 
