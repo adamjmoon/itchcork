@@ -9,6 +9,10 @@ require(['arrayMocha'], function (c) {
             it('should return 0 valued index when the value is present', function () {
                 return context.arr.indexOf(1).should.equal(0);
             });
+            it('should return 0 valued index when the value is present', function () {
+                return context.arr.indexOf(3).should.equal(2);
+            });
+
         });
         describe('fun() should multiply each value in array by 3', function () {
             var context = new c();
