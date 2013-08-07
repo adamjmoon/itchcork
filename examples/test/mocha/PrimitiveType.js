@@ -3,7 +3,7 @@ require(['primitivetypes'], function (c) {
     describe('primitivetypes', function () {
         describe('stringPrimitiveValue', function () {
             it("typeof should equal 'string'", function () {
-                (typeof context.stringPrimitiveValue).should.equal("string");
+                return (typeof context.stringPrimitiveValue).should.equal("string");
             });
         });
     });
