@@ -1186,7 +1186,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                                     _.each(s.suites, function (subMochaSuite) {
 
                                                         _.each(subMochaSuite.tests, function (test) {
-                                                            console.log(test.fn().eq);
+                                                            console.log(test.fn().equals);
                                                             //sui   te.it(test.fn).shouldBe(true);
                                                         });
                                                    });
