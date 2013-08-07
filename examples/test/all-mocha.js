@@ -18,7 +18,9 @@ require(['arrayMocha'], function (c) {
             var context = new c();
             context.fun();
             it('should return 3 for index 0', function () {
-                return context.arr[0].should.equal(3);
+                var result = context.arr[0];
+                result.should.equal(3);
+                return result;
             });
             it('should return 6 for index 1', function () {
                 return context.arr[1].should.equal(6);
