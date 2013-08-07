@@ -1177,7 +1177,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                 mocha.setup('bdd');
                                 mocha.reporter('html');
 
-                                require(['suitePath/mocha/PrimitiveType', 'suitePath/mocha/ArrayMocha'], function () {
+
                                     var runner = mocha.run();
                                     runner.on('end', function () {
 
@@ -1217,7 +1217,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
 //                                            $("#collapse").show();
 //                                        });
                                     });
-                                });
+                                
                             });
                         }
                     });
