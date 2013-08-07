@@ -1,7 +1,8 @@
 require(['arrayMocha'], function (c) {
-    var context = new c();
+
     describe('arrayMocha', function () {
         describe('#indexOf()', function () {
+            var context = new c();
             it('should return -1 when the value is not present ', function () {
                 return context.arr.indexOf(5).should.equal(-1);
             });
@@ -10,6 +11,7 @@ require(['arrayMocha'], function (c) {
             });
         });
         describe('fun() should multiply each value in array by 3', function () {
+            var context = new c();
             context.fun();
             it('should return 3 for index 0', function () {
                 return context.arr[0].should.equal(3);
