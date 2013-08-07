@@ -3,13 +3,13 @@ if (Meteor.isClient) {
     Template.scripts.rendered = function () {
 
         if (window.location.pathname.indexOf('bootstrap') === -1) {
-            var root = 'https://raw.github.com/adamjmoon/itchcork/master/';
-
-            var main = document.createElement('script');
-            main.type = 'text/javascript';
-            main.src = 'https://raw.github.com/adamjmoon/itchcork/master/itchcork.min.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(main, s);
+//            var root = 'https://raw.github.com/adamjmoon/itchcork/master/';
+//
+//            var main = document.createElement('script');
+//            main.type = 'text/javascript';
+//            main.src = 'https://raw.github.com/adamjmoon/itchcork/master/itchcork.min.js';
+//            var s = document.getElementsByTagName('script')[0];
+//            s.parentNode.insertBefore(main, s);
         }
 
     };
