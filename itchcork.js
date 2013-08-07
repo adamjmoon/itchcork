@@ -1185,14 +1185,6 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                                                         _.each(subMochaSuite.tests, function(test){
                                                             suite.it(test).shouldBe(true);
                                                     });
-
-
-
-
-
-
-
-
                                                 });
                                             });
                                         window.suiteView.totalTests(runner.total);
