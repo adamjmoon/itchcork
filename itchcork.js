@@ -110,9 +110,13 @@ window.ThemeManager = (function () {
     themeManager['superhero'].completedColor = "#51A351";
     themeManager['superhero'].tableBorderColor = "transparent";
 
+    var themeStyleTag = document.createElement('style');
+    themeStyleTag.setAttribute("id","theme");
+    var s = document.getElementsByTagName('link')[0];
+    s.parentNode.insertBefore(themeStyleTag, s);
+
     var apply = function () {
         var t;
-        var themeStyleTag = document.getElementById('theme');
 
         if (amplify.store('currentTheme') === 'customTheme') {
             t = amplify.store('customTheme');
@@ -1167,13 +1171,19 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                         else {
 
                             require(['chai', 'sinon-chai', 'mocha'], function (chai, sinonChai) {
+
+                                _.each(window.mochaSuites, function(suite){
+                                    "use strict";
+                                    suite();
+                                });
+
                                 chai.use(sinonChai);
                                 var assert = chai.assert;
                                 var should = chai.should();
                                 mocha.setup('bdd');
                                 mocha.reporter('html');
 
-                                require(['suitePath/mocha/PrimitiveType', 'suitePath/mocha/ArrayMocha'], function () {
+
                                     var runner = mocha.run();
                                     runner.on('end', function () {
 
@@ -1213,7 +1223,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
 //                                            $("#collapse").show();
 //                                        });
                                     });
-                                });
+
                             });
                         }
                     });
