@@ -1165,15 +1165,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                         });
                     };
 
-                    var postCoverage = function () {
-                        "use strict";
 
-                        if (window.__coverage__) {
-                            var coverage = JSON.stringify(window.__coverage__.valueOf());
-                            $.post("/coverage", {coverage: coverage});
-                        }
-
-                    };
 
                     var runItchCork = function () {
                         "use strict";
