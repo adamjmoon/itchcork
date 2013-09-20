@@ -10651,16 +10651,6 @@ define("itchcork", ['Suite', 'Test', 'Spy', 'Verify'], function (Suite, Test, Sp
         requirejs.config({
             baseUrl: 'https://',
             paths: {
-                'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
-                'coffeescript': suiteView.vendorRoot() + 'coffee/coffeescript.min',
-                'js2coffee': suiteView.vendorRoot() + 'coffee/js2coffee',
-                'lodash': suiteView.vendorRoot() + 'aa.lodash.min',
-                'mocha': suiteView.vendorRoot() + 'mocha',
-                'sinon': suiteView.vendorRoot() + 'sinon',
-                'chai': suiteView.vendorRoot() + 'chai',
-                'sinon-chai': suiteView.vendorRoot() + 'sinon-chai',
-                'platform': suiteView.vendorRoot() + 'platform',
-                'benchmark': suiteView.vendorRoot() + 'benchmark',
                 'context': suiteView.contextRoot() + 'examples/all-context',
                 'suite': suiteFilePath + "/" + suite,
                 'suitePath': suiteFilePath
@@ -10670,6 +10660,12 @@ define("itchcork", ['Suite', 'Test', 'Spy', 'Verify'], function (Suite, Test, Sp
             $("#topNav").show();
             $('div.frame').show();
 
+        require(['ItchCork', 'context'], function (itchcork) {
+            if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
+                require(['suite'], function () {
+
+                });
+            }
 
             var runItchCork = function () {
                 "use strict";
