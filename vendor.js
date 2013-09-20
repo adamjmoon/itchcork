@@ -10723,7 +10723,7 @@ define("itchcork", ['Suite', 'Test', 'Spy', 'Verify'], function (Suite, Test, Sp
                 };
 
 
-                    view = window.location.pathname;
+
 
                     else if (view.indexOf('benchmarks') > -1) {
                         window.suiteView.currentView('Benchmarks');
