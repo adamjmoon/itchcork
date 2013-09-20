@@ -1152,7 +1152,7 @@ define("itchcork", ['Suite', 'Test', 'Spy', 'Verify'], function (Suite, Test, Sp
             $("#topNav").show();
             $('div.frame').show();
 
-        require(['ItchCork', 'context'], function (itchcork) {
+
             if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
                 require(['suite'], function () {
 
