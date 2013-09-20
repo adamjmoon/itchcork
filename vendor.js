@@ -10636,7 +10636,7 @@ define("itchcork", ['Suite', 'Test', 'Spy', 'Verify'], function (Suite, Test, Sp
 });
 
 
-    require(['SuiteView', 'itchcork', ''], function (sv, itchcork) {
+    require(['SuiteView', 'itchcork', 'context'], function (sv, itchcork) {
 
         window.suiteView = new sv();
         var context = '';
