@@ -1164,27 +1164,3 @@ define("itchcork", ['Suite', 'Test', 'Spy', 'Verify'], function (Suite, Test, Sp
 
 
 
-
-                    else if (view.indexOf('benchmarks') > -1) {
-                        window.suiteView.currentView('Benchmarks');
-                        window.suiteView.unitTestFrameworkManager.set('itchcork');
-                        require(['/js/app.js'], function () {
-                            "use strict";
-                            runItchCork();
-                        })
-                        ;
-                    }
-                    else {
-
-                        window.suiteView.currentView('UnitTests');
-                        window.suiteView.unitTestFrameworkManager.set('mocha');
-                        require(['mocha','/js/app.js'], function () {
-                            window.mocha = mocha;
-                            runMocha();
-                        });
-                    }
-                });
-            });
-        });
-    });
-});
