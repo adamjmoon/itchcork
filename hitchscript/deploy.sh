@@ -1,2 +1,2 @@
-meteor deploy hitchscript.meteor.com
+meteor deploy www.hitchscript.com
 

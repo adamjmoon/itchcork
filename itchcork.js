@@ -22,7 +22,7 @@ window.ThemeManager = (function () {
         this.completedColor = "#5c8a00";
         this.tableBorderColor = "#222";
         this.codeFontFamily = "Menlo,Monaco,Consolas,monospace";
-        this.fontSize= "12px";
+        this.fontSize = "12px";
     };
 
     themeManager['cyborg'] = new theme();
@@ -46,9 +46,9 @@ window.ThemeManager = (function () {
     themeManager['cyborg'].completedColor = "#5c8a00";
     themeManager['cyborg'].tableBorderColor = "#222";
     themeManager['cyborg'].codeFontFamily = "Menlo,Monaco,Consolas,monospace";
-    themeManager['cyborg'].fontSize= "12px";
+    themeManager['cyborg'].fontSize = "12px";
     themeManager['custom'] = new theme();
-    if(!amplify.store('customTheme'))
+    if (!amplify.store('customTheme'))
         amplify.store('customTheme', themeManager['custom']);
     themeManager['cosmo'] = new theme();
     themeManager['cosmo'].bodyFontColor = "#000";
@@ -80,7 +80,7 @@ window.ThemeManager = (function () {
     themeManager['curelean'].badgeSuccess = "#669900";
     themeManager['curelean'].badgeWarning = "#f80";
     themeManager['curelean'].codeColor = "#fff";
-    themeManager['curelean'].hoverColor = "#33b5e5";
+    themeManager['curelean'].hoverColor = "#FF2B2B";
     themeManager['curelean'].wellBackgroundColor = "#0a1366";
     themeManager['curelean'].navBackgroundColor = "#4cc6ef";
     themeManager['curelean'].navBarInnerBackgroundColor = "#0a1366";
@@ -111,7 +111,7 @@ window.ThemeManager = (function () {
     themeManager['superhero'].tableBorderColor = "transparent";
 
     var themeStyleTag = document.createElement('style');
-    themeStyleTag.setAttribute("id","theme");
+    themeStyleTag.setAttribute("id", "theme");
     var s = document.getElementsByTagName('link')[0];
     s.parentNode.insertBefore(themeStyleTag, s);
 
@@ -134,7 +134,7 @@ window.ThemeManager = (function () {
             + t.badgeSuccess + "}a.text-success:hover,a.text-success:focus{color:#356635}.text-left{text-align:left}.text-right{text-align:right}.text-center{text-align:center}h1,h2,h3,h4,h5,h6{margin:10px 0;font-family:inherit;font-weight:normal;line-height:20px;color:#fff;text-rendering:optimizelegibility}h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{font-weight:normal;line-height:1;color:#adafae}h1,h2,h3{line-height:40px}h1{font-size:38.5px}h2{font-size:31.5px}h3{font-size:24.5px}h4{font-size:17.5px}h5{font-size:14px}h6{font-size:11.9px}h1 small{font-size:24.5px}h2 small{font-size:17.5px}h3 small{font-size:14px}h4 small{font-size:14px}.page-header{padding-bottom:9px;margin:20px 0 30px;border-bottom:1px solid #eee}ul,ol{padding:0;margin:0 0 10px 25px}ul ul,ul ol,ol ol,ol ul{margin-bottom:0}li{line-height:20px}ul.unstyled,ol.unstyled{margin-left:0;list-style:none}ul.inline,ol.inline{margin-left:0;list-style:none}ul.inline>li,ol.inline>li{display:inline-block;*display:inline;padding-right:5px;padding-left:5px;*zoom:1}dl{margin-bottom:0}dt,dd{line-height:20px}dt{font-weight:bold}dd{margin-left:10px}.dl-horizontal{*zoom:1}.dl-horizontal:before,.dl-horizontal:after{display:table;line-height:0;content:''}.dl-horizontal:after{clear:both}.dl-horizontal dt{float:left;width:160px;overflow:hidden;clear:left;text-align:right;text-overflow:ellipsis;white-space:nowrap}.dl-horizontal dd{margin-left:180px}hr{margin:20px 0;border:0;border-top:1px solid "
             + t.tableBorderColor + ";border-bottom:1px solid #fff}abbr[title],abbr[data-original-title]{cursor:help;border-bottom:1px dotted #adafae}abbr.initialism{font-size:90%;text-transform:uppercase}blockquote{padding:0 0 0 15px;margin:0 0 20px;border-left:5px solid #eee}blockquote p{margin-bottom:0;font-size:17.5px;font-weight:300;line-height:1.25}blockquote small{display:block;line-height:20px;color:#adafae}blockquote small:before{content:'\2014 \00A0'}blockquote.pull-right{float:right;padding-right:15px;padding-left:0;border-right:5px solid #eee;border-left:0}blockquote.pull-right p,blockquote.pull-right small{text-align:right}blockquote.pull-right small:before{content:''}blockquote.pull-right small:after{content:'\00A0 \2014'}q:before,q:after,blockquote:before,blockquote:after{content:''}address{display:block;margin-bottom:20px;font-style:normal;line-height:20px}code,pre{padding:0 3px 2px;font-family:"
             + t.codeFontFamily + ";font-size:"
-            + t.fontSize +";color:#222;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}code{padding:2px 4px;color:#d14;white-space:nowrap;background-color:#f7f7f9;border:1px solid #e1e1e8}pre{display:block;padding:9.5px;margin:0 0 10px;font-size:13px;line-height:20px;word-break:break-all;word-wrap:break-word;white-space:pre;white-space:pre-wrap;background-color:#f5f5f5;border:1px solid #ccc;border:1px solid rgba(0,0,0,0.15);-webkit-border-radius: "
+            + t.fontSize + ";color:#222;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px}code{padding:2px 4px;color:#d14;white-space:nowrap;background-color:#f7f7f9;border:1px solid #e1e1e8}pre{display:block;padding:9.5px;margin:0 0 10px;font-size:13px;line-height:20px;word-break:break-all;word-wrap:break-word;white-space:pre;white-space:pre-wrap;background-color:#f5f5f5;border:1px solid #ccc;border:1px solid rgba(0,0,0,0.15);-webkit-border-radius: "
             + t.radius + ";-moz-border-radius: "
             + t.radius + ";border-radius: "
             + t.radius + "}pre.prettyprint{margin-bottom:0}code{font-weight: bold !important;suit}pre code{padding:0;color:inherit;white-space:pre;white-space:pre-wrap;background-color:transparent;border:0}.pre-scrollable{max-height:340px;overflow-y:scroll}form{margin:0 0 20px}fieldset{padding:0;margin:0;border:0}legend{display:block;width:100%;padding:0;margin-bottom:20px;font-size:21px;line-height:40px;color:#222;border:0;border-bottom:1px solid #e5e5e5}legend small{font-size:15px;color:#adafae}label,input,button,select,textarea{font-size:14px;font-weight:normal;line-height:20px}input,button,select,textarea{font-family:'Droid Sans',sans-serif}label{display:block;margin-bottom:5px}select,textarea,input[type='text'],input[type='password'],input[type='datetime'],input[type='datetime-local'],input[type='date'],input[type='month'],input[type='time'],input[type='week'],input[type='number'],input[type='email'],input[type='url'],input[type='search'],input[type='tel'],input[type='color'],.uneditable-input{display:inline-block;height:20px;padding:4px 6px;margin-bottom:10px;font-size:14px;line-height:20px;color:"
@@ -466,12 +466,11 @@ window.ThemeManager = (function () {
             + "body .frame .menu.collapse{float:left;width:300px}.menu{margin:0 2px 0 0!important;}body .frame .menu .navbar .navbar-inner{font-size:1.1em;line-height:23px;text-align:center;border-right:0}body .frame .menu .nav-stacked{padding:0}body .frame .menu .nav-stacked{margin:0!important}body .frame .menu .nav-stacked li input{padding:0!important;margin:0!important}body .frame .view{height:100%;overflow:auto;}body .frame .view .navbar .navbar-inner .btn-navbar{display:block;float:left}body .frame .view #content{text-align:justify}code.well{padding:1px!important}a:hover,a:focus{text-decoration:none!important}"
             + ".suiteDesc{padding:2px!important; height: 55px; margin-bottom: 2px !important;}.run-again{margin-left:4px!important}.navbar .btn,.navbar .btn-group{margin-top:10px} div.js{overflow-x: auto;} div.coffee{overflow-x: auto;} div.results{ overflow-x: auto !important;} pre.well {border: none;overflow-x: auto;}.frame{overflow-y: auto !important;}"
             + ".count{border: 1px solid #fff; margin: 0px 0 0px 0 !important;}.autoOverFlow{overflow-x:auto;}"
-            + ".headCount{border: 1px solid #fff; height:26px; width: 24px; line-height: 23px !important; margin: 0px 0 0px 0 !important; text-align:center;}.autoOverFlow{overflow-x:auto;}"
-            + ".nicescroll-rails{margin-top:45px !important;}"
+            + ".headCount{border: 1px solid #fff; height:26px; width: 24px; line-height: 23px !important; margin: 0px 1px 0px 1px !important; text-align:center;}.autoOverFlow{overflow-x:auto;}"
+            + ".nicescroll-rails{margin-top:45px !important;} #mocha-stats{display: none;}"
             + "a.logoBtn:active {height: 100%;-webkit-transform: rotate(180deg);-webkit-transition: all .5s linear;}"
             + ".collapseAll {-webkit-transform: rotate(0deg);-webkit-transition: all .5s linear;}"
             + ".expandAll {-webkit-transform: rotate(90deg);-webkit-transition: all .5s linear;} input {margin-right: 1px; width: 100%;border: 0px !important; border-top: dotted 1px !important; border-bottom: dotted 1px !important;height: 30px; } div.accordion-heading span{ margin-left: 5px;} ";
-
 
 
     };
@@ -482,15 +481,14 @@ window.ThemeManager = (function () {
         }
     };
 
-    themeManager.resetCustomTheme = function (prop,value){
-
+    themeManager.resetCustomTheme = function (prop, value) {
         amplify.store('customTheme', new theme());
         apply();
     }
 
-    themeManager.updateCustom = function (prop,value){
+    themeManager.updateCustom = function (prop, value) {
         var currentCustomTheme = amplify.store('customTheme');
-        if(prop.indexOf('Color') > 0)
+        if (prop.indexOf('Color') > 0)
             currentCustomTheme[prop] = '#' + value;
         else
             currentCustomTheme[prop] = value;
@@ -506,7 +504,6 @@ window.ThemeManager = (function () {
 
     return themeManager;
 }());
-
 /*
  RequireJS 2.1.5 Copyright (c) 2010-2012, The Dojo Foundation All Rights Reserved.
  Available via the MIT or new BSD license.
@@ -654,51 +651,39 @@ this.length=0;this.name="nicescrollarray";this.each=function(e){for(var j=0,k=0;
 d){e[d]=function(){var e=arguments;return this.each(function(){this[d].apply(this,e)})}},I=0;I<M.length;I++)Q(u,M[I]);e.fn.getNiceScroll=function(j){return"undefined"==typeof j?new F(this):e.data(this[j],"__nicescroll")||!1};e.extend(e.expr[":"],{nicescroll:function(j){return e.data(j,"__nicescroll")?!0:!1}});e.fn.niceScroll=function(j,d){"undefined"==typeof d&&("object"==typeof j&&!("jquery"in j))&&(d=j,j=!1);var k=new F;"undefined"==typeof d&&(d={});j&&(d.doc=e(j),d.win=e(this));var s=!("doc"in
 d);!s&&!("win"in d)&&(d.win=e(this));this.each(function(){var j=e(this).data("__nicescroll")||!1;j||(d.doc=s?e(this):d.doc,j=new P(d,e(this)),e(this).data("__nicescroll",j));k.push(j)});return 1==k.length?k[0]:k};window.NiceScroll={getjQuery:function(){return e}};e.nicescroll||(e.nicescroll=new F,e.nicescroll.options=K)})(jQuery);
 
-define("BenchmarkUtil", ['BenchmarkViewModel'], function (bVM) {
-    "use strict";
-    function benchmarkUtil() {
-        var benchmarks = ko.observableArray([]);
+define("BenchmarkViewModel", [], function () {
+    var vm = function () {
+        this.name = ko.observable('');
+        this.expression = ko.observable('');
+        this.hz = ko.observable(0);
+        this.relativateMarginError = ko.observable('');
+        this.timesFaster = ko.observable('pending...');
+        this.slowest = ko.observable(false);
+        this.fastest = ko.observable(false);
+        this.iterationPerSampleCycle = ko.observable(0);
+        this.numAnalysisCycles = ko.observable(0);
+        this.numSampleCycles = ko.observable(0);
+    };
 
-
-
-    }
-
-    return benchmarkUtil;
-
+    return vm;
 });
-define("BenchmarkViewModel", [], function() {
-  var vm =  function() {
-      this.name= ko.observable('');
-      this.expression= ko.observable('');
-      this.hz= ko.observable(0);
-      this.relativateMarginError= ko.observable('');
-      this.timesFaster= ko.observable('pending...');
-      this.slowest= ko.observable(false);
-      this.fastest= ko.observable(false);
-      this.iterationPerSampleCycle= ko.observable(0);
-      this.numAnalysisCycles= ko.observable(0);
-      this.numSampleCycles= ko.observable(0);
-  };
-
-  return vm;
-});
-define("Spy", [], function() {
+define("Spy", [], function () {
     "use strict";
-	return function(F) {
-		function G() {
-			var args = Array.prototype.slice.call(arguments);
-			G.calls.push(args);
-			F.apply(this, args);
-		}
+    return function (F) {
+        function G() {
+            var args = Array.prototype.slice.call(arguments);
+            G.calls.push(args);
+            F.apply(this, args);
+        }
 
-		G.prototype = F.prototype;
-		G.calls = [];
+        G.prototype = F.prototype;
+        G.calls = [];
 
-		return G;
-  };
+        return G;
+    };
 });
 define("Suite", ['Test', 'benchmark', 'SuiteViewModel'], function (Test, Benchmark, sVM) {
-    function suite(desc, js, framework) {
+    function suite(desc, jsFunc, framework) {
         "use strict";
         var self = this;
         self.vm, self.jsContext;
@@ -709,6 +694,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel'], function (Test, Benchma
         }
         self.highlight = function (code) {
             if (self.framework == "itchcork") {
+
                 return code
                     .replace(/</g, '&lt;')
                     .replace(/>/g, '&gt;')
@@ -719,7 +705,8 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel'], function (Test, Benchma
                 return code;
             }
         };
-        self.setupContextBreakdown = function (context, base) {
+        self.setupContextBreakdown = function (context, name) {
+            console.log(context);
             var jsStr = '', coffeeStr = '';
 
             for (var prop in context) {
@@ -727,33 +714,31 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel'], function (Test, Benchma
                     jsStr = context[prop].toString();
                     try {
                         coffeeStr = Js2coffee.build(jsStr);
-                        var tc = { name: base.replace(/context/g, 'c') + '.' + prop, jsStr: self.highlight(jsStr), coffeeStr: self.highlight(coffeeStr)};
+                        var tc = { name: name + '.' + prop, jsStr: self.highlight(jsStr), coffeeStr: self.highlight(coffeeStr)};
                         self.vm.testCases.push(tc);
                     } catch (err) {
-                        var tc = { name: base.replace(/context/g, 'c') + '.' + prop, jsStr: self.highlight(jsStr), coffeeStr: ''};
+                        var tc = { name: name + '.' + prop, jsStr: self.highlight(jsStr), coffeeStr: ''};
                         self.vm.testCases.push(tc);
                     }
 
                 } else if (context[prop] instanceof Object) {
-                    var tc = { name: 'c.' + prop, jsStr: Object.toSource ? context[prop].toSource() : 'is instanceof Object', coffeeStr: ''};
+                    var tc = { name: name + prop, jsStr: Object.toSource ? context[prop].toSource() : 'is instanceof Object', coffeeStr: ''};
                     self.vm.testCases.push(tc);
                 }
-                if (context[prop] && context[prop].prototype && prop !=="constructor") {
-                    self.setupContextBreakdown(context[prop].prototype, base + '.' + prop + '.prototype');
+                if (context[prop] && context[prop].prototype && prop !== "constructor") {
+                    self.setupContextBreakdown(context[prop].prototype, name + '.' + prop + '.prototype');
                 }
             }
         };
 
-
         self.map = function () {
             self.vm = new sVM();
             self.vm.suiteDesc(desc);
-            self.vm.jsContextStr(js.toString() + "\n var c = new context();");
+            self.vm.jsContextStr(jsFunc.toString());
             self.vm.coffeeContextStr(self.highlight(Js2coffee.build(self.vm.jsContextStr())));
             self.vm.jsContextStr(self.highlight(self.vm.jsContextStr()));
-
-            self.jsContext = new js();
-            self.setupContextBreakdown(self.jsContext, 'context');
+            self.jsContext = new jsFunc();
+            self.setupContextBreakdown(self.jsContext, jsFunc.name);
         };
 
         self.map(desc);
@@ -763,40 +748,39 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel'], function (Test, Benchma
             if (typeof func == 'function') {
                 self.addTestWithBenchmarks(shouldEqual, func, null, false);
             }
-
             return self;
         }
 
         self.currentTest;
 
-        self.it = function(func, shouldBe){
-            self.currentTest = self.addTestWithBenchmarks(shouldBe, func, null, true);
+        self.it = function (describe, func, shouldBe) {
+            self.currentTest = self.addTestWithBenchmarks(shouldBe, func, describe, null, true);
 
             return self;
         };
 
-        self.shouldBe = function shouldBe(val){
+        self.shouldBe = function shouldBe(val) {
             self.currentTest.shouldEqual = val;
             self.processTest(self.currentTest);
             return self;
         };
 
-        self.processTest = function(test){
+        self.processTest = function (test) {
             if (test.run()) {
                 self.vm.passedCount(self.vm.passedCount() + 1);
-                if(window.suiteView)
+                if (window.suiteView)
                     window.suiteView.incrementPassedCount();
             } else {
                 self.vm.failedCount(self.vm.failedCount() + 1);
-                if(window.suiteView)
+                if (window.suiteView)
                     window.suiteView.incrementFailedCount();
             }
             self.vm.tests.push(test);
         }
 
-        self.addTestWithBenchmarks = function (shouldEqual, func, name, defer) {
-            var test = new Test(shouldEqual, func, new js(), name);
-            if(!defer){
+        self.addTestWithBenchmarks = function (shouldEqual, testFunc, describe, name, defer) {
+            var test = new Test(shouldEqual, testFunc, new jsFunc(), name, describe);
+            if (!defer) {
                 self.processTest(test);
             }
 
@@ -816,7 +800,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel'], function (Test, Benchma
             }
             else {
                 self.vm.benchmarkSuite.add(test.expression, function () {
-                        func(test.context);
+                        testFunc(test.context);
                     },
                     { 'async': true, 'queued': true, 'minSamples': 100});
             }
@@ -836,7 +820,7 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel'], function (Test, Benchma
             };
             for (var testcase in self.jsContext) {
                 console.log(typeof self.jsContext[testcase]);
-                if(typeof self.jsContext[testcase] === 'function'){
+                if (typeof self.jsContext[testcase] === 'function') {
                     self.addTestWithBenchmarks(self.shouldEqualValue, func, testcase, false);
                 }
             }
@@ -845,56 +829,75 @@ define("Suite", ['Test', 'benchmark', 'SuiteViewModel'], function (Test, Benchma
             return self;
         };
 
-        self.benchmark = function(){
+        self.benchmark = function () {
             self.vm.benchmarkingEnabled(true);
             self.vm.processBenchmarks();
         };
 
-        if(window.suiteView)
+        if (window.suiteView)
             window.suiteView.add(self);
     };
     return suite;
 });
-
 define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
     function view() {
 
         var self = this;
-        self.suites = new ko.observableArray([]);
+
         self.unitTestFrameworkManager = new utfm();
         self.unitTestFrameworkManager.init();
         self.menu = document.getElementById('menu');
-        self.view = document.getElementById('hitchscriptView');
+        self.view = document.getElementById('view');
+        self.suites = new ko.observableArray([]);
         self.totalTests = new ko.observable(0);
         self.totalPassed = new ko.observable(0);
         self.totalFailed = new ko.observable(0);
         self.githubAccount = new ko.observable('adamjmoon');
         self.githubRepo = new ko.observable('itchcork');
         self.githubBranch = new ko.observable('master');
-        self.contextRoot = new ko.observable('raw.github.com/' +  self.githubAccount() + '/' + self.githubRepo() + '/' + self.githubBranch() + '/');
+        self.contextRoot = new ko.observable('raw.github.com/' + self.githubAccount() + '/' + self.githubRepo() + '/' + self.githubBranch() + '/');
         self.vendorRoot = new ko.observable(self.contextRoot() + 'vendor/');
         self.currentTheme = ko.observable(amplify.store('currentTheme'));
+        self.currentView = ko.observable('');
         var customTheme = amplify.store('customTheme');
         self.cto = {};
-        for(var prop in customTheme) {
-            self.cto[prop] =  ko.observable(customTheme[prop]);
+        for (var prop in customTheme) {
+            self.cto[prop] = ko.observable(customTheme[prop]);
         }
-        for(var prop in self.cto) {
-            self.cto[prop].subscribe(new Function('newValue',"window.ThemeManager.updateCustom('"+ prop + "',newValue);")
+        for (var prop in self.cto) {
+            self.cto[prop].subscribe(new Function('newValue', "window.ThemeManager.updateCustom('" + prop + "',newValue);")
 
             );
         }
 
+        self.reset = function () {
+            "use strict";
+            self.suites([]);
+            self.totalTests(0);
+            self.totalPassed(0);
+            self.totalFailed(0);
+        }
+
+
         self.setMenuHeight = function () {
-            self.menu.style.height = document.body.scrollHeight - 45 + "px";
+
+            if (self.view.scrollHeight > window.innerHeight) {
+                if (self.view.scrollHeight > self.menu.scrollHeight) {
+                    self.menu.style.height = self.view.scrollHeight - 45 + 'px';
+                }
+            }
+            else {
+                self.menu.style.height = window.innerHeight - 45 + 'px';
+            }
+
         };
 
         self.add = function (suite) {
 
             suite.vm.num = self.suites().length + 1;
             self.suites.push(suite.vm);
-            if(self.suites().length === 1){
-               self.show();
+            if (self.suites().length === 1 && self.unitTestFrameworkManager.getFramework() === 'itchcork') {
+                self.bindView();
             }
 
             suite.vm.benchmarksDone.subscribe(function (newValue) {
@@ -913,37 +916,38 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
             self.totalFailed(self.totalFailed() + 1);
         };
 
-        self.show = function () {
+        self.bindView = function () {
+
             ko.applyBindings(self, document.getElementById('frame'));
-            self.setupNiceScroll();
-            require([self.vendorRoot() + 'jscolor'], function(){
+            self.setMenuHeight();
+            require([self.vendorRoot() + 'jscolor'], function () {
                 jscolor.init();
             });
+            self.setupNiceScroll();
 
         };
+
 
         self.setTheme = function (theme) {
             window.ThemeManager.set(theme);
             self.currentTheme(theme);
         };
 
-
-
         self.toggleMenu = function () {
             var menu = document.getElementById('menu');
-            if (self.menu.style.display == 'block') {
-                self.menu.style.display = 'none';
+            if (menu.style.display != 'none') {
+                menu.style.display = 'none';
             } else {
-                self.setMenuHeight();
                 menu.style.display = 'block';
-                window.scrollTo(0, 0);
             }
         };
+
+
         self.setupNiceScroll = function () {
-
-            self.nice = $("html").niceScroll();
-
-            self.view.onresize=function(){
+            window.scrollTo(0, 0);
+            $("html").niceScroll();
+            $("#view").niceScroll();
+            self.view.onresize = function () {
                 self.nice.resize();
             };
         };
@@ -960,11 +964,12 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
                 $("#rightCorkCollapse").removeClass('collapseAll').addClass('expandAll');
             }
         };
+
     };
     return view;
 });
 
-define("SuiteViewModel", ['benchmark','BenchmarkViewModel'], function (Benchmark, bVM) {
+define("SuiteViewModel", ['benchmark', 'BenchmarkViewModel'], function (Benchmark, bVM) {
     var vm = function () {
         var self = this;
         this.num = 0;
@@ -982,7 +987,7 @@ define("SuiteViewModel", ['benchmark','BenchmarkViewModel'], function (Benchmark
         this.benchmarkPlatform(Benchmark.platform.description);
         this.benchmarkingEnabled = ko.observable(false);
 
-            this.processBenchmarks = function () {
+        this.processBenchmarks = function () {
             self.benchmarksDone(false);
             self.benchmarks.removeAll();
             self.runBenchmarks();
@@ -1031,19 +1036,20 @@ define("SuiteViewModel", ['benchmark','BenchmarkViewModel'], function (Benchmark
 });
 define("Test", [], function () {
 
-    var test = function (shouldEqual, func, ctx, testName) {
+    var test = function (shouldEqual, func, ctx, testName, describe) {
         'use strict';
-        var expressionStr = func.toString().trim(), self=this;
+        var expressionStr = func.toString().trim(), self = this;
         this.context = ctx;
-        this.passed=false;
+        this.passed = false;
+        this.describe = describe;
         if (testName) {
             this.expression = testName + '()';
             this.actual = func(this.context, testName);
 
         } else {
             this.expression = expressionStr.replace(/\n/gm, '')
-                .replace(/function +?\(c\) +?\{+?return(.*?)\;+?\}/g,'$1')
-                .replace(/function +?\(c\) +?\{ +?return(.*?)\; +?\}/g,'$1');
+                .replace(/function +?\(c\) +?\{+?return(.*?)\;+?\}/g, '$1')
+                .replace(/function +?\(c\) +?\{ +?return(.*?)\; +?\}/g, '$1');
 
 
             this.actual = func(this.context);
@@ -1052,15 +1058,14 @@ define("Test", [], function () {
 
         this.typeOf = typeof(this.actual);
 
-        this.run = function(){
-            self.passed = self.shouldEqual===self.actual;
+        this.run = function () {
+            self.passed = self.shouldEqual === self.actual;
             return self.passed;
         };
     };
 
     return test;
 });
-
 define("UnitTestFrameworkManager", [], function () {
     return function UnitTestFrameworkManager() {
 
@@ -1080,60 +1085,53 @@ define("UnitTestFrameworkManager", [], function () {
         };
     };
 });
-define("Verify", [], function() {
-	return function(F) {
+define("Verify", [], function () {
+    return function (F) {
         'use strict';
-		return function () {
-			var args = Array.prototype.slice.call(arguments),
-				i,
-				j,
-				call,
-				count = 0,
-				matched;
+        return function () {
+            var args = Array.prototype.slice.call(arguments),
+                i,
+                j,
+                call,
+                count = 0,
+                matched;
 
-			for (i = 0; i < F.calls.length; i += 1) {
-				call = F.calls[i];
-				matched = true;
-				for (j = 0; j < args.length; j += 1) {
-					if (args[j] !== call[j]) {
-						matched = false;
-						break;
-					}
-				}
-				if (matched) {
-					count += 1;
-				}
-			}
+            for (i = 0; i < F.calls.length; i += 1) {
+                call = F.calls[i];
+                matched = true;
+                for (j = 0; j < args.length; j += 1) {
+                    if (args[j] !== call[j]) {
+                        matched = false;
+                        break;
+                    }
+                }
+                if (matched) {
+                    count += 1;
+                }
+            }
 
-			return count > 0;
-		};
-	};
-});
-define("ItchCork", ['Suite', 'Test', 'Spy', 'Verify'], function (Suite, Test, Spy, Verify) {
-    'use strict';
-    var ItchCork = function() {
-
-        ItchCork.prototype.Suite = Suite;
-        ItchCork.prototype.Test = Test;
-        ItchCork.prototype.Spy = Spy;
-        ItchCork.prototype.Verify = Verify;
+            return count > 0;
+        };
     };
-
-    return new ItchCork();
 });
-require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js'], function (ko) {
+define("itchcork", ['Suite', 'Test', 'Spy', 'Verify'], function (Suite, Test, Spy, Verify) {
+    'use strict';
+    var itchcork = function () {
+
+        itchcork.prototype.Suite = Suite;
+        itchcork.prototype.Test = Test;
+        itchcork.prototype.Spy = Spy;
+        itchcork.prototype.Verify = Verify;
+    };
+    window.ItchCork = new itchcork();
+    return window.ItchCork;
+});
+require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js'], function (ko) {
     window.ko = ko;
 
     require(['SuiteView'], function (sv) {
-        window.suiteView = new sv();
-        var context = '';
-        if (window.location.pathname && window.location.pathname.length > 1)
-            context = window.location.pathname.split('/')[1];
-        else if (window.location.hash && window.location.hash.length > 1)
-            context = window.location.hash.split('#')[1];
 
-        var suite = context != '' ? window.suiteView.unitTestFrameworkManager.getFramework() + '/' + context : 'all-' + window.suiteView.unitTestFrameworkManager.getFramework();
-        var suiteFilePath = suiteView.contextRoot() + 'examples/test';
+        window.suiteView = new sv();
 
         requirejs.config({
             baseUrl: 'https://',
@@ -1147,89 +1145,310 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                 'chai': suiteView.vendorRoot() + 'chai',
                 'sinon-chai': suiteView.vendorRoot() + 'sinon-chai',
                 'platform': suiteView.vendorRoot() + 'platform',
-                'benchmark': suiteView.vendorRoot() + 'benchmark',
-                'context': suiteView.contextRoot() + 'examples/all-context',
-                'suite': suiteFilePath + "/" + suite,
-                'suitePath': suiteFilePath
+                'benchmark': suiteView.vendorRoot() + 'benchmark'
+
             }
         });
         require(['bootstrap', 'sinon'], function () {
-
             window.sinon = sinon;
             $("#topNav").show();
             $('div.frame').show();
             require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) {
                 this.CoffeeScript = CoffeeScript;
-                require(['js2coffee'], function () {
+                require(['js2coffee', 'itchcork'], function () {
+                    var postResults = function (stats, callback) {
 
-                    require(['ItchCork', 'context'], function (itchcork) {
-                        if (window.suiteView.unitTestFrameworkManager.init() === "itchcork") {
-                            require(['suite'], function () {
+                        $.post("/stats", { stats: stats}, function () {
+                            if (callback) {
+                                callback();
+                            }
+                        });
+                    };
 
-                            });
+                    var postCoverage = function () {
+                        "use strict";
+
+                        if (window.__coverage__) {
+                            var coverage = JSON.stringify(window.__coverage__.valueOf());
+                            $.post("/coverage", {coverage: coverage});
                         }
-                        else {
 
-                            require(['chai', 'sinon-chai', 'mocha'], function (chai, sinonChai) {
+                    };
 
-                                _.each(window.mochaSuites, function(suite){
-                                    "use strict";
-                                    suite();
-                                });
+                    var runItchCork = function () {
+                        "use strict";
+                        $.get('/benchmarkList', function (benchmarks) {
+                            require(benchmarks, function () {
+                                //window.suiteView.bindView();
+                            });
+                        });
+                    };
 
-                                chai.use(sinonChai);
-                                var assert = chai.assert;
-                                var should = chai.should();
-                                mocha.setup('bdd');
-                                mocha.reporter('html');
+                    var runMocha = function () {
+                        chai.use(sinonChai);
+                        window.assert = chai.assert;
+                        window.should = chai.should();
+                           require(['chai', 'sinon-chai','mocha'], function (chai, sinonChai, mocha) {
 
+                                if (window.location.search) {
+                                    var array = window.location.search.split('?');
+                                    var spec = array[1];
+                                    run([spec]);
+                                } else {
+                                    $.get('/specs', function (specs) {
 
-                                    var runner = mocha.run();
-                                    runner.on('end', function () {
+                                        run(specs);
 
-                                        _.each(runner.suite.suites,
-                                            function (s) {
-
-                                                require([s.title], function (c) {
-                                                    var suite = new itchcork.Suite(s.title, c, "mocha");
-
-                                                     suite.compareBenchmarks();
-                                                    _.each(s.suites, function (subMochaSuite) {
-
-                                                        _.each(subMochaSuite.tests, function (test) {
-                                                            console.log(test.fn());
-                                                            //sui   te.it(test.fn).shouldBe(true);
-                                                        });
-                                                   });
-                                                });
-                                            });
-                                        window.suiteView.totalTests(runner.total);
-                                        window.suiteView.totalPassed(runner.total - runner.failures);
-                                        window.suiteView.totalFailed(runner.failures);
-                                        //var suites = $("ul#mocha-report li.suite ul");
-//                                        $("#collapse").click(function () {
-//                                            $(suites).each(function (index, element) {
-//                                                element.hidden = true;
-//                                            });
-//                                            $("#collapse").hide();
-//                                            $("#expand").show();
-//                                        });
-//                                        $("#expand").click(function () {
-//                                            $(suites).each(function (index, element) {
-//                                                element.hidden = false;
-//                                            });
-//                                            $("#expand").hide();
-//
-//                                            $("#collapse").show();
-//                                        });
                                     });
+                                }
 
+
+                                var run = function (specs) {
+                                    if (window.mochaPhantomJS) {
+                                        mochaPhantomJS.run();
+                                    }
+                                    else {
+                                        mocha.checkLeaks();
+                                        mocha.globals(['jQuery']);
+                                        mocha.run();
+                                        mocha.setup('bdd');
+                                        mocha.reporter('html');
+                                        require(specs, function () {
+                                            var runner = mocha.run();
+
+                                            runner.on('end', function () {
+                                                window.suiteView.totalTests(runner.total);
+                                                window.suiteView.totalPassed(runner.total - runner.failures);
+                                                window.suiteView.totalFailed(runner.failures);
+                                                    _.each(runner.suite.suites,
+                                                        function (s) {
+                                                            require([s.title], function (c) {
+                                                               // var suite = new window.ItchCork.Suite(s.title, c, "mocha");
+                                                            });
+                                                        });
+                                                var suites = $("ul#mocha-report li.suite ul");
+                                                $("#collapse").click(function () {
+                                                    $(suites).each(function (index, element) {
+                                                        element.hidden = true;
+                                                    });
+                                                    $("#collapse").hide();
+                                                    $("#expand").show();
+                                                });
+                                                $("#expand").click(function () {
+                                                    $(suites).each(function (index, element) {
+                                                        element.hidden = false;
+                                                    });
+                                                    $("#expand").hide();
+
+                                                    $("#collapse").show();
+                                                });
+                                                postResults(runner.stats, function () {
+                                                    }
+                                                );
+                                                window.suiteView.bindView();
+                                            });
+                                        });
+                                    }
+                                }
                             });
-                        }
-                    });
+                        };
+
+
+                    view = window.location.pathname;
+                    if (view.indexOf('coverage') > -1) {
+                        window.suiteView.currentView('Coverage');
+                        require(['mocha','/coverage/app.js'], function () {
+                            "use strict";
+                            window.suiteView.unitTestFrameworkManager.set('both');
+                            runItchCork();
+                            runMocha();
+                            postCoverage();
+                        })
+                        ;
+                    }
+                    else if (view.indexOf('benchmarks') > -1) {
+                        window.suiteView.currentView('Benchmarks');
+                        window.suiteView.unitTestFrameworkManager.set('itchcork');
+                        require(['/js/app.js'], function () {
+                            "use strict";
+                            runItchCork();
+                        })
+                        ;
+                    }
+                    else {
+
+                        window.suiteView.currentView('UnitTests');
+                        window.suiteView.unitTestFrameworkManager.set('mocha');
+                        require(['mocha','/js/app.js'], function () {
+                            window.mocha = mocha;
+                            runMocha();
+                        });
+                    }
                 });
             });
         });
     });
+});
+require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js'], function (ko) {
+    window.ko = ko;
 
+    require(['SuiteView'], function (sv) {
+
+        window.suiteView = new sv();
+
+        requirejs.config({
+            baseUrl: 'https://',
+            paths: {
+                'bootstrap': 'netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min',
+                'coffeescript': suiteView.vendorRoot() + 'coffee/coffeescript.min',
+                'js2coffee': suiteView.vendorRoot() + 'coffee/js2coffee',
+                'lodash': suiteView.vendorRoot() + 'aa.lodash.min',
+                'mocha': suiteView.vendorRoot() + 'mocha',
+                'sinon': suiteView.vendorRoot() + 'sinon',
+                'chai': suiteView.vendorRoot() + 'chai',
+                'sinon-chai': suiteView.vendorRoot() + 'sinon-chai',
+                'platform': suiteView.vendorRoot() + 'platform',
+                'benchmark': suiteView.vendorRoot() + 'benchmark'
+
+            }
+        });
+        require(['bootstrap', 'sinon'], function () {
+            window.sinon = sinon;
+            $("#topNav").show();
+            $('div.frame').show();
+            require(['coffeescript', 'platform', 'benchmark'], function (CoffeeScript) {
+                this.CoffeeScript = CoffeeScript;
+                require(['js2coffee', 'itchcork'], function () {
+                    var postResults = function (stats, callback) {
+
+                        $.post("/stats", { stats: stats}, function () {
+                            if (callback) {
+                                callback();
+                            }
+                        });
+                    };
+
+                    var postCoverage = function () {
+                        "use strict";
+
+                        if (window.__coverage__) {
+                            var coverage = JSON.stringify(window.__coverage__.valueOf());
+                            $.post("/coverage", {coverage: coverage});
+                        }
+
+                    };
+
+                    var runItchCork = function () {
+                        "use strict";
+                        $.get('/benchmarkList', function (benchmarks) {
+                            require(benchmarks, function () {
+                                //window.suiteView.bindView();
+                            });
+                        });
+                    };
+
+                    var runMocha = function () {
+                        chai.use(sinonChai);
+                        window.assert = chai.assert;
+                        window.should = chai.should();
+                           require(['chai', 'sinon-chai','mocha'], function (chai, sinonChai, mocha) {
+
+                                if (window.location.search) {
+                                    var array = window.location.search.split('?');
+                                    var spec = array[1];
+                                    run([spec]);
+                                } else {
+                                    $.get('/specs', function (specs) {
+
+                                        run(specs);
+
+                                    });
+                                }
+
+
+                                var run = function (specs) {
+                                    if (window.mochaPhantomJS) {
+                                        mochaPhantomJS.run();
+                                    }
+                                    else {
+                                        mocha.checkLeaks();
+                                        mocha.globals(['jQuery']);
+                                        mocha.run();
+                                        mocha.setup('bdd');
+                                        mocha.reporter('html');
+                                        require(specs, function () {
+                                            var runner = mocha.run();
+
+                                            runner.on('end', function () {
+                                                window.suiteView.totalTests(runner.total);
+                                                window.suiteView.totalPassed(runner.total - runner.failures);
+                                                window.suiteView.totalFailed(runner.failures);
+                                                    _.each(runner.suite.suites,
+                                                        function (s) {
+                                                            require([s.title], function (c) {
+                                                               // var suite = new window.ItchCork.Suite(s.title, c, "mocha");
+                                                            });
+                                                        });
+                                                var suites = $("ul#mocha-report li.suite ul");
+                                                $("#collapse").click(function () {
+                                                    $(suites).each(function (index, element) {
+                                                        element.hidden = true;
+                                                    });
+                                                    $("#collapse").hide();
+                                                    $("#expand").show();
+                                                });
+                                                $("#expand").click(function () {
+                                                    $(suites).each(function (index, element) {
+                                                        element.hidden = false;
+                                                    });
+                                                    $("#expand").hide();
+
+                                                    $("#collapse").show();
+                                                });
+                                                postResults(runner.stats, function () {
+                                                    }
+                                                );
+                                                window.suiteView.bindView();
+                                            });
+                                        });
+                                    }
+                                }
+                            });
+                        };
+
+
+                    view = window.location.pathname;
+                    if (view.indexOf('coverage') > -1) {
+                        window.suiteView.currentView('Coverage');
+                        require(['mocha','/coverage/app.js'], function () {
+                            "use strict";
+                            window.suiteView.unitTestFrameworkManager.set('both');
+                            runItchCork();
+                            runMocha();
+                            postCoverage();
+                        })
+                        ;
+                    }
+                    else if (view.indexOf('benchmarks') > -1) {
+                        window.suiteView.currentView('Benchmarks');
+                        window.suiteView.unitTestFrameworkManager.set('itchcork');
+                        require(['/js/app.js'], function () {
+                            "use strict";
+                            runItchCork();
+                        })
+                        ;
+                    }
+                    else {
+
+                        window.suiteView.currentView('UnitTests');
+                        window.suiteView.unitTestFrameworkManager.set('mocha');
+                        require(['mocha','/js/app.js'], function () {
+                            window.mocha = mocha;
+                            runMocha();
+                        });
+                    }
+                });
+            });
+        });
+    });
 });
