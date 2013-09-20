@@ -1165,7 +1165,6 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
                         });
                     };
 
-
                     var runItchCork = function () {
                         "use strict";
                         $.get('/benchmarkList', function (benchmarks) {
