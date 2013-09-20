@@ -30,7 +30,7 @@ module.exports = (grunt) ->
     concat:
       ic:
         src: lib + '*.js'
-        dest: r + 'itchcork.js'
+        dest: v + 'itchcork.js'
       allContext:
         src: context + '*.js'
         dest: ex + 'all-context.js'
@@ -40,10 +40,16 @@ module.exports = (grunt) ->
       allMochaTests:
         src: mocha + '*.js'
         dest: test + 'all-mocha.js'
+      vendor:
+        src: v + '*.js'
+        dest: r + 'vendor.js'
     'min':
       'ic':
         'src': ['itchcork.js']
         'dest': 'itchcork.min.js'
+      ic:
+        src: ['vendor.js']
+        dest: 'vendor.min.js'
     instrument :
       files : ex + 'all-context.js'
       options :
