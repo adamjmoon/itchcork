@@ -1,4 +1,3 @@
-
 if (typeof module == 'undefined') {
 this.Narcissus = new Object;
 }
@@ -852,7 +851,7 @@ while ((tt = t.get()) !== RIGHT_CURLY) {
 switch (tt) {
 case DEFAULT:
 if (n.defaultIndex >= 0)
-throw t.newSyntaxError("More than one switch default");
+console.log("More than one switch default");
 case CASE:
 n2 = new Node(t);
 if (tt === DEFAULT)
@@ -861,7 +860,7 @@ else
 n2.caseLabel = Expression(t, x2, COLON);
 break;
 default:
-throw t.newSyntaxError("Invalid switch case");
+console.log("Invalid switch case");
 }
 t.mustMatch(COLON);
 n2.statements = new Node(t, blockInit());
@@ -925,7 +924,7 @@ n.iterator = n2;
 n.setup = n2;
 t.mustMatch(SEMICOLON);
 if (n.isEach)
-throw t.newSyntaxError("Invalid for each..in loop");
+console.log("Invalid for each..in loop");
 n.condition = (t.peek() === SEMICOLON)
 ? null
 : Expression(t, x3);
@@ -968,9 +967,9 @@ n.target = n.label
 ? x2.labeledTargets.find(function(target) { return target.labels.has(n.label) })
 : x2.defaultTarget;
 if (!n.target)
-throw t.newSyntaxError("Invalid " + ((tt === BREAK) ? "break" : "continue"));
+console.log("Invalid " + ((tt === BREAK) ? "break" : "continue"));
 if (!n.target.isLoop && tt === CONTINUE)
-throw t.newSyntaxError("Invalid continue");
+console.log("Invalid continue");
 break;
 case TRY:
 n = new Node(t, { catchClauses: [] });
@@ -988,14 +987,14 @@ case IDENTIFIER:
 n2.varName = t.token.value;
 break;
 default:
-throw t.newSyntaxError("missing identifier in catch");
+console.log("missing identifier in catch");
 break;
 }
 if (t.match(IF)) {
 if (x.ecma3OnlyMode)
-throw t.newSyntaxError("Illegal catch guard");
+console.log("Illegal catch guard");
 if (n.catchClauses.length && !n.catchClauses.top().guard)
-throw t.newSyntaxError("Guarded catch after unguarded");
+console.log("Guarded catch after unguarded");
 n2.guard = Expression(t, x);
 }
 MaybeRightParen(t, p);
@@ -1005,11 +1004,11 @@ n.catchClauses.push(n2);
 if (t.match(FINALLY))
 n.finallyBlock = Block(t, x);
 if (!n.catchClauses.length && !n.finallyBlock)
-throw t.newSyntaxError("Invalid try statement");
+console.log("Invalid try statement");
 return n;
 case CATCH:
 case FINALLY:
-throw t.newSyntaxError(definitions.tokens[tt] + " without preceding try");
+console.log(definitions.tokens[tt] + " without preceding try");
 case THROW:
 n = new Node(t);
 n.exception = Expression(t, x);
@@ -1046,7 +1045,7 @@ tt = t.peek();
 if (tt === COLON) {
 label = t.token.value;
 if (x.allLabels.has(label))
-throw t.newSyntaxError("Duplicate label");
+console.log("Duplicate label");
 t.get();
 n = new Node(t, { type: LABEL, label: label });
 n.statement = Statement(t, x.pushLabel(label).nest(NESTING_SHALLOW));
@@ -1068,7 +1067,7 @@ var tt;
 if (t.lineno === t.token.lineno) {
 tt = t.peekOnSameLine();
 if (tt !== END && tt !== NEWLINE && tt !== SEMICOLON && tt !== RIGHT_CURLY)
-throw t.newSyntaxError("missing ; before statement");
+console.log("missing ; before statement");
 }
 t.match(SEMICOLON);
 }
@@ -1077,10 +1076,10 @@ var n, b, tt = t.token.type, tt2;
 var parentScript = x.parentScript;
 if (tt === RETURN) {
 if (!x.inFunction)
-throw t.newSyntaxError("Return not in function");
+console.log("Return not in function");
 } else   {
 if (!x.inFunction)
-throw t.newSyntaxError("Yield not in function");
+console.log("Yield not in function");
 parentScript.isGenerator = true;
 }
 n = new Node(t, { value: undefined });
@@ -1100,7 +1099,7 @@ n.value = AssignExpression(t, x);
 parentScript.hasEmptyReturn = true;
 }
 if (parentScript.hasReturnWithValue && parentScript.isGenerator)
-throw t.newSyntaxError("Generator returns a value");
+console.log("Generator returns a value");
 return n;
 }
 function FunctionDefinition(t, x, requireName, functionForm) {
@@ -1111,7 +1110,7 @@ f.type = (f.value === "get") ? GETTER : SETTER;
 if (t.match(IDENTIFIER))
 f.name = t.token.value;
 else if (requireName)
-throw t.newSyntaxError("missing function identifier");
+console.log("missing function identifier");
 var x2 = new StaticContext(null, null, true, false, NESTING_TOP);
 t.mustMatch(LEFT_PAREN);
 if (!t.match(RIGHT_PAREN)) {
@@ -1126,7 +1125,7 @@ case IDENTIFIER:
 f.params.push(t.token.value);
 break;
 default:
-throw t.newSyntaxError("missing formal parameter");
+console.log("missing formal parameter");
 break;
 }
 } while (t.match(COMMA));
@@ -1138,7 +1137,7 @@ t.unget();
 if (tt !== LEFT_CURLY) {
 f.body = AssignExpression(t, x2);
 if (f.body.isGenerator)
-throw t.newSyntaxError("Generator returns a value");
+console.log("Generator returns a value");
 } else {
 f.body = Script(t, true);
 }
@@ -1183,12 +1182,12 @@ continue;
 }
 t.mustMatch(ASSIGN);
 if (t.token.assignOp)
-throw t.newSyntaxError("Invalid variable initialization");
+console.log("Invalid variable initialization");
 n2.initializer = AssignExpression(t, x);
 continue;
 }
 if (tt !== IDENTIFIER)
-throw t.newSyntaxError("missing variable name");
+console.log("missing variable name");
 n2 = new Node(t, { type: IDENTIFIER,
 name: t.token.value,
 readOnly: n.type === CONST });
@@ -1196,7 +1195,7 @@ n.push(n2);
 s.varDecls.push(n2);
 if (t.match(ASSIGN)) {
 if (t.token.assignOp)
-throw t.newSyntaxError("Invalid variable initialization");
+console.log("Invalid variable initialization");
 n2.initializer = AssignExpression(t, x);
 }
 } while (t.match(COMMA));
@@ -1221,7 +1220,7 @@ return n;
 }
 function checkDestructuring(t, x, n, simpleNamesOnly) {
 if (n.type === ARRAY_COMP)
-throw t.newSyntaxError("Invalid array comprehension left-hand side");
+console.log("Invalid array comprehension left-hand side");
 if (n.type !== ARRAY_INIT && n.type !== OBJECT_INIT)
 return;
 var lhss = {};
@@ -1244,7 +1243,7 @@ if (sub.type === ARRAY_INIT || sub.type === OBJECT_INIT) {
 lhss[idx] = checkDestructuring(t, x, sub, simpleNamesOnly);
 } else {
 if (simpleNamesOnly && sub.type !== IDENTIFIER) {
-throw t.newSyntaxError("missing name in pattern");
+console.log("missing name in pattern");
 }
 lhss[idx] = sub;
 }
@@ -1287,7 +1286,7 @@ n2.push(n3);
 x.parentScript.varDecls.push(n3);
 break;
 default:
-throw t.newSyntaxError("missing identifier");
+console.log("missing identifier");
 }
 t.mustMatch(IN);
 n.object = Expression(t, x);
@@ -1305,7 +1304,7 @@ MaybeRightParen(t, p);
 if (p === END && !n.parenthesized) {
 var tt = t.peek();
 if (tt !== LEFT_CURLY && !definitions.isStatementStartCode[tt])
-throw t.newSyntaxError("Unparenthesized head followed by unbraced body");
+console.log("Unparenthesized head followed by unbraced body");
 }
 return n;
 }
@@ -1314,9 +1313,9 @@ var n = Expression(t, x.update({ inForLoopInit: x.inForLoopInit &&
 (t.token.type === LEFT_PAREN) }));
 if (t.match(FOR)) {
 if (n.type === YIELD && !n.parenthesized)
-throw t.newSyntaxError("Yield expression must be parenthesized");
+console.log("Yield expression must be parenthesized");
 if (n.type === COMMA && !n.parenthesized)
-throw t.newSyntaxError("Generator expression must be parenthesized");
+console.log("Generator expression must be parenthesized");
 n = GeneratorExpression(t, x, n);
 }
 return n;
@@ -1331,7 +1330,7 @@ n = n2;
 do {
 n2 = n.children[n.children.length-1];
 if (n2.type === YIELD && !n2.parenthesized)
-throw t.newSyntaxError("Yield expression must be parenthesized");
+console.log("Yield expression must be parenthesized");
 n.push(AssignExpression(t, x));
 } while (t.match(COMMA));
 }
@@ -1353,7 +1352,7 @@ lhs.destructuredNames = checkDestructuring(t, x, lhs);
 case IDENTIFIER: case DOT: case INDEX: case CALL:
 break;
 default:
-throw t.newSyntaxError("Bad left-hand side of assignment");
+console.log("Bad left-hand side of assignment");
 break;
 }
 n.assignOp = t.token.assignOp;
@@ -1370,7 +1369,7 @@ n = new Node(t, { type: HOOK });
 n.push(n2);
 n.push(AssignExpression(t, x.update({ inForLoopInit: false })));
 if (!t.match(COLON))
-throw t.newSyntaxError("missing : after ?");
+console.log("missing : after ?");
 n.push(AssignExpression(t, x));
 }
 return n;
@@ -1571,11 +1570,11 @@ return n;
 do {
 n2 = AssignExpression(t, x);
 if (n2.type === YIELD && !n2.parenthesized && t.peek() === COMMA)
-throw t.newSyntaxError("Yield expression must be parenthesized");
+console.log("Yield expression must be parenthesized");
 if (t.match(FOR)) {
 n2 = GeneratorExpression(t, x, n2);
 if (n.children.length > 1 || t.peek(true) === COMMA)
-throw t.newSyntaxError("Generator expression must be parenthesized");
+console.log("Generator expression must be parenthesized");
 }
 n.push(n2);
 } while (t.match(COMMA));
@@ -1618,7 +1617,7 @@ tt = t.get();
 if ((t.token.value === "get" || t.token.value === "set") &&
 t.peek() === IDENTIFIER) {
 if (x.ecma3OnlyMode)
-throw t.newSyntaxError("Illegal property accessor");
+console.log("Illegal property accessor");
 n.push(FunctionDefinition(t, x, true, EXPRESSED_FORM));
 } else {
 switch (tt) {
@@ -1627,14 +1626,14 @@ id = new Node(t, { type: IDENTIFIER });
 break;
 case RIGHT_CURLY:
 if (x.ecma3OnlyMode)
-throw t.newSyntaxError("Illegal trailing ,");
+console.log("Illegal trailing ,");
 break object_init;
 default:
 if (t.token.value in definitions.keywords) {
 id = new Node(t, { type: IDENTIFIER });
 break;
 }
-throw t.newSyntaxError("Invalid property name");
+console.log("Invalid property name");
 }
 if (t.match(COLON)) {
 n2 = new Node(t, { type: PROPERTY_INIT });
@@ -1643,7 +1642,7 @@ n2.push(AssignExpression(t, x));
 n.push(n2);
 } else {
 if (t.peek() !== COMMA && t.peek() !== RIGHT_CURLY)
-throw t.newSyntaxError("missing : after property");
+console.log("missing : after property");
 n.push(id);
 }
 }
@@ -1664,7 +1663,7 @@ case IDENTIFIER: case NUMBER: case STRING: case REGEXP:
 n = new Node(t);
 break;
 default:
-throw t.newSyntaxError("missing operand");
+console.log("missing operand");
 break;
 }
 return n;
@@ -1673,7 +1672,7 @@ function parse(s, f, l) {
 var t = new lexer.Tokenizer(s, f, l);
 var n = Script(t, false);
 if (!t.done)
-throw t.newSyntaxError("Syntax error");
+console.log("Syntax error");
 return n;
 }
 function parseStdin(s, ln) {
