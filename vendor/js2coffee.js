@@ -785,7 +785,7 @@ return this.tokenizer.filename;
 });
 definitions.defineGetter(Np, "length",
 function() {
-throw new Error("Node.prototype.length is gone; " +
+//throw new Error("Node.prototype.length is gone; " +
 "use n.children.length instead");
 });
 definitions.defineProperty(String.prototype, "repeat",
@@ -811,7 +811,7 @@ while (!t.done && t.peek(true) !== RIGHT_CURLY)
 } catch (e) {
 if (t.done)
 { t.unexpectedEOF = true; }
-throw(e);
+//throw(e);
 }
 }
 function Block(t, x) {
@@ -905,7 +905,7 @@ n.object = Expression(t, x3);
 if (n2.type === VAR || n2.type === LET) {
 c = n2.children;
 if (c.length !== 1 && n2.destructurings.length !== 1) {
-throw new SyntaxError("Invalid for..in left-hand side",
+//throw new SyntaxError("Invalid for..in left-hand side",
 t.filename, n2.lineno);
 }
 if (n2.destructurings.length > 0) {
@@ -1684,10 +1684,10 @@ ln.value = t.lineno;
 return n;
 } catch (e) {
 if (!t.unexpectedEOF)
-throw e;
+//throw e;
 var more = readline();
 if (!more)
-throw e;
+//throw e;
 s += "\n" + more;
 }
 }
@@ -2694,7 +2694,7 @@ args = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
 return this.script.apply(this, args);
 };
 Builder.prototype['unsupported'] = function(node, message) {
-throw new UnsupportedError("Unsupported: " + message, node);
+//throw new UnsupportedError("Unsupported: " + message, node);
 };
 return Builder;
 })();
