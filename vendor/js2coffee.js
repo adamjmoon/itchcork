@@ -786,7 +786,7 @@ return this.tokenizer.filename;
 definitions.defineGetter(Np, "length",
 function() {
 //throw new Error("Node.prototype.length is gone; " +
-"use n.children.length instead");
+//"use n.children.length instead");
 });
 definitions.defineProperty(String.prototype, "repeat",
 function(n) {
