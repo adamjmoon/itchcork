@@ -906,7 +906,7 @@ if (n2.type === VAR || n2.type === LET) {
 c = n2.children;
 if (c.length !== 1 && n2.destructurings.length !== 1) {
 //throw new SyntaxError("Invalid for..in left-hand side",
-t.filename, n2.lineno);
+//t.filename, n2.lineno);
 }
 if (n2.destructurings.length > 0) {
 n.iterator = n2.destructurings[0];
