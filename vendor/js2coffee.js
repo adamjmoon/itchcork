@@ -1836,7 +1836,8 @@ function Code() {
 this.code = '';
 }
 Code.prototype.add = function(str) {
-this.code += str.toString();
+if(str)
+  this.code += str.toString();
 return this;
 };
 Code.prototype.scope = function(str, level) {
