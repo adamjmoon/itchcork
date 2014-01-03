@@ -231,7 +231,7 @@ return new Stack({ top: x, rest: this.elts });
 },
 top: function() {
 if (!this.elts)
-throw new Error("empty stack");
+console.log("empty stack");
 return this.elts.top;
 },
 isEmpty: function() {
@@ -310,7 +310,7 @@ return this.get(scanOperand) === tt || this.unget();
 },
 mustMatch: function (tt) {
 if (!this.match(tt)) {
-throw this.newSyntaxError("Missing " +
+console.log("Missing " +
 definitions.tokens[tt].toLowerCase());
 }
 return this.token;
@@ -354,7 +354,7 @@ this.cursor++;
 for (;;) {
 ch = input[this.cursor++];
 if (ch === undefined)
-throw this.newSyntaxError("Unterminated comment");
+console.log("Unterminated comment");
 if (ch === '*') {
 next = input[this.cursor];
 if (next === '/') {
@@ -416,7 +416,7 @@ ch = input[this.cursor++];
 if (ch === '+' || ch === '-')
 ch = input[this.cursor++];
 if (ch < '0' || ch > '9')
-throw this.newSyntaxError("Missing exponent");
+console.log("Missing exponent");
 do {
 ch = input[this.cursor++];
 } while (ch >= '0' && ch <= '9');
@@ -496,11 +496,11 @@ var hasEscapes = false;
 var delim = ch;
 while ((ch = input[this.cursor++]) !== delim) {
 if (this.cursor >= input.length)
-throw this.newSyntaxError("Unterminated string literal");
+console.log("Unterminated string literal");
 if (ch === '\\') {
 hasEscapes = true;
 if (++this.cursor == input.length)
-throw this.newSyntaxError("Unterminated string literal");
+console.log("Unterminated string literal");
 }
 }
 token.value = hasEscapes
@@ -517,13 +517,13 @@ this.cursor++;
 } else if (ch === '[') {
 do {
 if (ch === undefined)
-throw this.newSyntaxError("Unterminated character class");
+console.log("Unterminated character class");
 if (ch === '\\')
 this.cursor++;
 ch = input[this.cursor++];
 } while (ch !== ']');
 } else if (ch === undefined) {
-throw this.newSyntaxError("Unterminated regex");
+console.log("Unterminated regex");
 }
 } while (ch !== '/');
 do {
@@ -608,7 +608,7 @@ token.type = NEWLINE;
 token.value = '\n';
 this.lineno++;
 } else {
-throw this.newSyntaxError("Illegal token");
+//throw this.newSyntaxError("Illegal token");
 }
 token.end = this.cursor;
 return token.type;
