@@ -66,4 +66,14 @@ core.min.js
 *.js.html
 */Content/js/app-cov/*
 */Content/js/coverage/*
-.idea/*
+.idea/**/**
+*/_instrumented/*
+*/_src/*
+*/node_modules/*
+*/results/*
+*/specs/*
+*/coverage/*
+*/.idea/*
+*/**/*.log
+/*/Gruntfile.js
+/*/coverage.json

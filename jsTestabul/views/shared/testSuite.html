@@ -1,0 +1,211 @@
+<div id="view" class="view" style="position: absolute; top: 11px; left:0px; right: 0px; bottom: 0px; height: 100%;" >
+<div class="" style="position: fixed;bottom: 10px;right:10px;z-index: 1000; display: none;"
+     data-bind="visible: window.suiteView.unitTestFrameworkManager.getFramework()==='mocha'">
+    <a class="btn btn-sm btn-primary" href=""
+       data-bind="css: viewSpecs() ? 'active' : '' , click: function(){ viewSpecs(true); viewSrc(false); }">SPECS</a>
+    <a class="btn btn-sm btn-primary" href=""
+       data-bind="css: viewSrc() ? 'active' : '' , click: function(){ viewSpecs(false); viewSrc(true);}">SOURCE</a>
+</div>
+<div id="mochaWrapper" class="mochaWrapper well"
+     data-bind="visible: viewSpecs,style: { 'max-height': (window.innerHeight - 50) + 'px'}">
+    <div class="well" style="position:absolute;left:48%;top: 3px;">
+            <span style="" title="Collapse All Suites"
+                  class="btn btn-warning"
+                  data-bind="click: changeMochaSuitesState()">
+                                                   <i style="width: 15px;text-align: center;padding: 0px 0px;font-size:16px;font-weight: bold !important;"
+                                                      class='glyphicon glyphicon-plus'
+                                                      data-bind="css : 'glyphicon ' + (collapseMocha() ? 'glyphicon-plus' : 'glyphicon-minus')"></i>
+                                               </span>
+    </div>
+    <div id="mocha" class="row-fluid"
+         style="height:100%;overflow: auto !important;margin-top: 34px;" data-bind="sideMenuOpen: {hash: '#main-nav'}"></div>
+</div>
+<div id="itchcorkWrapper" class="row-fluid"
+     data-bind="visible: viewSrc,style: { 'max-height': (window.innerHeight - 11) + 'px' }">
+    <div class="well row-fluid" id="suiteListAccordian" data-bind="'foreach': suites"
+         style="display: block !important;height: 100%; overflow: auto !important;">
+                <div class="well">
+
+                    <a class="suiteDesc autoOverFlow well"
+                       data-parent="#suiteListAccordian"
+                       data-bind="attr: {'id' : 'suite' + num, 'href': '#suite' + num}">
+
+                                <span data-bind="text: suiteDesc" class="label label-info"
+                                      style="margin-left: 15px;padding:3px;font-size: 18px;"/>
+                               <span class="badge badge-info count"
+                                     data-bind="visible: tests().length > 0,text: tests().length"></span>
+                                          <span class="badge badge-success count"
+                                                data-bind="visible: passedCount() > 0,text: passedCount()"></span>
+                                          <span class="badge badge-important count"
+                                                data-bind="visible: failedCount() > 0,text: failedCount()"></span>
+                        <br/>
+
+                    </a>
+
+                </div>
+
+                <div data-bind="css: 'suite' + num, attr:{ 'id': 'suiteContext' + num } ">
+
+                        <div class="">
+                            <div class="row-fluid"><a class=""
+                                                              data-bind="attr: {'data-target': '.collapseContextSource' + num, 'href': '#suiteContext' + num}"><span
+                                    class="badge badge-info">SOURCE</span></a></div>
+                            <div data-bind="css: 'collapseContextSource' + num, attr:{'id': 'contextSourceSuite' + num } ">
+                                <div class="accordion-inner">
+                                    <div class="span6 sourceCode ace-twilight">
+                                        <div class="badge badge-warning badge-code">
+                                            Coffeescript
+                                        </div>
+                                        <br/>
+
+                                        <div class="code" data-bind="html: coffeeContextStr"></div>
+
+                                    </div>
+                                    <div class="span6 sourceCode ace-twilight">
+                                        <div class="badge badge-success badge-code">
+                                            Javascript
+                                        </div>
+                                        <br/>
+
+                                        <div class="code" data-bind="html: jsContextStr"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class=""
+                             data-bind="'visible': properties().length > 0, attr: { 'id': 'ContextBreakdown' + num}">
+                            <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
+                                                              data-bind="attr: {'href': '#ContextBreakdown' + num,'data-target' : '.collapseContextBreakdown' + num}, click: function(){suiteView.scrollToSelector('#ContextBreakdown' + num);}"
+                                    ><span
+                                    class="badge badge-info">PROPERTIES</span></a></div>
+                            <div data-bind="css: 'accordion-body collapse collapseContextBreakdown' + num, attr:{'id': 'contextBreakdownSuite' + num }">
+                                <div class="accordion-inner results">
+                                    <table class="table" id="testCaseList">
+                                        <thead>
+                                        <th>
+                                            <div class="badge badge-info">property</div>
+                                        </th>
+                                        <th>
+                                            <div class="badge badge-success">Coffeescript</div>
+                                        </th>
+                                        <th>
+                                            <div class="badge badge-warning">Javascript</div>
+                                        </th>
+                                        </thead>
+                                        <tbody data-bind="'foreach': properties">
+                                        <tr>
+                                            <td><label data-bind="text: name"></label></td>
+                                            <td class="">
+                                                <div class="well">
+                                                    <div class="code" data-bind="html: coffeeStr"></div>
+                                                </div>
+                                            </td>
+                                            <td class="">
+                                                <div class="well">
+                                                    <div class="code" data-bind="html: jsStr"></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-group"
+                             data-bind="visible: tests().length > 0,attr: { id: 'TestResults' + num}">
+                            <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
+                                                              data-bind="attr: {'data-target': '.collapseResults' + num}, click: function(){suiteView.scrollToSelector('#TestResults' + num);}"
+                                                              href=""><span
+                                    class="badge badge-info">TEST RESULTS</span></a></div>
+                            <div data-bind="css: 'accordion-body collapse in collapseResults' + num">
+                                <div class="accordion-inner results" id="itchcorkResults"
+                                     data-bind="visible: window.suiteView.unitTestFrameworkManager.getFramework()!=='mocha'">
+                                    <table class="table" id="results">
+                                        <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>should.equal</th>
+                                            <th>actual</th>
+                                            <th>typeof</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody data-bind="'foreach': tests">
+                                        <tr data-bind="css: passed ? 'success' : 'error', visible: describe">
+                                            <td colspan='4'><span class="badge badge-info"
+                                                                  data-bind="text: describe"></span></td>
+                                        </tr>
+                                        <tr data-bind="css: passed ? 'success' : 'error'">
+                                            <td><code class="well help-inline"
+                                                      data-bind="text: expression"></code></td>
+                                            <td><code class="well help-inline"
+                                                      data-bind="text: shouldEqual"></code></td>
+                                            <td><code class="well help-inline" data-bind="text: actual"></code>
+                                            </td>
+                                            <td><code class="well help-inline" data-bind="text: typeOf"></code>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="accordion-group"
+                             data-bind="visible: benchmarkingEnabled()">
+                            <div class="accordion-heading"><a class="accordion-toggle" data-toggle="collapse"
+                                                              data-bind="attr: {'data-target': '.collapseBenchmarks' + num}"
+                                                              data-target=".collapseBenchmarks" href="#"><span
+                                    class="badge badge-info">BENCHMARKS&nbsp;</span>
+                                                    <span data-bind="text: benchmarkPlatform"
+                                                          class="badge badge-inverse"></span><span
+                                        data-bind="text: !benchmarksDone() ? 'RUNNING...': 'COMPLETED', css: benchmarksDone() ? 'badge badge-success' : 'badge badge-warning'"></span>
+                            </a>
+                            </div>
+                            <div data-bind="css: 'accordion-body collapse in collapseBenchmarks' + num">
+                                <div class="accordion-inner results">
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>expression</th>
+                                            <th>times faster</th>
+                                            <th>ops/sec</th>
+                                            <th>+/-</th>
+                                            <th># analysis cycles</th>
+                                            <th># sample cycles</th>
+                                            <th>iterations/sample cycle</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody data-bind="'foreach': benchmarks">
+                                        <tr data-bind="css: fastest() ? 'success' : slowest() ? 'error' : ''">
+                                            <td><code class="well help-inline"
+                                                      data-bind="text: expression"></code></td>
+                                            <td><code class="well help-inline" style='display:none;'
+                                                      data-bind="text: timesFaster, visible:timesFaster"></code>
+                                            </td>
+                                            <td><code class="well help-inline" data-bind="text: hz"></code></td>
+                                            <td><code class="well help-inline"
+                                                      data-bind="text: relativateMarginError"></code></td>
+                                            <td><code class="well help-inline"
+                                                      data-bind="text: numAnalysisCycles"></code></td>
+                                            <td><code class="well help-inline"
+                                                      data-bind="text: numSampleCycles"></code></td>
+                                            <td><code class="well help-inline"
+                                                      data-bind="text: iterationPerSampleCycle"></code></td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <button style="display:none;margin-bottom: 5px;" class='btn btn-large run-again'
+                                        data-bind="click: processBenchmarks,visible: benchmarksDone">RUN AGAIN
+                                </button>
+                            </div>
+                        </div>
+
+                </div>
+
+    </div>
+</div>
+</div>
+
+
