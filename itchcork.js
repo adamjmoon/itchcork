@@ -855,7 +855,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         self.githubAccount = new ko.observable('adamjmoon');
         self.githubRepo = new ko.observable('itchcork');
         self.githubBranch = new ko.observable('master');
-        self.contextRoot = new ko.observable('cdn.git.com/' + self.githubAccount() + '/' + self.githubRepo() + '/' + self.githubBranch() + '/');
+        self.contextRoot = new ko.observable('rawgit.com/' + self.githubAccount() + '/' + self.githubRepo() + '/' + self.githubBranch() + '/');
         self.vendorRoot = new ko.observable(self.contextRoot() + 'vendor/');
         self.currentTheme = ko.observable(amplify.store('currentTheme'));
         self.currentView = ko.observable('');
