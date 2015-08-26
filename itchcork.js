@@ -855,7 +855,7 @@ define("SuiteView", ['UnitTestFrameworkManager'], function (utfm) {
         self.githubAccount = new ko.observable('adamjmoon');
         self.githubRepo = new ko.observable('itchcork');
         self.githubBranch = new ko.observable('master');
-        self.contextRoot = new ko.observable('cdn.rawgit.com/' + self.githubAccount() + '/' + self.githubRepo() + '/' + self.githubBranch() + '/');
+        self.contextRoot = new ko.observable('rawgit.com/' + self.githubAccount() + '/' + self.githubRepo() + '/' + self.githubBranch() + '/');
         self.vendorRoot = new ko.observable(self.contextRoot() + 'vendor/');
         self.currentTheme = ko.observable(amplify.store('currentTheme'));
         self.currentView = ko.observable('');
@@ -1245,7 +1245,7 @@ require(['https://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js', 'https://
 
                     view = window.location.pathname;
 
-                    else if (view.indexOf('benchmarks') > -1) {
+                    if (view.indexOf('benchmarks') > -1) {
                         window.suiteView.currentView('Benchmarks');
                         window.suiteView.unitTestFrameworkManager.set('itchcork');
                         require(['/js/app.js'], function () {
